@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HotelManga.com - Anime & Entertainment Domain</title>
+    <style>
+        body { font-family: 'Verdana', sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #FFDEE9; background: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%); margin: 0; }
+        .card { background: white; padding: 3rem; border-radius: 25px; border: 4px solid #FF9A9E; box-shadow: 0 10px 20px rgba(0,0,0,0.1); text-align: center; max-width: 500px; }
+        h1 { color: #FF9A9E; font-size: 2.2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+        p { color: #777; line-height: 1.6; font-size: 1.1rem; }
+        .btn { display: inline-block; margin-top: 2rem; padding: 12px 30px; background: #FF9A9E; color: white; text-decoration: none; border-radius: 50px; font-weight: bold; }
+        .btn:hover { background: #f88085; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>HotelManga.com</h1>
+        <p>A unique, brandable domain for the anime and manga community. High visibility and memorable name.</p>
+        <a href="mailto:info@hotelmanga.com" class="btn">Get in Touch</a>
+    </div>
+</body>
+</html>
