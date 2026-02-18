@@ -3,19 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotelmanga.com | Digital Asset Test</title>
+    <title>Hotelmanga.com | Premium Digital Asset</title>
     <style>
-        body, html { margin: 0; padding: 0; height: 100%; background-color: #fff1f2; }
-        .bg-test {
-            width: 100%; height: 100%;
-            /* تصویر یک فضای مدرن و دنج با تم ژاپنی */
-            background-image: url('https://images.unsplash.com/photo-1542051841857-5f90071e7989?q=80&w=1600&auto=format&fit=crop'); 
-            background-size: cover;
-            background-position: center;
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body, html { height: 100%; font-family: 'Inter', -apple-system, sans-serif; background-color: #1a0f0a; overflow: hidden; }
+
+        /* استفاده از لینک مستقیم شما */
+        .bg-img {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://github.com/saminkhanaki/Hotelmanga/blob/main/MV_img.jpg?raw=true');
+            background-size: cover; background-position: center; z-index: 0;
         }
+
+        .overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* کمی شفاف‌تر تا شکوه لابی بهتر دیده شود */
+            z-index: 1;
+        }
+
+        .container { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; }
+
+        .card { 
+            background: rgba(15, 15, 15, 0.75);
+            backdrop-filter: blur(12px);
+            padding: 50px 40px; border-radius: 24px; text-align: center;
+            max-width: 500px; width: 92%;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        .tag { color: #ff4757; font-weight: 800; font-size: 0.75em; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 25px; display: block; }
+        
+        h1 { font-size: 2.6em; color: #fff; margin-bottom: 10px; letter-spacing: -1px; }
+        .highlight { color: #ff4757; text-shadow: 0 0 15px rgba(255, 71, 87, 0.3); }
+
+        p { color: #d1d1d1; margin-bottom: 35px; line-height: 1.7; font-size: 1.1em; }
+
+        .btn-container { width: 100%; }
+
+        .btn { 
+            display: block; padding: 18px; margin: 12px 0; border-radius: 12px;
+            text-decoration: none; font-weight: bold; font-size: 1em;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+            text-transform: uppercase; letter-spacing: 2px;
+        }
+
+        .btn-red { 
+            background: #ff4757; color: white; box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+        }
+        .btn-red:hover { background: #ff6b81; transform: scale(1.03); }
+
+        .btn-white { 
+            background: #ffffff; color: #1a1a1a;
+        }
+        .btn-white:hover { background: #f1f1f1; transform: scale(1.03); }
+
+        .footer { font-size: 0.8em; color: rgba(255, 255, 255, 0.5); margin-top: 30px; letter-spacing: 2px; font-weight: 600; }
     </style>
 </head>
 <body>
-    <div class="bg-test"></div>
+    <div class="bg-img"></div>
+    <div class="overlay"></div>
+    
+    <div class="container">
+        <div class="card">
+            <span class="tag">Hospitality • Anime • Culture</span>
+            <h1>Hotelmanga<span class="highlight">.com</span></h1>
+            <p>A premier digital asset for themed luxury hotels, global manga platforms, or immersive entertainment ventures.</p>
+            
+            <div class="btn-container">
+                <a href="https://www.afternic.com/domain/hotelmanga.com" class="btn btn-red">PURCHASE VIA AFTERNIC</a>
+                <a href="https://sedo.com/search/details/?domain=hotelmanga.com" class="btn btn-white">PURCHASE VIA SEDO</a>
+            </div>
+            
+            <div class="footer">✓ SECURE TRANSFER • ✓ ESCROW READY</div>
+        </div>
+    </div>
 </body>
 </html>
