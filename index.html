@@ -6,9 +6,8 @@
     <title>Hotelmanga.com | Premium Digital Asset</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { height: 100%; font-family: 'Inter', -apple-system, sans-serif; background-color: #1a0f0a; overflow: hidden; }
+        body, html { min-height: 100%; font-family: 'Inter', -apple-system, sans-serif; background-color: #1a0f0a; overflow-x: hidden; overflow-y: auto; }
 
-        /* استفاده از لینک مستقیم شما */
         .bg-img {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-image: url('https://github.com/saminkhanaki/Hotelmanga/blob/main/MV_img.jpg?raw=true');
@@ -17,48 +16,49 @@
 
         .overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.4); /* کمی شفاف‌تر تا شکوه لابی بهتر دیده شود */
+            background: rgba(0, 0, 0, 0.4); 
             z-index: 1;
         }
 
-        .container { position: relative; height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; }
+        .container { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; padding: 40px 20px; }
 
         .card { 
-            background: rgba(15, 15, 15, 0.75);
+            background: rgba(15, 15, 15, 0.82);
             backdrop-filter: blur(12px);
             padding: 50px 40px; border-radius: 24px; text-align: center;
-            max-width: 500px; width: 92%;
+            max-width: 500px; width: 100%;
             border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
         }
 
         .tag { color: #ff4757; font-weight: 800; font-size: 0.75em; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 25px; display: block; }
-        
         h1 { font-size: 2.6em; color: #fff; margin-bottom: 10px; letter-spacing: -1px; }
         .highlight { color: #ff4757; text-shadow: 0 0 15px rgba(255, 71, 87, 0.3); }
-
         p { color: #d1d1d1; margin-bottom: 35px; line-height: 1.7; font-size: 1.1em; }
-
-        .btn-container { width: 100%; }
 
         .btn { 
             display: block; padding: 18px; margin: 12px 0; border-radius: 12px;
             text-decoration: none; font-weight: bold; font-size: 1em;
             transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-            text-transform: uppercase; letter-spacing: 2px;
+            text-transform: uppercase; letter-spacing: 2px; text-align: center;
         }
 
-        .btn-red { 
-            background: #ff4757; color: white; box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
-        }
+        .btn-red { background: #ff4757; color: white; }
         .btn-red:hover { background: #ff6b81; transform: scale(1.03); }
 
-        .btn-white { 
-            background: #ffffff; color: #1a1a1a;
-        }
+        .btn-white { background: #ffffff; color: #1a1a1a; }
         .btn-white:hover { background: #f1f1f1; transform: scale(1.03); }
 
-        .footer { font-size: 0.8em; color: rgba(255, 255, 255, 0.5); margin-top: 30px; letter-spacing: 2px; font-weight: 600; }
+        /* بخش مقاله و اطلاعات فنی */
+        .article-section { position: relative; z-index: 2; background: #ffffff; color: #1a1a1a; padding: 80px 20px; }
+        .article-content { max-width: 850px; margin: 0 auto; line-height: 1.9; }
+        .article-content h2 { color: #1a0f0a; font-size: 2.2em; margin-bottom: 25px; }
+        .article-content p { margin-bottom: 20px; font-size: 1.1em; color: #333; }
+        
+        .tech-box { background: #f9f9f9; padding: 30px; border-radius: 12px; border-left: 5px solid #ff4757; margin-top: 40px; }
+        .tech-box h3 { margin-bottom: 15px; color: #1a0f0a; }
+        .tech-box ul { list-style: none; }
+        .tech-box li { margin-bottom: 10px; font-size: 1em; }
     </style>
 </head>
 <body>
@@ -70,14 +70,26 @@
             <span class="tag">Hospitality • Anime • Culture</span>
             <h1>Hotelmanga<span class="highlight">.com</span></h1>
             <p>A premier digital asset for themed luxury hotels, global manga platforms, or immersive entertainment ventures.</p>
-            
-            <div class="btn-container">
-                <a href="https://www.afternic.com/domain/hotelmanga.com" class="btn btn-red">PURCHASE VIA AFTERNIC</a>
-                <a href="https://sedo.com/search/details/?domain=hotelmanga.com" class="btn btn-white">PURCHASE VIA SEDO</a>
-            </div>
-            
-            <div class="footer">✓ SECURE TRANSFER • ✓ ESCROW READY</div>
+            <a href="https://www.afternic.com/domain/hotelmanga.com" class="btn btn-red">PURCHASE VIA AFTERNIC</a>
+            <a href="https://sedo.com/search/details/?domain=hotelmanga.com" class="btn btn-white">PURCHASE VIA SEDO</a>
         </div>
     </div>
+
+    <section class="article-section">
+        <div class="article-content">
+            <h2>The New Era of <span style="color: #ff4757;">Themed Hospitality</span></h2>
+            <p>As the global fascination with Japanese pop-culture continues to soar, <strong>Hotelmanga.com</strong> emerges as a unique digital identity bridging the gap between high-end hospitality and the vibrant world of <strong>Manga</strong>. The rise of capsule hotels has transformed from a niche trend into a multi-billion dollar phenomenon.</p>
+            
+            <div class="tech-box">
+                <h3>Technical Domain Insights (Verified by Moz)</h3>
+                <ul>
+                    <li><strong>• Search Recognition:</strong> Ranking for high-volume keywords including <strong>"Manga"</strong> and <strong>"Capsule Hotel"</strong>.</li>
+                    <li><strong>• Authority Profile:</strong> Domain Authority (DA) of <strong>6</strong> with <strong>171 Linking Domains</strong>.</li>
+                    <li><strong>• Link Profile:</strong> Supported by <strong>192 total Inbound Links</strong>.</li>
+                    <li><strong>• Traffic Potential:</strong> Indexed for keywords with monthly volumes up to <strong>300,000</strong>.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
