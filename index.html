@@ -6,7 +6,7 @@
     <title>Hotelmanga.com | Premium Digital Asset</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { min-height: 100%; font-family: 'Inter', -apple-system, sans-serif; background-color: #1a0f0a; overflow-x: hidden; overflow-y: auto; scroll-behavior: smooth; }
+        body, html { min-height: 100%; font-family: 'Inter', sans-serif; background-color: #1a0f0a; overflow-x: hidden; overflow-y: auto; scroll-behavior: smooth; }
 
         .bg-img {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
@@ -14,53 +14,47 @@
             background-size: cover; background-position: center; z-index: 0;
         }
 
-        .overlay {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.4); 
-            z-index: 1;
-        }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 1; }
 
         .container { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; z-index: 2; padding: 40px 20px; }
 
         .card { 
-            background: rgba(15, 15, 15, 0.85);
-            backdrop-filter: blur(12px);
+            background: rgba(15, 15, 15, 0.85); backdrop-filter: blur(12px);
             padding: 50px 40px; border-radius: 24px; text-align: center;
-            max-width: 500px; width: 100%;
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            max-width: 500px; width: 100%; border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
         }
 
         .tag { color: #ff4757; font-weight: 800; font-size: 0.75em; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 25px; display: block; }
-        h1 { font-size: 2.6em; color: #fff; margin-bottom: 10px; letter-spacing: -1px; }
+        h1 { font-size: 2.6em; color: #fff; margin-bottom: 10px; }
         .highlight { color: #ff4757; text-shadow: 0 0 15px rgba(255, 71, 87, 0.3); }
-        p { color: #d1d1d1; margin-bottom: 35px; line-height: 1.7; font-size: 1.1em; }
+        .hero-p { color: #d1d1d1; margin-bottom: 35px; line-height: 1.7; font-size: 1.1em; }
 
-        .btn { 
-            display: block; padding: 18px; margin: 12px 0; border-radius: 12px;
-            text-decoration: none; font-weight: bold; font-size: 1em;
-            transition: all 0.3s ease; text-transform: uppercase; letter-spacing: 2px; text-align: center;
-        }
-
-        .btn-red { background: #ff4757; color: white; box-shadow: 0 4px 15px rgba(255, 71, 87, 0.2); }
-        .btn-red:hover { background: #ff6b81; transform: translateY(-2px); }
-
+        .btn { display: block; padding: 18px; margin: 12px 0; border-radius: 12px; text-decoration: none; font-weight: bold; text-transform: uppercase; letter-spacing: 2px; text-align: center; transition: 0.3s; }
+        .btn-red { background: #ff4757; color: white; }
         .btn-white { background: #ffffff; color: #1a1a1a; }
-        .btn-white:hover { background: #f1f1f1; transform: translateY(-2px); }
+        .btn:hover { transform: translateY(-3px); opacity: 0.9; }
 
-        /* بخش مقاله کامل */
+        /* بخش مقاله و کارت فنی اصلاح شده */
         .article-section { position: relative; z-index: 2; background: #ffffff; color: #1a1a1a; padding: 80px 20px; border-top: 6px solid #ff4757; }
-        .article-content { max-width: 850px; margin: 0 auto; line-height: 1.9; }
-        .article-content h2 { color: #1a0f0a; font-size: 2.4em; margin-bottom: 30px; font-weight: 800; }
-        .article-content p { margin-bottom: 25px; font-size: 1.15em; color: #333; }
+        .article-content { max-width: 850px; margin: 0 auto; }
+        .article-content h2 { font-size: 2.4em; margin-bottom: 30px; font-weight: 800; color: #1a0f0a; }
+        .article-content p { margin-bottom: 25px; font-size: 1.15em; line-height: 1.8; color: #333; }
         .kw { color: #ff4757; font-weight: 700; }
-        
-        .tech-box { background: #f8f9fa; padding: 35px; border-radius: 16px; border-left: 6px solid #ff4757; margin-top: 45px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .tech-box h3 { margin-bottom: 20px; color: #1a0f0a; font-size: 1.4em; text-transform: uppercase; letter-spacing: 1px; }
-        .tech-box ul { list-style: none; }
-        .tech-box li { margin-bottom: 12px; font-size: 1.05em; display: flex; align-items: baseline; }
-        .tech-box li::before { content: "•"; color: #ff4757; font-weight: bold; display: inline-block; width: 1em; margin-left: -1em; }
-        .tech-box strong { color: #000; }
+
+        /* کارت اطلاعات فنی جدید و مرتب */
+        .tech-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 20px; margin-top: 40px; background: #fdfdfe; padding: 30px; 
+            border-radius: 20px; border: 1px solid #eee; box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+        }
+        .tech-item { padding: 15px; border-bottom: 2px solid #f0f0f0; }
+        .tech-label { display: block; font-size: 0.85em; color: #777; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; font-weight: 600; }
+        .tech-value { display: block; font-size: 1.2em; color: #1a0f0a; font-weight: 800; }
+        .tech-value span { color: #ff4757; }
+
+        .ranking-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+        .r-tag { background: #fff1f2; color: #ff4757; padding: 4px 10px; border-radius: 6px; font-size: 0.85em; font-weight: 700; border: 1px solid #ffe4e6; }
     </style>
 </head>
 <body>
@@ -71,7 +65,7 @@
         <div class="card">
             <span class="tag">Hospitality • Anime • Culture</span>
             <h1>Hotelmanga<span class="highlight">.com</span></h1>
-            <p>A premier digital asset for themed luxury hotels, global manga platforms, or immersive entertainment ventures.</p>
+            <p class="hero-p">A premier digital asset for themed luxury hotels, global manga platforms, or immersive entertainment ventures.</p>
             <div class="btn-container">
                 <a href="https://www.afternic.com/domain/hotelmanga.com" class="btn btn-red">PURCHASE VIA AFTERNIC</a>
                 <a href="https://sedo.com/search/details/?domain=hotelmanga.com" class="btn btn-white">PURCHASE VIA SEDO</a>
@@ -82,22 +76,40 @@
     <section class="article-section">
         <div class="article-content">
             <h2>The New Era of <span style="color: #ff4757;">Themed Hospitality</span></h2>
+            <p>As the global fascination with Japanese pop-culture continues to soar, <span class="kw">Hotelmanga.com</span> emerges as a unique digital identity bridging the gap between high-end hospitality and the vibrant world of <span class="kw">Manga</span>.</p>
             
-            <p>As the global fascination with Japanese pop-culture continues to soar, <span class="kw">Hotelmanga.com</span> emerges as a unique digital identity bridging the gap between high-end hospitality and the vibrant world of <span class="kw">Manga</span>. The rise of <span class="kw">Capsule Hotels</span> and themed accommodations has transformed from a niche trend into a multi-billion dollar phenomenon, where travelers no longer seek just a room, but an immersive story.</p>
-            
-            <p>This domain represents the perfect intersection of the tourism industry and <span class="kw">Otaku Culture</span>. Whether it's a boutique hotel designed for <span class="kw">Anime</span> enthusiasts or a digital platform for comic-themed lodging, Hotelmanga.com offers a memorable, brandable, and SEO-ready name. By integrating creative arts with modern lodging services, this asset is positioned to capture a highly engaged global creative community.</p>
+            <p>This domain represents the perfect intersection of the tourism industry and <span class="kw">Otaku Culture</span>. Whether it's a boutique hotel designed for <span class="kw">Anime</span> enthusiasts or a digital platform for comic-themed lodging, Hotelmanga.com offers a memorable, brandable, and SEO-ready name.</p>
 
-            <div class="tech-box">
-                <h3>Technical Domain Insights (Verified by Moz)</h3>
-                <ul>
-                    <li><strong>Search Recognition:</strong> Already ranking for high-volume keywords including <strong>"Manga"</strong>, <strong>"Capsule Hotel"</strong>, and <strong>"Hostle"</strong>.</li>
-                    <li><strong>Authority Profile:</strong> Maintains a <strong>Domain Authority (DA) of 6</strong> with a diverse profile of <strong>171 Linking Domains</strong>.</li>
-                    <li><strong>Link Profile:</strong> Supported by a solid foundation of <strong>192 total Inbound Links</strong> from relevant sectors.</li>
-                    <li><strong>Traffic Potential:</strong> Indexed and recognized for keywords with monthly search volumes reaching up to <strong>300,000 queries</strong>.</li>
-                </ul>
+            <div style="margin-top: 50px;">
+                <h3 style="margin-bottom: 20px; font-size: 1.2em; text-transform: uppercase; color: #555;">Technical Domain Insights (Verified by Moz)</h3>
+                <div class="tech-grid">
+                    <div class="tech-item">
+                        <span class="tech-label">Domain Authority</span>
+                        <span class="tech-value">6 <span>/ 100</span></span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Linking Domains</span>
+                        <span class="tech-value">171 <span>Found</span></span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Inbound Links</span>
+                        <span class="tech-value">192 <span>Total</span></span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="tech-label">Monthly Potential</span>
+                        <span class="tech-value">300,000+ <span>Queries</span></span>
+                    </div>
+                    <div class="tech-item" style="grid-column: 1 / -1; border-bottom: none;">
+                        <span class="tech-label">Active Search Rankings</span>
+                        <div class="ranking-tags">
+                            <span class="r-tag">Manga</span>
+                            <span class="r-tag">Capsule Hotel</span>
+                            <span class="r-tag">Hostle</span>
+                            <span class="r-tag">Anime Tourism</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-
-            <p style="margin-top: 40px; font-style: italic; color: #777;">From Tokyo to the global stage, the future of travel is creative. Hotelmanga.com is the gateway to that future.</p>
         </div>
     </section>
 </body>
