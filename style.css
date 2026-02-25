@@ -1,0 +1,94 @@
+/* تنظیمات متغیرها برای تغییر آسان در آینده */
+:root {
+    --bg-paper: #FDF8F5;    /* زمینه کرم روشن (حس کاغذ مانگا) */
+    --primary-red: #E63946;  /* قرمز علامت HM */
+    --deep-navy: #1D3557;    /* سرمه‌ای متن لوگو */
+    --text-body: #333333;    /* رنگ متن اصلی */
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg-paper); 
+    color: var(--text-body); 
+    line-height: 1.6; 
+}
+
+/* Header & Navigation - Montserrat */
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 10%; 
+    background: #fff; 
+    border-bottom: 1px solid rgba(29, 53, 87, 0.1); 
+    font-family: 'Montserrat', sans-serif; 
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    height: 40px; /* تنظیم اندازه لوگوی شما */
+    width: auto;
+}
+
+.logo-text { 
+    font-size: 22px; 
+    font-weight: 700; 
+    color: var(--deep-navy); 
+    letter-spacing: -0.5px;
+}
+
+.logo-text span { color: var(--primary-red); }
+
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 30px; }
+nav ul li a { 
+    text-decoration: none; 
+    color: var(--deep-navy); 
+    font-size: 13px; 
+    font-weight: 600; 
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s; 
+}
+
+nav ul li a:hover { color: var(--primary-red); }
+
+/* Grid Layout */
+.content-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px; 
+    width: 80%; 
+    margin: 50px auto; 
+}
+
+.card { background: #fff; border-radius: 8px; overflow: hidden; transition: 0.3s; }
+.card img { width: 100%; height: 250px; object-fit: cover; }
+.card-body { padding: 20px; }
+
+.card-category { 
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-red); 
+    font-weight: 700; 
+    font-size: 11px; 
+    text-transform: uppercase;
+}
+
+.card-title { 
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+    color: var(--deep-navy);
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .content-grid { grid-template-columns: 1fr; }
+}
