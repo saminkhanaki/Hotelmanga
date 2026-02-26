@@ -6,6 +6,8 @@
     --text-body: #333333;    /* رنگ متن اصلی */
 }
 
+.container {width: 90%;max-width: 1100px;margin: auto;}
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { 
@@ -440,3 +442,36 @@ nav ul li a.active::after {
     .main-content { padding: 20px 5%; }
 }
 
+/* ۱. کانتینر اصلی مقاله که همه چیز را وسط نگه می‌دارد */
+.article-body {
+    max-width: 800px; /* عرض استاندارد برای مطالعه راحت مقاله */
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* ۲. کلاس عمومی برای کارت‌های عکس دار */
+.content-block {
+    margin-bottom: 50px; /* فاصله بین پاراگراف‌ها و بخش‌های مختلف */
+    display: block;
+    width: 100%;
+}
+
+/* ۳. استایل عکس‌ها (بدون کادر جدولی) */
+.content-block img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 4px; /* یک گردی خیلی ملایم */
+}
+
+/* ۴. استایل تیترها داخل مقاله */
+.article-body h1 { font-size: 36px; color: var(--deep-navy); margin-bottom: 30px; }
+.article-body h2 { font-size: 28px; color: var(--deep-navy); margin-top: 40px; }
+
+/* ۵. کلاس‌های اندازه برای کنترل عرض عکس (اختیاری) */
+.w-full { width: 100%; }
+.w-medium { width: 70%; margin-left: auto; margin-right: auto; }
