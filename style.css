@@ -208,52 +208,66 @@ nav {
 
 //************************************************************طراحی صفحه اول**********************************************************//
 //**********************************************************************************************************************************//
-/* کانتینر اصلی */
+/* کانتینر اصلی برای تقارن کامل از دو طرف */
 .main-content {
     max-width: 1200px;
-    margin: 50px auto;
-    padding: 0 25px;
+    margin: 0 auto;
+    padding: 30px 20px; /* فاصله ۳۰ پیکسلی از بالا (هدر) و ۲۰ پیکسلی از طرفین */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* اطمینان از وسط‌چین بودن محتوا */
 }
 
-/* ردیف هیرو (HERO ROW) - بدون خط، با سایه نرم */
+/* اصلاح ردیف هیرو برای شبیه شدن به گرید پایین */
 .hero-row {
     display: flex;
-    margin-bottom: 30px; /* فاصله بین هیرو و کارت‌های پایین */
-    border: none; /* حذف خطوط مشکی احتمالی */
-    /* استایل‌های سایه و گوشه گرد از کلاس grid-card گرفته می‌شود */
+    gap: 20px; /* ایجاد فاصله بین عکس و متن هیرو */
+    margin-bottom: 40px;
+    width: 100%;
+    background: transparent; /* حذف پس‌زمینه یکسره */
+    box-shadow: none; /* حذف سایه کلی */
+    overflow: visible;
 }
 
-.hero-row:hover {
-    transform: translateY(-5px); /* افکت حرکت ملایم هنگام هاور */
+/* تبدیل بخش عکس و متن هیرو به کارت‌های مجزا با استایل یکسان */
+.hero-image, .hero-text {
+    background: #fff;
+    border-radius: 20px; /* گردی لبه‌ها مشابه کارت‌های پایین */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .hero-image {
     flex: 1.6;
-    height: 500px;
+    height: 450px;
 }
 
-..hero-image img {
+.hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    /* چون هیرو فلکس است، مطمئن می‌شویم گوشه عکس با کارت همخوانی دارد */
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
 }
+
 .hero-text {
     flex: 1;
-    padding: 50px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-/* ۳. تنظیم گرید برای فاصله دقیق */
+/* افکت هاور برای هیرو */
+.hero-image:hover, .hero-text:hover {
+    transform: translateY(-5px);
+}
+
+/* تنظیم گرید پایین برای تقارن کامل */
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* فاصله بین سه کارت پایین */
+    gap: 25px;
+    width: 100%;
 }
 
 /* ۴. اطمینان از اینکه همه کارت‌ها (شامل هیرو) یکسان دیده می‌شوند */
@@ -309,8 +323,12 @@ nav {
 }
 /* ریسپانسیو موبایل */
 @media (max-width: 992px) {
-    .hero-row { flex-direction: column; }
-    .hero-image { border-right: none; border-bottom: 2px solid #000; }
+   hero-row { 
+        flex-direction: column; 
+    }
+    .hero-image {
+        height: 300px;
+    }
     .articles-grid { grid-template-columns: 1fr; } /* کارت‌ها در موبایل زیر هم می‌افتند */
 }
 //**********************************************************************************************************************************//
