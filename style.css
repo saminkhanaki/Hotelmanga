@@ -218,12 +218,9 @@ nav {
 /* ردیف هیرو (HERO ROW) - بدون خط، با سایه نرم */
 .hero-row {
     display: flex;
-    background: #fff;
-    margin-bottom: 50px;
-    border-radius: 16px; /* لبه‌های گرد برای حس مدرن */
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05); /* سایه بسیار ملایم */
-    transition: transform 0.3s ease;
+    margin-bottom: 30px; /* فاصله بین هیرو و کارت‌های پایین */
+    border: none; /* حذف خطوط مشکی احتمالی */
+    /* استایل‌های سایه و گوشه گرد از کلاس grid-card گرفته می‌شود */
 }
 
 .hero-row:hover {
@@ -235,12 +232,15 @@ nav {
     height: 500px;
 }
 
-.hero-image img {
+..hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    /* چون هیرو فلکس است، مطمئن می‌شویم گوشه عکس با کارت همخوانی دارد */
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
 }
-
 .hero-text {
     flex: 1;
     padding: 50px;
@@ -249,19 +249,19 @@ nav {
     justify-content: center;
 }
 
-/* گرید سه تایی پایین (ARTICLES GRID) */
+/* ۳. تنظیم گرید برای فاصله دقیق */
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 20px; /* فاصله بین سه کارت پایین */
 }
 
+/* ۴. اطمینان از اینکه همه کارت‌ها (شامل هیرو) یکسان دیده می‌شوند */
 .grid-card {
     background: #fff;
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    border: 1px solid rgba(0,0,0,0.03); /* یک خط بسیار بسیار محو */
     transition: all 0.3s ease;
 }
 
