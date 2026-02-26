@@ -1,83 +1,16 @@
-/* تنظیمات متغیرها برای تغییر آسان در آینده */
+/* ۱. تنظیمات متغیرها و پایه */
 :root {
-    --bg-paper: #FDF8F5;    /* زمینه کرم روشن (حس کاغذ مانگا) */
-    --primary-red: #E63946;  /* قرمز علامت HM */
-    --deep-navy: #1D3557;    /* سرمه‌ای متن لوگو */
-    --text-body: #333333;    /* رنگ متن اصلی */
+    --bg-paper: #FDF8F5;    /* زمینه کرم روشن */
+    --primary-red: #E63946;  /* قرمز برند */
+    --deep-navy: #1D3557;    /* سرمه‌ای متن */
+    --text-body: #333333;    /* متن اصلی */
+    --white: #ffffff;
 }
 
-.container {width: 90%;max-width: 1100px;margin: auto;}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-/* کانتینر سفید مرکزی که مقاله را نگه می‌دارد */
-.article-container { 
-    max-width: 850px; 
-    margin: 40px auto; 
-    background: white; 
-    padding: 40px; 
-    border-radius: 12px; 
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
-}
-
-/* تصویر بزرگ اول مقاله یا بین بخش‌های مهم */
-.hero-img { 
-    width: 100%; 
-    height: auto; 
-    border-radius: 8px; 
-    margin: 20px 0 30px 0; 
-    display: block; 
-}
-/* تصویر بزرگ که متن دور آن می‌پیچد (سمت چپ) */
-.big-img { 
-    width: 65%; 
-    float: left; 
-    margin: 0 25px 20px 0; 
-    border-radius: 8px; 
-
-/* تصویر متوسط که متن دور آن می‌پیچد (سمت چپ) */
-.mid-img { 
-    width: 45%; 
-    float: left; 
-    margin: 0 25px 20px 0; 
-    border-radius: 8px; 
-}
-
-.small-img { 
-    width: 25%; 
-    float: left; 
-    margin: 0 25px 20px 0; 
-    border-radius: 8px; 
-}
-
-.tall-img { 
-    width: 100px
-    height: auto; 
-    border-radius: 8px; 
-    margin: 20px 0 30px 0; 
-    float: left;
-}
-
-
-    
-
-
-/* باکس برجسته برای نکات (مثل لیست نهایی یا بایدها و نبایدها) */
-.highlight-box { 
-    background: #f1f5f9; 
-    border-radius: 12px; 
-    padding: 30px; 
-    margin: 30px 0; 
-    border-left: 6px solid var(--accent); /* خط رنگی عمودی برای تاکید */
-}
-
-/* برای اینکه بعد از عکس شناور، محتوای بعدی به درستی از سر خط شروع شود */
-.clear { clear: both; }
-
-/* تنظیم فواصل پاراگراف‌ها */
-.article-body p { 
-    margin-bottom: 25px; 
-    text-align: justify; 
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
 body { 
@@ -87,35 +20,23 @@ body {
     line-height: 1.6; 
 }
 
-/* Header & Navigation - Montserrat */
+/* ۲. ناوبری و هدر (Header) */
 nav { 
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
     padding: 20px 10%; 
-    background: #fff; 
+    background: var(--white); 
     border-bottom: 1px solid rgba(29, 53, 87, 0.1); 
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.logo-img {
-    height: 40px; /* تنظیم اندازه لوگوی شما */
-    width: auto;
-}
-
-.logo-text { 
-    font-size: 22px; 
-    font-weight: 700; 
-    color: var(--deep-navy); 
-    letter-spacing: -0.5px;
-}
-
+.logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-img { height: 40px; width: auto; }
+.logo-text { font-size: 22px; font-weight: 700; color: var(--deep-navy); letter-spacing: -0.5px; }
 .logo-text span { color: var(--primary-red); }
 
 nav ul { display: flex; list-style: none; }
@@ -126,422 +47,104 @@ nav ul li a {
     font-size: 13px; 
     font-weight: 600; 
     text-transform: uppercase;
-    letter-spacing: 1px;
     transition: 0.3s; 
 }
+nav ul li a:hover, nav ul li a.active { color: var(--primary-red); }
 
-nav ul li a:hover { color: var(--primary-red); }
+/* ۳. ساختار اصلی مقاله (Single Column) */
+.article-container { 
+    max-width: 850px; 
+    margin: 40px auto; 
+    background: var(--white); 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+}
 
-/* Grid Layout */
+.article-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+.article-title { font-size: 32px; color: var(--deep-navy); margin-bottom: 10px; }
+
+/* ۴. سیستم تصاویر در متن مقاله */
+.hero-img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    margin-bottom: 30px; 
+}
+
+.big-img { width: 65%; float: left; margin: 0 25px 20px 0; border-radius: 8px; }
+.mid-img { width: 45%; float: left; margin: 0 25px 20px 0; border-radius: 8px; }
+.small-img { width: 25%; float: left; margin: 0 25px 20px 0; border-radius: 8px; }
+
+.tall-img { 
+    width: 250px; /* اصلاح عرض برای تصاویر عمودی */
+    height: auto; 
+    float: left; 
+    margin-right: 25px; 
+    border-radius: 8px; 
+}
+
+.clear { clear: both; }
+
+/* ۵. اجزای داخلی مقاله */
+.article-body p { margin-bottom: 25px; text-align: justify; font-size: 1.1rem; }
+.article-body h2 { color: var(--deep-navy); margin: 35px 0 20px; font-size: 1.6rem; clear: both; }
+
+.highlight-box { 
+    background: #f1f5f9; 
+    border-radius: 12px; 
+    padding: 30px; 
+    margin: 30px 0; 
+    border-left: 6px solid var(--primary-red); 
+    clear: both;
+}
+
+/* ۶. گرید مقالات (برای صفحه اصلی) */
 .content-grid { 
     display: grid; 
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px; 
     width: 80%; 
     margin: 50px auto; 
 }
 
-.card { background: #fff; border-radius: 8px; overflow: hidden; transition: 0.3s; }
+.card { background: var(--white); border-radius: 8px; overflow: hidden; border: 1px solid #eee; transition: 0.3s; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 .card img { width: 100%; height: 250px; object-fit: cover; }
 .card-body { padding: 20px; }
+.card-category { color: var(--primary-red); font-weight: 700; font-size: 11px; text-transform: uppercase; }
 
-.card-category { 
-    font-family: 'Montserrat', sans-serif;
-    color: var(--primary-red); 
-    font-weight: 700; 
-    font-size: 11px; 
-    text-transform: uppercase;
+/* ۷. فوتر (Footer) */
+.site-footer { 
+    background-color: var(--deep-navy); 
+    color: var(--white); 
+    padding: 60px 10% 20px; 
+    margin-top: 80px; 
 }
 
-.card-title { 
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 700;
-    color: var(--deep-navy);
-    margin: 10px 0;
-    font-size: 1.2rem;}
-
-@media screen and (max-width: 768px) {
-    /* ۱. مخفی کردن قطعی منوی متنی در هدر */
-    .nav-menu {
-        display: none !important; 
-        flex-direction: column;
-        position: absolute;
-        top: 100%; /* دقیقاً زیر هدر باز شود */
-        left: 0;
-        width: 100%;
-        background-color: #fff;
-        padding: 20px 0;
-        border-bottom: 2px solid var(--primary-red);
-        z-index: 1000;
-    }
-
-    /* ۲. وقتی همبرگری کلیک شد */
-    .nav-menu.active {
-        display: flex !important;
-    }
-
-
-/* استایل هیرو (بخش بالا) */
-.article-hero {
-    display: flex;
-    border: 2px solid #000; /* کادر مشکی طبق طرح */
-    margin-bottom: 40px;
+.footer-container { 
+    display: grid; 
+    grid-template-columns: 2fr 1fr 1fr; 
+    gap: 50px; 
+    padding-bottom: 40px; 
 }
 
-    /* ۳. تنظیم هدر برای لوگو و دکمه */
-    nav {
-        position: relative;
-        justify-content: space-between !important;
-        padding: 10px 20px !important;
-    }
+.footer-list { list-style: none; }
+.footer-list a { color: #ecf0f1; text-decoration: none; font-size: 14px; transition: 0.3s; }
+.footer-list a:hover { color: var(--primary-red); padding-left: 5px; }
 
-    .menu-toggle {
-        display: flex !important;
-    }
-
-    .nav-menu li {
-        text-align: center;
-        margin: 15px 0;
-    }
-}
-/* تنظیمات دکمه همبرگری */
-.menu-toggle {
-    display: none; /* در دسکتاپ مخفی است */
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--deep-navy);
-    margin: 3px 0;
-    transition: 0.4s;
-}
-
-/* استایل مخصوص موبایل */
+/* ۸. واکنش‌گرایی (Mobile) */
 @media (max-width: 768px) {
-    .menu-toggle {
-        display: flex;
-        z-index: 100;
-    }
-
-    .nav-list {
-        position: fixed;
-        right: -100%; /* منو در حالت عادی خارج از صفحه است */
-        top: 70px;
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        padding: 40px 0;
-    }
-
-    .nav-list.active {
-        right: 0; /* با کلیک وارد صفحه می‌شود */    }
-
-    .nav-list li {
-        margin: 15px 0;    }
-
-    /* انیمیشن تبدیل همبرگر به X */
-    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
-    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-}
-
-/* استایل لینک فعال */
-nav ul li a.active {
-    color: var(--primary-red); /* تغییر رنگ متن به قرمز */
-    position: relative;
-}
-
-/* اضافه کردن یک خط کوچک زیر لینک فعال برای زیبایی بیشتر (اختیاری) */
-nav ul li a.active::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: var(--primary-red);
-    bottom: -5px;
-    left: 0;
-}
-
-/* در نسخه موبایل */
-@media (max-width: 768px) {
-    nav ul li a.active {
-        background-color: rgba(230, 57, 70, 0.1); /* یک پس‌زمینه بسیار ملایم قرمز */
-        padding: 5px 15px;
-        border-radius: 5px;
-    }
-    nav ul li a.active::after {
-        display: none; /* خط زیرین در موبایل حذف شود تا شلوغ نشود */
-    }
-}
-
-
-.site-footer {
-    background-color: var(--deep-navy); /* همان سرمه‌ای لوگو */
-    color: #ffffff;
-    padding: 60px 10% 20px;
-    margin-top: 80px;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.footer-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 50px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 40px;
-}
-
-.footer-logo {
-    font-size: 26px;
-    margin-bottom: 15px;
-    color: white !important;
-}
-
-.footer-logo span {
-    color: var(--primary-red);
-}
-
-.footer-tagline {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: #bdc3c7;
-    max-width: 300px;
-    line-height: 1.8;
-}
-
-.footer-nav-section h4 {
-    color: var(--primary-red);
-    font-size: 16px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.footer-list {
-    list-style: none;
-}
-
-.footer-list li {
-    margin-bottom: 12px;
-}
-
-.footer-list a {
-    color: #ecf0f1;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-    font-weight: 400;
-}
-
-.footer-list a:hover {
-    color: var(--primary-red);
-    padding-left: 5px;
-}
-
-.social-links {
-    margin-top: 20px;
-    display: flex;
-    gap: 15px;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 12px;
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: 0.3s;
-}
-
-.social-links a:hover {
-    background: var(--primary-red);
-    border-color: var(--primary-red);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 12px;
-    color: #7f8c8d;
-}
-
-/* بهینه‌سازی برای موبایل */
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
+    nav { padding: 15px 5%; }
+    .nav-menu { display: none; } /* نیاز به JS برای باز کردن */
     
-    .footer-tagline {
-        margin: 0 auto;
+    .article-container { width: 95%; padding: 20px; }
+    
+    .mid-img, .big-img, .small-img, .tall-img { 
+        width: 100%; 
+        float: none; 
+        margin: 20px 0; 
     }
 
-    .social-links {
-        justify-content: center;
-    }
+    .footer-container { grid-template-columns: 1fr; text-align: center; }
 }
-
-.main-content {
-    padding: 40px 10%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-/* استایل بخش هیرو */
-.hero-container {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 50px;
-    background: #fff;
-    border: 1px solid #eee;
-}
-
-.hero-image-box {
-    flex: 2; /* فضای بیشتر برای عکس */
-    height: 450px;
-}
-
-.hero-image-box img {
-    width: 100%; height: 100%; object-fit: cover;
-}
-
-.hero-text-box {
-    flex: 1; /* فضای کمتر برای متن */
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-text-box h1 {
-    font-size: 32px;
-    margin: 15px 0;
-    color: var(--deep-navy);
-}
-
-/* استایل هیرو (بخش بالا) */
-.article-hero {
-    display: flex;
-    border: 2px solid #000; /* کادر مشکی طبق طرح */
-    margin-bottom: 40px;
-}
-
-.hero-frame {
-    flex: 1.5;
-    height: 400px; /* ارتفاع ثابت برای هیرو */
-    border-right: 2px solid #000;
-}
-
-.hero-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* جلوگیری از تغییر فرم عکس */
-}
-
-.hero-text-frame {
-    flex: 1;
-    padding: 30px;
-}
-
-/* استایل ردیف‌های لیست عمودی */
-.feed-section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-
-.feed-photo-frame {
-    flex: 0 0 200px; /* عرض ثابت برای باکس عکس */
-    border-right: 2px solid #000;
-}
-
-.feed-photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.feed-text-frame {
-    flex: 1;
-    padding: 20px;
-}
-
-/* استایل بخش گرید */
-.articles-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.grid-card {
-    background: #fff;
-    border: 1px solid #eee;
-    transition: 0.3s;
-}
-
-.grid-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.card-img {
-    height: 250px;
-}
-
-.card-img img {
-    width: 100%; height: 100%; object-fit: cover;
-}
-
-.card-content {
-    padding: 20px;
-}
-
-/* بهینه‌سازی برای موبایل */
-@media (max-width: 992px) {
-    .hero-container { flex-direction: column; }
-    .articles-grid { grid-template-columns: 1fr; }
-    .main-content { padding: 20px 5%; }
-}
-
-/* ۱. کانتینر اصلی مقاله که همه چیز را وسط نگه می‌دارد */
-.article-body {
-    max-width: 800px; /* عرض استاندارد برای مطالعه راحت مقاله */
-    margin: 40px auto;
-    padding: 0 20px;
-    font-family: 'Inter', sans-serif;
-    line-height: 1.8;
-    color: #333;
-}
-
-/* ۲. کلاس عمومی برای کارت‌های عکس دار */
-.content-block {
-    margin-bottom: 50px; /* فاصله بین پاراگراف‌ها و بخش‌های مختلف */
-    display: block;
-    width: 100%;
-}
-
-/* ۳. استایل عکس‌ها (بدون کادر جدولی) */
-.content-block img {
-    width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 20px;
-    border-radius: 4px; /* یک گردی خیلی ملایم */
-}
-
-/* ۴. استایل تیترها داخل مقاله */
-.article-body h1 { font-size: 36px; color: var(--deep-navy); margin-bottom: 30px; }
-.article-body h2 { font-size: 28px; color: var(--deep-navy); margin-top: 40px; }
-
-/* ۵. کلاس‌های اندازه برای کنترل عرض عکس (اختیاری) */
-.w-full { width: 100%; }
-.w-medium { width: 70%; margin-left: auto; margin-right: auto; }
