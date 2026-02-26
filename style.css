@@ -21,6 +21,7 @@ body {
 }
 
 /* ۲. ناوبری و هدر (Header) */
+/* ۲. ناوبری و هدر (Header) */
 nav { 
     display: flex; 
     justify-content: space-between; 
@@ -34,22 +35,29 @@ nav {
     z-index: 1000;
 }
 
-.logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-.logo-img { height: 40px; width: auto; }
-.logo-text { font-size: 22px; font-weight: 700; color: var(--deep-navy); letter-spacing: -0.5px; }
-.logo-text span { color: var(--primary-red); }
+.menu-toggle {
+    display: none; /* مخفی در دسکتاپ */
+}
 
-nav ul { display: flex; list-style: none; }
-nav ul li { margin-left: 30px; }
-nav ul li a { 
+/* نام کلاس را به nav-list تغییر دادیم تا با موبایل یکی شود */
+.nav-list { 
+    display: flex; 
+    list-style: none; 
+}
+
+.nav-list li { margin-left: 30px; }
+
+.nav-list li a { 
     text-decoration: none; 
     color: var(--deep-navy); 
     font-size: 13px; 
     font-weight: 600; 
     text-transform: uppercase;
     transition: 0.3s; 
+    position: relative;
 }
-nav ul li a:hover, nav ul li a.active { color: var(--primary-red); }
+
+.nav-list li a:hover, .nav-list li a.active { color: var(--primary-red); }
 
 /* ۳. ساختار اصلی مقاله (Single Column) */
 .article-container { 
@@ -60,6 +68,11 @@ nav ul li a:hover, nav ul li a.active { color: var(--primary-red); }
     border-radius: 12px; 
     box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
 }
+
+.logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-img { height: 40px; width: auto; }
+.logo-text { font-size: 22px; font-weight: 700; color: var(--deep-navy); letter-spacing: -0.5px; }
+.logo-text span { color: var(--primary-red); }
 
 .article-header { margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 20px; }
 .article-title { font-size: 32px; color: var(--deep-navy); margin-bottom: 10px; }
@@ -136,36 +149,15 @@ nav ul li a:hover, nav ul li a.active { color: var(--primary-red); }
 /* ۸. واکنش‌گرایی (Mobile) */
 /* در بخش موبایل (Media Query) مطمئن شوید نام کلاس با HTML شما یکی است */
 @media (max-width: 768px) {
-    /* ۱. مخفی کردن منوی اصلی و تنظیم موقعیت آن */
-    .nav-list {
-        position: fixed;
-        right: -100%; /* منو کاملاً خارج از صفحه قرار می‌گیرد */
-        top: 0;
-        flex-direction: column;
-        background-color: #ffffff;
-        width: 70%; /* عرض منوی موبایل */
-        height: 100vh; /* تمام ارتفاع صفحه */
-        text-align: center;
-        transition: 0.4s ease-in-out;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        padding-top: 80px;
-        display: flex !important; /* برای اطمینان از اعمال Flex */
-        z-index: 999;
-    }
+    nav { padding: 15px 5%; }
 
-    /* ۲. وقتی کلاس active توسط جاوااسکریپت اضافه شد */
-    .nav-list.active {
-        right: 0; /* منو وارد صفحه می‌شود */
-    }
-
-    /* ۳. نمایش دکمه همبرگری در موبایل */
+    /* استایل دکمه همبرگری */
     .menu-toggle {
         display: flex !important;
         flex-direction: column;
         gap: 5px;
         cursor: pointer;
-        z-index: 1000;
-        position: relative;
+        z-index: 1001;
     }
 
     .bar {
@@ -175,15 +167,40 @@ nav ul li a:hover, nav ul li a.active { color: var(--primary-red); }
         transition: 0.4s;
     }
 
-    /* انیمیشن تبدیل به X */
+    /* استایل لیست منو در موبایل */
+    .nav-list {
+        position: fixed;
+        right: -100%; /* مخفی کردن منو */
+        top: 0;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 70%; 
+        height: 100vh;
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding-top: 80px;
+        z-index: 1000;
+    }
+
+    .nav-list.active {
+        right: 0; /* نمایش منو */
+    }
+
+    .nav-list li {
+        margin: 20px 0;
+        margin-left: 0; /* حذف فاصله دسکتاپ */
+    }
+
+    /* انیمیشن X */
     .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
-    /* حذف فاصله‌های اضافی لیست در موبایل */
-    .nav-list li {
-        margin: 20px 0;
-    }
+    /* تنظیمات سایر اجزا در موبایل */
+    .article-container { width: 95%; padding: 20px; }
+    .mid-img, .big-img, .small-img, .tall-img { width: 100%; float: none; margin: 20px 0; }
+    .footer-container { grid-template-columns: 1fr; text-align: center; }
 }
 
     .footer-container { grid-template-columns: 1fr; text-align: center; }
