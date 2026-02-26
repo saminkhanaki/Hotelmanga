@@ -171,3 +171,32 @@ nav ul li a:hover { color: var(--primary-red); }
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 }
+
+/* استایل لینک فعال */
+nav ul li a.active {
+    color: var(--primary-red); /* تغییر رنگ متن به قرمز */
+    position: relative;
+}
+
+/* اضافه کردن یک خط کوچک زیر لینک فعال برای زیبایی بیشتر (اختیاری) */
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--primary-red);
+    bottom: -5px;
+    left: 0;
+}
+
+/* در نسخه موبایل */
+@media (max-width: 768px) {
+    nav ul li a.active {
+        background-color: rgba(230, 57, 70, 0.1); /* یک پس‌زمینه بسیار ملایم قرمز */
+        padding: 5px 15px;
+        border-radius: 5px;
+    }
+    nav ul li a.active::after {
+        display: none; /* خط زیرین در موبایل حذف شود تا شلوغ نشود */
+    }
+}
