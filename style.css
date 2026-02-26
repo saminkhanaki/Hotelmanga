@@ -92,3 +92,52 @@ nav ul li a:hover { color: var(--primary-red); }
 @media (max-width: 768px) {
     .content-grid { grid-template-columns: 1fr; }
 }
+
+/* تنظیمات دکمه همبرگری */
+.menu-toggle {
+    display: none; /* در دسکتاپ مخفی است */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--deep-navy);
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+/* استایل مخصوص موبایل */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        z-index: 100;
+    }
+
+    .nav-list {
+        position: fixed;
+        right: -100%; /* منو در حالت عادی خارج از صفحه است */
+        top: 70px;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        padding: 40px 0;
+    }
+
+    .nav-list.active {
+        right: 0; /* با کلیک وارد صفحه می‌شود */
+    }
+
+    .nav-list li {
+        margin: 15px 0;
+    }
+
+    /* انیمیشن تبدیل همبرگر به X */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+}
