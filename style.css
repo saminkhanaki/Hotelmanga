@@ -108,6 +108,20 @@ nav ul li a:hover { color: var(--primary-red); }
         display: flex !important;
     }
 
+    /* کانتینر اصلی */
+.article-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* استایل هیرو (بخش بالا) */
+.article-hero {
+    display: flex;
+    border: 2px solid #000; /* کادر مشکی طبق طرح */
+    margin-bottom: 40px;
+}
+
     /* ۳. تنظیم هدر برای لوگو و دکمه */
     nav {
         position: relative;
@@ -345,6 +359,82 @@ nav ul li a.active::after {
     font-size: 32px;
     margin: 15px 0;
     color: var(--deep-navy);
+}
+
+/* استایل هیرو (بخش بالا) */
+.article-hero {
+    display: flex;
+    border: 2px solid #000; /* کادر مشکی طبق طرح */
+    margin-bottom: 40px;
+}
+
+.hero-frame {
+    flex: 1.5;
+    height: 400px; /* ارتفاع ثابت برای هیرو */
+    border-right: 2px solid #000;
+}
+
+.hero-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* جلوگیری از تغییر فرم عکس */
+}
+
+.hero-text-frame {
+    flex: 1;
+    padding: 30px;
+}
+
+/* استایل ردیف‌های لیست عمودی */
+.feed-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feed-row {
+    display: flex;
+    border: 2px solid #000; /* کادر برای هر آیتم */
+    min-height: 180px;
+    align-items: stretch;
+}
+
+.feed-photo-frame {
+    flex: 0 0 200px; /* عرض ثابت برای باکس عکس */
+    border-right: 2px solid #000;
+}
+
+.feed-photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feed-text-frame {
+    flex: 1;
+    padding: 20px;
+}
+
+/* استایل مخصوص ردیف بدون عکس */
+.feed-row.text-only {
+    justify-content: center;
+}
+
+.feed-row.text-only .feed-text-frame {
+    text-align: left;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 768px) {
+    .article-hero, .feed-row {
+        flex-direction: column;
+    }
+    .hero-frame, .feed-photo-frame {
+        border-right: none;
+        border-bottom: 2px solid #000;
+        width: 100%;
+        height: 250px;
+    }
 }
 
 /* استایل بخش گرید */
