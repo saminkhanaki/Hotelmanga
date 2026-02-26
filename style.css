@@ -89,48 +89,41 @@ nav ul li a:hover { color: var(--primary-red); }
     font-size: 1.2rem;}
 
 @media screen and (max-width: 768px) {
-    /* ۱. مخفی کردن اجباری لیست منو در حالت عادی */
-    .nav-list {
-        display: none !important; /* این خط اجازه نمایش به منو در هدر را نمی‌دهد */
-        position: fixed;
-        left: 0;
-        top: 60px;
-        width: 100%;
-        background: white;
+    /* ۱. مخفی کردن قطعی منوی متنی در هدر */
+    .nav-menu {
+        display: none !important; 
         flex-direction: column;
+        position: absolute;
+        top: 100%; /* دقیقاً زیر هدر باز شود */
+        left: 0;
+        width: 100%;
+        background-color: #fff;
         padding: 20px 0;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        border-bottom: 2px solid var(--primary-red);
         z-index: 1000;
     }
 
-    /* ۲. نمایش منو فقط وقتی همبرگری کلیک شده است */
-    .nav-list.active {
+    /* ۲. وقتی همبرگری کلیک شد */
+    .nav-menu.active {
         display: flex !important;
     }
 
-    /* ۳. تنظیم چیدمان هدر موبایل */
+    /* ۳. تنظیم هدر برای لوگو و دکمه */
     nav {
+        position: relative;
         justify-content: space-between !important;
-        padding: 10px 15px !important;
-    }
-
-    .logo-container {
-        margin-right: auto !important;
+        padding: 10px 20px !important;
     }
 
     .menu-toggle {
-        display: flex !important; /* نمایش دکمه همبرگری */
-        order: 2;
+        display: flex !important;
     }
 
-    /* ۴. استایل لینک‌های داخل منوی باز شده */
-    .nav-list li {
-        width: 100%;
+    .nav-menu li {
         text-align: center;
-        margin: 10px 0 !important;
+        margin: 15px 0;
     }
 }
-
 /* تنظیمات دکمه همبرگری */
 .menu-toggle {
     display: none; /* در دسکتاپ مخفی است */
