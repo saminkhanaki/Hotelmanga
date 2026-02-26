@@ -91,36 +91,30 @@ nav ul li a:hover { color: var(--primary-red); }
 
 @media (max-width: 768px) {
     /* ۱. ایجاد فاصله از لبه‌های گوشی */
-    nav {
-        padding: 15px 5%; /* فاصله ۵ درصدی از چپ و راست */
-    }
+    nav {padding: 15px 5%; /* فاصله ۵ درصدی از چپ و راست */}
 
     /* ۲. مدیریت فاصله لوگو و متن */
-    .logo-container {
-        gap: 8px; /* کاهش فاصله بین تصویر لوگو و متن در موبایل */
-        display: flex;
-        align-items: center;
-    }
+    .logo-container {gap: 8px; /* کاهش فاصله بین تصویر لوگو و متن در موبایل */display: flex; align-items: center;}
 
-    .logo-img {
-        height: 32px; /* کمی کوچک‌تر کردن لوگو برای موبایل */
-    }
+    .logo-img {height: 32px; /* کمی کوچک‌تر کردن لوگو برای موبایل */}
 
-    .logo-text {
-        font-size: 18px; /* کوچک‌تر کردن فونت برای جلوگیری از شلوغی */
-    }
+    .logo-text {font-size: 18px; /* کوچک‌تر کردن فونت برای جلوگیری از شلوغی */}
 
     /* ۳. تنظیم موقعیت دکمه همبرگری */
-    .menu-toggle {
-        display: flex;
-        margin-left: auto; /* این باعث می‌شود منو به راست بچسبد و از لوگو فاصله بگیرد */
-        padding: 5px; /* فضای کلیک بیشتر */
-    }
+    .menu-toggle {display: flex; margin-left: auto; /* این باعث می‌شود منو به راست بچسبد و از لوگو فاصله بگیرد */padding: 5px; /* فضای کلیک بیشتر */}
 
     /* ۴. تنظیم منوی بازشونده */
-    .nav-list {
-        top: 62px; /* متناسب با ارتفاع جدید هدر */
-    }
+    .nav-list {top: 62px; /* متناسب با ارتفاع جدید هدر */}
+    
+    /* ۱. حذف خط زیرین لینک فعال در هدر موبایل (زمانی که منو بسته است) */
+    nav ul li a.active::after {display: none;}
+
+    /* ۲. استایل لینک فعال فقط در زمانی که منوی همبرگری باز است */
+    .nav-list.active li a.active {color: var(--primary-red);background-color: rgba(230, 57, 70, 0.05); /* یک هاله بسیار کمرنگ */
+        padding: 10px 20px;border-radius: 8px; display: block; /* برای اینکه پس‌زمینه کل عرض منو را بگیرد */ width: fit-content;margin: 0 auto; /* وسط‌چین کردن در منو */}
+
+    /* ۳. اطمینان از خلوت بودن هدر در حالت عادی */
+    nav {padding: 10px 5%;}
 }
 
 /* تنظیمات دکمه همبرگری */
