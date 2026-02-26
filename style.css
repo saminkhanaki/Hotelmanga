@@ -205,3 +205,37 @@ nav {
     .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
+
+/* کلاس‌های محدودکننده ابعاد عکس در مقاله */
+
+/* عکس‌های افقی (Landscape) - معمولاً ۵۰ تا ۶۰ درصد عرض متن */
+.img-landscape {
+    width: 60%;
+    height: 300px; /* ارتفاع ثابت برای نظم بیشتر */
+    object-fit: cover; /* جلوگیری از دفرمه شدن عکس */
+    border-radius: 12px;
+    margin: 10px 25px 20px 0; /* فاصله از سمت راست و پایین برای چرخش متن */
+    float: left; /* جادوی چرخیدن متن دور عکس */
+}
+
+/* عکس‌های عمودی (Portrait) - عرض کمتر برای اینکه متن فضای کافی داشته باشد */
+.img-portrait {
+    width: 35%;
+    height: 450px; /* ارتفاع بیشتر برای عکس‌های عمودی */
+    object-fit: cover;
+    border-radius: 12px;
+    margin: 10px 25px 20px 0;
+    float: left;
+}
+
+/* اگر بخواهی عکس سمت راست باشد و متن سمت چپ */
+.img-right {
+    float: right;
+    margin: 10px 0 20px 25px;
+}
+
+/* برای اینکه بعد از اتمام عکس، پاراگراف بعدی حتماً از خط جدید شروع شود */
+.clear {
+    clear: both;
+    display: block;
+}
