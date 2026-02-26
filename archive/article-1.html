@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Title - HotelManga</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"> </head>
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="../index.html" class="logo-text">HOTEL<span>MANGA</span></a>
+        </div>
+        <div class="menu-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../explore.html">Explore</a></li>
+            <li><a href="../lifestyle.html">Lifestyle</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <article class="single-article-container">
+            
+            <header class="post-header">
+                <span class="tag">Lifestyle</span>
+                <h1>The Hidden Architecture of Tokyo's Manga Cafes</h1>
+                <div class="post-meta">By Admin • Feb 27, 2026</div>
+            </header>
+
+            <div class="post-hero">
+                <img src="../assets/hero-main.webp" alt="Tokyo Manga Cafe">
+            </div>
+
+            <div class="post-content">
+                <p>اینجا پاراگراف اول مقاله شما قرار می‌گیرد. متنی جذاب برای شروع که خواننده را همراه کند.</p>
+
+                <div class="post-gallery">
+                    <img src="../assets/article-1.jpg" alt="Gallery Image 1">
+                    <img src="../assets/article-2.jpg" alt="Gallery Image 2">
+                </div>
+
+                <h2>Why Space Matters in Manga Culture</h2>
+                <p>در این بخش می‌توانید در مورد جزئیات بیشتر بنویسید. پاراگراف‌ها به گونه‌ای تنظیم شده‌اند که فاصله کافی برای خواندن راحت داشته باشند.</p>
+
+                <div class="post-full-img">
+                    <img src="../assets/article-3.jpg" alt="Architecture Detail">
+                    <p class="img-caption">Architectural details often found in modern Akihabara buildings.</p>
+                </div>
+
+                <p>ادامه متن مقاله و تحلیل‌های شما...</p>
+
+                <div class="post-content-img-box">
+                    <img src="../assets/hero-main.webp" alt="Final Detail">
+                </div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        </footer>
+
+    <script>
+        // اسکریپت منو همبرگری که قبلاً درست کردیم
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.nav-list');
+        menuToggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+            menuToggle.classList.toggle('is-active');
+        });
+    </script>
+</body>
+</html>
