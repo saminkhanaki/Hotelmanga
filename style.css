@@ -103,11 +103,37 @@ nav ul li a:hover { color: var(--primary-red); }
     /* ۳. تنظیم موقعیت دکمه همبرگری */
     .menu-toggle {display: flex; margin-left: auto; /* این باعث می‌شود منو به راست بچسبد و از لوگو فاصله بگیرد */padding: 5px; /* فضای کلیک بیشتر */}
 
+    .nav-list {display: none; /* این خط باعث می‌شود منوهای Home و Stay در حالت عادی غیب شوند */
+        flex-direction: column; position: fixed; right: 0; top: 60px; /* تنظیم ارتفاع نسبت به هدر شما */
+        background-color: white; width: 100%; height: auto; box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        z-index: 999; padding: 20px 0;}
+
     /* ۴. تنظیم منوی بازشونده */
     .nav-list {top: 62px; /* متناسب با ارتفاع جدید هدر */}
     
     /* ۱. حذف خط زیرین لینک فعال در هدر موبایل (زمانی که منو بسته است) */
     nav ul li a.active::after {display: none;}
+
+    /* ۲. نمایش منو فقط وقتی کلاس active اضافه می‌شود (با جاوااسکریپت) */
+    .nav-list.active {display: flex; /* فقط وقتی همبرگری زده شد ظاهر شود */}
+
+    /* ۳. تنظیم دکمه همبرگری که جای درستی قرار بگیرد */
+    .menu-toggle {display: flex; order: 3; /* انتقال به آخرین جایگاه سمت راست */}
+
+    /* ۵. استایل لینک فعال فقط در داخل منوی باز شده */
+    .nav-list li a.active {
+        color: var(--primary-red);
+        font-weight: bold;
+        background-color: #fff1f2; /* یک هاله قرمز بسیار ملایم */
+        width: 100%;
+        display: block;
+        padding: 10px 0;
+    }
+    
+    /* حذف خط زیرین لینک فعال در موبایل برای شلوغ نشدن */
+    .nav-list li a.active::after {
+        display: none;
+    }
 
     /* ۲. استایل لینک فعال فقط در زمانی که منوی همبرگری باز است */
     .nav-list.active li a.active {color: var(--primary-red);background-color: rgba(230, 57, 70, 0.05); /* یک هاله بسیار کمرنگ */
