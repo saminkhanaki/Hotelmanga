@@ -208,61 +208,70 @@ nav {
 
 //************************************************************طراحی صفحه اول**********************************************************//
 //**********************************************************************************************************************************//
-/* کانتینر اصلی صفحه اول */
+/* کانتینر اصلی */
 .main-content {
     max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
+    margin: 50px auto;
+    padding: 0 25px;
 }
 
-/* ردیف هیرو: عکس سمت چپ، متن سمت راست با کادر مشکی */
+/* ردیف هیرو (HERO ROW) - بدون خط، با سایه نرم */
 .hero-row {
     display: flex;
-    border: 3px solid #000; /* کادر ضخیم مشکی */
     background: #fff;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
+    border-radius: 16px; /* لبه‌های گرد برای حس مدرن */
     overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05); /* سایه بسیار ملایم */
+    transition: transform 0.3s ease;
+}
+
+.hero-row:hover {
+    transform: translateY(-5px); /* افکت حرکت ملایم هنگام هاور */
 }
 
 .hero-image {
-    flex: 1.5; /* سهم بیشتر برای عکس */
-    border-right: 3px solid #000; /* خط جداکننده وسط */
-    height: 450px;
+    flex: 1.6;
+    height: 500px;
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .hero-text {
     flex: 1;
-    padding: 40px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fff;
 }
 
-/* گرید سه تایی پایین */
+/* گرید سه تایی پایین (ARTICLES GRID) */
 .articles-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* دقیقا ۳ ستون */
-    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 .grid-card {
-    border: 3px solid #000; /* کادر مشکی دور هر کارت */
     background: #fff;
-    display: flex;
-    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.03); /* یک خط بسیار بسیار محو */
+    transition: all 0.3s ease;
+}
+
+.grid-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
 .card-img-box {
-    border-bottom: 3px solid #000; /* خط زیر عکس */
-    height: 250px;
+    height: 220px;
 }
 
 .card-img-box img {
@@ -272,24 +281,32 @@ nav {
 }
 
 .card-content {
-    padding: 20px;
+    padding: 25px;
 }
 
-/* استایل متون داخل کارت */
-.hero-text h1 { font-size: 32px; margin-bottom: 15px; color: var(--deep-navy); }
-.grid-card h3 { font-size: 20px; margin: 10px 0; color: var(--deep-navy); }
-
-/* دکمه Continue Reading */
-.btn-read {
+/* تگ‌ها و دکمه‌ها */
+.tag, .card-tag {
     color: var(--primary-red);
+    font-size: 11px;
+    letter-spacing: 1.5px;
     font-weight: 700;
-    text-decoration: none;
     text-transform: uppercase;
-    font-size: 14px;
-    margin-top: 15px;
+    margin-bottom: 12px;
 }
-.btn-read:hover { text-decoration: underline; }
 
+.btn-read {
+    color: var(--deep-navy);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-red); /* خط زیر دکمه به جای دکمه کامل */
+    align-self: flex-start;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+.btn-read:hover {
+    color: var(--primary-red);
+}
 /* ریسپانسیو موبایل */
 @media (max-width: 992px) {
     .hero-row { flex-direction: column; }
