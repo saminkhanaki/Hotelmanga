@@ -205,3 +205,96 @@ nav {
 
     .footer-container { grid-template-columns: 1fr; text-align: center; }
 }
+
+//************************************************************طراحی صفحه اول**********************************************************//
+//**********************************************************************************************************************************//
+/* تنظیمات کانتینر اصلی */
+.main-content {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* استایل ردیف هیرو (HERO ROW) */
+.hero-row {
+    display: flex;
+    border: 2px solid #000; /* کادر مشکی طبق طرح */
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    flex: 2; /* فضای بیشتر برای عکس */
+    border-right: 2px solid #000;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-text {
+    flex: 1; /* فضای کمتر برای متن */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* استایل گرید سه تایی (GRID SECTION) */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* تقسیم به ۳ ستون مساوی */
+    gap: 20px;
+}
+
+.grid-card {
+    border: 2px solid #000; /* کادر مشکی دور هر کارت */
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-box {
+    border-bottom: 2px solid #000;
+    height: 250px;
+}
+
+.card-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+/* استایل تگ‌ها و دکمه */
+.tag, .card-tag {
+    color: var(--primary-red);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.btn-read {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--deep-navy);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+/* ریسپانسیو موبایل */
+@media (max-width: 992px) {
+    .hero-row { flex-direction: column; }
+    .hero-image { border-right: none; border-bottom: 2px solid #000; }
+    .articles-grid { grid-template-columns: 1fr; } /* کارت‌ها در موبایل زیر هم می‌افتند */
+}
+//**********************************************************************************************************************************//
+//**********************************************************************************************************************************//
