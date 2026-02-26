@@ -206,6 +206,26 @@ nav {
     .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 }
 
+/* کانتینر مقاله - متمرکز و با عرض بهینه */
+.single-article-container {
+    max-width: 800px; /* عرض ایده‌آل برای خوانایی (تقریباً 70% دسکتاپ) */
+    margin: 40px auto; /* وسط‌چین کردن و فاصله از بالا و پایین */
+    background: var(--white);
+    padding: 50px 60px; /* فاصله داخلی متن از لبه‌های کادر */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    line-height: 1.8; /* فاصله مناسب بین خطوط برای راحتی چشم */
+}
+
+/* اصلاح برای نمایشگرهای کوچک (تبلت و موبایل) */
+@media (max-width: 850px) {
+    .single-article-container {
+        max-width: 95%; /* در موبایل عرض بیشتری می‌گیرد تا فضا هدر نرود */
+        padding: 30px 20px;
+        margin: 20px auto;
+    }
+}
+
 /* کلاس‌های محدودکننده ابعاد عکس در مقاله */
 
 /* عکس‌های افقی (Landscape) - معمولاً ۵۰ تا ۶۰ درصد عرض متن */
