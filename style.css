@@ -10,6 +10,51 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* کانتینر سفید مرکزی که مقاله را نگه می‌دارد */
+.article-container { 
+    max-width: 850px; 
+    margin: 40px auto; 
+    background: white; 
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+}
+
+/* تصویر بزرگ اول مقاله یا بین بخش‌های مهم */
+.hero-img { 
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+    margin: 20px 0 30px 0; 
+    display: block; 
+}
+
+/* تصویر متوسط که متن دور آن می‌پیچد (سمت چپ) */
+.mid-img { 
+    width: 45%; 
+    float: left; 
+    margin: 0 25px 20px 0; 
+    border-radius: 8px; 
+}
+
+/* باکس برجسته برای نکات (مثل لیست نهایی یا بایدها و نبایدها) */
+.highlight-box { 
+    background: #f1f5f9; 
+    border-radius: 12px; 
+    padding: 30px; 
+    margin: 30px 0; 
+    border-left: 6px solid var(--accent); /* خط رنگی عمودی برای تاکید */
+}
+
+/* برای اینکه بعد از عکس شناور، محتوای بعدی به درستی از سر خط شروع شود */
+.clear { clear: both; }
+
+/* تنظیم فواصل پاراگراف‌ها */
+.article-body p { 
+    margin-bottom: 25px; 
+    text-align: justify; 
+}
+
 body { 
     font-family: 'Inter', sans-serif; 
     background-color: var(--bg-paper); 
