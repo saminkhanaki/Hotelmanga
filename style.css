@@ -108,15 +108,7 @@ nav ul li a:hover { color: var(--primary-red); }
         display: flex !important;
     }
 
-    /* کانتینر اصلی */
-.article-container {
-    max-width: 900px; /* کمی باریک‌تر برای خوانایی بهتر متن مقاله */
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 0; /* حذف فاصله خالی برای چسباندن بخش‌ها */
-}
+
 /* استایل هیرو (بخش بالا) */
 .article-hero {
     display: flex;
@@ -394,12 +386,6 @@ nav ul li a.active::after {
     gap: 20px;
 }
 
-.feed-row {
-    display: flex;
-    border: 2px solid #000; /* کادر برای هر آیتم */
-    min-height: 180px;
-    align-items: stretch;
-}
 
 .feed-photo-frame {
     flex: 0 0 200px; /* عرض ثابت برای باکس عکس */
@@ -415,28 +401,6 @@ nav ul li a.active::after {
 .feed-text-frame {
     flex: 1;
     padding: 20px;
-}
-
-/* استایل مخصوص ردیف بدون عکس */
-.feed-row.text-only {
-    justify-content: center;
-}
-
-.feed-row.text-only .feed-text-frame {
-    text-align: left;
-}
-
-/* ریسپانسیو برای موبایل */
-@media (max-width: 768px) {
-    .article-hero, .feed-row {
-        flex-direction: column;
-    }
-    .hero-frame, .feed-photo-frame {
-        border-right: none;
-        border-bottom: 2px solid #000;
-        width: 100%;
-        height: 250px;
-    }
 }
 
 /* استایل بخش گرید */
@@ -476,97 +440,3 @@ nav ul li a.active::after {
     .main-content { padding: 20px 5%; }
 }
 
-
-/* کانتینر اصلی برای جلوگیری از چسبیدن به چپ */
-.article-container {
-    max-width: 1100px;
-    margin: 40px auto; /* وسط‌چین کردن کل بدنه */
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
-
-/* استایل پایه تمام ردیف‌ها */
-/* استایل پایه ردیف‌ها */
-.post-row {
-    display: flex;
-    width: 100%;
-    padding: 30px 0; /* ایجاد فاصله داخلی به جای فاصله خارجی */
-    border-bottom: 1px solid #eee; /* خط جداکننده بسیار کمرنگ بین بخش‌ها */
-    align-items: flex-start; /* تراز از بالا برای حس متنی */
-}
-/* حذف خط آخرین آیتم */
-.post-row:last-child {
-    border-bottom: none;
-}
-.row-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    /* حذف گردی لبه‌ها برای حس کلاسیک مجله */
-    border-radius: 0; 
-}
-/* تغییر رنگ تیترها برای کنتراست بهتر */
-.row-content h1, .row-content h2, .row-content h3 {
-    color: var(--deep-navy);
-    margin-top: 0;
-    line-height: 1.3;
-}
-
-.row-content p {
-    color: #444;
-    line-height: 1.7;
-    margin-bottom: 0;
-}
-.row-content {
-    flex: 1;
-    padding-left: 30px; /* فاصله متن از عکس */
-}
-
-.row-img {
-    flex-shrink: 0;
-}
-
-.row-img { border-right: 2px solid #000; }
-.row-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.row-content { flex: 1; padding: 30px; display: flex; flex-direction: column; justify-content: center; }
-
-/* --- سیستم کلاس‌های اندازه --- */
-
-/* 1. Full: عکس بالا، متن پایین */
-.post-row.full {
-    flex-direction: column;
-}
-.post-row.full .row-img {
-    width: 100%;
-    height: 500px; /* عرض کامل با ارتفاع بلند */
-    border-right: none;
-    border-bottom: 2px solid #000;
-}
-
-/* 2. Big (همان سایز هیرو شما) */
-.post-row.big { height: 400px; }
-.post-row.big .row-img { flex: 0 0 60%; } /* عکس ۶۰٪ عرض کادر را می‌گیرد */
-
-/* 3. Medium (60% of Big height = 240px) */
-.post-row.medium { height: 240px; }
-.post-row.medium .row-img { flex: 0 0 350px; }
-
-/* 4. Small (40% of Big height = 160px) */
-.post-row.small { height: 160px; }
-.post-row.small .row-img { flex: 0 0 200px; }
-
-/* حالت بدون عکس */
-.post-row.no-image { height: auto; min-height: 120px; }
-.post-row.no-image .row-content { text-align: left; }
-
-/* ریسپانسیو موبایل */
-@media (max-width: 768px) {
-    .post-row, .post-row.big, .post-row.medium, .post-row.small { 
-        flex-direction: column; 
-        height: auto; 
-    }
-    .row-img { width: 100%; height: 250px !important; border-right: none; border-bottom: 2px solid #000; }
-}
