@@ -9,16 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../style.css">
-<style>
-     /* استایل کانتینر مقاله */
-        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
-        .article-header { border-bottom: 2px solid #f1f5f9; margin-bottom: 25px; padding-bottom: 10px; }
-        .article-title { font-family: 'Playfair Display', serif; font-size: 2.3rem; color: var(--primary); line-height: 1.2; margin: 15px 0; }
-        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
-      /* استایل تصاویر بر اساس درخواست قبلی */
-        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-        .mid-img { width: 45%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
-</style>
+
 </head>
 
 <body>
@@ -50,26 +41,38 @@
         menu.classList.toggle('is-active');
         menuLinks.classList.toggle('active'); });
     </script>
-<main class="article-body">
-    <h1>[Article Main Title]</h1>
-
-    <div class="content-block">
-        <img src="../assets/hero-main.jpg" alt="Description">
-        <p>اینجا شروع متن مقاله شماست. دیگر عکسی در کنار متن نیست و همه چیز زیر هم با چیدمانی تمیز قرار می‌گیرد.</p>
-    </div>
-
-    <div class="content-block">
-        <h2>Sub-headline of the Story</h2>
-        <p>این همان بخشی است که عکس ندارد. خیلی ساده تیتر و متن را می‌نویسید بدون اینکه نگران کادر یا به‌هم‌ریختگی باشید.</p>
-    </div>
-
-    <div class="content-block w-medium">
-        <img src="../assets/article-1.jpg" alt="Secondary Image">
-        <p>این هم یک عکس با اندازه متوسط (۷۰٪ عرض) که متن به زیبایی زیر آن قرار گرفته است.</p>
-    </div>
-</main>
-
+<main class="article-container">
     
+    <header class="article-header">
+        <h1 class="article-title">[Article Title]</h1>
+        <div class="meta">February 2026 • [Category]</div>
+    </header>
+
+    <img src="../assets/[image-1].jpg" alt="Hero" class="hero-img">
+    
+    <article class="article-body">
+        <p>مقدمه مقاله شما اینجا قرار می‌گیرد. متن به صورت کامل و یکپارچه در عرض کانتینر پخش می‌شود.</p>
+
+        <h2>[Sub-heading]</h2>
+        
+        <img src="../assets/[image-2].jpg" alt="Side Image" class="mid-img">
+        
+        <p>این متن به دلیل کلاس mid-img، در کنار عکس قرار می‌گیرد. این ساختار برای مقالاتی که می‌خواهی عکس و متن همزمان دیده شوند عالی است.</p>
+        
+        <p>ادامه متن که پس از اتمام ارتفاع عکس، به صورت خودکار به زیر آن هدایت می‌شود.</p>
+
+        <div class="clear"></div> <div class="highlight-box">
+            <h3>[Summary or Quick Tips]</h3>
+            <p>• Point One</p>
+            <p>• Point Two</p>
+        </div>
+
+        <h2>Conclusion</h2>
+        <p>بخش پایانی مقاله شما در اینجا قرار می‌گیرد.</p>
+    </article>
+
+</main>
+        
   
      <footer class="site-footer">
     <div class="footer-container">
