@@ -136,22 +136,53 @@ nav ul li a:hover, nav ul li a.active { color: var(--primary-red); }
 /* ۸. واکنش‌گرایی (Mobile) */
 /* در بخش موبایل (Media Query) مطمئن شوید نام کلاس با HTML شما یکی است */
 @media (max-width: 768px) {
+    /* ۱. مخفی کردن منوی اصلی و تنظیم موقعیت آن */
     .nav-list {
         position: fixed;
-        right: -100%; /* منو مخفی */
-        top: 70px;
+        right: -100%; /* منو کاملاً خارج از صفحه قرار می‌گیرد */
+        top: 0;
         flex-direction: column;
-        background-color: #fff;
-        width: 100%;
+        background-color: #ffffff;
+        width: 70%; /* عرض منوی موبایل */
+        height: 100vh; /* تمام ارتفاع صفحه */
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        padding: 40px 0;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding-top: 80px;
+        display: flex !important; /* برای اطمینان از اعمال Flex */
         z-index: 999;
     }
 
+    /* ۲. وقتی کلاس active توسط جاوااسکریپت اضافه شد */
     .nav-list.active {
-        right: 0; /* نمایش منو */
+        right: 0; /* منو وارد صفحه می‌شود */
+    }
+
+    /* ۳. نمایش دکمه همبرگری در موبایل */
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1000;
+        position: relative;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: var(--deep-navy);
+        transition: 0.4s;
+    }
+
+    /* انیمیشن تبدیل به X */
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    /* حذف فاصله‌های اضافی لیست در موبایل */
+    .nav-list li {
+        margin: 20px 0;
     }
 }
 
