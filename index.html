@@ -13,17 +13,33 @@
 <body>
     <nav>
         <div class="logo-container">
-            <img src="assets/logo.png" alt="Hotel Manga Logo" class="logo-img">
+            <img src="logo.png" alt="HM Logo" class="logo-img">
             <div class="logo-text">HOTEL<span>MANGA</span></div>
         </div>
-        <ul>
+    
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <ul class="nav-list">
             <li><a href="index.html">Home</a></li>
             <li><a href="stay.html">Stay</a></li>
             <li><a href="explore.html">Explore</a></li>
-            <li><a href="explore.html">Lifestyle</a></li>
+            <li><a href="lifestyle.html">Lifestyle</a></li>
         </ul>
     </nav>
+
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.nav-list');
+
+        menu.addEventListener('click', function() {
+        menu.classList.toggle('is-active');
+        menuLinks.classList.toggle('active'); });
+    </script>
     
-    </body>
+</body>
 
 </html>
