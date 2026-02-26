@@ -3,90 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HotelManga | Stay & Explore</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; color: #333; line-height: 1.6; background: #f9f9f9; }
-        
-        /* Navigation */
-        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 10%; background: #fff; border-bottom: 1px solid #eee; }
-        .logo { font-size: 24px; font-weight: 600; color: #222; }
-        nav ul { display: flex; list-style: none; }
-        nav ul li { margin-left: 30px; }
-        nav ul li a { text-decoration: none; color: #555; font-size: 14px; transition: 0.3s; }
-        nav ul li a:hover { color: #000; }
-
-        /* Hero Section */
-        .hero { position: relative; width: 80%; margin: 40px auto; height: 450px; border-radius: 15px; overflow: hidden; }
-        .hero img { width: 100%; height: 100%; object-fit: cover; }
-        .hero-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; background: linear-gradient(transparent, rgba(0,0,0,0.7)); color: #fff; }
-        .hero-overlay h1 { font-size: 32px; margin-bottom: 10px; }
-
-        /* Grid Section */
-        .content-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 80%; margin: 50px auto; }
-        .card { background: #fff; border-radius: 10px; overflow: hidden; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
-        .card img { width: 100%; height: 200px; object-fit: cover; }
-        .card-body { padding: 20px; }
-        .card-category { font-size: 12px; color: #ff4d4d; text-transform: uppercase; font-weight: 600; }
-        .card-title { font-size: 18px; margin: 10px 0; color: #222; }
-        
-        @media (max-width: 768px) {
-            .content-grid { grid-template-columns: 1fr; }
-            .hero { width: 95%; }
-        }
-    </style>
+    <title>HotelManga</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
     <nav>
-        <div class="logo">Hotel<span>Manga</span></div>
+        <div class="logo-container">
+            <img src="logo.png" alt="HM Logo" class="logo-img">
+            <div class="logo-text">HOTEL<span>MANGA</span></div>
+        </div>
         <ul>
-            <li><a href="#">Homepage</a></li>
-            <li><a href="#">Stay</a></li>
-            <li><a href="#">Explore</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stay.html">Stay</a></li>
+            <li><a href="explore.html">Explore</a></li>
         </ul>
     </nav>
+    
+    </body>
 
-    <section class="hero">
-        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80" alt="Featured Hotel">
-        <div class="hero-overlay">
-            <p style="font-size: 12px; text-transform: uppercase;">Featured Stay</p>
-            <h1>Discover the most serene hotels for your next escape</h1>
-        </div>
-    </section>
-
-    <main class="content-grid">
-        <article class="card">
-            <img src="https://images.unsplash.com/photo-1551882547-ff43c63efe56?auto=format&fit=crop&w=500&q=80" alt="Stay">
-            <div class="card-body">
-                <span class="card-category">Stay</span>
-                <h2 class="card-title">Top 10 Boutique Hotels in Tokyo</h2>
-                <p>Experience luxury and tradition in the heart of Japan...</p>
-            </div>
-        </article>
-
-        <article class="card">
-            <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=500&q=80" alt="Explore">
-            <div class="card-body">
-                <span class="card-category">Explore</span>
-                <h2 class="card-title">Hidden Gems: The Secret Beaches of Bali</h2>
-                <p>Go beyond the tourist trails and find your own paradise...</p>
-            </div>
-        </article>
-
-        <article class="card">
-            <img src="https://images.unsplash.com/photo-1506477331477-33d6d8b3dc85?auto=format&fit=crop&w=500&q=80" alt="Lifestyle">
-            <div class="card-body">
-                <span class="card-category">Lifestyle</span>
-                <h2 class="card-title">Sustainable Travel: How to Pack Light</h2>
-                <p>Essential tips for the eco-conscious modern traveler...</p>
-            </div>
-        </article>
-    </main>
-
-</body>
 </html>
