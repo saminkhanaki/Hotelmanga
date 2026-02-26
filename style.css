@@ -256,6 +256,7 @@ nav {
     flex-direction: column;
     justify-content: center;
 }
+.hero-text { background-color: var(--bg-paper); }
 
 /* افکت هاور برای هیرو */
 .hero-image:hover, .hero-text:hover {
