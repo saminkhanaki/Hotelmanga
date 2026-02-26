@@ -118,6 +118,26 @@
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
+
+    <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+        // باز و بسته کردن منو
+        navList.classList.toggle('active');
+        // تبدیل همبرگر به X
+        menuToggle.classList.toggle('is-active');
+    });
+
+    // بستن منو در صورت کلیک روی لینک‌ها
+    document.querySelectorAll('.nav-list li a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('active');
+            menuToggle.classList.remove('is-active');
+        });
+    });
+</script>
     
 </body>
 
