@@ -90,7 +90,37 @@ nav ul li a:hover { color: var(--primary-red); }
 }
 
 @media (max-width: 768px) {
-    .content-grid { grid-template-columns: 1fr; }
+    /* ۱. ایجاد فاصله از لبه‌های گوشی */
+    nav {
+        padding: 15px 5%; /* فاصله ۵ درصدی از چپ و راست */
+    }
+
+    /* ۲. مدیریت فاصله لوگو و متن */
+    .logo-container {
+        gap: 8px; /* کاهش فاصله بین تصویر لوگو و متن در موبایل */
+        display: flex;
+        align-items: center;
+    }
+
+    .logo-img {
+        height: 32px; /* کمی کوچک‌تر کردن لوگو برای موبایل */
+    }
+
+    .logo-text {
+        font-size: 18px; /* کوچک‌تر کردن فونت برای جلوگیری از شلوغی */
+    }
+
+    /* ۳. تنظیم موقعیت دکمه همبرگری */
+    .menu-toggle {
+        display: flex;
+        margin-left: auto; /* این باعث می‌شود منو به راست بچسبد و از لوگو فاصله بگیرد */
+        padding: 5px; /* فضای کلیک بیشتر */
+    }
+
+    /* ۴. تنظیم منوی بازشونده */
+    .nav-list {
+        top: 62px; /* متناسب با ارتفاع جدید هدر */
+    }
 }
 
 /* تنظیمات دکمه همبرگری */
