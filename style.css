@@ -29,7 +29,7 @@
     display: block; 
 }
 /* تصویر بزرگ که متن دور آن می‌پیچد (سمت چپ) */
-.mid-img { 
+.big-img { 
     width: 65%; 
     float: left; 
     margin: 0 25px 20px 0; 
