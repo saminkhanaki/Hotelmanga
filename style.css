@@ -86,33 +86,26 @@ nav ul li a:hover { color: var(--primary-red); }
     font-weight: 700;
     color: var(--deep-navy);
     margin: 10px 0;
-    font-size: 1.2rem;
-}
+    font-size: 1.2rem;}
 
 @media (max-width: 768px) {
     /* ۱. تنظیم هدر اصلی */
-    nav {
-        padding: 10px 5%;
+    nav { padding: 10px 5%;
         position: relative;
-        justify-content: space-between;
-    }
+        justify-content: space-between;    }
 
     /* ۲. تنظیم لوگو */
-    .logo-container {
-        gap: 8px;
-        z-index: 1001; /* لوگو همیشه رو بماند */
-    }
+    .logo-container {  gap: 8px;
+        z-index: 1001; /* لوگو همیشه رو بماند */    }
 
     .logo-img { height: 32px; }
     .logo-text { font-size: 18px; }
 
     /* ۳. تنظیم دکمه همبرگری */
-    .menu-toggle {
-        display: flex;
+    .menu-toggle {display: flex;
         flex-direction: column;
         z-index: 1001;
-        margin-left: auto;
-    }
+        margin-left: auto;}
 
     /* ۴. تنظیم لیست منو (نکته طلایی اینجاست) */
     .nav-list {
@@ -126,18 +119,15 @@ nav ul li a:hover { color: var(--primary-red); }
         padding: 20px 0;
         box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         z-index: 1000;
-        text-align: center;
-    }
+        text-align: center;}
 
     /* ۵. نمایش منو وقتی فعال شد */
     .nav-list.active {
-        display: flex; /* فقط وقتی کلاس active دارد نمایش داده شود */
-    }
+        display: flex; /* فقط وقتی کلاس active دارد نمایش داده شود */ }
 
     .nav-list li {
         margin: 15px 0;
-        width: 100%;
-    }
+        width: 100%;}
 
     /* ۶. استایل لینک فعال در منوی باز شده */
     .nav-list li a.active {
@@ -146,14 +136,13 @@ nav ul li a:hover { color: var(--primary-red); }
         padding: 10px 25px;
         border-radius: 8px;
         display: inline-block;
-        width: auto;
-    }
+        width: auto;}
 
     /* حذف خط زیرین در موبایل */
     nav ul li a.active::after {
-        display: none !important;
-    }
+        display: none !important;}
 }
+
 /* تنظیمات دکمه همبرگری */
 .menu-toggle {
     display: none; /* در دسکتاپ مخفی است */
@@ -190,12 +179,10 @@ nav ul li a:hover { color: var(--primary-red); }
     }
 
     .nav-list.active {
-        right: 0; /* با کلیک وارد صفحه می‌شود */
-    }
+        right: 0; /* با کلیک وارد صفحه می‌شود */    }
 
     .nav-list li {
-        margin: 15px 0;
-    }
+        margin: 15px 0;    }
 
     /* انیمیشن تبدیل همبرگر به X */
     .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
