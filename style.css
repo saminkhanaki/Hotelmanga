@@ -1,0 +1,207 @@
+/* ۱. تنظیمات متغیرها و پایه */
+:root {
+    --bg-paper: #FDF8F5;    /* زمینه کرم روشن */
+    --primary-red: #E63946;  /* قرمز برند */
+    --deep-navy: #1D3557;    /* سرمه‌ای متن */
+    --text-body: #333333;    /* متن اصلی */
+    --white: #ffffff;
+}
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: var(--bg-paper); 
+    color: var(--text-body); 
+    line-height: 1.6; 
+}
+
+/* ۲. ناوبری و هدر (Header) */
+nav { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px 10%; 
+    background: var(--white); 
+    border-bottom: 1px solid rgba(29, 53, 87, 0.1); 
+    font-family: 'Montserrat', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-img { height: 40px; width: auto; }
+.logo-text { font-size: 22px; font-weight: 700; color: var(--deep-navy); letter-spacing: -0.5px; }
+.logo-text span { color: var(--primary-red); }
+
+.menu-toggle { display: none; }
+
+.nav-list { 
+    display: flex; 
+    list-style: none; 
+}
+
+.nav-list li { margin-left: 30px; }
+.nav-list li a { 
+    text-decoration: none; 
+    color: var(--deep-navy); 
+    font-size: 13px; 
+    font-weight: 600; 
+    text-transform: uppercase;
+    transition: 0.3s; 
+}
+.nav-list li a:hover, .nav-list li a.active { color: var(--primary-red); }
+
+/* ۳. کانتینر اصلی صفحه */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ۴. طراحی بخش هیرو (دو کارت مجزا) */
+.hero-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.hero-image, .hero-text {
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.hero-image { flex: 1.6; height: 450px; }
+.hero-image img { width: 100%; height: 100%; object-fit: cover; }
+
+.hero-text { 
+    flex: 1; 
+    padding: 40px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    background-color: var(--white); /* یا var(--bg-paper) اگر تمایز می‌خواهید */
+}
+
+/* ۵. گرید مقالات پایین */
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+}
+
+.grid-card {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.grid-card:hover, .hero-image:hover, .hero-text:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.card-img-box { height: 220px; }
+.card-img-box img { width: 100%; height: 100%; object-fit: cover; }
+.card-content { padding: 25px; }
+
+/* ۶. المان‌های متنی و دکمه‌ها */
+.tag, .card-tag {
+    color: var(--primary-red);
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.btn-read {
+    color: var(--deep-navy);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 2px solid var(--primary-red);
+    align-self: flex-start;
+    padding-bottom: 2px;
+    transition: 0.3s;
+}
+
+/* ۷. فوتر اصلاح شده */
+.site-footer {
+    background-color: var(--deep-navy);
+    color: var(--white);
+    padding: 60px 10% 20px;
+    margin-top: 80px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.footer-list { list-style: none; }
+.footer-list li { margin-bottom: 10px; }
+.footer-list a { color: #ecf0f1; text-decoration: none; font-size: 14px; opacity: 0.8; transition: 0.3s; }
+.footer-list a:hover { color: var(--primary-red); opacity: 1; }
+.footer-bottom { text-align: center; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; font-size: 12px; opacity: 0.5; }
+
+/* ۸. واکنش‌گرایی (Mobile & Tablet) */
+@media (max-width: 992px) {
+    .hero-row { flex-direction: column; }
+    .articles-grid { grid-template-columns: 1fr; }
+    .footer-container { grid-template-columns: 1fr; text-align: center; }
+    
+    .nav-list {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 70%; 
+        height: 100vh;
+        text-align: center;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+        padding-top: 80px;
+        z-index: 1000;
+    }
+
+    .nav-list.active { right: 0; }
+
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: var(--deep-navy);
+        transition: 0.4s;
+    }
+
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+}
