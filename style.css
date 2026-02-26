@@ -88,59 +88,47 @@ nav ul li a:hover { color: var(--primary-red); }
     margin: 10px 0;
     font-size: 1.2rem;}
 
-@media (max-width: 768px) {
-    /* ۱. تنظیم هدر اصلی */
-    nav { padding: 10px 5%;
-        position: relative;
-        justify-content: space-between;    }
-
-    /* ۲. تنظیم لوگو */
-    .logo-container {  gap: 8px;
-        z-index: 1001; /* لوگو همیشه رو بماند */    }
-
-    .logo-img { height: 32px; }
-    .logo-text { font-size: 18px; }
-
-    /* ۳. تنظیم دکمه همبرگری */
-    .menu-toggle {display: flex;
-        flex-direction: column;
-        z-index: 1001;
-        margin-left: auto;}
-
-    /* ۴. تنظیم لیست منو (نکته طلایی اینجاست) */
+@media screen and (max-width: 768px) {
+    /* ۱. مخفی کردن اجباری لیست منو در حالت عادی */
     .nav-list {
-        display: none; /* در حالت عادی کاملاً مخفی */
-        flex-direction: column;
-        position: fixed; /* یا absolute بسته به طراحی شما */
-        top: 60px; 
+        display: none !important; /* این خط اجازه نمایش به منو در هدر را نمی‌دهد */
+        position: fixed;
         left: 0;
+        top: 60px;
         width: 100%;
-        background-color: white;
+        background: white;
+        flex-direction: column;
         padding: 20px 0;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
         z-index: 1000;
-        text-align: center;}
+    }
 
-    /* ۵. نمایش منو وقتی فعال شد */
+    /* ۲. نمایش منو فقط وقتی همبرگری کلیک شده است */
     .nav-list.active {
-        display: flex; /* فقط وقتی کلاس active دارد نمایش داده شود */ }
+        display: flex !important;
+    }
 
+    /* ۳. تنظیم چیدمان هدر موبایل */
+    nav {
+        justify-content: space-between !important;
+        padding: 10px 15px !important;
+    }
+
+    .logo-container {
+        margin-right: auto !important;
+    }
+
+    .menu-toggle {
+        display: flex !important; /* نمایش دکمه همبرگری */
+        order: 2;
+    }
+
+    /* ۴. استایل لینک‌های داخل منوی باز شده */
     .nav-list li {
-        margin: 15px 0;
-        width: 100%;}
-
-    /* ۶. استایل لینک فعال در منوی باز شده */
-    .nav-list li a.active {
-        color: var(--primary-red) !important;
-        background-color: #fff1f2;
-        padding: 10px 25px;
-        border-radius: 8px;
-        display: inline-block;
-        width: auto;}
-
-    /* حذف خط زیرین در موبایل */
-    nav ul li a.active::after {
-        display: none !important;}
+        width: 100%;
+        text-align: center;
+        margin: 10px 0 !important;
+    }
 }
 
 /* تنظیمات دکمه همبرگری */
