@@ -38,6 +38,7 @@ nav {
 .logo-img { height: 40px; width: auto; }
 .logo-text { font-size: 22px; font-weight: 700; color: var(--deep-navy); letter-spacing: -0.5px; }
 .logo-text span { color: var(--primary-red); }
+.logo-text-footer span {color: var(--bg-paper);}
 
 .menu-toggle { display: none; }
 
@@ -245,6 +246,19 @@ nav {
     margin: 60px auto; /* فاصله از سمت راست و پایین برای چرخش متن */
     padding: 60px 70px; 
     float: left; /* جادوی چرخیدن متن دور عکس */
+}
+
+strong {
+    color: var(--primary-red); /* یا هر رنگ اکسنتی که داری */
+    font-weight: 700;
+}
+
+.article-body h3 {
+    margin-top: 25px;
+    font-size: 1.3rem;
+    color: #1d3557;
+    border-left: 4px solid #e63946;
+    padding-left: 10px;
 }
 
 /* عکس‌های عمودی (Portrait) - عرض کمتر برای اینکه متن فضای کافی داشته باشد */
