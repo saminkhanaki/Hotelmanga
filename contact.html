@@ -44,23 +44,25 @@
      <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
-            <div class="logo-text footer-logo">HOTEL<span>MANGA</span></div>
-            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p>
-        </div>
+         <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>   
+         <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+         <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+     </div>
 
         <div class="footer-nav-section">
             <h4>Quick Links</h4>
             <ul class="footer-list">
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="archive.html">Archive</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
 
         <div class="footer-nav-section">
-            <h4>Support</h4>
-            <ul class="footer-list">
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="privacy.html">Privacy Policy</a></li>
+         <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+         <p class="footer-tagline">📩info@hotelmanga.com
+                
+                
             </ul>
         </div>
     </div>
@@ -69,7 +71,16 @@
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-    
-</body>
 
+        <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        menuToggle.classList.toggle('is-active');
+    });
+</script>
+
+</body>
 </html>
