@@ -38,7 +38,8 @@ nav {
 .logo-img { height: 40px; width: auto; }
 .logo-text { font-size: 22px; font-weight: 700; color: var(--deep-navy); letter-spacing: -0.5px; }
 .logo-text span { color: var(--primary-red); }
-.logo-text-footer span {color: var(--bg-paper);}
+.logo-footer { font-size: 22px; font-weight: 700; color: white; letter-spacing: -0.5px; }
+.logo-footer span { color: var(--primary-red); }
 
 .menu-toggle { display: none; }
 
