@@ -151,9 +151,45 @@ The intimacy flowing through the air—that sense of "hominess" which is a hallm
     </article>
 </main>
   
-<footer style="background: var(--primary); color: white; padding: 30px 0; margin-top: 60px; text-align: center;">
-    <p>&copy; 2026 Mississippi Lead News</p>
+  
+     <footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo-text footer-logo">HOTEL<span>MANGA</span></div>
+            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p>
+        </div>
+
+        <div class="footer-nav-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-list">
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="archive.html">Archive</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-nav-section">
+            <h4>Support</h4>
+            <ul class="footer-list">
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
+    </div>
 </footer>
+
+        <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        menuToggle.classList.toggle('is-active');
+    });
+</script>
 
 </body>
 </html>
