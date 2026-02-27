@@ -1,18 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HotelManga</title>
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="../style.css">
-</head>
+    <style>
+              
+        /* استایل کانتینر مقاله */
+        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .article-header { border-bottom: 2px solid #1D3557; margin-bottom: 25px; padding-bottom: 10px; }
+        .article-title { font-family: 'Montserrat', serif; font-size: 2.3rem; color: var(--deep-navyy); line-height: 1.2; margin: 15px 0; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
+        
+        /* استایل تصاویر بر اساس درخواست قبلی */
+        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .big-img { width: 60%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .big-right-img { width: 60%; float: right; margin: 0 0px 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .mid-img { width: 45%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .mid-right-img { width: 45%; float: right; margin: 0 0px 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .tall-img { width: 30%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .tall-right-img { width: 30%; float: right; margin: 0 0px 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+     
 
+        .article-body p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; }
+        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.6rem; clear: both; }
+        
+        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 30px; margin: 30px 0; border-top: 5px solid var(--accent); clear: both; }
+        .back-home { display: inline-block; margin-top: 30px; margin-bottom: 10px; color: var(--primary-red); text-decoration: none; font-weight: bold; border-bottom: 2px solid var(--primary-red); }
+        
+        .visit-card { background: var(--primary); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-top: 30px; }
+        .btn-link { display: inline-block; background: var(--accent); color: white !important; text-decoration: none; padding: 10px 20px; border-radius: 5px; margin: 5px; font-weight: bold; }
+
+        @media (max-width: 768px) {
+            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
+            .article-title { font-size: 1.8rem; }
+            .logo-text { font-size: 1.4rem; }
+            .mid-img { width: 100%; float: none; margin: 0 0 20px 0; }
+        }
+    </style>
+</head>
 <body>
-    <nav>
+
+ <nav>
         <div class="logo-container">
             <img src="../assets/logo.png" alt="HM Logo" class="logo-img">
             <div class="logo-text">HOTEL<span>MANGA</span></div>
@@ -24,65 +58,34 @@
             <span class="bar"></span>
         </div>
 
-            <ul class="nav-menu">
-                <li><a href="../index.html">Home</a></li>
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
                 
-                <li><a href="../explore.html">Explore</a></li>
-                <li><a href="../lifestyle.html" class="active">Lifestyle</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li><a href="lifestyle.html">Lifestyle</a></li>
             </ul>
     </nav>
 
-    <script>
-        const menu = document.querySelector('#mobile-menu');
-        const menuLinks = document.querySelector('.nav-menu');
-
-        menu.addEventListener('click', function() {
-        menu.classList.toggle('is-active');
-        menuLinks.classList.toggle('active'); });
-    </script>
-
 <main class="article-container">
+    <a href="../" class="back-home">← Back to Hotel Manga</a><br><br>
     
-    <article class="post-row full">
-        <div class="row-img"><img src="../assets/img1.jpg"></div>
-        <div class="row-content">
-            <h1>This is a Full Width Header</h1>
-            <p>Content starts below the image.</p>
-        </div>
-    </article>
+    <header class="article-header">
+        <span style="background: var(--deep-navy); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase;">Manga Spot</span>
+        <h1 class="article-title">Tokyo Through the Eyes of Sorcerers: A 2-Day Guide to "Jujutsu Kaisen"</h1>
+        <div class="meta">February 27, 2026 • Los Angeles, CA • By Travel Desk</div>
+    </header>
 
-    <article class="post-row big">
-        <div class="row-img"><img src="../assets/img2.jpg"></div>
-        <div class="row-content">
-            <h2>Big Featured Section</h2>
-            <p>Text on the right, big image on the left.</p>
-        </div>
-    </article>
+    <img src="../assets/shibuya-109.webp" alt="[ARTICLE TITLE]">
+    
+    <article class="article-body">
+        <p>[YOUR ARTICLE STARTS HERE]</p>
 
-    <article class="post-row medium">
-        <div class="row-img"><img src="../assets/img3.jpg"></div>
-        <div class="row-content">
-            <h3>Medium Sized Row</h3>
-            <p>Perfect for standard list items.</p>
-        </div>
+     
+        <a href="../" class="back-home">← Back to Hotel Manga</a>
     </article>
-
-    <article class="post-row small">
-        <div class="row-img"><img src="../assets/img4.jpg"></div>
-        <div class="row-content">
-            <h4>Small Summary</h4>
-            <p>Compact view for minor updates.</p>
-        </div>
-    </article>
-
-    <article class="post-row no-image">
-        <div class="row-content">
-            <h3>Special Text Insight</h3>
-            <p>Analysis without imagery.</p>
-        </div>
-    </article>
-
 </main>
+  
+  
      <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
@@ -93,16 +96,16 @@
         <div class="footer-nav-section">
             <h4>Quick Links</h4>
             <ul class="footer-list">
-                <li><a href="../about.html">About Us</a></li>
-                <li><a href="../archive.html">Archive</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="archive.html">Archive</a></li>
             </ul>
         </div>
 
         <div class="footer-nav-section">
             <h4>Support</h4>
             <ul class="footer-list">
-                <li><a href="../contact.html">Contact</a></li>
-                <li><a href="../privacy.html">Privacy Policy</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
             </ul>
         </div>
     </div>
@@ -111,7 +114,16 @@
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-    
-</body>
 
+        <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        menuToggle.classList.toggle('is-active');
+    });
+</script>
+
+</body>
 </html>
