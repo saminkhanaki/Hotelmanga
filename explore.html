@@ -90,6 +90,46 @@
         font-size: 1.8rem;
     }
 }
+//****************************************************************************//
+/* وضعیت اولیه: عکس رنگی و شفاف */
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease-in-out;
+}
+
+/* وضعیت هوور: تبدیل به استایل مانگا */
+.explore-card:hover .card-image img {
+    /* 1. سیاه و سفید کردن با کنتراست بسیار بالا برای شبیه شدن به جوهر */
+    filter: grayscale(100%) contrast(200%) brightness(110%);
+    
+    /* 2. ایجاد بافت نقطه‌نقطه‌ای (Halftone) با استفاده از یک لایه SVG یا گرادینت */
+    /* نکته: این بخش تصویر را کمی دانه دانه می‌کند تا شبیه چاپ دستی شود */
+    mix-blend-mode: multiply;
+}
+
+/* افکت اضافه برای شبیه‌تر شدن به پنل کتاب: ایجاد یک لایه بافت روی عکس */
+.card-image {
+    position: relative;
+    background: white;
+}
+
+.card-image::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-image: radial-gradient(#000 10%, transparent 10%);
+    background-size: 3px 3px; /* اندازه نقطه‌ها */
+    opacity: 0;
+    transition: opacity 0.4s;
+    pointer-events: none;
+}
+
+.explore-card:hover .card-image::after {
+    opacity: 0.15; /* نمایش بافت نقطه‌ای در هنگام هوور */
+}    
+
 </style>    
 <body>
     <nav>
