@@ -29,15 +29,15 @@
     color: var(--deep-navy);
 }
 
-/* گرید اصلی - بازگشت به ساختار اصلی گرید */
+/* ۱. گرید اصلی - استفاده از CSS Grid برای پایداری بیشتر */
 .explore-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* ایجاد دو ستون مساوی */
-    gap: 20px;
-    align-items: stretch; /* تمام کارت‌های یک ردیف هم‌قد می‌شوند */
+    grid-template-columns: repeat(2, 1fr); /* دو ستون مساوی */
+    gap: 25px;
+    align-items: stretch; /* هم‌قد کردن کارت‌های یک ردیف */
 }
 
-/* استایل کارت‌ها */
+/* ۲. استایل کارت‌ها */
 .explore-card {
     background: white;
     border-radius: 12px;
@@ -45,21 +45,22 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
     
-    /* اضافه شدن فلکس برای محتوای داخلی کارت */
+    /* فلکس داخلی برای هم‌تراز شدن محتوا */
     display: flex;
     flex-direction: column;
+    height: 100%; /* اطمینان از پر کردن کل قد ردیف */
 }
 
 .explore-card:hover {
     transform: translateY(-5px);
 }
 
-/* تنظیم نسبت عکس (7 به 4) */
+/* ۳. تنظیم نسبت عکس */
 .card-image {
     width: 100%;
     aspect-ratio: 7 / 4; 
     overflow: hidden;
-    flex-shrink: 0; /* عکس نباید فشرده شود */
+    flex-shrink: 0; 
 }
 
 .card-image img {
@@ -68,18 +69,19 @@
     object-fit: cover;
 }
 
-/* بخش محتوای کارت */
+/* ۴. بخش محتوای کارت */
 .card-content {
     padding: 25px;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* این بخش فضای خالی را تا پایین کارت پر می‌کند */
+    flex-grow: 1; /* پر کردن فضای خالی کارت */
 }
 
 .card-content h3 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
-    color: var(--deep-navy); /* رنگ سرمه‌ای طبق درخواست قبلی */
+    color: var(--deep-navy);
+    font-size: 1.4rem;
 }
 
 .card-content p {
@@ -88,13 +90,19 @@
     color: #4b5563;
     text-align: justify;
     margin: 0;
-    flex-grow: 1; /* متن را تا جای ممکن به پایین هدایت می‌کند */
+    /* این بخش باعث می‌شود اگر متن کوتاه بود، باز هم کارت هم‌قد بماند */
+    flex-grow: 1; 
 }
 
-/* ریسپانسیو برای موبایل */
+/* ۵. ریسپانسیو اصلاح شده */
 @media (max-width: 768px) {
     .explore-grid {
-        grid-template-columns: 1fr; /* در موبایل تک ستونه می‌شود */
+        grid-template-columns: 1fr; /* تبدیل به تک ستون در موبایل */
+        gap: 20px;
+    }
+    
+    .card-content {
+        padding: 20px;
     }
 }
 //****************************************************************************//
