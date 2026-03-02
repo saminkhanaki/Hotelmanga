@@ -34,42 +34,40 @@
             </ul>
     </nav>
 
-    <main class="archive-container" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+<main class="archive-container" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
     
-    <header style="margin-bottom: 60px; border-bottom: 4px solid var(--deep-navy); padding-bottom: 20px;">
+    <header style="margin-bottom: 40px; border-bottom: 4px solid var(--deep-navy); padding-bottom: 20px;">
         <h1 style="color: var(--deep-navy); font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin: 0;">The Vault</h1>
         <p style="color: #666; font-size: 1.1rem; margin-top: 10px;">Explore our complete collection of Manga travel guides and lifestyle aesthetics.</p>
     </header>
 
-    <section class="archive-section">
-        <h2 style="color: var(--deep-navy); font-family: 'Montserrat', sans-serif; margin-bottom: 30px; display: flex; align-items: center;">
-            <span style="background: var(--deep-navy); color: white; padding: 2px 12px; margin-right: 15px; border-radius: 4px;">2026</span> 
-            Latest Releases
-        </h2>
+    <nav class="year-nav" style="margin-bottom: 40px; display: flex; gap: 15px; border-bottom: 1px solid #eee; padding-bottom: 15px; align-items: center;">
+        <span style="font-weight: 700; color: var(--deep-navy); font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;">Archive:</span>
+        <a href="#year-2027" style="color: #999; text-decoration: none; font-weight: 600; transition: 0.3s;" onmouseover="this.style.color='var(--deep-navy)'">2027</a>
+        <a href="#year-2026" style="color: var(--deep-navy); text-decoration: none; font-weight: 700; border-bottom: 2px solid var(--deep-navy);">2026</a>
+    </nav>
 
-        <div class="archive-list" style="display: flex; flex-direction: column; gap: 25px;">
+    <section id="year-2026" class="archive-section">
+        <div class="archive-list" style="display: flex; flex-direction: column; gap: 20px;">
             
-            <article style="display: flex; gap: 20px; align-items: center; padding: 15px; border-radius: 8px; transition: background 0.3s;" onmouseover="this.style.background='#f9f9f9'" onmouseout="this.style.background='transparent'">
+            <article style="display: flex; gap: 20px; align-items: center; padding: 15px; border-radius: 8px; transition: 0.3s;" onmouseover="this.style.background='#f9f9f9'" onmouseout="this.style.background='transparent'">
                 <span style="color: #999; font-family: 'Inter'; font-size: 0.9rem; min-width: 80px;">MAR 02</span>
-                <div style="flex-grow: 1;">
-                    <span style="font-size: 0.75rem; text-transform: uppercase; color: #cc0000; font-weight: 700; letter-spacing: 1px;">Lifestyle</span>
-                    <h3 style="margin: 5px 0;"><a href="archive/manga-shelf.html" style="text-decoration: none; color: var(--deep-navy); font-size: 1.2rem;">The Lumina Method: A Definitive Guide to Building the Ultimate Smart Manga Shelf</a></h3>
+                <div>
+                    <span style="font-size: 0.7rem; text-transform: uppercase; color: #cc0000; font-weight: 800; letter-spacing: 1px;">Lifestyle</span>
+                    <h3 style="margin: 5px 0;"><a href="archive/manga-shelf.html" style="text-decoration: none; color: var(--deep-navy); font-size: 1.2rem; font-weight: 600;">The Lumina Method: Ultimate Smart Manga Shelf</a></h3>
                 </div>
             </article>
 
-            <article style="display: flex; gap: 20px; align-items: center; padding: 15px; border-radius: 8px; transition: background 0.3s;" onmouseover="this.style.background='#f9f9f9'" onmouseout="this.style.background='transparent'">
-                <span style="color: #999; font-family: 'Inter'; font-size: 0.9rem; min-width: 80px;">FEB 24</span>
-                <div style="flex-grow: 1;">
-                    <span style="font-size: 0.75rem; text-transform: uppercase; color: #cc0000; font-weight: 700; letter-spacing: 1px;">Explore</span>
-                    <h3 style="margin: 5px 0;"><a href="archive/jujutsu-tokyo.html" style="text-decoration: none; color: var(--deep-navy); font-size: 1.2rem;">Tokyo Through the Eyes of Sorcerers: A Jujutsu Kaisen Itinerary</a></h3>
-                </div>
-            </article>
-
-        </div>
+            </div>
     </section>
 
-    <div style="margin-top: 60px; text-align: center;">
-        <button style="background: transparent; border: 2px solid var(--deep-navy); color: var(--deep-navy); padding: 12px 40px; border-radius: 30px; font-weight: 600; cursor: pointer; transition: all 0.3s;" onmouseover="this.style.background='var(--deep-navy)'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='var(--deep-navy)';">Load Older Articles</button>
+    <div style="margin-top: 80px; text-align: center; padding-bottom: 40px;">
+        <p style="font-size: 0.85rem; color: #999; margin-bottom: 15px; font-family: 'Inter';">Showing the latest 15 chapters of 2026</p>
+        <button style="background: transparent; border: 2px solid var(--deep-navy); color: var(--deep-navy); padding: 12px 35px; border-radius: 4px; font-weight: 700; font-family: 'Montserrat'; cursor: pointer; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;" 
+                onmouseover="this.style.background='var(--deep-navy)'; this.style.color='white';" 
+                onmouseout="this.style.background='transparent'; this.style.color='var(--deep-navy)';">
+            Load Older Stories
+        </button>
     </div>
 
 </main>
