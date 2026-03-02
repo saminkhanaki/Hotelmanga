@@ -7,6 +7,29 @@
     --white: #ffffff;
 }
 
+/* حذف خط زیر لوگو و جلوگیری از تغییر رنگ آن */
+nav a {
+    text-decoration: none !important;
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    text-decoration: none !important;
+    border: none !important;
+}
+
+/* اطمینان از اینکه متن لوگو استایل اصلی‌اش را حفظ می‌کند */
+.logo-text {
+    text-decoration: none !important;
+    color: var(--deep-navy); /* یا هر رنگی که برای لوگو ست کردی */
+}
+
+/* حذف افکت بنفش یا آبی شدن لینک بعد از کلیک */
+.logo-text:visited {
+    color: inherit;
+}
+
 * { 
     margin: 0; 
     padding: 0; 
