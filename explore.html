@@ -29,15 +29,19 @@
     color: var(--deep-navy);
 }
 
-/* گرید 4 تایی (2 در 2) */
+/* گرید اصلی */
 .explore-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* دو ستون برابر */
-    gap: 30px; /* فاصله بین کارت‌ها */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: stretch; /* کلیدی: باعث می‌شود قد کارت‌های کنار هم برابر شود */
 }
 
 /* استایل کارت‌ها */
 .explore-card {
+    display: flex; /* اضافه شد: برای کنترل محتوای داخلی */
+    flex-direction: column; /* اضافه شد: چیدمان عمودی اجزا */
+    flex: 1 1 calc(50% - 20px); /* اضافه شد: نمایش ۲ تایی در ردیف */
     background: white;
     border-radius: 12px;
     overflow: hidden;
@@ -52,25 +56,29 @@
 /* تنظیم نسبت عکس (7 به 4) */
 .card-image {
     width: 100%;
-    aspect-ratio: 7 / 4; /* نسبت طلایی که خواسته بودی */
+    aspect-ratio: 7 / 4; 
     overflow: hidden;
+    flex-shrink: 0; /* اضافه شد: جلوگیری از کوچک شدن عکس */
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* جلوگیری از کش آمدن عکس */
+    object-fit: cover;
 }
 
 /* بخش محتوای کارت */
 .card-content {
     padding: 25px;
+    display: flex; /* اضافه شد */
+    flex-direction: column; /* اضافه شد */
+    flex-grow: 1; /* کلیدی: باعث می‌شود این بخش تمام فضای خالی پایین را پر کند */
 }
 
 .card-content h3 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
-    color: var(--primary-red);
+    color: var(--deep-navy); /* اصلاح شد: استفاده از رنگ سازمانی جدید */
 }
 
 .card-content p {
@@ -78,12 +86,13 @@
     line-height: 1.6;
     color: #4b5563;
     text-align: justify;
+    flex-grow: 1; /* کلیدی: متن را کش می‌آورد تا فضای خالی پر شود */
 }
 
 /* ریسپانسیو برای موبایل */
 @media (max-width: 768px) {
-    .explore-grid {
-        grid-template-columns: 1fr; /* در موبایل کارت‌ها زیر هم قرار بگیرند */
+    .explore-card {
+        flex: 1 1 100%; /* در موبایل کارت تمام عرض را می‌گیرد */
     }
     
     .page-header h1 {
