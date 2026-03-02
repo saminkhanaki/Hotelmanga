@@ -10,77 +10,78 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
+
 <style>
-    //****************************************************************************//
-<style>
-/* 1. تنظیمات ظرف نگهدارنده عکس */
-.card-img-box {
+/* 1. ظرف نگهدارنده عکس (هم برای کارت‌ها و هم برای هیرو) */
+.card-img-box, .hero-image {
     position: relative;
     overflow: hidden;
     background: white;
+    display: block;
 }
 
-/* 2. وضعیت اولیه عکس */
-.card-img-box img {
+/* 2. وضعیت اولیه عکس‌ها */
+.card-img-box img, .hero-image img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
     transition: all 0.5s ease-in-out;
     filter: grayscale(0%) contrast(100%);
 }
 
 /* 3. ایجاد لایه نقاط مانگایی (Screentone) */
-.card-img-box::after {
+.card-img-box::after, .hero-image::after {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
     background-image: radial-gradient(#000 20%, transparent 20%);
-    background-size: 3px 3px; 
+    background-size: 4px 4px; /* سایز دانه‌ها در هیرو کمی بزرگتر باشد جذاب‌تر است */
     opacity: 0;
     transition: opacity 0.4s;
-    pointer-events: none; /* اجازه می‌دهد کلیک از این لایه عبور کند */
+    pointer-events: none;
     z-index: 10;
 }
 
-/* 4. اجرای افکت هنگام هوور روی کارت (برای همه کارت‌ها) */
-.grid-card:hover .card-img-box img {
+/* 4. اجرای افکت هنگام هوور روی کارت‌ها و بخش هیرو */
+.grid-card:hover .card-img-box img, 
+.hero-row:hover .hero-image img {
     filter: grayscale(100%) contrast(250%) brightness(110%);
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
-.grid-card:hover .card-img-box::after {
-    opacity: 0.15; /* نمایش نقاط مانگا */
+.grid-card:hover .card-img-box::after, 
+.hero-row:hover .hero-image::after {
+    opacity: 0.18; /* نمایش نقاط مانگا */
 }
 
-/* 5. حذف کادر آبی و استایل لینک زیر عکس */
-.card-img-box a {
+/* 5. حذف کادر و خطوط اضافه از لینک‌ها */
+.hero-image a, .card-img-box a {
     text-decoration: none !important;
-    display: block;
     border: none !important;
     outline: none !important;
+    display: block;
 }
 
-/* 6. استایل کلی کارت در هنگام هوور (بالا آمدن کارت) */
-.grid-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.grid-card:hover {
-    transform: translateY(-8px);
-    cursor: pointer;
-}
-
-/* 7. اصلاح کادر Manga Home که آبی شده بود */
-.card-tag {
+/* 6. استایل تگ‌ها و لینک‌های متنی */
+.card-tag, .tag {
     display: inline-block;
     background-color: var(--deep-navy) !important;
     color: white !important;
     text-decoration: none !important;
     border: none !important;
+    padding: 4px 12px;
+    border-radius: 4px;
 }
-</style>
-//***********************************************************************************//
 
+/* 7. انیمیشن کلی برای کل ردیف هیرو و کارت‌ها */
+.hero-row, .grid-card {
+    transition: transform 0.3s ease;
+}
 
+.hero-row:hover {
+    transform: translateY(-5px);
+}
 </style>
 <body>
     <nav>
