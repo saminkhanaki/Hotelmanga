@@ -31,15 +31,54 @@
                 <li><a href="lifestyle.html">Lifestyle</a></li>
             </ul>
     </nav>
+<main class="contact-container" style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
+    
+    <header style="text-align: center; margin-bottom: 60px;">
+        <h1 style="color: var(--deep-navy); font-family: 'Montserrat', sans-serif; font-size: 2.8rem; margin-bottom: 10px;">Get in Touch</h1>
+        <p style="color: #666; font-size: 1.1rem;">Have a question about a Manga destination or a lifestyle tip? We'd love to hear from you.</p>
+    </header>
 
-    <script>
-        const menu = document.querySelector('#mobile-menu');
-        const menuLinks = document.querySelector('.nav-list');
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: start;">
+        
+        <section class="contact-info">
+            <h2 style="color: var(--deep-navy); margin-bottom: 25px;">Contact Information</h2>
+            
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin: 0; color: var(--deep-navy);">General Inquiries</h4>
+                <p style="margin: 5px 0; color: #666;">info@hotelmanga.com</p>
+            </div>
 
-        menu.addEventListener('click', function() {
-        menu.classList.toggle('is-active');
-        menuLinks.classList.toggle('active'); });
-    </script>
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin: 0; color: var(--deep-navy);">Office Location</h4>
+                <p style="margin: 5px 0; color: #666;">13101 W Washington Blvd,<br>Los Angeles, CA 90066</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4 style="margin: 0; color: var(--deep-navy);">Hours</h4>
+                <p style="margin: 5px 0; color: #666;">Monday — Friday<br>9:00 AM — 6:00 PM PST</p>
+            </div>
+        </section>
+
+        <section class="contact-form-section">
+            <form style="display: flex; flex-direction: column; gap: 15px;">
+                <input type="text" placeholder="Your Name" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Inter';">
+                <input type="email" placeholder="Email Address" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Inter';">
+                <textarea placeholder="How can we help you?" rows="5" style="padding: 12px; border: 1px solid #ddd; border-radius: 4px; font-family: 'Inter';"></textarea>
+                <button type="submit" style="background: var(--deep-navy); color: white; padding: 15px; border: none; border-radius: 4px; font-weight: 600; cursor: pointer; transition: 0.3s;" onmouseover="this.style.opacity='0.9'">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <section class="domain-footer" style="margin-top: 100px; padding-top: 20px; border-top: 1px solid #eee; text-align: center;">
+        <p style="font-size: 0.85rem; color: #888; font-family: 'Inter', sans-serif;">
+            For inquiries regarding brand acquisition or private treaty: 
+            <a href="https://www.afternic.com" target="_blank" style="color: #000; text-decoration: none; font-weight: 700; margin-left: 5px;">Afternic</a> 
+            <span style="margin: 0 10px; color: #ddd;">|</span> 
+            <a href="https://www.sedo.com" target="_blank" style="color: #000; text-decoration: none; font-weight: 700;">Sedo</a>
+        </p>
+    </section>
+
+</main>
 
      <footer class="site-footer">
     <div class="footer-container">
