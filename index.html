@@ -12,56 +12,55 @@
 </head>
 <style>
     //****************************************************************************//
-/* وضعیت اولیه: عکس رنگی و شفاف */
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.4s ease-in-out;
-}
-
-/* وضعیت هوور: تبدیل به استایل مانگا */
-.explore-card:hover .card-image img {
-    /* 1. سیاه و سفید کردن با کنتراست بسیار بالا برای شبیه شدن به جوهر */
-    filter: grayscale(100%) contrast(200%) brightness(110%);
-    
-    /* 2. ایجاد بافت نقطه‌نقطه‌ای (Halftone) با استفاده از یک لایه SVG یا گرادینت */
-    /* نکته: این بخش تصویر را کمی دانه دانه می‌کند تا شبیه چاپ دستی شود */
-    mix-blend-mode: multiply;
-}
-
-/* افکت اضافه برای شبیه‌تر شدن به پنل کتاب: ایجاد یک لایه بافت روی عکس */
-.card-image {
+/* 1. تنظیمات ظرف نگهدارنده عکس */
+.card-img-box {
     position: relative;
+    overflow: hidden; /* برای اینکه لایه‌ی نقطه‌نقطه از کادر بیرون نزند */
     background: white;
 }
 
-.card-image::after {
+/* 2. وضعیت اولیه عکس */
+.card-img-box img {
+    width: 100%;
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+/* 3. ایجاد بافت نقطه‌نقطه‌ای (Halftone) روی عکس */
+.card-img-box::after {
     content: "";
     position: absolute;
     top: 0; left: 0; width: 100%; height: 100%;
-    background-image: radial-gradient(#000 10%, transparent 10%);
-    background-size: 3px 3px; /* اندازه نقطه‌ها */
+    /* ایجاد نقاط ریز مانگایی */
+    background-image: radial-gradient(#000 20%, transparent 20%);
+    background-size: 3px 3px; 
     opacity: 0;
     transition: opacity 0.4s;
     pointer-events: none;
+    z-index: 2;
 }
 
-.explore-card:hover .card-image::after {
-    opacity: 0.15; /* نمایش بافت نقطه‌ای در هنگام هوور */
-}    
-
-/* حذف استایل پیش‌فرض لینک برای کارت‌ها */
-.card-link {
-    text-decoration: none; /* حذف خط زیر متن */
-    color: inherit; /* استفاده از رنگ اصلی متن که قبلاً ست کردیم */
-    display: block; /* برای اینکه کل فضای گرید را پر کند */
+/* 4. اجرای افکت هنگام هوور کردن روی کل کارت (Link) */
+.grid-card-link:hover .card-img-box img {
+    /* تبدیل به سیاه و سفید غلیظ شبیه جوهر مانگا */
+    filter: grayscale(100%) contrast(250%) brightness(110%);
+    transform: scale(1.05); /* کمی زوم برای جذابیت بیشتر */
 }
 
-/* انتقال افکت هوور از کارت به لینک (اختیاری اما حرفه‌ای) */
-.card-link:hover .explore-card {
+.grid-card-link:hover .card-img-box::after {
+    opacity: 0.2; /* نمایش بافت نقطه‌ای */
+}
+
+/* 5. استایل لینک برای حذف کادر و خطوط اضافه */
+.grid-card-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid-card-link:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 //***********************************************************************************//
 
