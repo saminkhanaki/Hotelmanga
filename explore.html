@@ -29,24 +29,25 @@
     color: var(--deep-navy);
 }
 
-/* گرید اصلی */
+/* گرید اصلی - بازگشت به ساختار اصلی گرید */
 .explore-grid {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* ایجاد دو ستون مساوی */
     gap: 20px;
-    align-items: stretch; /* کلیدی: باعث می‌شود قد کارت‌های کنار هم برابر شود */
+    align-items: stretch; /* تمام کارت‌های یک ردیف هم‌قد می‌شوند */
 }
 
 /* استایل کارت‌ها */
 .explore-card {
-    display: flex; /* اضافه شد: برای کنترل محتوای داخلی */
-    flex-direction: column; /* اضافه شد: چیدمان عمودی اجزا */
-    flex: 1 1 calc(50% - 20px); /* اضافه شد: نمایش ۲ تایی در ردیف */
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+    
+    /* اضافه شدن فلکس برای محتوای داخلی کارت */
+    display: flex;
+    flex-direction: column;
 }
 
 .explore-card:hover {
@@ -58,7 +59,7 @@
     width: 100%;
     aspect-ratio: 7 / 4; 
     overflow: hidden;
-    flex-shrink: 0; /* اضافه شد: جلوگیری از کوچک شدن عکس */
+    flex-shrink: 0; /* عکس نباید فشرده شود */
 }
 
 .card-image img {
@@ -70,15 +71,15 @@
 /* بخش محتوای کارت */
 .card-content {
     padding: 25px;
-    display: flex; /* اضافه شد */
-    flex-direction: column; /* اضافه شد */
-    flex-grow: 1; /* کلیدی: باعث می‌شود این بخش تمام فضای خالی پایین را پر کند */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* این بخش فضای خالی را تا پایین کارت پر می‌کند */
 }
 
 .card-content h3 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
-    color: var(--deep-navy); /* اصلاح شد: استفاده از رنگ سازمانی جدید */
+    color: var(--deep-navy); /* رنگ سرمه‌ای طبق درخواست قبلی */
 }
 
 .card-content p {
@@ -86,17 +87,14 @@
     line-height: 1.6;
     color: #4b5563;
     text-align: justify;
-    flex-grow: 1; /* کلیدی: متن را کش می‌آورد تا فضای خالی پر شود */
+    margin: 0;
+    flex-grow: 1; /* متن را تا جای ممکن به پایین هدایت می‌کند */
 }
 
 /* ریسپانسیو برای موبایل */
 @media (max-width: 768px) {
-    .explore-card {
-        flex: 1 1 100%; /* در موبایل کارت تمام عرض را می‌گیرد */
-    }
-    
-    .page-header h1 {
-        font-size: 1.8rem;
+    .explore-grid {
+        grid-template-columns: 1fr; /* در موبایل تک ستونه می‌شود */
     }
 }
 //****************************************************************************//
