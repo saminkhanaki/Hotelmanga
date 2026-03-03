@@ -29,48 +29,59 @@
     color: var(--deep-navy);
 }
 
-/* گرید 4 تایی (2 در 2) */
+/* ۱. گرید اصلی - استفاده از CSS Grid برای پایداری بیشتر */
 .explore-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* دو ستون برابر */
-    gap: 30px; /* فاصله بین کارت‌ها */
+    grid-template-columns: repeat(2, 1fr); /* دو ستون مساوی */
+    gap: 25px;
+    align-items: stretch; /* هم‌قد کردن کارت‌های یک ردیف */
 }
 
-/* استایل کارت‌ها */
+/* ۲. استایل کارت‌ها */
 .explore-card {
     background: white;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease;
+    
+    /* فلکس داخلی برای هم‌تراز شدن محتوا */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* اطمینان از پر کردن کل قد ردیف */
 }
 
 .explore-card:hover {
     transform: translateY(-5px);
 }
 
-/* تنظیم نسبت عکس (7 به 4) */
+/* ۳. تنظیم نسبت عکس */
 .card-image {
     width: 100%;
-    aspect-ratio: 7 / 4; /* نسبت طلایی که خواسته بودی */
+    aspect-ratio: 7 / 4; 
     overflow: hidden;
+    flex-shrink: 0; 
 }
 
 .card-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* جلوگیری از کش آمدن عکس */
+    object-fit: cover;
 }
 
-/* بخش محتوای کارت */
+/* ۴. بخش محتوای کارت */
 .card-content {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* پر کردن فضای خالی کارت */
 }
 
 .card-content h3 {
     font-family: 'Montserrat', sans-serif;
     margin-bottom: 15px;
-    color: var(--primary-red);
+    color: var(--deep-navy);
+    font-size: 1.4rem;
 }
 
 .card-content p {
@@ -78,16 +89,20 @@
     line-height: 1.6;
     color: #4b5563;
     text-align: justify;
+    margin: 0;
+    /* این بخش باعث می‌شود اگر متن کوتاه بود، باز هم کارت هم‌قد بماند */
+    flex-grow: 1; 
 }
 
-/* ریسپانسیو برای موبایل */
+/* ۵. ریسپانسیو اصلاح شده */
 @media (max-width: 768px) {
     .explore-grid {
-        grid-template-columns: 1fr; /* در موبایل کارت‌ها زیر هم قرار بگیرند */
+        grid-template-columns: 1fr; /* تبدیل به تک ستون در موبایل */
+        gap: 20px;
     }
     
-    .page-header h1 {
-        font-size: 1.8rem;
+    .card-content {
+        padding: 20px;
     }
 }
 //****************************************************************************//
