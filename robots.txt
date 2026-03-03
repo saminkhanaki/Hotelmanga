@@ -1,0 +1,15 @@
+# HotelManga Robots.txt - Updated March 2026
+User-agent: *
+Allow: /
+
+# دسترسی به پوشه تصاویر و استایل‌ها برای نمایش درست در نتایج جستجو
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# جلوگیری از ایندکس شدن فایل‌های سیستمی یا موقت (اگر داری)
+Disallow: /private/
+Disallow: /tmp/
+
+# معرفی نقشه سایت به گوگل و سایر موتورهای جستجو
+Sitemap: https://hotelmanga.com/sitemap.xml
