@@ -1,45 +1,711 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="canonical" href="https://hotelmanga.com/stay.html">
+    <title>Stay | Anime & Manga Hotels in Japan | HotelManga</title>
+    <meta name="description" content="Discover the ultimate guide to anime-themed hotels, manga sleepover destinations, and otaku sanctuaries across Japan. From Spirited Away ryokans to Naruto suites — find your perfect stay.">
+    <meta name="keywords" content="anime hotel Japan, manga hotel Tokyo, otaku hotel, Spirited Away hotel, Naruto hotel Japan, anime themed accommodation, manga sleepover Japan, capsule hotel Tokyo, Akihabara hotel">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Stay | Anime & Manga Hotels in Japan | HotelManga">
+    <meta property="og:description" content="The world's most curated guide to anime-themed hotels and manga destinations across Japan.">
+    <meta property="og:image" content="https://hotelmanga.com/assets/og-main-banner.webp">
+    <meta property="og:url" content="https://hotelmanga.com/stay.html">
+    <meta name="twitter:card" content="summary_large_image">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HotelManga</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
-</head>
+    <style>
+        /* ── Stay Page Hero ── */
+        .stay-hero {
+            background: var(--deep-navy);
+            color: white;
+            text-align: center;
+            padding: 70px 20px 50px;
+            position: relative;
+            overflow: hidden;
+        }
+        .stay-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 40px,
+                rgba(255,255,255,0.02) 40px,
+                rgba(255,255,255,0.02) 80px
+            );
+        }
+        .stay-hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin: 0 0 12px;
+            position: relative;
+        }
+        .stay-hero h1 span {
+            color: var(--accent);
+        }
+        .stay-hero p {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            position: relative;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+        }
 
+        /* ── Filter Tabs ── */
+        .stay-filters {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 30px 20px 10px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .filter-btn {
+            background: white;
+            border: 2px solid var(--deep-navy);
+            color: var(--deep-navy);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--deep-navy);
+            color: white;
+        }
+
+        /* ── Section Title ── */
+        .stay-section-title {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin: 40px 0 20px;
+        }
+
+        /* ── Hotel Grid ── */
+        .stay-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 28px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ── Hotel Card ── */
+        .hotel-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .hotel-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.13);
+        }
+        .hotel-card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            background: #e8edf2;
+        }
+        .hotel-card-img-placeholder {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        .hotel-card-body {
+            padding: 20px 22px 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .hotel-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 10px;
+        }
+        .hotel-tag {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 3px 9px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .tag-themed   { background: #fff0f0; color: #c0392b; }
+        .tag-pilgrimage { background: #f0f4ff; color: #1D3557; }
+        .tag-manga    { background: #f0fff4; color: #1a6b3a; }
+        .tag-capsule  { background: #fff8f0; color: #b05a00; }
+        .tag-otaku    { background: #f8f0ff; color: #6b2d9e; }
+        .tag-kissa    { background: #f0fbff; color: #005f82; }
+
+        .hotel-card-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            margin: 0 0 8px;
+            line-height: 1.3;
+        }
+        .hotel-card-anime {
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .hotel-card-desc {
+            font-size: 0.93rem;
+            color: #4a5568;
+            line-height: 1.65;
+            font-family: 'Inter', sans-serif;
+            flex: 1;
+            margin-bottom: 18px;
+        }
+        .hotel-card-footer {
+            display: flex;
+            gap: 10px;
+            margin-top: auto;
+        }
+        .btn-read-more {
+            flex: 1;
+            display: block;
+            text-align: center;
+            background: var(--deep-navy);
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 7px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            transition: background 0.2s;
+        }
+        .btn-read-more:hover {
+            background: #152843;
+        }
+        .btn-book {
+            flex: 1;
+            display: block;
+            text-align: center;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            padding: 10px 14px;
+            border-radius: 7px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            transition: background 0.2s;
+        }
+        .btn-book:hover {
+            background: #c0392b;
+        }
+
+        /* ── Location Badge ── */
+        .hotel-location {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* ── Coming Soon Banner ── */
+        .coming-soon-banner {
+            background: #f8fafc;
+            border: 2px dashed #cbd5e1;
+            border-radius: 12px;
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: 0 auto 60px;
+            color: #94a3b8;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+        }
+        .coming-soon-banner strong {
+            display: block;
+            font-size: 1.1rem;
+            color: #64748b;
+            margin-bottom: 6px;
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .stay-hero h1 { font-size: 2rem; }
+            .stay-grid { grid-template-columns: 1fr; padding: 0 16px 40px; }
+            .hotel-card-footer { flex-direction: column; }
+        }
+    </style>
+</head>
 <body>
-    <nav>
+
+<nav>
+    <a href="index.html" style="text-decoration: none;">
         <div class="logo-container">
             <img src="assets/logo.png" alt="HM Logo" class="logo-img">
             <div class="logo-text">HOTEL<span>MANGA</span></div>
         </div>
-    
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stay.html" class="active">Stay</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="stay-hero">
+    <h1>Where Will You <span>Stay</span>?</h1>
+    <p>The world's most curated guide to anime-themed hotels, manga sanctuaries, and otaku pilgrimages across Japan.</p>
+</section>
+
+<!-- Filter Tabs -->
+<div class="stay-filters">
+    <button class="filter-btn active" onclick="filterCards('all', this)">All Hotels</button>
+    <button class="filter-btn" onclick="filterCards('themed', this)">Character Themed</button>
+    <button class="filter-btn" onclick="filterCards('pilgrimage', this)">Anime Pilgrimage</button>
+    <button class="filter-btn" onclick="filterCards('manga', this)">Manga Sleepover</button>
+    <button class="filter-btn" onclick="filterCards('capsule', this)">Capsule & Tech</button>
+    <button class="filter-btn" onclick="filterCards('otaku', this)">Otaku Districts</button>
+</div>
+
+<p class="stay-section-title">20 Curated Stays — Japan</p>
+
+<!-- Hotel Grid -->
+<div class="stay-grid" id="hotelGrid">
+
+    <!-- 1. Hotel Gracery Shinjuku -->
+    <div class="hotel-card" data-category="themed otaku">
+        <div class="hotel-card-img-placeholder">🦖</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-themed">Character Themed</span>
+                <span class="hotel-tag tag-otaku">Otaku District</span>
+            </div>
+            <p class="hotel-location">📍 Shinjuku, Tokyo</p>
+            <h2 class="hotel-card-name">Hotel Gracery Shinjuku</h2>
+            <p class="hotel-card-anime">★ Godzilla · Iconic Tokyo Landmark</p>
+            <p class="hotel-card-desc">The most photographed hotel in Tokyo. A life-size Godzilla head erupts from the 8th floor terrace, gazing over the neon chaos of Kabukicho. The Godzilla View rooms put you eye-to-eye with the King of Monsters — a surreal, unforgettable experience that no otaku should miss.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/hotel-gracery-shinjuku.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/gracery-shinjuku.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
         </div>
+    </div>
 
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                
-                <li><a href="explore.html" class="active">Explore</a></li>
-                <li><a href="lifestyle.html">Lifestyle</a></li> 
-            </ul>
-    </nav>
+    <!-- 2. Highland Resort Hotel -->
+    <div class="hotel-card" data-category="themed pilgrimage">
+        <div class="hotel-card-img-placeholder">🍃</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-themed">Character Themed</span>
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+            </div>
+            <p class="hotel-location">📍 Fujiyoshida, Yamanashi</p>
+            <h2 class="hotel-card-name">Highland Resort Hotel & Spa</h2>
+            <p class="hotel-card-anime">★ Naruto · Official Collaboration Rooms</p>
+            <p class="hotel-card-desc">Sleep inside the Hidden Leaf Village. The official Naruto collaboration suites at Highland Resort are the most meticulously crafted anime rooms in Japan — from Hokage-themed walls to kunai-shaped room keys. Mount Fuji is your view. The ninja world is your bedroom.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/highland-resort-hotel.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/highland-resort.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
 
-     <footer class="site-footer">
+    <!-- 3. Grand Chariot 135° -->
+    <div class="hotel-card" data-category="themed pilgrimage">
+        <div class="hotel-card-img-placeholder">⭐</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-themed">Character Themed</span>
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+            </div>
+            <p class="hotel-location">📍 Awaji Island, Hyogo</p>
+            <h2 class="hotel-card-name">Grand Chariot 135°</h2>
+            <p class="hotel-card-anime">★ Naruto · Nijigen no Mori Anime Park</p>
+            <p class="hotel-card-desc">On the mythical island of Awaji — birthplace of the Japanese gods — Grand Chariot offers the most luxurious anime stay in existence. Official Naruto villas recreate the Hokage's chambers in breathtaking detail. Just outside your door: Japan's premier anime theme park, Nijigen no Mori.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/grand-chariot.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/grand-chariot-135.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. EJ Anime Hotel -->
+    <div class="hotel-card" data-category="themed pilgrimage">
+        <div class="hotel-card-img-placeholder">🤖</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-themed">Character Themed</span>
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+            </div>
+            <p class="hotel-location">📍 Tokorozawa, Saitama</p>
+            <h2 class="hotel-card-name">EJ Anime Hotel</h2>
+            <p class="hotel-card-anime">★ Multiple Series · AR Character System</p>
+            <p class="hotel-card-desc">The most technologically advanced anime hotel on Earth. EJ Anime Hotel uses augmented reality to place your favorite characters inside your room — they greet you, react to you, and inhabit the space alongside you. Located at Kadokawa's Musashino campus, this is fandom made physical.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/ej-anime-hotel.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/ej-anime-hotel.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5. Henn na Hotel -->
+    <div class="hotel-card" data-category="themed capsule">
+        <div class="hotel-card-img-placeholder">🦕</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-themed">Character Themed</span>
+                <span class="hotel-tag tag-capsule">Capsule & Tech</span>
+            </div>
+            <p class="hotel-location">📍 Akasaka, Tokyo</p>
+            <h2 class="hotel-card-name">Henn na Hotel Akasaka</h2>
+            <p class="hotel-card-anime">★ Sci-Fi · World's First Robot-Staffed Hotel</p>
+            <p class="hotel-card-desc">A velociraptor in a bow tie checks you in. This is not a fever dream — it is the Henn na Hotel. The world's first hotel staffed entirely by robots, it earned a Guinness World Record and the undying love of every otaku who has ever dreamed of living in a sci-fi anime. Surreal, efficient, and unforgettable.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/henn-na-hotel.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/henn-na-akasaka.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. Sekizenkan Ryokan -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <div class="hotel-card-img-placeholder">🏯</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+            </div>
+            <p class="hotel-location">📍 Shima Onsen, Gunma</p>
+            <h2 class="hotel-card-name">Sekizenkan Ryokan</h2>
+            <p class="hotel-card-anime">★ Spirited Away · Real-Life Bathhouse Inspiration</p>
+            <p class="hotel-card-desc">Cross the red bridge at night and you are inside Spirited Away. Sekizenkan is Japan's oldest continuously operating ryokan — built in 1691 — and the direct visual inspiration for Yubaba's bathhouse. The lantern-lit corridors, steaming baths, and ancient wooden architecture make this the most sacred pilgrimage in all of anime tourism.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/sekizenkan-ryokan.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/sekizenkan.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. Dogo Onsen Honkan -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <div class="hotel-card-img-placeholder">♨️</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+            </div>
+            <p class="hotel-location">📍 Matsuyama, Ehime</p>
+            <h2 class="hotel-card-name">Dogo Onsen Honkan</h2>
+            <p class="hotel-card-anime">★ Spirited Away · Japan's Oldest Hot Spring</p>
+            <p class="hotel-card-desc">Japan's oldest bathhouse and a UNESCO candidate for world heritage. Hayao Miyazaki drew upon Dogo Onsen's 3,000-year history when creating the Spirit Bathhouse in Spirited Away. Arrive at dusk when the wooden building glows orange against the sky — a scene ripped directly from the film and burned into your memory forever.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/dogo-onsen-honkan.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/dogo-onsen.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 8. Ookawa-so -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <div class="hotel-card-img-placeholder">🌸</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+            </div>
+            <p class="hotel-location">📍 Aizuwakamatsu, Fukushima</p>
+            <h2 class="hotel-card-name">Ookawa-so (Infinity Castle)</h2>
+            <p class="hotel-card-anime">★ Demon Slayer · Infinity Castle Inspiration</p>
+            <p class="hotel-card-desc">The ryokan that became the Infinity Castle. Ookawa-so's spectacular lobby — with its soaring ceilings, ornate wooden beams, and cascading staircases — directly inspired one of the most iconic locations in Demon Slayer. Standing inside it feels like stepping into the screen. The most talked-about pilgrimage of 2024 and 2025.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/ookawa-so.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/ookawa-so.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 9. Yasuda Ryokan -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <div class="hotel-card-img-placeholder">🎵</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+            </div>
+            <p class="hotel-location">📍 Numazu, Shizuoka</p>
+            <h2 class="hotel-card-name">Yasuda Ryokan</h2>
+            <p class="hotel-card-anime">★ Love Live! Sunshine!! · Chika's Real Home</p>
+            <p class="hotel-card-desc">This is not inspired by Love Live — this is Love Live. Yasuda Ryokan is the real-world home of Chika Takami, the series' protagonist. The building, the garden, the view of Suruga Bay — all faithfully recreated in the anime. For fans of the franchise, staying here is a religious experience. Numazu itself has become a pilgrimage city because of this show.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/yasuda-ryokan.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/yasuda-ryokan-numazu.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10. Natural Farm City Hotel -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <div class="hotel-card-img-placeholder">🌟</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+            </div>
+            <p class="hotel-location">📍 Chichibu, Saitama</p>
+            <h2 class="hotel-card-name">Natural Farm City Hotel</h2>
+            <p class="hotel-card-anime">★ Anohana · The Flower We Saw That Day</p>
+            <p class="hotel-card-desc">Perched above Chichibu — the real-world setting of Anohana, Japan's most emotionally devastating anime — this hotel offers the exact panoramic view that inspired the series' heartbreaking finale. The terrace overlooks the valley where Meiko Honma's spirit lingered. Come prepared: you may not leave with dry eyes.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/natural-farm-city-hotel.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/natural-farm-city.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 11. Manga Art Hotel Tokyo -->
+    <div class="hotel-card" data-category="manga capsule otaku">
+        <div class="hotel-card-img-placeholder">📚</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-manga">Manga Sleepover</span>
+                <span class="hotel-tag tag-capsule">Capsule & Tech</span>
+            </div>
+            <p class="hotel-location">📍 Kanda, Tokyo</p>
+            <h2 class="hotel-card-name">Manga Art Hotel Tokyo</h2>
+            <p class="hotel-card-anime">★ 5,000+ Curated Manga Volumes</p>
+            <p class="hotel-card-desc">Sleep surrounded by manga. The walls, the corridors, the shelves beside your bed — all manga. Manga Art Hotel is not a hotel with manga; it is manga that happens to have beds. The curators have hand-selected every volume. You can borrow any title, disappear into your capsule, and read until the city wakes up.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/manga-art-hotel-tokyo.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/manga-art-hotel-tokyo.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 12. Book Hotel Jimbocho -->
+    <div class="hotel-card" data-category="manga otaku">
+        <div class="hotel-card-img-placeholder">📖</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-manga">Manga Sleepover</span>
+                <span class="hotel-tag tag-otaku">Otaku District</span>
+            </div>
+            <p class="hotel-location">📍 Jimbocho, Tokyo</p>
+            <h2 class="hotel-card-name">Book Hotel Jimbocho</h2>
+            <p class="hotel-card-anime">★ Bibliotherapy · Tokyo's Literary Heart</p>
+            <p class="hotel-card-desc">In Jimbocho — Tokyo's legendary antiquarian book district — this hotel operates on a single beautiful principle: books are therapy. Staff curate personalized reading prescriptions based on your mood. Each floor has a theme. Each room has a shelf. Step outside and you are surrounded by hundreds of second-hand bookshops and manga dealers. This is paradise for readers.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/book-hotel-jimbocho.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/book-hotel-jimbocho.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 13. Quintessa Osaka -->
+    <div class="hotel-card" data-category="manga otaku">
+        <div class="hotel-card-img-placeholder">🎨</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-manga">Manga Sleepover</span>
+                <span class="hotel-tag tag-otaku">Otaku District</span>
+            </div>
+            <p class="hotel-location">📍 Shinsaibashi, Osaka</p>
+            <h2 class="hotel-card-name">Quintessa Hotel Osaka Shinsaibashi</h2>
+            <p class="hotel-card-anime">★ Comic & Books · Premium Manga Library</p>
+            <p class="hotel-card-desc">Quintessa's Comic & Books concept is the gold standard of manga hotels. Floor-to-ceiling bookshelves, a library lounge designed for late-night reading, and in-room manga delivery on request. Positioned in Shinsaibashi — steps from Den Den Town, Osaka's answer to Akihabara — this is the definitive base camp for otaku in western Japan.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/quintessa-osaka.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/quintessa-osaka-shinsaibashi.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 14. Niigata Daiichi Hotel -->
+    <div class="hotel-card" data-category="manga">
+        <div class="hotel-card-img-placeholder">📕</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-manga">Manga Sleepover</span>
+            </div>
+            <p class="hotel-location">📍 Niigata City, Niigata</p>
+            <h2 class="hotel-card-name">Niigata Daiichi Hotel</h2>
+            <p class="hotel-card-anime">★ 11,000 Manga Volumes · Kingdom of Manga</p>
+            <p class="hotel-card-desc">Niigata is Japan's manga kingdom — birthplace of Naruto's Masashi Kishimoto and One Piece's Eiichiro Oda. The Niigata Daiichi Hotel honors this legacy with an extraordinary archive of 11,000 manga volumes available to guests. This is not a gimmick; it is a serious literary collection in the city that gave manga to the world.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/niigata-daiichi-hotel.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/niigata-daiichi.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 15. WebBase Takamatsu -->
+    <div class="hotel-card" data-category="manga">
+        <div class="hotel-card-img-placeholder">🏝️</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-manga">Manga Sleepover</span>
+            </div>
+            <p class="hotel-location">📍 Takamatsu, Kagawa</p>
+            <h2 class="hotel-card-name">WebBase Takamatsu</h2>
+            <p class="hotel-card-anime">★ 10,000+ Volumes · Shikoku Island Gem</p>
+            <p class="hotel-card-desc">On the island of Shikoku — Japan's quieter, more contemplative side — WebBase Takamatsu offers one of the largest manga libraries in any hotel on Earth, with over 10,000 volumes. The design is modern and minimal, the communal reading space is exceptional, and the city of Takamatsu offers easy access to the iconic Setonaikai island-hopping routes.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/webbase-takamatsu.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/webbase-takamatsu.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 16. Nohga Hotel Akihabara -->
+    <div class="hotel-card" data-category="otaku">
+        <div class="hotel-card-img-placeholder">⚡</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-otaku">Otaku District</span>
+            </div>
+            <p class="hotel-location">📍 Akihabara, Tokyo</p>
+            <h2 class="hotel-card-name">Nohga Hotel Akihabara</h2>
+            <p class="hotel-card-anime">★ Electric Town · Premium Akihabara Base</p>
+            <p class="hotel-card-desc">The most design-forward hotel in Akihabara. While other options in the district sacrifice aesthetics for location, Nohga delivers both — a beautifully designed boutique hotel with high-end audio systems in every room, steps from the world's greatest concentration of anime, manga, and gaming stores. The sophisticated choice for the discerning otaku traveler.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/nohga-hotel-akihabara.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/nohga-akihabara.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 17. Anshin Oyado Akihabara -->
+    <div class="hotel-card" data-category="capsule otaku">
+        <div class="hotel-card-img-placeholder">🎮</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-capsule">Capsule & Tech</span>
+                <span class="hotel-tag tag-otaku">Otaku District</span>
+            </div>
+            <p class="hotel-location">📍 Akihabara, Tokyo</p>
+            <h2 class="hotel-card-name">Anshin Oyado Akihabara</h2>
+            <p class="hotel-card-anime">★ Otaku Paradise · Tech-Loaded Capsule</p>
+            <p class="hotel-card-desc">The otaku's secret weapon. Anshin Oyado Akihabara packs a manga library, high-speed gaming stations, free unlimited drinks, and a relaxation lounge into one of the most convenient locations in Tokyo. After a day of hunting rare figures and first-edition manga on Electric Town's legendary streets, this is where you recharge — body and soul.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/anshin-oyado-akihabara.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/anshin-oyado-akihabara.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 18. The Millennials Shibuya -->
+    <div class="hotel-card" data-category="capsule otaku">
+        <div class="hotel-card-img-placeholder">🌃</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-capsule">Capsule & Tech</span>
+                <span class="hotel-tag tag-otaku">Otaku District</span>
+            </div>
+            <p class="hotel-location">📍 Shibuya, Tokyo</p>
+            <h2 class="hotel-card-name">The Millennials Shibuya</h2>
+            <p class="hotel-card-anime">★ Smart Pod · Jujutsu Kaisen's Shibuya</p>
+            <p class="hotel-card-desc">The future of sleep, in the heart of anime's most famous battleground. The Millennials' Smart Pods transform as you use them — rising from flat bed to lounge chair at a touch, with a built-in projector casting Tokyo's skyline across your pod ceiling. Outside: the Shibuya Scramble, where Gojo Satoru once stood against an army of curses.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/the-millennials-shibuya.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/the-millennials-shibuya.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 19. The Tokyo Station Hotel -->
+    <div class="hotel-card" data-category="pilgrimage otaku">
+        <div class="hotel-card-img-placeholder">🚄</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span>
+                <span class="hotel-tag tag-otaku">Otaku District</span>
+            </div>
+            <p class="hotel-location">📍 Marunouchi, Tokyo</p>
+            <h2 class="hotel-card-name">The Tokyo Station Hotel</h2>
+            <p class="hotel-card-anime">★ Anime Character Street · Tokyo's Grand Central</p>
+            <p class="hotel-card-desc">Sleep inside a National Important Cultural Property. The Tokyo Station Hotel occupies the iconic red-brick 1914 station building — a structure that appears in countless anime films and has anchored Tokyo's identity for over a century. Directly beneath your feet: the Tokyo Character Street, home to official shops from every major anime studio in Japan.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/tokyo-station-hotel.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/the-tokyo-station.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 20. 9h Nine Hours Shinjuku -->
+    <div class="hotel-card" data-category="capsule otaku">
+        <div class="hotel-card-img-placeholder">🌙</div>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags">
+                <span class="hotel-tag tag-capsule">Capsule & Tech</span>
+                <span class="hotel-tag tag-otaku">Otaku District</span>
+            </div>
+            <p class="hotel-location">📍 Shinjuku, Tokyo</p>
+            <h2 class="hotel-card-name">9h Nine Hours Shinjuku</h2>
+            <p class="hotel-card-anime">★ Cyberpunk Capsule · Iconic Design</p>
+            <p class="hotel-card-desc">The capsule hotel that changed what a capsule hotel could be. Nine Hours Shinjuku's stark white pods, precision engineering, and minimalist philosophy make it the most visually iconic sleep experience in Japan. The formula is simple and perfect: 1 hour to shower, 7 hours to sleep, 1 hour to prepare. Step outside into Shinjuku's electric chaos. Repeat.</p>
+            <div class="hotel-card-footer">
+                <a href="stay/9h-nine-hours-shinjuku.html" class="btn-read-more">Read More</a>
+                <a href="https://www.booking.com/hotel/jp/9h-shinjuku.html" class="btn-book" target="_blank" rel="noopener">Book Stay →</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Coming Soon -->
+<div style="max-width:1100px;margin:0 auto;padding:0 20px 60px;">
+    <div class="coming-soon-banner">
+        <strong>452 More Hotels Coming Soon</strong>
+        From capsule hotels in Osaka to pilgrimages in Hokkaido — the full HotelManga database is on its way.
+    </div>
+</div>
+
+<footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
-         <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>   
-         <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
-         <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
-     </div>
-
+            <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
+            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+            <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+        </div>
         <div class="footer-nav-section">
             <h4>Quick Links</h4>
             <ul class="footer-list">
@@ -48,29 +714,37 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
         <div class="footer-nav-section">
-         <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-         <p class="footer-tagline">📩info@hotelmanga.com
-                
-                
-            </ul>
+            <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+            <p class="footer-tagline">📩info@hotelmanga.com</p>
         </div>
     </div>
-
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
 
-        <script>
+<script>
+    // Mobile menu
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
-
     menuToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
+
+    // Filter functionality
+    function filterCards(category, btn) {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.hotel-card').forEach(card => {
+            if (category === 'all' || card.dataset.category.includes(category)) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
 </script>
 
 </body>
