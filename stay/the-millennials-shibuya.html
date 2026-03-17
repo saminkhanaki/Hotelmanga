@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://hotelmanga.com/stay/the-millennials-shibuya.html">
+    <title>The Millennials Shibuya: Japan's Smartest Smart Pod Hotel | HotelManga</title>
+    <meta name="description" content="The Millennials Shibuya is a high-tech IoT smart pod hotel in the heart of Shibuya — 6 minutes from Shibuya Crossing, with fully reclining beds controlled by iPod, silent alarm system, 80-inch screen, co-working space, and free happy hour. A complete guide.">
+    <meta name="keywords" content="The Millennials Shibuya, smart pod hotel Tokyo, IoT capsule hotel Shibuya, futuristic hotel Tokyo, tech hotel Shibuya, best capsule hotel Shibuya, Shibuya pod hotel, smart hotel Tokyo, millennials hotel Japan">
+    <meta property="og:title" content="The Millennials Shibuya: Japan's Most High-Tech Smart Pod Hotel">
+    <meta property="og:description" content="An iPod controls your bed. Your alarm wakes you with light, not sound. An 80-inch screen turns your pod into a private cinema. This is Shibuya's smartest sleep.">
+    <meta property="og:image" content="https://hotelmanga.com/assets/stay/millennials-hero.webp">
+    <meta property="og:url" content="https://hotelmanga.com/stay/the-millennials-shibuya.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .article-header { border-bottom: 2px solid #1D3557; margin-bottom: 25px; padding-bottom: 10px; }
+        .article-title { font-family: 'Montserrat', sans-serif; font-size: 2.3rem; color: black; line-height: 1.2; margin: 15px 0; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
+        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); min-height: 380px; object-fit: cover; }
+        .big-img { width: 60%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .big-right-img { width: 60%; float: right; margin: 0 0 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .article-body p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; font-family: 'Inter', sans-serif; }
+        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.6rem; clear: both; font-family: 'Montserrat', sans-serif; }
+        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 25px 30px; margin: 30px 0; border-left: 5px solid var(--accent); clear: both; }
+        .highlight-box h3 { margin-top: 0; color: var(--accent); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        .highlight-box ul { padding-left: 18px; font-family: 'Inter', sans-serif; font-size: 0.97rem; line-height: 1.8; color: #4a5568; }
+        .info-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-family: 'Inter', sans-serif; font-size: 0.95rem; clear: both; }
+        .info-table td { padding: 11px 14px; border-bottom: 1px solid #e8edf2; vertical-align: top; }
+        .info-table td:first-child { font-weight: 600; color: var(--deep-navy); width: 38%; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .info-table tr:last-child td { border-bottom: none; }
+        .gallery-section { margin: 40px 0 30px; clear: both; }
+        .gallery-section h2 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; color: var(--deep-navy); margin-bottom: 16px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .gallery-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s, opacity 0.2s; }
+        .gallery-grid img:hover { transform: scale(1.03); opacity: 0.92; }
+        .gallery-placeholder { width: 100%; aspect-ratio: 4/3; border-radius: 8px; background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.8rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 20px; right: 24px; color: white; font-size: 2rem; cursor: pointer; font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1; opacity: 0.8; transition: opacity 0.2s; }
+        .lightbox-close:hover { opacity: 1; }
+        .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 2.5rem; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; background: none; border: none; padding: 10px; }
+        .lightbox-prev { left: 16px; } .lightbox-next { right: 16px; }
+        .lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
+        .book-cta { background: var(--deep-navy); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 35px 0 20px; clear: both; }
+        .book-cta h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 0 0 8px; color: white; }
+        .book-cta p { font-size: 0.95rem !important; opacity: 0.8; margin-bottom: 20px !important; }
+        .btn-book-large { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 13px 32px; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: background 0.2s; }
+        .btn-book-large:hover { background: #c0392b; }
+        .back-home { display: inline-block; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
+        .back-stay { display: inline-block; margin-bottom: 10px; margin-left: 16px; color: var(--deep-navy); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; opacity: 0.7; }
+        .notice-box { background: #fffbeb; border: 1px solid #fcd34d; border-radius: 10px; padding: 16px 20px; margin: 25px 0; font-family: 'Inter', sans-serif; font-size: 0.93rem; color: #78350f; clear: both; }
+        .notice-box strong { display: block; margin-bottom: 4px; font-family: 'Montserrat', sans-serif; }
+        @media (max-width: 768px) {
+            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
+            .article-title { font-size: 1.8rem; }
+            .big-img, .big-right-img { width: 100%; float: none; margin: 0 0 20px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" style="text-decoration: none;">
+        <div class="logo-container">
+            <img src="../assets/logo.png" alt="HM Logo" class="logo-img">
+            <div class="logo-text">HOTEL<span>MANGA</span></div>
+        </div>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../stay.html" class="active">Stay</a></li>
+        <li><a href="../explore.html">Explore</a></li>
+        <li><a href="../lifestyle.html">Lifestyle</a></li>
+    </ul>
+</nav>
+
+<main class="article-container">
+
+    <a href="../stay.html" class="back-home">← Back to Stay</a>
+    <a href="../" class="back-stay">/ HotelManga</a>
+
+    <header class="article-header">
+        <span style="background: var(--deep-navy); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Capsule & Tech</span>
+        &nbsp;
+        <span style="background: #f0f0f0; color: #555; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Shibuya · Mixed</span>
+        <h1 class="article-title">The Millennials Shibuya: The Future of Sleep, Six Minutes from the Crossing</h1>
+        <div class="meta">March 2026 &nbsp;·&nbsp; Shibuya, Tokyo &nbsp;·&nbsp; By HotelManga Editorial</div>
+    </header>
+
+    <div class="notice-box">
+        <strong>ℹ Age Restriction</strong>
+        The Millennials Shibuya is open to guests aged 20 and above only. Mixed gender — both men and women welcome. No children permitted.
+    </div>
+
+    <img src="../assets/stay/millennials-hero.webp" alt="The Millennials Shibuya — high-tech smart pod hotel in the heart of Shibuya" class="hero-img" onerror="this.style.background='linear-gradient(135deg,#1D3557,#2d5482)'; this.alt='';">
+
+    <article class="article-body">
+
+        <p>At check-in, they hand you an iPod. This device controls everything about your pod for the duration of your stay — the angle of your bed, the color and intensity of the lighting, the fan speed, and the alarm that will wake you tomorrow morning. That alarm, when it fires, will not make a sound. Instead, your bed will slowly recline to upright, and soft ambient light will fill the pod. You will wake up the way anime characters wake up: gently, in a pod, in Shibuya, already in the future.</p>
+
+        <p>The Millennials Shibuya was the first hotel in the world to integrate IoT technology into its sleeping pods at this level of sophistication. It remains, years after opening, the most convincing argument that the capsule hotel format has not reached its ceiling — it has barely begun.</p>
+
+        <h2>The Smart Pod: What Three Square Meters Can Actually Be</h2>
+
+        <p>Each Smart Pod is 3 square meters of space engineered for a specific kind of traveler — the person who knows exactly what they need and is willing to trade everything else for it. The pod has a high ceiling, which means you can stand inside when the bed is in sofa mode. The mattress is a 25cm-thick Serta Pocket Coil — the same specification you would find in a high-end hotel room, delivered in a 120cm width. A rolling privacy screen completely blocks the pod from the corridor. Under the bed, a drawer-system storage space accommodates a full open suitcase.</p>
+
+        <img src="../assets/stay/millennials-pod.webp" alt="The Millennials Shibuya Smart Pod interior with reclining bed and iPod controls" class="big-img" onerror="this.style.display='none';">
+
+        <p>The iPod manages bed recline angle — infinitely adjustable between flat sleep and fully upright sofa — plus lighting and the soundless alarm. A rental 80-inch screen can be added to the pod for casting from your phone or laptop, turning the space into a private cinema. Each pod has a small safe for valuables, power outlets, USB charging, and sufficient storage for a week of belongings if packed efficiently. Free amenities — towels, toothbrush, razor, earplugs, slippers, and hair care products — are available at the front desk.</p>
+
+        <p>What guests consistently note, and what photographs do not quite capture, is the feeling of privacy. The combination of the privacy screen, the personal control system, and the high ceiling creates a sense of personal space that exceeds the pod's physical dimensions. Multiple TripAdvisor reviewers describe it as feeling like "a room of your own" rather than a shared sleeping space — which is precisely the design intent.</p>
+
+        <h2>The Common Areas: Where The Hotel Actually Lives</h2>
+
+        <p>Twenty percent of The Millennials Shibuya is common space — an unusually high allocation that reflects the hotel's core philosophy. The hotel is not designed as a place to sleep and leave. It is designed as a place to work, eat, socialize, and decompress, with the pod as the private retreat within a larger living environment.</p>
+
+        <img src="../assets/stay/millennials-lounge.webp" alt="The Millennials Shibuya social lounge and co-working area" class="big-right-img" onerror="this.style.display='none';">
+
+        <p>The social lounge and kitchen operate 24 hours a day and are freely accessible throughout the stay. Free coffee and matcha are available in the lounge. A happy beer hour provides free drinks at a set time each day — the designated social moment that staff describe as one of the easiest ways to meet other guests. Buffet breakfast is available for a fee. The co-working space is available to guests when not reserved for events, and the hotel provides free PC monitor rental for anyone working from their own device.</p>
+
+        <p>The common areas do attract a note of caution from some reviewers: on busy weekends in Shibuya, the hotel's location means ambient noise from nearby nightlife can filter up to sleeping floors, and the social lounge can become occupied by co-working guests during daytime hours, changing its character. Light sleepers should bring earplugs. Guests who want quiet morning work time should plan accordingly.</p>
+
+        <h2>Shibuya: Location as the Third Amenity</h2>
+
+        <p>Shibuya Crossing — the most photographed intersection in Japan and one of the most recognizable urban images in the world — is a 6-minute walk from the hotel. Shibuya Parco, with its concentration of anime goods, video game stores, and Japanese pop culture retail, is a 5-minute walk. Shibuya 109, Yoyogi Park, Meiji Jingu Shrine, and NHK Studio Park are all accessible on foot or by a single train stop. For travelers building an itinerary around Tokyo's cultural landscape, The Millennials Shibuya places the center of everything within walking distance.</p>
+
+        <p>The hotel's position in central Shibuya also means that Harajuku, Omotesando, Daikanyama, and Shimokitazawa — the neighborhoods that define Tokyo's fashion and subculture geography — are all reachable within 15 minutes without a transfer. This is not incidental to the hotel's appeal. It is the reason to stay here over technically comparable options elsewhere in the city.</p>
+
+        <div class="highlight-box">
+            <h3>Practical Information</h3>
+            <ul>
+                <li><strong>Age restriction:</strong> 20 and above only — mixed gender, no children</li>
+                <li><strong>Check-in:</strong> 3:00 PM &nbsp;&nbsp; <strong>Check-out:</strong> 10:00 AM</li>
+                <li><strong>Pods:</strong> 120 Smart Pods — 120cm Serta mattress, reclining bed, iPod controls, privacy screen, safe</li>
+                <li><strong>Silent alarm:</strong> Bed reclines + ambient lights — no sound</li>
+                <li><strong>80-inch screen:</strong> Available to rent — paid rental, not free</li>
+                <li><strong>Common areas:</strong> Social lounge + kitchen (24hr free) · Co-working space · Happy beer hour daily</li>
+                <li><strong>Free amenities:</strong> Towels, toothbrush, earplugs, slippers, hair care at front desk</li>
+                <li><strong>To Shibuya Crossing:</strong> 6-minute walk</li>
+                <li><strong>Nearest station:</strong> Shibuya Station — multiple lines, 6-min walk</li>
+            </ul>
+        </div>
+
+        <table class="info-table">
+            <tr><td>Full Name</td><td>The Millennials Shibuya</td></tr>
+            <tr><td>Location</td><td>Shibuya, Tokyo — 6 min walk from Shibuya Crossing</td></tr>
+            <tr><td>Gender Policy</td><td>Mixed — men and women welcome · Ages 20+ only</td></tr>
+            <tr><td>Pods</td><td>120 Smart Pods — iPod-controlled bed, light, soundless alarm</td></tr>
+            <tr><td>Mattress</td><td>120cm wide · 25cm Serta Pocket Coil</td></tr>
+            <tr><td>Common Areas</td><td>24hr lounge + kitchen · Co-working space · Happy beer hour</td></tr>
+            <tr><td>Price Range</td><td>Approximately ¥5,000–¥10,000 per night — varies by season</td></tr>
+            <tr><td>Nearest Station</td><td>Shibuya Station — 6-minute walk</td></tr>
+        </table>
+
+        <div class="gallery-section">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <img src="../assets/stay/millennials-g1.webp" alt="The Millennials Shibuya exterior" onclick="openLightbox(0)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(0)\'>Photo 1</div>'">
+                <img src="../assets/stay/millennials-g2.webp" alt="Smart Pod with reclining bed and iPod" onclick="openLightbox(1)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(1)\'>Photo 2</div>'">
+                <img src="../assets/stay/millennials-g3.webp" alt="Privacy screen and pod interior" onclick="openLightbox(2)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(2)\'>Photo 3</div>'">
+                <img src="../assets/stay/millennials-g4.webp" alt="Social lounge and common area" onclick="openLightbox(3)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(3)\'>Photo 4</div>'">
+                <img src="../assets/stay/millennials-g5.webp" alt="Co-working space" onclick="openLightbox(4)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(4)\'>Photo 5</div>'">
+                <img src="../assets/stay/millennials-g6.webp" alt="View toward Shibuya from the hotel" onclick="openLightbox(5)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(5)\'>Photo 6</div>'">
+            </div>
+        </div>
+
+        <div class="book-cta">
+            <h3>Sleep Smart in Shibuya</h3>
+            <p>Book The Millennials Shibuya — 6 minutes from the Crossing, in the pod that wakes you with light.</p>
+            <a href="https://www.booking.com/hotel/jp/the-millennials-shibuya-shibuya-ku.html" class="btn-book-large" target="_blank" rel="noopener sponsored">Check Availability & Book →</a>
+        </div>
+
+        <a href="../stay.html" class="back-home">← Back to Stay</a>
+
+    </article>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <button class="lightbox-prev" onclick="changeImage(-1); event.stopPropagation();">&#8249;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-next" onclick="changeImage(1); event.stopPropagation();">&#8250;</button>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
+            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+            <div class="footer-nav-section"><ul class="footer-list"><li><a href="../privacy.html">Privacy Policy</a></li></ul></div>
+        </div>
+        <div class="footer-nav-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-list">
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../archive.html">Archive</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-nav-section">
+            <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+            <p class="footer-tagline">📩info@hotelmanga.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        menuToggle.classList.toggle('is-active');
+    });
+    const galleryImages = ['../assets/stay/millennials-g1.webp','../assets/stay/millennials-g2.webp','../assets/stay/millennials-g3.webp','../assets/stay/millennials-g4.webp','../assets/stay/millennials-g5.webp','../assets/stay/millennials-g6.webp'];
+    let currentIndex = 0;
+    function openLightbox(index) { currentIndex = index; document.getElementById('lightboxImg').src = galleryImages[index]; document.getElementById('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeLightbox(event) { if (!event || event.target === document.getElementById('lightbox') || event.target.classList.contains('lightbox-close')) { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; } }
+    function changeImage(direction) { currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length; document.getElementById('lightboxImg').src = galleryImages[currentIndex]; }
+    document.addEventListener('keydown', (e) => { const lb = document.getElementById('lightbox'); if (!lb.classList.contains('open')) return; if (e.key === 'ArrowRight') changeImage(1); if (e.key === 'ArrowLeft') changeImage(-1); if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
