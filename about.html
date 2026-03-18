@@ -2,96 +2,339 @@
 <html lang="en">
 <head>
     <link rel="canonical" href="https://hotelmanga.com/about.html">
-<title>About Us | HotelManga: The Modern Otaku’s Digital Sanctuary</title>
-
-<meta name="description" content="Discover the story behind HotelManga. We blend the aesthetic of high-end travel with the soul of Manga culture, providing guides, lifestyle rituals, and hidden spot explorations for the global Otaku community.">
-
-<meta name="keywords" content="About HotelManga, Manga Lifestyle Magazine, Modern Otaku Culture, Anime Travel Guides, Digital Sanctuary for Manga Fans, HotelManga Mission, Aesthetic Manga Community">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="HotelManga: Where Manga Meets Lifestyle">
-<meta property="og:description" content="Step into our world. HotelManga is a curated magazine for explorers of the Grand Line and the streets of Tokyo.">
-<meta property="og:image" content="https://hotelmanga.com/assets/about-hero-image.webp"> <meta property="og:url" content="https://hotelmanga.com/about.html">
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About Us | HotelManga">
-<meta name="twitter:description" content="Everything you need to know about the sanctuary for modern Manga voyagers.">
-<meta name="twitter:image" content="https://hotelmanga.com/assets/about-hero-image.webp">
+    <title>About HotelManga | Anime & Manga Hotel Guide for Japan Travel</title>
+    <meta name="description" content="HotelManga is the world's most curated guide to anime-themed hotels, manga sleepover destinations, and otaku pilgrimages across Japan. 20 handpicked stays, from Spirited Away ryokans to Naruto suites — written for travelers who take their fandom seriously.">
+    <meta name="keywords" content="anime hotel Japan guide, manga hotel Tokyo, otaku travel Japan, anime pilgrimage hotels, HotelManga about, manga travel magazine, capsule hotel Japan guide, best anime hotels Japan 2026">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About HotelManga — The World's Most Curated Anime Hotel Guide">
+    <meta property="og:description" content="HotelManga is where manga culture meets serious travel. 20 handpicked anime hotels, pilgrimage guides, and otaku lifestyle — all in one place.">
+    <meta property="og:image" content="https://hotelmanga.com/assets/about-hero-image.webp">
+    <meta property="og:url" content="https://hotelmanga.com/about.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About HotelManga | Anime & Manga Hotel Guide">
+    <meta name="twitter:description" content="The world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan.">
+    <meta name="twitter:image" content="https://hotelmanga.com/assets/about-hero-image.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HotelManga</title>
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "HotelManga",
+      "url": "https://hotelmanga.com",
+      "logo": "https://hotelmanga.com/assets/logo.png",
+      "description": "HotelManga is the world's most curated guide to anime-themed hotels, manga pilgrimages, and otaku travel across Japan.",
+      "sameAs": [],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "13101 W Washington Blvd",
+        "addressLocality": "Los Angeles",
+        "addressRegion": "CA",
+        "postalCode": "90066",
+        "addressCountry": "US"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "info@hotelmanga.com",
+        "contactType": "editorial"
+      }
+    }
+    </script>
+
+    <style>
+        .about-hero {
+            text-align: center;
+            padding: 80px 20px 60px;
+            background: var(--deep-navy);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: repeating-linear-gradient(
+                45deg, transparent, transparent 40px,
+                rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px
+            );
+        }
+        .about-hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            line-height: 1.2;
+        }
+        .about-hero h1 span { color: var(--accent); }
+        .about-hero p {
+            font-size: 1.15rem;
+            opacity: 0.85;
+            max-width: 680px;
+            margin: 0 auto;
+            line-height: 1.7;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            position: relative;
+        }
+        .about-container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .about-section {
+            padding: 60px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .about-section:last-of-type { border-bottom: none; }
+        .about-section h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            color: var(--deep-navy);
+            margin-bottom: 18px;
+        }
+        .about-section p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            color: #4a5568;
+            line-height: 1.75;
+            margin-bottom: 16px;
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-top: 40px;
+        }
+        .pillar-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 28px 24px;
+            border-top: 4px solid var(--deep-navy);
+        }
+        .pillar-card.accent { border-top-color: var(--accent); }
+        .pillar-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            color: var(--deep-navy);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .pillar-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.93rem;
+            color: #64748b;
+            line-height: 1.65;
+            margin: 0;
+        }
+        .pillar-card a {
+            display: inline-block;
+            margin-top: 14px;
+            color: var(--accent);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            letter-spacing: 0.04em;
+        }
+        .pillar-card a:hover { text-decoration: underline; }
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .stat-box {
+            text-align: center;
+            background: white;
+            border: 2px solid #e8edf2;
+            border-radius: 10px;
+            padding: 24px 16px;
+        }
+        .stat-box .num {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            display: block;
+        }
+        .stat-box .label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            color: #94a3b8;
+            margin-top: 4px;
+            display: block;
+        }
+        .about-cta {
+            background: var(--deep-navy);
+            color: white;
+            text-align: center;
+            padding: 64px 20px;
+        }
+        .about-cta h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .about-cta p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            opacity: 0.85;
+            margin-bottom: 32px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+        .btn-cta-primary {
+            display: inline-block;
+            padding: 13px 30px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            transition: background 0.2s;
+        }
+        .btn-cta-primary:hover { background: #c0392b; }
+        .btn-cta-secondary {
+            display: inline-block;
+            padding: 13px 30px;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+            border: 2px solid rgba(255,255,255,0.5);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            transition: border-color 0.2s;
+        }
+        .btn-cta-secondary:hover { border-color: white; }
+        @media (max-width: 768px) {
+            .about-hero h1 { font-size: 2rem; }
+            .pillars-grid { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
 </head>
-
 <body>
-    <nav>
-        <a href="index.html" style="text-decoration: none;">
-            <div class="logo-container">
-                <img src="assets/logo.png" alt="HM Logo" class="logo-img">
-                <div class="logo-text">HOTEL<span>MANGA</span></div>
-            </div>
-        </a>   
-    
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
 
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="stay.html" >Stay</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="lifestyle.html">Lifestyle</a></li>
-            </ul>
-    </nav>
+<nav>
+    <a href="index.html" style="text-decoration: none;">
+        <div class="logo-container">
+            <img src="assets/logo.png" alt="HM Logo" class="logo-img">
+            <div class="logo-text">HOTEL<span>MANGA</span></div>
+        </div>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stay.html">Stay</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="about-hero">
+    <h1>The World's Most Curated<br><span>Anime Hotel Guide</span></h1>
+    <p>HotelManga is where manga culture meets serious travel. We research, verify, and write the definitive guide to anime-themed hotels, manga pilgrimages, and otaku destinations across Japan.</p>
+</section>
+
 <main class="about-container">
-    <section class="about-hero" style="text-align: center; padding: 80px 20px; background-color: #fcfcfc;">
-        <h1 style="color: var(--deep-navy); font-size: 3rem; margin-bottom: 20px;">More Than a Magazine.</h1>
-        <p style="font-size: 1.2rem; color: #666; max-width: 800px; margin: 0 auto; line-height: 1.6;">
-            HotelManga is the digital sanctuary where <strong>Manga culture</strong> meets <strong>modern lifestyle</strong>. We explore the thin line between the fictional worlds of your favorite panels and the real-life aesthetics of Japan.
-        </p>
-    </section>
 
-    <hr style="border: 0; border-top: 1px solid #eee; width: 80%; margin: 0 auto;">
+    <!-- What We Are -->
+    <section class="about-section">
+        <h2>What HotelManga Is</h2>
+        <p>HotelManga is an independent travel and lifestyle magazine built for one specific reader: the person who plans their Japan trip around the hotels, the pilgrimages, and the places that manga and anime made real. Not the casual tourist who happens to like anime. The traveler who wants to sleep inside the ryokan that inspired Spirited Away, or stay in the hotel room that faces a life-size Godzilla head, or book a capsule in the manga library where the bed is inside the bookshelf.</p>
+        <p>We cover every category of anime-adjacent accommodation in Japan — from luxury ryokan with Higurashi connections to budget manga kissa with unlimited drinks and a free lounge. Every hotel we feature has been researched from multiple primary sources: the property's official site, Booking.com, Agoda, Rakuten Travel, TripAdvisor, and Japanese platforms including Jalan. We do not publish entries we cannot verify.</p>
 
-    <section class="about-story" style="max-width: 900px; margin: 60px auto; padding: 0 20px;">
-        <div style="margin-bottom: 50px;">
-            <h2 style="color: var(--deep-navy); margin-bottom: 15px;">Our Vision</h2>
-            <p>At HotelManga, we believe that being an Otaku is not just about reading; it's about a lifestyle. Whether it’s finding the exact Shibuya crossing where a sorcerer once stood, or building a "Lumina" smart shelf to protect your physical volumes, we are here to guide you through the 2026 era of manga collection and travel.</p>
-        </div>
-
-        <div class="mission-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px;">
-            <div style="border-left: 4px solid var(--deep-navy); padding-left: 20px;">
-                <h4 style="color: var(--deep-navy); margin-bottom: 10px;">The Explore Pillar</h4>
-                <p style="font-size: 0.95rem;">We map the real-life locations of legendary manga series, turning your trip to Japan into a curated pilgrimage of art and reality.</p>
+        <!-- Stats -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <span class="num">20</span>
+                <span class="label">Curated Hotel Guides</span>
             </div>
-            <div style="border-left: 4px solid var(--deep-navy); padding-left: 20px;">
-                <h4 style="color: var(--deep-navy); margin-bottom: 10px;">The Lifestyle Pillar</h4>
-                <p style="font-size: 0.95rem;">We blend Japanese minimalism with smart technology to help you create a living space that breathes the spirit of Manga.</p>
+            <div class="stat-box">
+                <span class="num">6</span>
+                <span class="label">Stay Categories</span>
+            </div>
+            <div class="stat-box">
+                <span class="num">12</span>
+                <span class="label">Prefectures Covered</span>
+            </div>
+            <div class="stat-box">
+                <span class="num">100%</span>
+                <span class="label">Independent Editorial</span>
             </div>
         </div>
     </section>
 
-    <section class="about-cta" style="background: var(--deep-navy); color: white; text-align: center; padding: 60px 20px; margin-bottom: -50px;">
-        <h2 style="margin-bottom: 20px;">Join the Journey</h2>
-        <p style="margin-bottom: 30px; opacity: 0.9;">We are just getting started. Follow us as we redefine the Otaku experience for the modern world.</p>
-        <a href="archive.html" style="display: inline-block; padding: 12px 30px; background: white; color: var(--deep-navy); text-decoration: none; border-radius: 5px; font-weight: 600;">Explore the Archive</a>
+    <!-- Three Pillars -->
+    <section class="about-section">
+        <h2>Three Pillars, One Mission</h2>
+        <p>HotelManga organizes its content around three editorial pillars. Each one answers a different question that the otaku traveler actually asks.</p>
+
+        <div class="pillars-grid">
+            <div class="pillar-card accent">
+                <h3>🏨 Stay</h3>
+                <p>The core of HotelManga. Twenty handpicked hotels across Japan — from the Spirited Away ryokan in Gunma to the Infinity Castle resort in Fukushima. Every entry is researched, verified, and written with the manga-focused traveler in mind.</p>
+                <a href="stay.html">Browse All Hotels →</a>
+            </div>
+            <div class="pillar-card">
+                <h3>🗺️ Explore</h3>
+                <p>Real-world locations that manga and anime made famous. Pilgrimage maps, neighborhood guides, and the stories behind the places that shaped the panels you've read a hundred times.</p>
+                <a href="explore.html">Start Exploring →</a>
+            </div>
+            <div class="pillar-card">
+                <h3>✨ Lifestyle</h3>
+                <p>The otaku life beyond travel. Manga collection design, smart shelf systems, Japanese minimalism applied to fan spaces, and the rituals that turn an apartment into something worth living in.</p>
+                <a href="lifestyle.html">Read Lifestyle →</a>
+            </div>
+        </div>
     </section>
+
+    <!-- How We Work -->
+    <section class="about-section">
+        <h2>How We Research</h2>
+        <p>Every hotel guide on HotelManga is built from a standard research process: general search for current information, TripAdvisor for guest experience, Agoda and Booking.com for pricing and policies, Jalan or Rakuten Travel for Japanese-language detail unavailable in English, and the property's own official website for amenities and booking. Where information conflicts between sources, we note it. Where we cannot verify a claim, we don't make it.</p>
+        <p>Our six stay categories — Manga Sleepover, Character-Themed, Capsule/Cyberpunk, Anime Pilgrimage, Otaku Districts, and Manga Kissa — are defined by experience rather than marketing. A hotel earns its category by what it actually offers, not by what it calls itself. Some hotels appear in multiple categories because they genuinely qualify for more than one.</p>
+        <p>HotelManga is ad-free. We earn through affiliate links to booking platforms — when you book through our links, we may receive a commission at no additional cost to you. This does not influence which hotels we feature or how we write about them. We have declined to feature hotels that did not meet our editorial standards regardless of affiliate potential.</p>
+    </section>
+
 </main>
-   
-     <footer class="site-footer">
+
+<!-- CTA -->
+<section class="about-cta">
+    <h2>Find Your Next Stay</h2>
+    <p>Twenty anime hotels, six categories, one Japan. Start with the hotels — or read what the pilgrimage looks like from the inside.</p>
+    <div class="cta-buttons">
+        <a href="stay.html" class="btn-cta-primary">Browse All Hotels</a>
+        <a href="archive.html" class="btn-cta-secondary">Read the Archive</a>
+    </div>
+</section>
+
+<footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
-         <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>   
-         <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
-         <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
-     </div>
-
+            <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
+            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+            <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+        </div>
         <div class="footer-nav-section">
             <h4>Quick Links</h4>
             <ul class="footer-list">
@@ -100,30 +343,23 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
         <div class="footer-nav-section">
-         <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-         <p class="footer-tagline">📩info@hotelmanga.com
-                
-                
-            </ul>
+            <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+            <p class="footer-tagline">📩info@hotelmanga.com</p>
         </div>
     </div>
-
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
 
-        <script>
+<script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
-
     menuToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
 </script>
-
 </body>
 </html>
