@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="canonical" href="https://hotelmanga.com/stay/quintessa-osaka-shinsaibashi.html">
+    <title>Quintessa Hotel Osaka Shinsaibashi Comic & Books: 8,000 Manga in the Lobby | HotelManga</title>
+    <meta name="description" content="Quintessa Hotel Osaka Shinsaibashi Comic & Books has 8,000 manga volumes in its lobby — including ONE PIECE, Demon Slayer, Doraemon, and Detective Conan. Take up to 10 volumes to your room. Steps from Shinsaibashi Station and 15 minutes from Dotonbori. A complete guide.">
+    <meta name="keywords" content="Quintessa Hotel Osaka Shinsaibashi, manga hotel Osaka, Quintessa Comic Books, 8000 manga hotel, Shinsaibashi hotel manga, ONE PIECE hotel Osaka, Demon Slayer hotel Japan, manga library hotel Japan, best manga hotel Osaka">
+    <meta property="og:title" content="Quintessa Hotel Osaka Shinsaibashi: 8,000 Manga in the Lobby">
+    <meta property="og:description" content="Check in, grab 10 volumes from a library of 8,000 manga, take them to your room, and fall asleep with ONE PIECE. This is Osaka's best manga base camp.">
+    <meta property="og:image" content="https://hotelmanga.com/assets/stay/quintessa-hero.webp">
+    <meta property="og:url" content="https://hotelmanga.com/stay/quintessa-osaka-shinsaibashi.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .article-header { border-bottom: 2px solid #1D3557; margin-bottom: 25px; padding-bottom: 10px; }
+        .article-title { font-family: 'Montserrat', sans-serif; font-size: 2.3rem; color: black; line-height: 1.2; margin: 15px 0; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
+        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); min-height: 380px; object-fit: cover; }
+        .big-img { width: 60%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .big-right-img { width: 60%; float: right; margin: 0 0 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .article-body p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; font-family: 'Inter', sans-serif; }
+        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.6rem; clear: both; font-family: 'Montserrat', sans-serif; }
+        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 25px 30px; margin: 30px 0; border-left: 5px solid var(--accent); clear: both; }
+        .highlight-box h3 { margin-top: 0; color: var(--accent); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        .highlight-box ul { padding-left: 18px; font-family: 'Inter', sans-serif; font-size: 0.97rem; line-height: 1.8; color: #4a5568; }
+        .info-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-family: 'Inter', sans-serif; font-size: 0.95rem; clear: both; }
+        .info-table td { padding: 11px 14px; border-bottom: 1px solid #e8edf2; vertical-align: top; }
+        .info-table td:first-child { font-weight: 600; color: var(--deep-navy); width: 38%; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .info-table tr:last-child td { border-bottom: none; }
+        .gallery-section { margin: 40px 0 30px; clear: both; }
+        .gallery-section h2 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; color: var(--deep-navy); margin-bottom: 16px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .gallery-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s, opacity 0.2s; }
+        .gallery-grid img:hover { transform: scale(1.03); opacity: 0.92; }
+        .gallery-placeholder { width: 100%; aspect-ratio: 4/3; border-radius: 8px; background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.8rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 20px; right: 24px; color: white; font-size: 2rem; cursor: pointer; opacity: 0.8; transition: opacity 0.2s; }
+        .lightbox-close:hover { opacity: 1; }
+        .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 2.5rem; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; background: none; border: none; padding: 10px; }
+        .lightbox-prev { left: 16px; } .lightbox-next { right: 16px; }
+        .lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
+        .book-cta { background: var(--deep-navy); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 35px 0 20px; clear: both; }
+        .book-cta h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 0 0 8px; color: white; }
+        .book-cta p { font-size: 0.95rem !important; opacity: 0.8; margin-bottom: 20px !important; }
+        .btn-book-large { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 13px 32px; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: background 0.2s; }
+        .btn-book-large:hover { background: #c0392b; }
+        .back-home { display: inline-block; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
+        .back-stay { display: inline-block; margin-bottom: 10px; margin-left: 16px; color: var(--deep-navy); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; opacity: 0.7; }
+        @media (max-width: 768px) {
+            .article-container { width: 92%; padding: 20px; margin: 20px auto; }
+            .article-title { font-size: 1.8rem; }
+            .big-img, .big-right-img { width: 100%; float: none; margin: 0 0 20px; }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="../index.html" style="text-decoration: none;">
+        <div class="logo-container">
+            <img src="../assets/logo.png" alt="HM Logo" class="logo-img">
+            <div class="logo-text">HOTEL<span>MANGA</span></div>
+        </div>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../stay.html" class="active">Stay</a></li>
+        <li><a href="../explore.html">Explore</a></li>
+        <li><a href="../lifestyle.html">Lifestyle</a></li>
+    </ul>
+</nav>
+
+<main class="article-container">
+
+    <a href="../stay.html" class="back-home">← Back to Stay</a>
+    <a href="../" class="back-stay">/ HotelManga</a>
+
+    <header class="article-header">
+        <span style="background: var(--deep-navy); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Manga Sleepover</span>
+        &nbsp;
+        <span style="background: #f0f0f0; color: #555; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Osaka · Shinsaibashi</span>
+        <h1 class="article-title">Quintessa Hotel Osaka Shinsaibashi: 8,000 Manga, One Hotel</h1>
+        <div class="meta">March 2026 &nbsp;·&nbsp; Shinsaibashi, Osaka &nbsp;·&nbsp; By HotelManga Editorial</div>
+    </header>
+
+    <img src="../assets/stay/quintessa-hero.webp" alt="Quintessa Hotel Osaka Shinsaibashi Comic & Books — manga library lobby" class="hero-img" onerror="this.style.background='linear-gradient(135deg,#1D3557,#2d5482)'; this.alt='';">
+
+    <article class="article-body">
+
+        <p>You check in. The lobby is lined with shelves. You count the volumes — you stop counting somewhere around a thousand and accept that this is not a hotel that happens to have some manga. This is a manga library that happens to have hotel rooms. Approximately 8,000 titles occupy the shelves of the Quintessa Hotel Osaka Shinsaibashi Comic & Books lobby, spanning every major genre and era of Japanese manga, organized by publisher and updated quarterly. You are allowed to take up to ten volumes at a time to your room. When you finish those, you return them and take ten more.</p>
+
+        <p>For anyone whose ideal hotel night involves reading manga until two in the morning, this is Osaka's answer.</p>
+
+        <h2>The Manga Library: 8,000 Volumes, Quarterly Updates</h2>
+
+        <p>The manga collection at Quintessa Shinsaibashi is the most substantial in-hotel manga library in Osaka. The selection spans shonen titles — Demon Slayer, ONE PIECE, Kingdom — alongside shojo titles like Kimi ni Todoke and Tenshi Nanka Ja Nai, classic series including Doraemon and Detective Conan, and seinen works like MONSTER. The publishers represented include both Shueisha and Shogakukan's major catalogues, giving the collection breadth across the full landscape of manga publishing.</p>
+
+        <img src="../assets/stay/quintessa-library.webp" alt="The 8,000-volume manga library at Quintessa Hotel Osaka Shinsaibashi" class="big-img" onerror="this.style.display='none';">
+
+        <p>The quarterly rotation is a meaningful detail. Guests who return three months later find a substantially updated selection — new volumes from ongoing series, recently popular titles, and nostalgic classics cycling through the shelves. For manga fans visiting Osaka on a regular basis, this creates a reason to return to the same hotel rather than exploring alternatives.</p>
+
+        <p>The borrowing system is straightforward: take up to ten volumes, return them to the return box at the front desk when finished, and select another set. Books can be read in the room, in the restaurant at breakfast, or in any common area of the hotel. The only restriction is that manga cannot leave the hotel premises — a standard policy at manga hotels that protects the collection. All volumes are disinfected after each use.</p>
+
+        <p>One honest note from guest reviews: the collection is entirely in Japanese. International visitors who read Japanese will find it exceptional; those who don't will still find visual pleasure in browsing the covers and art, but the full reading experience requires Japanese literacy. The hotel's staff are available in over 30 languages via the KOTOBAL multilingual translation system for any communication needs.</p>
+
+        <h2>The Rooms: Comfortable Base for Osaka Exploration</h2>
+
+        <p>The hotel has 132–137 air-conditioned rooms with soundproofed windows — a practical feature given its location in central Osaka. Each room has a refrigerator, flat-screen TV with satellite channels, free WiFi, bidet, hairdryer, and blackout curtains. The bathrooms have a shower and tub combination. Rooms are compact by Western standards but well-organized — the standard for Japanese city hotels in this category and price range. Free coffee and toiletries are provided in unlimited quantities, an amenity that guests consistently mention as a distinguishing positive.</p>
+
+        <img src="../assets/stay/quintessa-room.webp" alt="Standard room at Quintessa Hotel Osaka Shinsaibashi" class="big-right-img" onerror="this.style.display:'none';">
+
+        <p>The hotel's 3-star rating accurately reflects its positioning: this is not a luxury property, and it does not try to be. What it offers is a clean, well-maintained, centrally located room at a reasonable price, with 8,000 manga in the lobby. For the manga-focused traveler, that trade-off is obviously correct. The number of repeat guests mentioned in staff responses suggests many visitors agree.</p>
+
+        <h2>Location: Shinsaibashi and Dotonbori</h2>
+
+        <p>Quintessa Shinsaibashi sits in Higashishinsaibashi — a five-minute walk from Shinsaibashi Station on the Midosuji Line, Osaka's central subway artery. Dotonbori, the illuminated canal district with its giant Glico running man sign and dense concentration of restaurants and takoyaki stalls, is approximately 15 minutes on foot. The Shinsaibashi Shopping Arcade — one of the longest covered shopping streets in Japan — begins 850 meters from the hotel.</p>
+
+        <p>For visitors whose Osaka itinerary includes Dotonbori, Namba, Den Den Town (Osaka's electronics and anime district, roughly equivalent to Akihabara), and the Shinsaibashi shopping corridor, the hotel's location places all of these within walking distance or a single subway stop. Den Den Town in particular — with its manga stores, figure shops, and retro game arcades — is accessible on foot or by a short subway ride, making Quintessa Shinsaibashi a particularly logical base for the kind of traveler this hotel is built for.</p>
+
+        <div class="highlight-box">
+            <h3>Practical Information</h3>
+            <ul>
+                <li><strong>Check-in:</strong> 3:00 PM &nbsp;&nbsp; <strong>Check-out:</strong> 11:00 AM</li>
+                <li><strong>Manga library:</strong> ~8,000 volumes — shonen, shojo, seinen, classics — updated quarterly</li>
+                <li><strong>Borrowing limit:</strong> Up to 10 volumes at a time — return and select again freely</li>
+                <li><strong>Language note:</strong> Collection is entirely in Japanese</li>
+                <li><strong>Free inclusions:</strong> Unlimited coffee · toiletries · WiFi</li>
+                <li><strong>Breakfast buffet:</strong> Plaussio restaurant — 7:00–9:30 AM (fee applies: ~¥1,200)</li>
+                <li><strong>Nearest station:</strong> Shinsaibashi Station (Midosuji Line) — 5 min walk</li>
+                <li><strong>To Dotonbori:</strong> ~15 min walk</li>
+                <li><strong>To Den Den Town:</strong> Short walk or 1 subway stop</li>
+                <li><strong>Multilingual staff:</strong> 30+ languages via KOTOBAL translation system</li>
+            </ul>
+        </div>
+
+        <table class="info-table">
+            <tr><td>Full Name</td><td>Quintessa Hotel Osaka Shinsaibashi Comic & Books</td></tr>
+            <tr><td>Address</td><td>1-8-21 Higashishinsaibashi, Chuo Ward, Osaka City, Osaka 542-0083</td></tr>
+            <tr><td>Manga Library</td><td>~8,000 volumes — updated quarterly — borrow up to 10 at a time</td></tr>
+            <tr><td>Featured Titles</td><td>ONE PIECE · Demon Slayer · Kingdom · Doraemon · Detective Conan · Kimi ni Todoke · MONSTER</td></tr>
+            <tr><td>Rooms</td><td>132 air-conditioned rooms — soundproofed windows — free WiFi</td></tr>
+            <tr><td>Nearest Station</td><td>Shinsaibashi Station (Midosuji Line) — 5 min walk</td></tr>
+            <tr><td>Breakfast</td><td>Buffet 7:00–9:30 AM — ~¥1,200 (not included in room rate)</td></tr>
+        </table>
+
+        <div class="gallery-section">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-grid" id="galleryGrid">
+                <img src="../assets/stay/quintessa-g1.webp" alt="Quintessa Hotel Osaka Shinsaibashi exterior" onclick="openLightbox(0)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(0)\'>Photo 1</div>'">
+                <img src="../assets/stay/quintessa-g2.webp" alt="Manga library lobby with 8,000 volumes" onclick="openLightbox(1)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(1)\'>Photo 2</div>'">
+                <img src="../assets/stay/quintessa-g3.webp" alt="Selecting manga from the shelves" onclick="openLightbox(2)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(2)\'>Photo 3</div>'">
+                <img src="../assets/stay/quintessa-g4.webp" alt="Standard guest room" onclick="openLightbox(3)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(3)\'>Photo 4</div>'">
+                <img src="../assets/stay/quintessa-g5.webp" alt="Plaussio restaurant breakfast" onclick="openLightbox(4)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(4)\'>Photo 5</div>'">
+                <img src="../assets/stay/quintessa-g6.webp" alt="Shinsaibashi neighborhood near hotel" onclick="openLightbox(5)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(5)\'>Photo 6</div>'">
+            </div>
+        </div>
+
+        <div class="book-cta">
+            <h3>8,000 Volumes Are Waiting</h3>
+            <p>Book Quintessa Hotel Osaka Shinsaibashi — Dotonbori on foot, manga in hand.</p>
+            <a href="https://www.booking.com/hotel/jp/quintessa-osaka-shinsaibashi.html" class="btn-book-large" target="_blank" rel="noopener sponsored">Check Availability & Book →</a>
+        </div>
+
+        <a href="../stay.html" class="back-home">← Back to Stay</a>
+
+    </article>
+</main>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <button class="lightbox-prev" onclick="changeImage(-1); event.stopPropagation();">&#8249;</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-next" onclick="changeImage(1); event.stopPropagation();">&#8250;</button>
+</div>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-brand">
+            <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
+            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+            <div class="footer-nav-section"><ul class="footer-list"><li><a href="../privacy.html">Privacy Policy</a></li></ul></div>
+        </div>
+        <div class="footer-nav-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-list">
+                <li><a href="../about.html">About Us</a></li>
+                <li><a href="../archive.html">Archive</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-nav-section">
+            <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+            <p class="footer-tagline">📩info@hotelmanga.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
+    </div>
+</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navList = document.querySelector('.nav-list');
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('active');
+        menuToggle.classList.toggle('is-active');
+    });
+    const galleryImages = ['../assets/stay/quintessa-g1.webp','../assets/stay/quintessa-g2.webp','../assets/stay/quintessa-g3.webp','../assets/stay/quintessa-g4.webp','../assets/stay/quintessa-g5.webp','../assets/stay/quintessa-g6.webp'];
+    let currentIndex = 0;
+    function openLightbox(index) { currentIndex = index; document.getElementById('lightboxImg').src = galleryImages[index]; document.getElementById('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeLightbox(event) { if (!event || event.target === document.getElementById('lightbox') || event.target.classList.contains('lightbox-close')) { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; } }
+    function changeImage(direction) { currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length; document.getElementById('lightboxImg').src = galleryImages[currentIndex]; }
+    document.addEventListener('keydown', (e) => { const lb = document.getElementById('lightbox'); if (!lb.classList.contains('open')) return; if (e.key === 'ArrowRight') changeImage(1); if (e.key === 'ArrowLeft') changeImage(-1); if (e.key === 'Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>
