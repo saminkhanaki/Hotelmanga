@@ -91,6 +91,8 @@
     <header class="article-header">
         <span style="background: var(--deep-navy); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Manga Sleepover</span>
         &nbsp;
+        <span style="background: var(--deep-navy); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Anime Pilgrimage</span>
+        &nbsp;
         <span style="background: #f0f0f0; color: #555; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Niigata · Comics</span>
         <h1 class="article-title">Niigata Daiichi Hotel: 15,000 Comics in Japan's Manga Capital</h1>
         <div class="meta">March 2026 &nbsp;·&nbsp; Niigata Station, Niigata City &nbsp;·&nbsp; By HotelManga Editorial</div>
@@ -120,9 +122,9 @@
 
         <h2>Breakfast: Niigata on a Plate</h2>
 
-        <img src="../assets/stay/niigata-daiichi-breakfast.webp" alt="Breakfast buffet at Niigata Daiichi Hotel — Niigata specialties and teppanyaki" class="big-right-img" onerror="this.style.display:'none';">
-
         <p>The breakfast buffet at Niigata Daiichi is genuinely good — well above the generic city hotel standard. Niigata Prefecture produces what many Japanese consider the country's finest rice, and the breakfast reflects this: the rice here is exceptional, and the side dishes are designed around it. The teppanyaki station is a particularly popular feature, cooking fresh items to order as guests watch. Guest reviews consistently mention the breakfast as a highlight, with multiple visitors noting they regretted staying only one night. Over 80 menu items have been reported across the buffet spread — an unusually comprehensive offering for a 3-star business hotel.</p>
+
+        <img src="../assets/stay/niigata-daiichi-breakfast.webp" alt="Breakfast buffet at Niigata Daiichi Hotel — Niigata specialties and teppanyaki" class="big-right-img" onerror="this.style.display='none';">
 
         <h2>Niigata: The Manga City</h2>
 
@@ -204,7 +206,7 @@
         </div>
         <div class="footer-nav-section">
             <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-            <p class="footer-tagline">📩info@hotelmanga.com</p>
+            <p class="footer-tagline">📩<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f363139301f37302b3a33323e31383e713c3032">[email&#160;protected]</a></p>
         </div>
     </div>
     <div class="footer-bottom">
@@ -212,7 +214,7 @@
     </div>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
     menuToggle.addEventListener('click', () => {
@@ -224,8 +226,4 @@
     function openLightbox(index) { currentIndex = index; document.getElementById('lightboxImg').src = galleryImages[index]; document.getElementById('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
     function closeLightbox(event) { if (!event || event.target === document.getElementById('lightbox') || event.target.classList.contains('lightbox-close')) { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; } }
     function changeImage(direction) { currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length; document.getElementById('lightboxImg').src = galleryImages[currentIndex]; }
-    document.addEventListener('keydown', (e) => { const lb = document.getElementById('lightbox'); if (!lb.classList.contains('open')) return; if (e.key === 'ArrowRight') changeImage(1); if (e.key === 'ArrowLeft') changeImage(-1); if (e.key === 'Escape') closeLightbox(); });
-</script>
-
-</body>
-</html>
+    document.addEventListener('keydown', (e) => { const lb = document.ge
