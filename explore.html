@@ -1,246 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="canonical" href="https://hotelmanga.com/explore.html">
-<title>Explore the World of Manga: Travel, Spots & Culture | HotelManga</title>
-
-<meta name="description" content="Embark on a journey to the most iconic manga-inspired destinations. From the streets of Tokyo to hidden anime haunts in Los Angeles, explore the world through the lens of a modern voyager.">
-
-<meta name="keywords" content="Explore Manga Destinations, Anime Travel Guides, Manga Spot Locations, Real-life Anime Scenes, Little Tokyo Los Angeles Guide, Tokyo Anime Tourism, Otaku Exploration">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Explore: Your Treasure Map to Manga Destinations">
-<meta property="og:description" content="Discover real-life locations from your favorite series. Join our voyage across the globe to find the best manga spots.">
-<meta property="og:image" content="https://hotelmanga.com/assets/explore-hero.webp">
-<meta property="og:url" content="https://hotelmanga.com/explore.html">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Explore: Manga & Anime Travel Guide | HotelManga">
-<meta name="twitter:description" content="Step into the Grand Line. Discover real-world locations that inspired the greatest stories.">
-<meta name="twitter:image" content="https://hotelmanga.com/assets/explore-hero.webp">    
+    <link rel="canonical" href="https://hotelmanga.com/explore.html">
+    <title>Explore | Anime Pilgrimage & Manga Travel Guides | HotelManga</title>
+    <meta name="description" content="Real-world locations from your favorite manga and anime. Pilgrimage guides, destination maps, and travel itineraries for otaku travelers in Japan and beyond.">
+    <meta name="keywords" content="anime pilgrimage Japan, manga travel guide, real life anime locations, Jujutsu Kaisen Tokyo guide, otaku travel destinations, anime tourism Japan">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Explore | Anime Pilgrimage & Manga Travel Guides | HotelManga">
+    <meta property="og:description" content="Real-world locations from your favorite manga and anime. Pilgrimage guides and travel itineraries for otaku travelers.">
+    <meta property="og:image" content="https://hotelmanga.com/assets/explore-hero.webp">
+    <meta property="og:url" content="https://hotelmanga.com/explore.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Explore | Anime Pilgrimage & Manga Travel Guides">
+    <meta name="twitter:description" content="Real-world locations from your favorite manga and anime. Pilgrimage guides for otaku travelers.">
+    <meta name="twitter:image" content="https://hotelmanga.com/assets/explore-hero.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .explore-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            color: var(--deep-navy);
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #94a3b8;
+            font-weight: 300;
+        }
+
+        /* Grid */
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        /* Card */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+        .explore-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-link:hover .explore-card {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+        }
+
+        /* Image with manga hover effect */
+        .card-image {
+            width: 100%;
+            aspect-ratio: 7 / 4;
+            overflow: hidden;
+            flex-shrink: 0;
+            position: relative;
+            background: white;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.4s ease, transform 0.4s ease;
+        }
+        .card-image::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(#000 10%, transparent 10%);
+            background-size: 3px 3px;
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+        .card-link:hover .card-image img {
+            filter: grayscale(100%) contrast(180%) brightness(115%);
+            transform: scale(1.03);
+        }
+        .card-link:hover .card-image::after {
+            opacity: 0.12;
+        }
+
+        /* Card content */
+        .card-content {
+            padding: 26px 28px 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-tag {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.67rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: white;
+            background: var(--deep-navy);
+            padding: 3px 9px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+        .card-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            color: var(--deep-navy);
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .card-content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            color: #64748b;
+            line-height: 1.7;
+            font-weight: 300;
+            flex-grow: 1;
+            margin: 0;
+        }
+        .card-read {
+            display: inline-block;
+            margin-top: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            letter-spacing: 0.05em;
+        }
+        .card-link:hover .card-read {
+            text-decoration: underline;
+        }
+
+        /* Archive link */
+        .archive-link-row {
+            text-align: right;
+            margin-top: 32px;
+        }
+        .archive-link-row a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #94a3b8;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        .archive-link-row a:hover { color: var(--deep-navy); }
+
+        @media (max-width: 768px) {
+            .explore-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.9rem; }
+            .card-content { padding: 20px 22px 24px; }
+            .archive-link-row { text-align: center; }
+        }
+    </style>
 </head>
-<style>
-    /* تنظیمات کانتینر اصلی */
-.explore-container {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.page-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    color: var(--deep-navy);
-}
-
-/* ۱. گرید اصلی - استفاده از CSS Grid برای پایداری بیشتر */
-.explore-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* دو ستون مساوی */
-    gap: 25px;
-    align-items: stretch; /* هم‌قد کردن کارت‌های یک ردیف */
-}
-
-/* ۲. استایل کارت‌ها */
-.explore-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    
-    /* فلکس داخلی برای هم‌تراز شدن محتوا */
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* اطمینان از پر کردن کل قد ردیف */
-}
-
-.explore-card:hover {
-    transform: translateY(-5px);
-}
-
-/* ۳. تنظیم نسبت عکس */
-.card-image {
-    width: 100%;
-    aspect-ratio: 7 / 4; 
-    overflow: hidden;
-    flex-shrink: 0; 
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ۴. بخش محتوای کارت */
-.card-content {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* پر کردن فضای خالی کارت */
-}
-
-.card-content h3 {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 15px;
-    color: var(--deep-navy);
-    font-size: 1.4rem;
-}
-
-.card-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #4b5563;
-    text-align: justify;
-    margin: 0;
-    /* این بخش باعث می‌شود اگر متن کوتاه بود، باز هم کارت هم‌قد بماند */
-    flex-grow: 1; 
-}
-
-/* ۵. ریسپانسیو اصلاح شده */
-@media (max-width: 768px) {
-    .explore-grid {
-        grid-template-columns: 1fr; /* تبدیل به تک ستون در موبایل */
-        gap: 20px;
-    }
-    
-    .card-content {
-        padding: 20px;
-    }
-}
-//****************************************************************************//
-/* وضعیت اولیه: عکس رنگی و شفاف */
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.4s ease-in-out;
-}
-
-/* وضعیت هوور: تبدیل به استایل مانگا */
-.explore-card:hover .card-image img {
-    /* 1. سیاه و سفید کردن با کنتراست بسیار بالا برای شبیه شدن به جوهر */
-    filter: grayscale(100%) contrast(200%) brightness(110%);
-    
-    /* 2. ایجاد بافت نقطه‌نقطه‌ای (Halftone) با استفاده از یک لایه SVG یا گرادینت */
-    /* نکته: این بخش تصویر را کمی دانه دانه می‌کند تا شبیه چاپ دستی شود */
-    mix-blend-mode: multiply;
-}
-
-/* افکت اضافه برای شبیه‌تر شدن به پنل کتاب: ایجاد یک لایه بافت روی عکس */
-.card-image {
-    position: relative;
-    background: white;
-}
-
-.card-image::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: radial-gradient(#000 10%, transparent 10%);
-    background-size: 3px 3px; /* اندازه نقطه‌ها */
-    opacity: 0;
-    transition: opacity 0.4s;
-    pointer-events: none;
-}
-
-.explore-card:hover .card-image::after {
-    opacity: 0.15; /* نمایش بافت نقطه‌ای در هنگام هوور */
-}    
-
-/* حذف استایل پیش‌فرض لینک برای کارت‌ها */
-.card-link {
-    text-decoration: none; /* حذف خط زیر متن */
-    color: inherit; /* استفاده از رنگ اصلی متن که قبلاً ست کردیم */
-    display: block; /* برای اینکه کل فضای گرید را پر کند */
-}
-
-/* انتقال افکت هوور از کارت به لینک (اختیاری اما حرفه‌ای) */
-.card-link:hover .explore-card {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-//***********************************************************************************//
-
-</style>    
 <body>
-    <nav>
-        <a href="index.html" style="text-decoration: none;">
+
+<nav>
+    <a href="index.html" style="text-decoration: none;">
         <div class="logo-container">
             <img src="assets/logo.png" alt="HM Logo" class="logo-img">
             <div class="logo-text">HOTEL<span>MANGA</span></div>
         </div>
-        </a>
-    
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stay.html">Stay</a></li>
+        <li><a href="explore.html" class="active">Explore</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+    </ul>
+</nav>
 
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                 <li><a href="stay.html" >Stay</a></li>
-                <li><a href="explore.html" class="active">Explore</a></li>
-                <li><a href="lifestyle.html">Lifestyle</a></li> 
-            </ul>
-    </nav>
 <main class="explore-container">
+
     <header class="page-header">
-        <h1>Explore Destinations</h1>
-        <p>Discover the real-life inspirations behind your favorite manga worlds.</p>
+        <h1>Explore</h1>
+        <p>Real-world locations from your favorite manga and anime — mapped, researched, and written for the serious fan.</p>
     </header>
 
     <div class="explore-grid">
+
         <a href="archive/jujutsu-tokyo.html" class="card-link">
-        <article class="explore-card">
-            <div class="card-image">
-                <img src="assets/shibuya-109.webp" alt="jujutsu kaisen real world">
-            </div>
-            <div class="card-content">
-                <h3>Tokyo: The Sorcerer's Hub</h3>
-                <p>Have you ever dreamed of leaping out from the action-packed pages of a manga and stepping directly into the heart of Tokyo’s battles? In this article, we dissolve the boundary between imagination and reality, taking you on a two-day journey through the iconic locations of Jujutsu Kaisen. From the fateful battles of Sorcerers in the depths of the Shibuya subway to the favorite hangouts of Nobara and Gojo; this guide is a treasure map for fans of the world of Curses and modern Japanese lifestyle. Are you ready to join us and discover the magic hidden within the streets of Tokyo?</p>
-            </div>
-        </article>
+            <article class="explore-card">
+                <div class="card-image">
+                    <img src="assets/shibuya-109.webp" alt="Tokyo real-life Jujutsu Kaisen locations guide">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Explore</span>
+                    <h3>Tokyo Through the Eyes of Sorcerers: A 2-Day Jujutsu Kaisen Guide</h3>
+                    <p>A two-day itinerary through the real Tokyo locations that Gege Akutami turned into battlegrounds — from Shibuya Crossing to the gates of Jujutsu High.</p>
+                    <span class="card-read">Continue Reading →</span>
+                </div>
+            </article>
         </a>
 
-         <a href="archive/one-piece-la.html" class="card-link">
-        <article class="explore-card">
-            <div class="card-image">
-                <img src="assets/one-piece-la-out.webp" alt="one piece cafe little tokyo los angeles">
-            </div>
-            <div class="card-content">
-                <h3>Los Angeles: Guide to the One Piece Cafe</h3>
-                <p>Are you ready to step off the two-dimensional pages of manga and onto the deck of the Thousand Sunny? In this feature, we journey to the heart of Little Tokyo, Los Angeles, to discover one of the world's most electrifying anime haunts: the One Piece Cafe. From tasting "Devil Fruits" on Chef Sanji’s exclusive menu to watching the ocean through digital portholes, consider this guide your personal treasure map to an unforgettable experience in the kingdom of the Straw Hat Pirates.</p>
-            </div>
-        </article>
-         </a>
-
+        <a href="archive/one-piece-la.html" class="card-link">
+            <article class="explore-card">
+                <div class="card-image">
+                    <img src="assets/one-piece-la-out.webp" alt="One Piece Cafe Little Tokyo Los Angeles guide">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Explore</span>
+                    <h3>Los Angeles: A Guide to the One Piece Cafe in Little Tokyo</h3>
+                    <p>Inside one of the world's most immersive anime dining experiences — from the Thousand Sunny deck to Chef Sanji's menu, in the heart of Little Tokyo, LA.</p>
+                    <span class="card-read">Continue Reading →</span>
+                </div>
+            </article>
+        </a>
 
     </div>
+
+    <div class="archive-link-row">
+        <a href="archive.html">View All in Archive →</a>
+    </div>
+
 </main>
 
-     <footer class="site-footer">
+<footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
-         <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>   
-         <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
-         <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
-     </div>
-
+            <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
+            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+            <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+        </div>
         <div class="footer-nav-section">
             <h4>Quick Links</h4>
             <ul class="footer-list">
@@ -249,30 +263,23 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
         <div class="footer-nav-section">
-         <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-         <p class="footer-tagline">📩info@hotelmanga.com
-                
-                
-            </ul>
+            <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+            <p class="footer-tagline">📩info@hotelmanga.com</p>
         </div>
     </div>
-
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
 
-        <script>
+<script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
-
     menuToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
 </script>
-
 </body>
 </html>
