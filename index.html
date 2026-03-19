@@ -1,123 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="canonical" href="https://hotelmanga.com/">
-<title>HotelManga | The Modern Otaku’s Sanctuary for Lifestyle & Travel</title>
-
-<meta name="description" content="Welcome to HotelManga, a curated digital magazine blending modern lifestyle with Manga culture. Explore real-life anime locations, culinary rituals, and premium guides for the global voyager.">
-
-<meta name="keywords" content="HotelManga, Manga Lifestyle Magazine, Anime Travel Guide, Otaku Culture 2026, Tokyo Real Life Locations, Modern Manga Aesthetics, Premium Anime Content">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="HotelManga: Where Modern Lifestyle Meets Manga Culture">
-<meta property="og:description" content="Step into a digital sanctuary designed for the modern voyager. Discover guides to the Grand Line and beyond.">
-<meta property="og:image" content="https://hotelmanga.com/assets/og-main-banner.webp"> 
-<meta property="og:url" content="https://hotelmanga.com/">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="HotelManga | Modern Otaku Lifestyle & Travel">
-<meta name="twitter:description" content="Exploring the intersection of reality and the manga world. Join our journey.">
-<meta name="twitter:image" content="https://hotelmanga.com/assets/og-main-banner.webp">    
+    <link rel="canonical" href="https://hotelmanga.com/">
+    <title>HotelManga | Anime Hotel Guide & Manga Travel Magazine</title>
+    <meta name="description" content="HotelManga is the world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan. 20 handpicked stays, explore guides, and manga lifestyle.">
+    <meta name="keywords" content="anime hotel Japan, manga hotel Tokyo, otaku travel guide, anime pilgrimage Japan, manga lifestyle magazine, capsule hotel Japan, HotelManga">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="HotelManga | Anime Hotel Guide & Manga Travel Magazine">
+    <meta property="og:description" content="The world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan.">
+    <meta property="og:image" content="https://hotelmanga.com/assets/og-main-banner.webp">
+    <meta property="og:url" content="https://hotelmanga.com/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="HotelManga | Anime Hotel Guide & Manga Travel Magazine">
+    <meta name="twitter:description" content="The world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan.">
+    <meta name="twitter:image" content="https://hotelmanga.com/assets/og-main-banner.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
-</head>
 
+    <style>
+        /* ── Featured Hotel Hero ── */
+        .featured-hotel {
+            max-width: 1100px;
+            margin: 48px auto 0;
+            padding: 0 20px;
+        }
+        .featured-label {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #888;
+            margin-bottom: 14px;
+        }
+        .featured-hotel-card {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr;
+            border-radius: 12px;
+            overflow: hidden;
+            background: var(--deep-navy);
+            min-height: 420px;
+            text-decoration: none;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+            transition: box-shadow 0.3s;
+        }
+        .featured-hotel-card:hover {
+            box-shadow: 0 12px 56px rgba(0,0,0,0.18);
+        }
+        .featured-hotel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        .featured-hotel-card:hover .featured-hotel-img {
+            transform: scale(1.03);
+        }
+        .featured-hotel-img-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .featured-hotel-body {
+            padding: 44px 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+        .featured-hotel-tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.12);
+            color: rgba(255,255,255,0.85);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 4px 10px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+            width: fit-content;
+        }
+        .featured-hotel-body h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 16px;
+            color: white;
+        }
+        .featured-hotel-body p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.72);
+            margin-bottom: 28px;
+            font-weight: 300;
+        }
+        .featured-hotel-footer {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+        .btn-featured-read {
+            display: inline-block;
+            padding: 11px 24px;
+            background: white;
+            color: var(--deep-navy);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            letter-spacing: 0.04em;
+            transition: background 0.2s;
+        }
+        .btn-featured-read:hover { background: #f0f0f0; }
+        .btn-featured-all {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: color 0.2s;
+        }
+        .btn-featured-all:hover { color: white; }
+        .featured-hotel-location {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.5);
+            margin-bottom: 6px;
+            font-weight: 300;
+        }
+
+        /* ── Section Divider ── */
+        .section-divider {
+            max-width: 1100px;
+            margin: 56px auto 0;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .section-divider h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #aaa;
+            white-space: nowrap;
+        }
+        .section-divider-line {
+            flex: 1;
+            height: 1px;
+            background: #e5e7eb;
+        }
+
+        /* ── 2-Column Editorial Grid ── */
+        .editorial-grid {
+            max-width: 1100px;
+            margin: 24px auto 64px;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28px;
+        }
+        .editorial-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: white;
+            border: 1px solid #e5e7eb;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.25s, transform 0.25s;
+        }
+        .editorial-card:hover {
+            box-shadow: 0 6px 32px rgba(0,0,0,0.09);
+            transform: translateY(-2px);
+        }
+        .editorial-card-img-wrap {
+            overflow: hidden;
+            height: 220px;
+        }
+        .editorial-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .editorial-card:hover .editorial-card-img {
+            transform: scale(1.04);
+        }
+        .editorial-card-body {
+            padding: 24px 26px 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .editorial-card-tag {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.67rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: white;
+            background: var(--deep-navy);
+            padding: 3px 9px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+        .editorial-card-tag.tag-lifestyle {
+            background: #2d6a4f;
+        }
+        .editorial-card h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .editorial-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.65;
+            font-weight: 300;
+            flex: 1;
+        }
+        .editorial-card-read {
+            display: inline-block;
+            margin-top: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            text-decoration: none;
+            letter-spacing: 0.05em;
+        }
+        .editorial-card-read:hover { text-decoration: underline; }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .featured-hotel-card {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+            .featured-hotel-img-wrap { height: 240px; }
+            .featured-hotel-body { padding: 28px 24px; }
+            .featured-hotel-body h2 { font-size: 1.3rem; }
+            .editorial-grid { grid-template-columns: 1fr; }
+            .editorial-card-img-wrap { height: 180px; }
+        }
+    </style>
+</head>
 <body>
-    <nav>
+
+<nav>
+    <a href="index.html" style="text-decoration: none;">
         <div class="logo-container">
             <img src="assets/logo.png" alt="HM Logo" class="logo-img">
             <div class="logo-text">HOTEL<span>MANGA</span></div>
         </div>
-    
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-
-            <ul class="nav-list">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="stay.html" >Stay</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="lifestyle.html">Lifestyle</a></li>
-            </ul>
-    </nav>
-
- <main class="main-content">
-    <section class="hero-row grid-card">
-            <a href="archive/jujutsu-tokyo.html">
-                <div class="hero-image">
-                <img src="assets/shibuya-109.webp" alt="ujutsu Kaisen real life">
-                </div>
-            </a>
-              
-    <div class="hero-text">
-        <span class="tag">Explore</span>
-        <h1>Tokyo Through the Eyes of Sorcerers: A 2-Day Guide to "Jujutsu Kaisen"</h1>
-        <p>A trip to Tokyo is a journey to the thin veil between reality and the world of fantasy. Whether you are a devoted manga fan or simply wish to feel the pulse of modern Japan, this two-day itinerary will take you...</p>
-        <a href="https://hotelmanga.com/archive/jujutsu-tokyo.html" class="btn-read">Continue Reading</a>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
     </div>
-    </section>
+    <ul class="nav-list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="stay.html">Stay</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="lifestyle.html">Lifestyle</a></li>
+    </ul>
+</nav>
 
-    <section class="articles-grid">
-        
+<main class="main-content">
 
-    <article class="grid-card">
-        <div class="card-img-box">
-            <a href="archive/manga-shelf.html">
-            <img src="assets/manga-shelf.webp" alt="building your smart manga shelf">
-            </a>
+    <!-- Featured Hotel -->
+    <div class="featured-hotel">
+        <span class="featured-label">✦ Featured Stay This Week</span>
+        <div class="featured-hotel-card">
+            <div class="featured-hotel-img-wrap">
+                <img
+                    src="assets/stay/sekizenkan-hero.webp"
+                    alt="Sekizenkan Ryokan — the real-life Spirited Away bathhouse in Shima Onsen, Gunma"
+                    class="featured-hotel-img"
+                    onerror="this.style.background='linear-gradient(135deg,#1D3557,#2d5482)'; this.style.minHeight='420px'; this.alt='';">
+            </div>
+            <div class="featured-hotel-body">
+                <span class="featured-hotel-tag">Anime Pilgrimage</span>
+                <p class="featured-hotel-location">📍 Shima Onsen, Gunma</p>
+                <h2>Sekizenkan Ryokan: The Real Bathhouse Behind Spirited Away</h2>
+                <p>Japan's oldest continuously operating ryokan — built in 1691 — and the direct visual inspiration for Yubaba's bathhouse. Cross the red bridge at night and you are inside the film.</p>
+                <div class="featured-hotel-footer">
+                    <a href="stay/sekizenkan-ryokan.html" class="btn-featured-read">Read Full Guide</a>
+                    <a href="stay.html" class="btn-featured-all">Browse All 20 Hotels →</a>
+                </div>
+            </div>
         </div>
-        <div class="card-content">
-            <span class="card-tag";">Lifestyle</span>
-            <h3 style="color: var(--deep-navy);">The Lumina Method: A Definitive Guide to Building the Ultimate Smart Manga Shelf</h3>
-            <p>In 2026, a simple bookshelf is no longer enough to host the epic...</p>
-        </div>
-    </article>
+    </div>
 
-        <article class="grid-card">
-            <div class="card-img-box">
-                <a href="archive/one-piece-la.html">
-                    <img src="assets/one-piece-la-in.webp" alt="one piece cafe los angeles little tokyo">
-                </a>                    
-            </div>
-            <div class="card-content">
-                <span class="card-tag">Explore</span>
-                <h3>Beyond the Black & White: One Piece Cafe in Little Tokyo, LA.</h3>
-                <p>Are you ready to step off the two-dimensional pages of manga and onto the deck of the Thousand Sunny?</p>
-            </div>
-        </article>
+    <!-- Section Divider -->
+    <div class="section-divider">
+        <h2>From the Magazine</h2>
+        <div class="section-divider-line"></div>
+    </div>
 
-                <article class="grid-card">
-            <div class="card-img-box">
-                <a href="archive/ramen-set.html">
-                <img src="assets/ramen-set.webp" alt="otaku ramen set 2026">
-                </a>
+    <!-- 2-Column Editorial Grid -->
+    <div class="editorial-grid">
+
+        <!-- Explore -->
+        <a href="archive/jujutsu-tokyo.html" class="editorial-card">
+            <div class="editorial-card-img-wrap">
+                <img src="assets/shibuya-109.webp" alt="Tokyo through the eyes of Jujutsu Kaisen sorcerers" class="editorial-card-img" onerror="this.style.background='#e5e7eb'; this.alt='';">
             </div>
-            <div class="card-content">
-                <span class="card-tag">Explore</span>
-                <h3>The Art of Slurping: The 2026 Ramen Set Guide</h3>
-                <p>In 2026, enjoying a bowl of ramen is no longer just a meal; it is a "ritual protocol" for every true Otaku.</p>
+            <div class="editorial-card-body">
+                <span class="editorial-card-tag">Explore</span>
+                <h3>Tokyo Through the Eyes of Sorcerers: A 2-Day Jujutsu Kaisen Guide</h3>
+                <p>A two-day Tokyo itinerary built around the real locations that Gege Akutami turned into battlegrounds — from Shibuya Crossing to the gates of Jujutsu High.</p>
+                <span class="editorial-card-read">Continue Reading →</span>
             </div>
-        </article>
-        
-        
-    </section>
+        </a>
+
+        <!-- Lifestyle -->
+        <a href="archive/manga-shelf.html" class="editorial-card">
+            <div class="editorial-card-img-wrap">
+                <img src="assets/manga-shelf.webp" alt="The Lumina Method — building the ultimate smart manga shelf" class="editorial-card-img" onerror="this.style.background='#e5e7eb'; this.alt='';">
+            </div>
+            <div class="editorial-card-body">
+                <span class="editorial-card-tag tag-lifestyle">Lifestyle</span>
+                <h3>The Lumina Method: Building the Ultimate Smart Manga Shelf</h3>
+                <p>In 2026, a simple bookshelf is no longer enough. A complete guide to lighting, organization, and smart systems for the serious manga collector.</p>
+                <span class="editorial-card-read">Continue Reading →</span>
+            </div>
+        </a>
+
+    </div>
+
 </main>
-    
-     <footer class="site-footer">
+
+<footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
-         <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>   
-         <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
-         <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
-     </div>
-
+            <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
+            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+            <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+        </div>
         <div class="footer-nav-section">
             <h4>Quick Links</h4>
             <ul class="footer-list">
@@ -126,30 +369,23 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
         <div class="footer-nav-section">
-         <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-         <p class="footer-tagline">📩info@hotelmanga.com
-                
-                
-            </ul>
+            <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+            <p class="footer-tagline">📩info@hotelmanga.com</p>
         </div>
     </div>
-
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
 
-        <script>
+<script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
-
     menuToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
 </script>
-
 </body>
 </html>
