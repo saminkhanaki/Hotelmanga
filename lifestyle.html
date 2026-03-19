@@ -1,245 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="canonical" href="https://hotelmanga.com/lifestyle.html">
-<title>Manga Lifestyle: Rituals, Design & Otaku Living | HotelManga</title>
-
-<meta name="description" content="Elevate your daily life with our curated Manga lifestyle guides. From professional ramen rituals to aesthetic home decor, discover how to blend Otaku culture with modern living.">
-
-<meta name="keywords" content="Manga Lifestyle, Otaku Home Decor, Anime Inspired Living, Ramen Rituals, Japanese Aesthetic Lifestyle, Manga Design Tools, HotelManga Lifestyle Guide">
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="HotelManga Lifestyle: The Art of Otaku Living">
-<meta property="og:description" content="Explore the intersection of manga culture and daily life. Transform your rituals with our premium lifestyle guides.">
-<meta property="og:image" content="https://hotelmanga.com/assets/lifestyle-hero.webp">
-<meta property="og:url" content="https://hotelmanga.com/lifestyle.html">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Manga Lifestyle | HotelManga">
-<meta name="twitter:description" content="Beyond the screen: Bringing the soul of Manga into your daily rituals.">
-<meta name="twitter:image" content="https://hotelmanga.com/assets/lifestyle-hero.webp">    
+    <link rel="canonical" href="https://hotelmanga.com/lifestyle.html">
+    <title>Lifestyle | Manga Collection, Otaku Living & Japanese Aesthetics | HotelManga</title>
+    <meta name="description" content="Manga collection design, smart shelf systems, Japanese minimalism, and the rituals that define otaku living in 2026. Lifestyle guides for the serious fan.">
+    <meta name="keywords" content="manga collection design, otaku lifestyle guide, smart manga shelf, Japanese minimalism otaku, anime home decor 2026, manga living space, HotelManga lifestyle">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lifestyle | Manga Collection & Otaku Living | HotelManga">
+    <meta property="og:description" content="Manga collection design, smart shelf systems, and the rituals that define otaku living in 2026.">
+    <meta property="og:image" content="https://hotelmanga.com/assets/lifestyle-hero.webp">
+    <meta property="og:url" content="https://hotelmanga.com/lifestyle.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lifestyle | Manga Collection & Otaku Living | HotelManga">
+    <meta name="twitter:description" content="Manga collection design, smart shelf systems, and the rituals that define otaku living in 2026.">
+    <meta name="twitter:image" content="https://hotelmanga.com/assets/lifestyle-hero.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/favicon.png">
-    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .explore-container {
+            max-width: 1100px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        .page-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .page-header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            color: var(--deep-navy);
+            margin-bottom: 10px;
+        }
+        .page-header p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #94a3b8;
+            font-weight: 300;
+        }
+
+        /* Grid */
+        .explore-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            align-items: stretch;
+        }
+
+        /* Card */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+        .explore-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-link:hover .explore-card {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.1);
+        }
+
+        /* Image with manga hover effect */
+        .card-image {
+            width: 100%;
+            aspect-ratio: 7 / 4;
+            overflow: hidden;
+            flex-shrink: 0;
+            position: relative;
+            background: white;
+        }
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.4s ease, transform 0.4s ease;
+        }
+        .card-image::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: radial-gradient(#000 10%, transparent 10%);
+            background-size: 3px 3px;
+            opacity: 0;
+            transition: opacity 0.4s;
+            pointer-events: none;
+        }
+        .card-link:hover .card-image img {
+            filter: grayscale(100%) contrast(180%) brightness(115%);
+            transform: scale(1.03);
+        }
+        .card-link:hover .card-image::after {
+            opacity: 0.12;
+        }
+
+        /* Card content */
+        .card-content {
+            padding: 26px 28px 30px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .card-tag {
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.67rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: white;
+            background: #2d6a4f;
+            padding: 3px 9px;
+            border-radius: 3px;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+        .card-content h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.15rem;
+            color: var(--deep-navy);
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        .card-content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.92rem;
+            color: #64748b;
+            line-height: 1.7;
+            font-weight: 300;
+            flex-grow: 1;
+            margin: 0;
+        }
+        .card-read {
+            display: inline-block;
+            margin-top: 18px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--deep-navy);
+            letter-spacing: 0.05em;
+        }
+        .card-link:hover .card-read {
+            text-decoration: underline;
+        }
+
+        /* Archive link */
+        .archive-link-row {
+            text-align: right;
+            margin-top: 32px;
+        }
+        .archive-link-row a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: #94a3b8;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        .archive-link-row a:hover { color: var(--deep-navy); }
+
+        @media (max-width: 768px) {
+            .explore-grid { grid-template-columns: 1fr; }
+            .page-header h1 { font-size: 1.9rem; }
+            .card-content { padding: 20px 22px 24px; }
+            .archive-link-row { text-align: center; }
+        }
+    </style>
 </head>
-<style>
-    /* تنظیمات کانتینر اصلی */
-.explore-container {
-    max-width: 1200px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-.page-header {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.page-header h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2.5rem;
-    color: var(--deep-navy);
-}
-
-/* ۱. گرید اصلی - استفاده از CSS Grid برای پایداری بیشتر */
-.explore-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* دو ستون مساوی */
-    gap: 25px;
-    align-items: stretch; /* هم‌قد کردن کارت‌های یک ردیف */
-}
-
-/* ۲. استایل کارت‌ها */
-.explore-card {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    
-    /* فلکس داخلی برای هم‌تراز شدن محتوا */
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* اطمینان از پر کردن کل قد ردیف */
-}
-
-.explore-card:hover {
-    transform: translateY(-5px);
-}
-
-/* ۳. تنظیم نسبت عکس */
-.card-image {
-    width: 100%;
-    aspect-ratio: 7 / 4; 
-    overflow: hidden;
-    flex-shrink: 0; 
-}
-
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ۴. بخش محتوای کارت */
-.card-content {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* پر کردن فضای خالی کارت */
-}
-
-.card-content h3 {
-    font-family: 'Montserrat', sans-serif;
-    margin-bottom: 15px;
-    color: var(--deep-navy);
-    font-size: 1.4rem;
-}
-
-.card-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #4b5563;
-    text-align: justify;
-    margin: 0;
-    /* این بخش باعث می‌شود اگر متن کوتاه بود، باز هم کارت هم‌قد بماند */
-    flex-grow: 1; 
-}
-
-/* ۵. ریسپانسیو اصلاح شده */
-@media (max-width: 768px) {
-    .explore-grid {
-        grid-template-columns: 1fr; /* تبدیل به تک ستون در موبایل */
-        gap: 20px;
-    }
-    
-    .card-content {
-        padding: 20px;
-    }
-}
-//****************************************************************************//
-/* وضعیت اولیه: عکس رنگی و شفاف */
-.card-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: all 0.4s ease-in-out;
-}
-
-/* وضعیت هوور: تبدیل به استایل مانگا */
-.explore-card:hover .card-image img {
-    /* 1. سیاه و سفید کردن با کنتراست بسیار بالا برای شبیه شدن به جوهر */
-    filter: grayscale(100%) contrast(200%) brightness(110%);
-    
-    /* 2. ایجاد بافت نقطه‌نقطه‌ای (Halftone) با استفاده از یک لایه SVG یا گرادینت */
-    /* نکته: این بخش تصویر را کمی دانه دانه می‌کند تا شبیه چاپ دستی شود */
-    mix-blend-mode: multiply;
-}
-
-/* افکت اضافه برای شبیه‌تر شدن به پنل کتاب: ایجاد یک لایه بافت روی عکس */
-.card-image {
-    position: relative;
-    background: white;
-}
-
-.card-image::after {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: radial-gradient(#000 10%, transparent 10%);
-    background-size: 3px 3px; /* اندازه نقطه‌ها */
-    opacity: 0;
-    transition: opacity 0.4s;
-    pointer-events: none;
-}
-
-.explore-card:hover .card-image::after {
-    opacity: 0.15; /* نمایش بافت نقطه‌ای در هنگام هوور */
-}    
-
-/* حذف استایل پیش‌فرض لینک برای کارت‌ها */
-.card-link {
-    text-decoration: none; /* حذف خط زیر متن */
-    color: inherit; /* استفاده از رنگ اصلی متن که قبلاً ست کردیم */
-    display: block; /* برای اینکه کل فضای گرید را پر کند */
-}
-
-/* انتقال افکت هوور از کارت به لینک (اختیاری اما حرفه‌ای) */
-.card-link:hover .explore-card {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-}
-//***********************************************************************************//
-
-</style> 
 <body>
-    <nav>
-        <a href="index.html" style="text-decoration: none;">
+
+<nav>
+    <a href="index.html" style="text-decoration: none;">
         <div class="logo-container">
             <img src="assets/logo.png" alt="HM Logo" class="logo-img">
             <div class="logo-text">HOTEL<span>MANGA</span></div>
         </div>
-        </a>
-    
-        <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
+    </a>
+    <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="stay.html">Stay</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li><a href="lifestyle.html" class="active">Lifestyle</a></li>
+    </ul>
+</nav>
 
-            <ul class="nav-list">
-                <li><a href="index.html">Home</a></li>
-                 <li><a href="stay.html" >Stay</a></li>
-                <li><a href="explore.html">Explore</a></li>
-                <li><a href="lifestyle.html" class="active">Lifestyle</a></li>
-            </ul>
-    </nav>
 <main class="explore-container">
+
     <header class="page-header">
-        <h1>The Otaku Lifestyle</h1>
-        <p>Integrating Manga aesthetics and Japanese minimalism into your world.</p>
+        <h1>Lifestyle</h1>
+        <p>Manga collection design, Japanese minimalism, and the rituals that turn everyday living into something worth inhabiting.</p>
     </header>
 
+    <p style="font-family:'Inter',sans-serif; font-size:0.97rem; color:#4b5563; line-height:1.8; max-width:780px; margin:0 auto 48px; text-align:center; font-weight:300;">
+        The otaku lifestyle extends well beyond what you watch and read. HotelManga's Lifestyle guides cover the physical dimension of manga fandom — how to build a collection worth displaying, how to design a living space that reflects the aesthetic values of Japanese minimalism and manga culture, and how to approach daily rituals with the same care that goes into a well-curated shelf. Practical, opinionated, and written for collectors who take the details seriously.
+    </p>
+
     <div class="explore-grid">
+
         <a href="archive/manga-shelf.html" class="card-link">
-        <article class="explore-card">
-            <div class="card-image">
-                <img src="assets/manga-shelf.webp" alt="Lumina shelf manga">
-            </div>
-            <div class="card-content">
-                <h3>The Lumina Method: A Definitive Guide to Building the Ultimate Smart Manga Shelf</h3>
-                <p>The Lumina Manga Shelf is the definitive 2026 standard for elite collectors, transforming traditional storage into a sophisticated digital gallery. Beyond mere shelving, a Lumina system integrates smart RGBIC lighting that syncs with your favorite anime and Electronic Shelf Labels (ESL) for real-time metadata tracking. Engineered for absolute preservation, it features museum-grade UV-filtering and automated humidity controls to prevent page yellowing. By utilizing tiered acrylic risers and immersive Book Nooks, it creates a multi-layered, atmospheric display. This "time capsule" cabinet offers a perfect fusion of aerospace-grade durability and high-tech interactivity, ensuring your collection remains an eternal, glowing centerpiece of Otaku culture.</p>
-            </div>
-        </article>
+            <article class="explore-card">
+                <div class="card-image">
+                    <img src="assets/manga-shelf.webp" alt="The Lumina Method — smart manga shelf guide 2026">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Lifestyle</span>
+                    <h3>The Lumina Method: Building the Ultimate Smart Manga Shelf</h3>
+                    <p>A complete guide to smart RGBIC lighting, Electronic Shelf Labels, UV-filtering, and humidity control — for the collector who treats their volumes as what they are: a permanent archive.</p>
+                    <span class="card-read">Continue Reading →</span>
+                </div>
+            </article>
         </a>
 
-         <a href="archive/ramen-set" class="card-link">
-        <article class="explore-card">
-            <div class="card-image">
-                <img src="assets/ramen-set.webp" alt="best ramen set 2026">
-            </div>
-            <div class="card-content">
-                <h3>The Art of Slurping: The 2026 Ramen Set Guide</h3>
-                <p>In 2026, enjoying a bowl of ramen is no longer just a meal; it is a "ritual protocol" for every true Otaku. From the thick steam of Tonkotsu broth to the precise placement of Narutomaki, every detail demands tools that blend engineering with art. In this comprehensive guide, we venture beyond ordinary kitchens into the specialized world of Ramen. From selecting ceramic bowls with advanced heat-retention technology to titanium chopsticks and "Renge" spoons that guarantee the golden ratio of flavor, we teach you how to transform your dining table into a top-tier ramen shop in the heart of Tokyo.</p>
-            </div>
-        </article>
-         </a>
-
+        <a href="archive/ramen-set.html" class="card-link">
+            <article class="explore-card">
+                <div class="card-image">
+                    <img src="assets/ramen-set.webp" alt="The 2026 ramen set guide — bowls, chopsticks, and ritual">
+                </div>
+                <div class="card-content">
+                    <span class="card-tag">Lifestyle</span>
+                    <h3>The Art of Slurping: The 2026 Ramen Set Guide</h3>
+                    <p>From ceramic bowls with heat-retention engineering to titanium chopsticks and the perfect Renge spoon — a guide to building a ramen setup that treats the meal as the ritual it is.</p>
+                    <span class="card-read">Continue Reading →</span>
+                </div>
+            </article>
+        </a>
 
     </div>
+
+    <div class="archive-link-row">
+        <a href="archive.html">View All in Archive →</a>
+    </div>
+
 </main>
-     <footer class="site-footer">
+
+<footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
-         <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>   
-         <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
-         <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
-     </div>
-
+            <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
+            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+            <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+        </div>
         <div class="footer-nav-section">
             <h4>Quick Links</h4>
             <ul class="footer-list">
@@ -248,30 +267,23 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </div>
-
         <div class="footer-nav-section">
-         <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-         <p class="footer-tagline">📩info@hotelmanga.com
-                
-                
-            </ul>
+            <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+            <p class="footer-tagline">📩info@hotelmanga.com</p>
         </div>
     </div>
-
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
 
-        <script>
+<script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
-
     menuToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
 </script>
-
 </body>
 </html>
