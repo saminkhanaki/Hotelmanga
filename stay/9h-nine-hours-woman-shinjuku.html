@@ -65,7 +65,7 @@
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .two-col { grid-template-columns: 1fr; }
         }
-        /* ===== BOOKING POPUP ===== */
+/* ===== BOOKING POPUP ===== */
     .booking-overlay {
         display: none;
         position: fixed;
@@ -106,7 +106,17 @@
     .popup-subtitle { font-size: 0.85rem; color: #64748b; margin: 0 0 18px; }
     .booking-platforms { display: flex; flex-direction: column; gap: 9px; }
     .booking-platform-link {
-        display: flex; align-items: cente
+        display: flex; align-items: center; gap: 12px;
+        padding: 11px 15px; border-radius: 10px; text-decoration: none;
+        font-size: 0.95rem; font-weight: 500; color: #1e293b;
+        transition: background 0.15s, transform 0.1s;
+        border: 1.5px solid #e2e8f0;
+    }
+    .booking-platform-link:hover { background: #f8fafc; border-color: #94a3b8; transform: translateX(3px); }
+    .platform-logo { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; border-radius: 4px; }
+    .platform-name { flex: 1; }
+    .platform-arrow { color: #94a3b8; }
+    .booking-popup-note { margin-top: 14px; font-size: 0.73rem; color: #94a3b8; text-align: center; }
     </style>
 </head>
 <body>
