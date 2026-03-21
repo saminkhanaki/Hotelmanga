@@ -290,7 +290,15 @@
     function openLightbox(index) { currentIndex = index; document.getElementById('lightboxImg').src = galleryImages[index]; document.getElementById('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
     function closeLightbox(event) { if (!event || event.target === document.getElementById('lightbox') || event.target.classList.contains('lightbox-close')) { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; } }
     function changeImage(direction) { currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length; document.getElementById('lightboxImg').src = galleryImages[currentIndex]; }
-    document.addEventListener('keydown', (e) => { const lb = document.ge
+    document.addEventListener('keydown', (e) => {
+        const lb = document.getElementById('lightbox');
+        if (lb.classList.contains('open')) {
+            if (e.key === 'ArrowRight') changeImage(1);
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'Escape') closeLightbox();
+        }
+    });
+</script>
 
 <!-- BOOKING POPUP -->
 <div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
