@@ -369,3 +369,73 @@
     });
 </script>
 
+<!-- BOOKING POPUP -->
+<div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
+    <div class="booking-popup" id="bookingPopup">
+        <button class="booking-popup-close" onclick="closeBookingPopup(null,true)" aria-label="Close">&#215;</button>
+        <h4 id="popupHotelName">Check Availability</h4>
+        <p class="popup-subtitle">Compare prices across booking platforms</p>
+        <div class="booking-platforms" id="popupPlatforms"></div>
+        <p class="booking-popup-note">Links may earn affiliate commissions &mdash; your price stays the same.</p>
+    </div>
+</div>
+<script>
+window.HOTEL_BOOKING_LINKS = {
+    name: "Book Hotel Jimbocho",
+    booking: "https://www.booking.com/hotel/jp/book-shen-bao-ting.html",
+    trip: "https://www.trip.com/hotels/tokyo-hotel-detail-91391378/book-hotel-jimbocho/",
+    hotels: "https://www.hotels.com/ho3434480192/",
+    agoda: "https://www.agoda.com/book-hotel-jimbocho/hotel/tokyo-jp.html",
+};
+(function(){
+    var PLATFORMS=[
+        {key:'booking',name:'Booking.com',logo:'../assets/logos/booking.png',color:'#003580'},
+        {key:'trip',name:'Trip.com',logo:'../assets/logos/trip.png',color:'#006FAF'},
+        {key:'hotels',name:'Hotels.com',logo:'../assets/logos/hotels.png',color:'#C8003B'},
+        {key:'agoda',name:'Agoda',logo:'../assets/logos/agoda.png',color:'#E53935'},
+    ];
+    var LINKS=window.HOTEL_BOOKING_LINKS||{};
+    window.openBookingPopup=function(){
+        var overlay=document.getElementById('bookingOverlay');
+        var nameEl=document.getElementById('popupHotelName');
+        var plEl=document.getElementById('popupPlatforms');
+        if(LINKS.name) nameEl.textContent='Book: '+LINKS.name;
+        plEl.innerHTML='';
+        var any=false;
+        PLATFORMS.forEach(function(p){
+            var url=LINKS[p.key];
+            if(!url)return;
+            any=true;
+            var a=document.createElement('a');
+            a.href=url; a.target='_blank'; a.rel='noopener sponsored';
+            a.className='booking-platform-link';
+            var img=document.createElement('img');
+            img.src=p.logo; img.alt=p.name; img.className='platform-logo';
+            var col=p.color;
+            img.onerror=function(){this.outerHTML='<span style="width:26px;height:26px;border-radius:50%;background:'+col+';display:inline-block;flex-shrink:0;"></span>';};
+            var nm=document.createElement('span'); nm.className='platform-name'; nm.textContent=p.name;
+            var ar=document.createElement('span'); ar.className='platform-arrow'; ar.textContent='→';
+            a.appendChild(img); a.appendChild(nm); a.appendChild(ar);
+            plEl.appendChild(a);
+        });
+        if(!any) plEl.innerHTML='<p style="color:#64748b;text-align:center;">No booking links available.</p>';
+        overlay.classList.add('active');
+        document.body.style.overflow='hidden';
+    };
+    window.closeBookingPopup=function(e,force){
+        if(force||!e||e.target===document.getElementById('bookingOverlay')){
+            document.getElementById('bookingOverlay').classList.remove('active');
+            document.body.style.overflow='';
+        }
+    };
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
+    document.addEventListener('DOMContentLoaded',function(){
+        document.querySelectorAll('.btn-book-large').forEach(function(el){
+            el.addEventListener('click',function(e){
+                e.preventDefault();
+                openBookingPopup();
+            });
+        });
+    });
+})();
+</script>
