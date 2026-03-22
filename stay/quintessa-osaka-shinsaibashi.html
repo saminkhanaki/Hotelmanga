@@ -59,6 +59,58 @@
             .big-img, .big-right-img { width: 100%; float: none; margin: 0 0 20px; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
         }
+        /* ===== BOOKING POPUP ===== */
+        .booking-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.55);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            backdrop-filter: blur(3px);
+        }
+        .booking-overlay.active { display: flex; }
+        .booking-popup {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px 28px 24px;
+            max-width: 420px;
+            width: 100%;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+            animation: popIn 0.22s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        @keyframes popIn {
+            from { transform: scale(0.88); opacity: 0; }
+            to   { transform: scale(1);    opacity: 1; }
+        }
+        .booking-popup-close {
+            position: absolute; top: 12px; right: 16px;
+            font-size: 1.5rem; color: #94a3b8; cursor: pointer;
+            background: none; border: none; padding: 4px 8px;
+            border-radius: 4px; transition: color 0.15s, background 0.15s; line-height:1;
+        }
+        .booking-popup-close:hover { color: #1e293b; background: #f1f5f9; }
+        .booking-popup h4 {
+            font-family: 'Montserrat', sans-serif; font-size: 1.1rem;
+            color: #1D3557; margin: 0 0 4px; padding-right: 28px;
+        }
+        .popup-subtitle { font-size: 0.85rem; color: #64748b; margin: 0 0 18px; }
+        .booking-platforms { display: flex; flex-direction: column; gap: 9px; }
+        .booking-platform-link {
+            display: flex; align-items: center; gap: 12px;
+            padding: 11px 15px; border-radius: 10px; text-decoration: none;
+            font-size: 0.95rem; font-weight: 500; color: #1e293b;
+            transition: background 0.15s, transform 0.1s;
+            border: 1.5px solid #e2e8f0;
+        }
+        .booking-platform-link:hover { background: #f8fafc; border-color: #94a3b8; transform: translateX(3px); }
+        .platform-logo { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; border-radius: 4px; }
+        .platform-name { flex: 1; }
+        .platform-arrow { color: #94a3b8; }
+        .booking-popup-note { margin-top: 14px; font-size: 0.73rem; color: #94a3b8; text-align: center; }
     </style>
 </head>
 <body>
@@ -173,7 +225,7 @@
         <div class="book-cta">
             <h3>8,000 Volumes Are Waiting</h3>
             <p>Book Quintessa Hotel Osaka Shinsaibashi — Dotonbori on foot, manga in hand.</p>
-            <a href="https://www.booking.com/hotel/jp/quintessa-osaka-shinsaibashi.html" class="btn-book-large" target="_blank" rel="noopener sponsored">Check Availability & Book →</a>
+            <button class="btn-book-large" onclick="openBookingPopup()">Check Availability & Book →</button>
         </div>
 
         <a href="../stay.html" class="back-home">← Back to Stay</a>
@@ -225,4 +277,83 @@
     function openLightbox(index) { currentIndex = index; document.getElementById('lightboxImg').src = galleryImages[index]; document.getElementById('lightbox').classList.add('open'); document.body.style.overflow = 'hidden'; }
     function closeLightbox(event) { if (!event || event.target === document.getElementById('lightbox') || event.target.classList.contains('lightbox-close')) { document.getElementById('lightbox').classList.remove('open'); document.body.style.overflow = ''; } }
     function changeImage(direction) { currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length; document.getElementById('lightboxImg').src = galleryImages[currentIndex]; }
-    document.addEventListener('keydown', (e) => { const lb = document.ge
+        document.addEventListener('keydown', (e) => {
+        const lb = document.getElementById('lightbox');
+        if (lb.classList.contains('open')) {
+            if (e.key === 'ArrowRight') changeImage(1);
+            if (e.key === 'ArrowLeft') changeImage(-1);
+            if (e.key === 'Escape') closeLightbox();
+        }
+    });
+</script>
+
+<!-- BOOKING POPUP -->
+<div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
+    <div class="booking-popup" id="bookingPopup">
+        <button class="booking-popup-close" onclick="closeBookingPopup(null,true)" aria-label="Close">&#215;</button>
+        <h4 id="popupHotelName">Check Availability</h4>
+        <p class="popup-subtitle">Compare prices across booking platforms</p>
+        <div class="booking-platforms" id="popupPlatforms"></div>
+        <p class="booking-popup-note">Links may earn affiliate commissions &mdash; your price stays the same.</p>
+    </div>
+</div>
+<script>
+window.HOTEL_BOOKING_LINKS = {
+    name: "Quintessa Hotel Osaka Shinsaibashi",
+    booking: "https://www.booking.com/hotel/jp/quintessa-osaka-shinsaibashi.html",
+    trip: "https://www.trip.com/hotels/osaka-hotel-detail-8900892/quintessa-hotel-osaka-shinsaibashi/",
+    hotels: "https://www.hotels.com/ho621345024/quintessa-hotel-osaka-shinsaibashi-osaka-japan/",
+    agoda: "https://www.agoda.com/quintessa-hotel-osaka-shinsaibashi/hotel/osaka-jp.html",
+};
+(function(){
+    var PLATFORMS=[
+        {key:'booking',name:'Booking.com',logo:'../assets/logos/booking.png',color:'#003580'},
+        {key:'trip',name:'Trip.com',logo:'../assets/logos/trip.png',color:'#006FAF'},
+        {key:'hotels',name:'Hotels.com',logo:'../assets/logos/hotels.png',color:'#C8003B'},
+        {key:'agoda',name:'Agoda',logo:'../assets/logos/agoda.png',color:'#E53935'},
+    ];
+    var LINKS=window.HOTEL_BOOKING_LINKS||{};
+    window.openBookingPopup=function(){
+        var overlay=document.getElementById('bookingOverlay');
+        var nameEl=document.getElementById('popupHotelName');
+        var plEl=document.getElementById('popupPlatforms');
+        if(LINKS.name) nameEl.textContent='Book: '+LINKS.name;
+        plEl.innerHTML='';
+        var any=false;
+        PLATFORMS.forEach(function(p){
+            var url=LINKS[p.key];
+            if(!url)return;
+            any=true;
+            var a=document.createElement('a');
+            a.href=url; a.target='_blank'; a.rel='noopener sponsored';
+            a.className='booking-platform-link';
+            var img=document.createElement('img');
+            img.src=p.logo; img.alt=p.name; img.className='platform-logo';
+            var col=p.color;
+            img.onerror=function(){this.outerHTML='<span style="width:26px;height:26px;border-radius:50%;background:'+col+';display:inline-block;flex-shrink:0;"></span>';};
+            var nm=document.createElement('span'); nm.className='platform-name'; nm.textContent=p.name;
+            var ar=document.createElement('span'); ar.className='platform-arrow'; ar.textContent='→';
+            a.appendChild(img); a.appendChild(nm); a.appendChild(ar);
+            plEl.appendChild(a);
+        });
+        if(!any) plEl.innerHTML='<p style="color:#64748b;text-align:center;">No booking links available.</p>';
+        overlay.classList.add('active');
+        document.body.style.overflow='hidden';
+    };
+    window.closeBookingPopup=function(e,force){
+        if(force||!e||e.target===document.getElementById('bookingOverlay')){
+            document.getElementById('bookingOverlay').classList.remove('active');
+            document.body.style.overflow='';
+        }
+    };
+    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
+    document.addEventListener('DOMContentLoaded',function(){
+        document.querySelectorAll('.btn-book-large').forEach(function(el){
+            el.addEventListener('click',function(e){
+                e.preventDefault();
+                openBookingPopup();
+            });
+        });
+    });
+})();
+</script>
