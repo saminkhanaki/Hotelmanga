@@ -3,164 +3,169 @@
   <!-- Core Pages -->
   <url>
     <loc>https://hotelmanga.com/index.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/explore.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/lifestyle.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/archive.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.69</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/about.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/contact.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/privacy.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.30</priority>
   </url>
   <!-- Archive Articles -->
   <url>
+    <loc>https://hotelmanga.com/archive/demon-slayer-real-locations.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
     <loc>https://hotelmanga.com/archive/jujutsu-tokyo.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/archive/manga-shelf.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/archive/one-piece-la.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/archive/ramen-set.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.70</priority>
   </url>
   <!-- Stay Articles — 20 Hotel Guides -->
   <url>
     <loc>https://hotelmanga.com/stay/hotel-gracery-shinjuku.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/highland-resort-hotel.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/grand-chariot-135.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/book-and-bed-tokyo.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/henn-na-hotel.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/sekizenkan-ryokan.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/chaharu-dogo-onsen.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/ookawa-so.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/yasuda-ryokan.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/shiroyamakan-shirakawa-go.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/manga-art-hotel-tokyo.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/book-hotel-jimbocho.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/quintessa-osaka-shinsaibashi.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/niigata-daiichi-hotel.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/webase-takamatsu.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/nohga-hotel-akihabara.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/anshin-oyado-akihabara.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/the-millennials-shibuya.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/tokyo-station-hotel.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/9h-nine-hours-woman-shinjuku.html</loc>
-    <lastmod>2026-03-22</lastmod>
+    <lastmod>2026-03-25</lastmod>
     <priority>0.85</priority>
   </url>
 </urlset>
