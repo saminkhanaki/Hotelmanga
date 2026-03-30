@@ -17,20 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        .stay-hero {
-            background: var(--deep-navy);
-            color: white;
-            text-align: center;
-            padding: 70px 20px 50px;
-            position: relative;
-            overflow: hidden;
-        }
-        .stay-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px);
-        }
+        .stay-hero { background: var(--deep-navy); color: white; text-align: center; padding: 70px 20px 50px; position: relative; overflow: hidden; }
+        .stay-hero::before { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, transparent, transparent 40px, rgba(255,255,255,0.02) 40px, rgba(255,255,255,0.02) 80px); }
         .stay-hero h1 { font-family: 'Montserrat', sans-serif; font-size: 3rem; font-weight: 700; letter-spacing: 0.05em; margin: 0 0 12px; position: relative; }
         .stay-hero h1 span { color: var(--accent); }
         .stay-hero p { font-size: 1.1rem; opacity: 0.8; max-width: 600px; margin: 0 auto 30px; position: relative; font-family: 'Inter', sans-serif; font-weight: 300; }
@@ -77,9 +65,7 @@
         </div>
     </a>
     <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </div>
     <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
@@ -103,7 +89,7 @@
     <button class="filter-btn" onclick="filterCards('otaku', this)">Otaku Districts</button>
 </div>
 
-<p class="stay-section-title">20 Curated Stays — Japan</p>
+<p class="stay-section-title">26 Curated Stays — Japan</p>
 
 <div class="stay-grid" id="hotelGrid">
 
@@ -118,9 +104,7 @@
             <h2 class="hotel-card-name">Hotel Gracery Shinjuku</h2>
             <p class="hotel-card-anime">★ Godzilla · Iconic Tokyo Landmark</p>
             <p class="hotel-card-desc">The most photographed hotel in Tokyo. A life-size Godzilla head erupts from the 8th floor terrace, gazing over the neon chaos of Kabukicho. The Godzilla View rooms put you eye-to-eye with the King of Monsters — a surreal, unforgettable experience that no otaku should miss.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/hotel-gracery-shinjuku.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/hotel-gracery-shinjuku.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -135,9 +119,7 @@
             <h2 class="hotel-card-name">Highland Resort Hotel & Spa</h2>
             <p class="hotel-card-anime">★ Naruto · Official Collaboration Rooms</p>
             <p class="hotel-card-desc">Sleep inside the Hidden Leaf Village. The official Naruto collaboration suites at Highland Resort are the most meticulously crafted anime rooms in Japan — from Hokage-themed walls to kunai-shaped room keys. Mount Fuji is your view. The ninja world is your bedroom.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/highland-resort-hotel.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/highland-resort-hotel.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -152,9 +134,7 @@
             <h2 class="hotel-card-name">Grand Chariot 135°</h2>
             <p class="hotel-card-anime">★ Naruto · Demon Slayer · Nijigen no Mori</p>
             <p class="hotel-card-desc">On the mythical island of Awaji — birthplace of the Japanese gods — Grand Chariot offers the most luxurious anime stay in existence. Official Naruto villas recreate the Hokage's chambers in breathtaking detail. Just outside your door: Japan's premier anime theme park, Nijigen no Mori.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/grand-chariot-135.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/grand-chariot-135.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -169,9 +149,7 @@
             <h2 class="hotel-card-name">Book and Bed Tokyo Shinjuku</h2>
             <p class="hotel-card-anime">★ 泊まれる本屋 · The Bookstore You Sleep In</p>
             <p class="hotel-card-desc">Your bed is inside a bookshelf. Thousands of books — including a significant manga collection — surround you on all sides. There is a bar and a cafe. The WiFi password is "have a book night." Book and Bed Tokyo is the hostel concept that book lovers dreamed up, and it works exactly as described.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/book-and-bed-tokyo.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/book-and-bed-tokyo.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -186,9 +164,7 @@
             <h2 class="hotel-card-name">Henn na Hotel Akasaka</h2>
             <p class="hotel-card-anime">★ Sci-Fi · World's First Robot-Staffed Hotel</p>
             <p class="hotel-card-desc">An android looks up from the reception desk and greets you in four languages. This is the Henn na Hotel — the world's first hotel staffed entirely by robots, Guinness World Record holder, and the most convincing proof yet that the sci-fi anime future has arrived. Surreal, efficient, and unforgettable.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/henn-na-hotel.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/henn-na-hotel.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -203,9 +179,7 @@
             <h2 class="hotel-card-name">Sekizenkan Ryokan</h2>
             <p class="hotel-card-anime">★ Spirited Away · Real-Life Bathhouse Inspiration</p>
             <p class="hotel-card-desc">Cross the red bridge at night and you are inside Spirited Away. Sekizenkan is Japan's oldest continuously operating ryokan — built in 1691 — and the direct visual inspiration for Yubaba's bathhouse. The lantern-lit corridors, steaming baths, and ancient wooden architecture make this the most sacred pilgrimage in all of anime tourism.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/sekizenkan-ryokan.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/sekizenkan-ryokan.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -220,9 +194,7 @@
             <h2 class="hotel-card-name">Chaharu Ryokan</h2>
             <p class="hotel-card-anime">★ Spirited Away · Dogo Onsen Honkan · 2 Minutes Away</p>
             <p class="hotel-card-desc">Two minutes from the Spirited Away bathhouse — and Dogo's finest ryokan. Chaharu's rooftop open-air bath is the first in Dogo Onsen, with unobstructed views of Matsuyama Castle under open sky. The Honkan glows across the arcade at dusk. This is where the pilgrimage stays.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/chaharu-dogo-onsen.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/chaharu-dogo-onsen.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -237,9 +209,7 @@
             <h2 class="hotel-card-name">Ookawa-so (Infinity Castle)</h2>
             <p class="hotel-card-anime">★ Demon Slayer · Infinity Castle Inspiration</p>
             <p class="hotel-card-desc">The ryokan that became the Infinity Castle. Ookawa-so's spectacular lobby — with its soaring ceilings, ornate wooden beams, and cascading staircases — directly inspired one of the most iconic locations in Demon Slayer. Standing inside it feels like stepping into the screen.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/ookawa-so.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/ookawa-so.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -254,9 +224,7 @@
             <h2 class="hotel-card-name">Yasuda Ryokan</h2>
             <p class="hotel-card-anime">★ Love Live! Sunshine!! · Chika's Real Home</p>
             <p class="hotel-card-desc">This is not inspired by Love Live — this is Love Live. Yasuda Ryokan is the real-world home of Chika Takami, the series' protagonist. The building, the garden, the view of Suruga Bay — all faithfully recreated in the anime. For fans of the franchise, staying here is a religious experience.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/yasuda-ryokan.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/yasuda-ryokan.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -271,9 +239,7 @@
             <h2 class="hotel-card-name">Shiroyamakan</h2>
             <p class="hotel-card-anime">★ Higurashi When They Cry · Real Hinamizawa</p>
             <p class="hotel-card-desc">Shirakawa-go is Hinamizawa — the haunted village at the heart of Higurashi When They Cry. Built in 1884 inside the UNESCO World Heritage gassho-zukuri village, Shiroyamakan accepts just four parties per night. Private cypress baths, kaiseki cuisine, and a complimentary village tour from the fourth-generation owner.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/shiroyamakan-shirakawa-go.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/shiroyamakan-shirakawa-go.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -288,9 +254,7 @@
             <h2 class="hotel-card-name">Manga Art Hotel Tokyo</h2>
             <p class="hotel-card-anime">★ 5,000+ Curated Manga Volumes</p>
             <p class="hotel-card-desc">Sleep surrounded by manga. The walls, the corridors, the shelves beside your bed — all manga. Manga Art Hotel is not a hotel with manga; it is manga that happens to have beds. The curators have hand-selected every volume. You can borrow any title, disappear into your capsule, and read until the city wakes up.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/manga-art-hotel-tokyo.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/manga-art-hotel-tokyo.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -305,9 +269,7 @@
             <h2 class="hotel-card-name">Book Hotel Jimbocho · MANGA ART ROOM</h2>
             <p class="hotel-card-anime">★ Private Sauna · Reality Forbidden</p>
             <p class="hotel-card-desc">On the 12th floor: two private manga caves — one white, one black — with floor-to-ceiling art panels, shelves of manga, and a private sauna called KUHAKU (blank space). The hotel's manifesto is direct: reality is strictly forbidden here.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/book-hotel-jimbocho.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/book-hotel-jimbocho.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -322,9 +284,7 @@
             <h2 class="hotel-card-name">Quintessa Hotel Osaka Shinsaibashi</h2>
             <p class="hotel-card-anime">★ 8,000 Manga Volumes · Comic & Books</p>
             <p class="hotel-card-desc">Eight thousand manga volumes fill the lobby — ONE PIECE, Demon Slayer, Doraemon, Detective Conan, and much more. Take up to ten volumes to your room at a time; return them, take ten more. Steps from Shinsaibashi Station, 15 minutes on foot from Dotonbori. Osaka's definitive manga base camp.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/quintessa-osaka-shinsaibashi.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/quintessa-osaka-shinsaibashi.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -339,9 +299,7 @@
             <h2 class="hotel-card-name">Niigata Daiichi Hotel</h2>
             <p class="hotel-card-anime">★ 15,000 Comics · Japan's Manga Capital</p>
             <p class="hotel-card-desc">Niigata gave the world Rumiko Takahashi (Inuyasha), Takeshi Obata (Death Note), and ONE (One Punch Man). Its best hotel has 15,000 comics in a dedicated reading room, gender-segregated public baths, yukata for the whole hotel, and a teppanyaki breakfast. One block from the Shinkansen station.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/niigata-daiichi-hotel.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/niigata-daiichi-hotel.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -356,9 +314,7 @@
             <h2 class="hotel-card-name">WeBase Takamatsu</h2>
             <p class="hotel-card-anime">★ Setouchi Art Islands · Naoshima Gateway</p>
             <p class="hotel-card-desc">The smartest base for Setouchi Triennale island-hopping. Modern hostel-hotel hybrid with private rooms, a 116-seat coworking lounge, Sanuki Udon breakfast, and ferry access to Naoshima — home to the Chichu Art Museum, Benesse Art House, and some of the most significant contemporary art installations in Asia.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/webase-takamatsu.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/webase-takamatsu.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -373,9 +329,7 @@
             <h2 class="hotel-card-name">Nohga Hotel Akihabara</h2>
             <p class="hotel-card-anime">★ Electric Town · Premium Akihabara Base</p>
             <p class="hotel-card-desc">The most design-forward hotel in Akihabara. While other options in the district sacrifice aesthetics for location, Nohga delivers both — a beautifully designed boutique hotel with high-end audio systems in every room, steps from the world's greatest concentration of anime, manga, and gaming stores.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/nohga-hotel-akihabara.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/nohga-hotel-akihabara.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -390,9 +344,7 @@
             <h2 class="hotel-card-name">Anshin Oyado Akihabara</h2>
             <p class="hotel-card-anime">★ Otaku Paradise · Tech-Loaded Capsule</p>
             <p class="hotel-card-desc">The otaku's secret weapon. Free onsen, sauna, unlimited drinks, manga lounge, curry breakfast, and late-night ramen — all included. 27-hour stay window. Two minutes from Akihabara Station. After a day of hunting rare figures and first-edition manga on Electric Town's legendary streets, this is where you recharge.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/anshin-oyado-akihabara.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/anshin-oyado-akihabara.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -407,9 +359,7 @@
             <h2 class="hotel-card-name">The Millennials Shibuya</h2>
             <p class="hotel-card-anime">★ Smart Pod · Capsule/Cyberpunk · Shibuya</p>
             <p class="hotel-card-desc">The future of sleep, in the heart of anime's most famous battleground. The Millennials' Smart Pods transform as you use them — rising from flat bed to lounge chair at a touch, with a built-in projector casting Tokyo's skyline across your pod ceiling. Outside: the Shibuya Scramble.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/the-millennials-shibuya.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/the-millennials-shibuya.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -424,9 +374,7 @@
             <h2 class="hotel-card-name">The Tokyo Station Hotel</h2>
             <p class="hotel-card-anime">★ Anime Character Street · Tokyo's Grand Central</p>
             <p class="hotel-card-desc">Sleep inside a National Important Cultural Property. The Tokyo Station Hotel occupies the iconic red-brick 1914 station building — a structure that appears in countless anime films. Directly beneath your feet: the Tokyo Character Street, home to official shops from every major anime studio in Japan.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/tokyo-station-hotel.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/tokyo-station-hotel.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -441,9 +389,97 @@
             <h2 class="hotel-card-name">9h Nine Hours Woman Shinjuku</h2>
             <p class="hotel-card-anime">★ Women Only · Sleep Science Capsule</p>
             <p class="hotel-card-desc">The capsule hotel that redefined what capsule hotels could be — for women. Nine Hours Shinjuku's cocoon-shaped pods are engineered for sleep: Gymnast Plus pillows, Nikke Shoji mattresses, no televisions by design. An optional sleep analysis report generated overnight. Five minutes from Shinjuku Sanchome.</p>
-            <div class="hotel-card-footer">
-                <a href="stay/9h-nine-hours-woman-shinjuku.html" class="btn-read-more">Read More</a>
-            </div>
+            <div class="hotel-card-footer"><a href="stay/9h-nine-hours-woman-shinjuku.html" class="btn-read-more">Read More</a></div>
+        </div>
+    </div>
+
+    <!-- 21 — NEW -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <a href="stay/kosekiya-annex-ginzan.html" class="hotel-card-img-link">
+            <img src="assets/stay/kosekiya-hero.webp" alt="Kosekiya Annex Ginzan Onsen" class="hotel-card-img" loading="lazy" onerror="this.style.display='none'">
+        </a>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags"><span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span></div>
+            <p class="hotel-location">📍 Ginzan Onsen, Yamagata</p>
+            <h2 class="hotel-card-name">Kosekiya Annex</h2>
+            <p class="hotel-card-anime">★ Demon Slayer · Real Swordsmith Village</p>
+            <p class="hotel-card-desc">A 500-year-old Taisho-era ryokan at the heart of Ginzan Onsen — the real-world Swordsmith Village from Demon Slayer. Gas lamp streets, snow-covered timber roofs, Taisho costume rental on-site, and free access to Ginzanso's outdoor baths. In winter, the resemblance to the anime is total.</p>
+            <div class="hotel-card-footer"><a href="stay/kosekiya-annex-ginzan.html" class="btn-read-more">Read More</a></div>
+        </div>
+    </div>
+
+    <!-- 22 — NEW -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <a href="stay/nara-hotel.html" class="hotel-card-img-link">
+            <img src="assets/stay/nara-hero.webp" alt="Nara Hotel" class="hotel-card-img" loading="lazy" onerror="this.style.display='none'">
+        </a>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags"><span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span></div>
+            <p class="hotel-location">📍 Nara City, Nara</p>
+            <h2 class="hotel-card-name">Nara Hotel</h2>
+            <p class="hotel-card-anime">★ Demon Slayer · Taisho-Era Grand Hotel</p>
+            <p class="hotel-card-desc">Opened in 1909, designed by the architect of Tokyo Station, and at the height of its cultural prestige during the Taisho era — the world of Demon Slayer. The pilgrimage base for Yagyu Village's Itto-seki boulder, the real-world parallel to Tanjiro's training rock. Einstein played the piano in this lobby.</p>
+            <div class="hotel-card-footer"><a href="stay/nara-hotel.html" class="btn-read-more">Read More</a></div>
+        </div>
+    </div>
+
+    <!-- 23 — NEW -->
+    <div class="hotel-card" data-category="pilgrimage capsule">
+        <a href="stay/anshin-oyado-nagoya.html" class="hotel-card-img-link">
+            <img src="assets/stay/anshin-nagoya-hero.webp" alt="Anshin Oyado Nagoya Sakae" class="hotel-card-img" loading="lazy" onerror="this.style.display='none'">
+        </a>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags"><span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span><span class="hotel-tag tag-capsule">Capsule/Cyberpunk</span></div>
+            <p class="hotel-location">📍 Sakae, Nagoya</p>
+            <h2 class="hotel-card-name">Anshin Oyado Nagoya Sakae</h2>
+            <p class="hotel-card-anime">★ Demon Slayer · Butterfly Mansion Base Camp</p>
+            <p class="hotel-card-desc">Free onsen, sauna, unlimited drinks, retro game consoles, and curry breakfast — all included. 30 minutes from Museum Meiji-mura, the real-life Butterfly Mansion from Demon Slayer. The most value-packed capsule hotel in central Japan, with a 27-hour stay window.</p>
+            <div class="hotel-card-footer"><a href="stay/anshin-oyado-nagoya.html" class="btn-read-more">Read More</a></div>
+        </div>
+    </div>
+
+    <!-- 24 — NEW -->
+    <div class="hotel-card" data-category="pilgrimage manga">
+        <a href="stay/hotel-tavinos-kyoto.html" class="hotel-card-img-link">
+            <img src="assets/stay/tavinos-kyoto-hero.webp" alt="Hotel Tavinos Kyoto" class="hotel-card-img" loading="lazy" onerror="this.style.display='none'">
+        </a>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags"><span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span><span class="hotel-tag tag-manga">Manga Sleepover</span></div>
+            <p class="hotel-location">📍 Shimogyo, Kyoto</p>
+            <h2 class="hotel-card-name">Hotel Tavinos Kyoto</h2>
+            <p class="hotel-card-anime">★ Demon Slayer · Mugen Train Base · Manga Rooms</p>
+            <p class="hotel-card-desc">Three manga-designed room themes — sumo, public bath, moon-viewing — assigned at check-in as a surprise. Steps from Kiyomizu-gojo Station and 20 minutes from Kyoto Railway Museum, home of the real Class 8620 steam locomotive that became the Mugen Train.</p>
+            <div class="hotel-card-footer"><a href="stay/hotel-tavinos-kyoto.html" class="btn-read-more">Read More</a></div>
+        </div>
+    </div>
+
+    <!-- 25 — NEW -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <a href="stay/hotel-cultia-dazaifu.html" class="hotel-card-img-link">
+            <img src="assets/stay/cultia-dazaifu-hero.webp" alt="Hotel Cultia Dazaifu" class="hotel-card-img" loading="lazy" onerror="this.style.display='none'">
+        </a>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags"><span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span></div>
+            <p class="hotel-location">📍 Dazaifu, Fukuoka</p>
+            <h2 class="hotel-card-name">Hotel Cultia Dazaifu</h2>
+            <p class="hotel-card-anime">★ Demon Slayer · Real Kamado Shrine · Kyushu</p>
+            <p class="hotel-card-desc">Four restored Meiji and Taisho-era buildings, one minute from Dazaifu Tenmangu. Thirty minutes from Homangu Kamado Shrine — origin of Tanjiro's name, haori, and the Hinokami Kagura. Thirteen rooms with handcrafted cypress bathtubs and exclusive after-dark shrine access for guests.</p>
+            <div class="hotel-card-footer"><a href="stay/hotel-cultia-dazaifu.html" class="btn-read-more">Read More</a></div>
+        </div>
+    </div>
+
+    <!-- 26 — NEW -->
+    <div class="hotel-card" data-category="pilgrimage">
+        <a href="stay/naniwa-ryokan-okuizumo.html" class="hotel-card-img-link">
+            <img src="assets/stay/naniwa-ryokan-hero.webp" alt="Naniwa Ryokan Okuizumo" class="hotel-card-img" loading="lazy" onerror="this.style.display='none'">
+        </a>
+        <div class="hotel-card-body">
+            <div class="hotel-card-tags"><span class="hotel-tag tag-pilgrimage">Anime Pilgrimage</span></div>
+            <p class="hotel-location">📍 Okuizumo, Shimane</p>
+            <h2 class="hotel-card-name">Naniwa Ryokan</h2>
+            <p class="hotel-card-anime">★ Demon Slayer · Birthplace of the Nichirin Blade</p>
+            <p class="hotel-card-desc">One minute from Izumo-Yokota Station in the heart of Okuizumo — Japan's ancient tatara ironworking region and the real-world origin of the Nichirin blade. A former kaiseki restaurant turned family ryokan, three minutes from the Tatara Sword Museum. From ¥5,500 per person.</p>
+            <div class="hotel-card-footer"><a href="stay/naniwa-ryokan-okuizumo.html" class="btn-read-more">Read More</a></div>
         </div>
     </div>
 
@@ -488,7 +524,6 @@
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
-
     function filterCards(category, btn) {
         document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
