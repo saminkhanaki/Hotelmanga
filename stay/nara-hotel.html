@@ -312,7 +312,6 @@
         <p class="booking-popup-note">Links may earn affiliate commissions &mdash; your price stays the same.</p>
     </div>
 </div>
-
 <script>
 window.HOTEL_BOOKING_LINKS = {
     name: "Nara Hotel",
@@ -364,4 +363,14 @@ window.HOTEL_BOOKING_LINKS = {
     };
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
     document.addEventListener('DOMContentLoaded',function(){
-        document.querySelectorAll('.btn
+        document.querySelectorAll('.btn-book-large').forEach(function(el){
+            el.addEventListener('click',function(e){
+                e.preventDefault();
+                openBookingPopup();
+            });
+        });
+    });
+})();
+</script>
+</body>
+</html>
