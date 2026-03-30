@@ -31,26 +31,8 @@
         .highlight-box { background: #f8fafc; border-radius: 12px; padding: 25px 30px; margin: 30px 0; border-left: 5px solid var(--accent); clear: both; }
         .highlight-box h3 { margin-top: 0; color: var(--accent); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; }
         .highlight-box ul { padding-left: 18px; font-family: 'Inter', sans-serif; font-size: 0.97rem; line-height: 1.8; color: #4a5568; }
-        .anime-connection {
-            background: #fff8f0;
-            border-left: 4px solid #e07b00;
-            border-radius: 0 8px 8px 0;
-            padding: 14px 18px;
-            margin: 18px 0;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            color: #1e293b;
-            clear: both;
-        }
-        .anime-connection strong {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #e07b00;
-            display: block;
-            margin-bottom: 5px;
-        }
+        .anime-connection { background: #fff8f0; border-left: 4px solid #e07b00; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 18px 0; font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #1e293b; clear: both; }
+        .anime-connection strong { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: #e07b00; display: block; margin-bottom: 5px; }
         .info-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-family: 'Inter', sans-serif; font-size: 0.95rem; clear: both; }
         .info-table td { padding: 11px 14px; border-bottom: 1px solid #e8edf2; vertical-align: top; }
         .info-table td:first-child { font-weight: 600; color: var(--deep-navy); width: 38%; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
@@ -69,31 +51,19 @@
         .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 2.5rem; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; background: none; border: none; padding: 10px; }
         .lightbox-prev { left: 16px; } .lightbox-next { right: 16px; }
         .lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
+        /* FIX: book-cta text color */
         .book-cta { background: var(--deep-navy); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 35px 0 20px; clear: both; }
         .book-cta h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 0 0 8px; color: white; }
-        .book-cta p { font-size: 0.95rem !important; opacity: 0.8; margin-bottom: 20px !important; }
-        .btn-book-large { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 13px 32px; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: background 0.2s; }
+        .book-cta p { font-size: 0.95rem !important; color: rgba(255,255,255,0.8) !important; margin-bottom: 20px !important; }
+        .btn-book-large { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 13px 32px; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: background 0.2s; cursor: pointer; border: none; }
         .btn-book-large:hover { background: #c0392b; }
         .back-home { display: inline-block; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
         .back-stay { display: inline-block; margin-bottom: 10px; margin-left: 16px; color: var(--deep-navy); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; opacity: 0.7; }
-
-        .back-home { display: inline-block; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
-        .back-stay { display: inline-block; margin-bottom: 10px; margin-left: 16px; color: var(--deep-navy); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; opacity: 0.7; }
         .section-divider { border: none; border-top: 2px dashed #e2e8f0; margin: 40px 0; clear: both; }
-        /* ===== BOOKING POPUP ===== */
-        .booking-overlay {
-            display: none; position: fixed; inset: 0;
-            background: rgba(0,0,0,0.55); z-index: 9999;
-            align-items: center; justify-content: center;
-            padding: 20px; backdrop-filter: blur(3px);
-        }
+        /* BOOKING POPUP */
+        .booking-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 9999; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(3px); }
         .booking-overlay.active { display: flex; }
-        .booking-popup {
-            background: #fff; border-radius: 16px; padding: 32px 28px 24px;
-            max-width: 420px; width: 100%; position: relative;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-            animation: popIn 0.22s cubic-bezier(0.34,1.56,0.64,1);
-        }
+        .booking-popup { background: #fff; border-radius: 16px; padding: 32px 28px 24px; max-width: 420px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.25); animation: popIn 0.22s cubic-bezier(0.34,1.56,0.64,1); }
         @keyframes popIn { from { transform: scale(0.88); opacity: 0; } to { transform: scale(1); opacity: 1; } }
         .booking-popup-close { position: absolute; top: 12px; right: 16px; font-size: 1.5rem; color: #94a3b8; cursor: pointer; background: none; border: none; padding: 4px 8px; border-radius: 4px; transition: color 0.15s, background 0.15s; line-height:1; }
         .booking-popup-close:hover { color: #1e293b; background: #f1f5f9; }
@@ -115,7 +85,6 @@
     </style>
 </head>
 <body>
-
 <nav>
     <a href="../index.html" style="text-decoration: none;">
         <div class="logo-container">
@@ -133,12 +102,9 @@
         <li><a href="../lifestyle.html">Lifestyle</a></li>
     </ul>
 </nav>
-
 <main class="article-container">
-
     <a href="../stay.html" class="back-home">← Back to Stay</a>
     <a href="../" class="back-stay">/ HotelManga</a>
-
     <header class="article-header">
         <span style="background: var(--deep-navy); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Anime Pilgrimage</span>
         &nbsp;
@@ -146,58 +112,33 @@
         <h1 class="article-title">Kosekiya Annex: You Are Standing Inside the Swordsmith Village</h1>
         <div class="meta">March 2026 &nbsp;·&nbsp; Ginzan Onsen, Yamagata &nbsp;·&nbsp; By HotelManga Editorial</div>
     </header>
-
     <img src="../assets/stay/kosekiya-hero.webp" alt="Kosekiya Annex ryokan at Ginzan Onsen in winter — the real-world Swordsmith Village from Demon Slayer" class="hero-img" onerror="this.style.background='linear-gradient(135deg,#1D3557,#2d5482)'; this.alt='';">
-
     <article class="article-body">
-
         <p>There is a specific moment that every Ginzan Onsen visitor describes the same way: you step off the shuttle bus at dusk, the gas lamps along the river gorge flicker on one by one, and the four-story Taisho-era timber ryokans begin to glow from within against the darkening mountain sky. If there is snow — and in winter there almost always is — it accumulates on the grey rooftops in perfect silence. The steam rising from the river mixes with the cold air. Someone ahead of you in a Taisho kimono is crossing the wooden bridge. And you understand, without needing the anime open in front of you, that this is the Swordsmith Village. Not inspired by it. Not similar to it. This is it.</p>
-
         <p>Kosekiya Annex sits at the precise center of this scene — not at its edge, not a short walk from it, but in the middle of the town's main riverside strip, the building that has anchored this streetscape since 1914. It is the oldest continuously operating ryokan in Ginzan Onsen's modern era, now run by the 14th generation of the Koseki family, and it carries the specific weight of a building that has been inhabited continuously for over a century without ever being rebuilt from scratch.</p>
-
         <div class="anime-connection">
             <strong>Anime Connection — Demon Slayer</strong>
             The Swordsmith Village arc's visual template — its isolated mountain location, Taisho-era multi-story timber architecture, gas lamp streets, and the quality of secrecy that a craft town hidden from the wider world requires — was drawn directly from Ginzan Onsen. Kosekiya Annex, standing at the center of that streetscape since 1914, is the village's architectural heart. In winter, when snow covers the rooftops and steam rises from the river, the resemblance is total.
         </div>
-
         <h2>The Building: What 500 Years of Hospitality Looks Like</h2>
-
         <img src="../assets/stay/kosekiya-exterior.webp" alt="Kosekiya Annex exterior on the Ginzan River — Taisho-era timber architecture, gas lamps" class="big-img" onerror="this.style.display='none';">
-
         <p>The Kosekiya name traces back approximately 500 years, to the Tenpo era (1831–1845) at its most conservatively documented, though the family's connection to this specific stretch of the Ginzan River is significantly older. The current building dates from 1914 — the year the Taisho era began, and the year the Class 8620 steam locomotive (the real Mugen Train) entered mass production — making it a registered tangible cultural property of Ginzan Onsen and one of the most photographed structures in Yamagata Prefecture.</p>
-
         <p>The architecture is what the Jalan booking platform calls "Taisho Roman" style: the hybrid aesthetic of early 20th-century Japan, where Western structural elements — wide bay windows, symmetrical facades, decorative woodwork — were absorbed into traditional multi-story wooden construction. The result is a building that reads as simultaneously Japanese and cosmopolitan, ancient and modern, exactly as the Taisho era itself was. Standing in front of Kosekiya Annex at night, with the gas lamps burning orange against the snow and the Ginzan River audible below, it is not difficult to understand why Koyoharu Gotouge chose this town as her template.</p>
-
         <p>The Annex is distinct from Kosekiya's main building (Ginzanso) — it is the older, smaller, more atmospheric structure, positioned directly on the riverside strip rather than set back from it. Rooms on the river side have direct views of the gas lamp promenade and the opposing ryokan facades. This is the building that appears in the most-reproduced photographs of Ginzan Onsen.</p>
-
         <h2>The Taisho Costume Experience: Wearing the Anime</h2>
-
         <img src="../assets/stay/kosekiya-costume.webp" alt="Taisho era costume rental at Cafe I'rasgayna, Kosekiya Annex Ginzan Onsen — hakama kimono" class="big-right-img" onerror="this.style.display='none';">
-
         <p>Inside Kosekiya Annex's ground floor, Cafe I'rasgayna (pronounced "I'll ask you") operates a Taisho-era costume rental service that is among the most well-considered in Japan. The women's option is a hakama-over-kimono combination — the "haikara-san" style that defined fashionable young women during the Taisho period, and the closest civilian approximation of the kind of layered traditional garments that Demon Slayer's female characters wear. For men, the options include kimono-styled shirts and peaked student caps, the masculine Taisho look that places you somewhere between a village craftsman and a Hashira candidate.</p>
-
         <p>The staff dress guests themselves — this is not a self-service rental — and the care they take is notable. Even guests who have never worn a kimono leave looking like they belong in a Taisho photograph. The rental runs from a 60-minute strolling option up to an overnight package (available from 4 PM to 11 AM the following morning), meaning you can walk the gas lamp streets after dark in period dress and return your costume at checkout. This overnight option, combined with the winter snow and gas lamps, produces photographs that are difficult to distinguish from period images and impossible to reproduce anywhere else in Japan.</p>
-
         <h2>The Hot Springs: Two Baths, Plus Access to Ginzanso</h2>
-
         <p>Kosekiya Annex draws directly from the Ginzan Onsen source — a chloride and sulfate spring whose water is believed to ease neuralgia, rheumatism, and general fatigue. Two indoor baths serve the Annex: the Chika Bath of Warmth and the Kintaro Bath of Coziness, which alternate between men and women at different times of day, allowing guests who stay one night to experience both. The baths are fed directly from the source, not recirculated — the water running over the stone bath edge is fresh spring water, continuously replaced.</p>
-
         <p>The more significant bathing option is available through the ryokan's sister relationship with Ginzanso: all Kosekiya Annex guests have free access to Ginzanso's considerably larger bathing facilities, including open-air baths overlooking the valley. The water temperature at Ginzanso runs cooler (approximately 39°C versus Kosekiya's hotter source), making it easier for longer soaks, and the outdoor bath's view of the snow-covered valley in winter is the kind of onsen experience that travelers specifically travel to Tohoku to find. The walk between the two buildings takes approximately five minutes along the riverside promenade — ideally undertaken in yukata after dark, with the gas lamps burning.</p>
-
         <h2>Rooms and Dining</h2>
-
         <img src="../assets/stay/kosekiya-room.webp" alt="Traditional tatami room at Kosekiya Annex with river view, Ginzan Onsen" class="big-img" onerror="this.style.display='none';">
-
         <p>Guest rooms span both river-facing and mountain-facing orientations, with the river-side rooms commanding higher rates and delivering the more iconic view — the gas lamp promenade and opposing ryokan facades visible from the window. The 2016 renovation added a fifth-floor "Romantic Rooms" category: modernized spaces that retain tatami flooring while updating the fittings to contemporary comfort standards. Standard rooms consist of two adjoining spaces in traditional configuration. Some rooms include beds rather than futon; this should be specified at booking if you have a preference.</p>
-
         <p>Dinner is kaiseki — the multi-course seasonal format that is the standard for upper-tier Japanese ryokan — prepared with Yamagata Prefecture ingredients: locally grown rice, mountain vegetables, river fish, and sake from the region's prolific brewing tradition. Breakfast follows the traditional Japanese format. The ground-floor Cafe Swallones serves local sake and cocktails in the evenings, operating as a social space for guests who want to extend the night after dinner.</p>
-
         <h2>Getting There: The Shuttle, the Train, and the Right Time to Arrive</h2>
-
         <p>From Tokyo Station, the route is the Tohoku Shinkansen to Oishida Station (approximately 2 hours 40 minutes, around ¥10,000), followed by either the Kosekiya shuttle bus (35 minutes, advance reservation required) or the Hanagasa Bus to Ginzan Onsen (40 minutes) with a short walk to the ryokan. Shuttle departure times from Oishida Station are 11:10, 13:40, and 15:45 — book in advance when making your room reservation.</p>
-
         <p>The timing matters more here than at almost any other ryokan in Japan. Arriving on the 15:45 shuttle puts you in Ginzan Onsen at approximately 4:20 PM, as dusk is gathering. This is the correct arrival: the gas lamps come on as you walk from the bus stop to the ryokan entrance, the snow glows faintly blue before the lamps overwhelm it, and you check in while the town transitions from daytime to its evening identity. Arriving at noon is fine. Arriving at dusk is the Swordsmith Village.</p>
-
         <div class="highlight-box">
             <h3>Practical Information</h3>
             <ul>
@@ -210,7 +151,6 @@
                 <li><strong>Cultural Property:</strong> The 1914 building is a registered tangible cultural property of Ginzan Onsen</li>
             </ul>
         </div>
-
         <table class="info-table">
             <tr><td>Full Name</td><td>Kosekiya Annex (古勢起屋別館)</td></tr>
             <tr><td>Address</td><td>417 Ginzan, Shinhata, Obanazawa-shi, Yamagata Prefecture</td></tr>
@@ -222,7 +162,6 @@
             <tr><td>Nearest Station</td><td>JR Oishida Station — 35 min by shuttle (advance reservation required)</td></tr>
             <tr><td>Best Season</td><td>Winter for snow; late April for sakura; October–November for autumn foliage</td></tr>
         </table>
-
         <div class="gallery-section">
             <h2>Photo Gallery</h2>
             <div class="gallery-grid" id="galleryGrid">
@@ -234,30 +173,34 @@
                 <img src="../assets/stay/kosekiya-g6.webp" alt="Ginzan Onsen snow-covered rooftops in winter" onclick="openLightbox(5)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(5)\'>Photo 6</div>'">
             </div>
         </div>
-
         <div class="book-cta">
             <h3>Enter the Swordsmith Village</h3>
             <p>Book the 15:45 shuttle from Oishida. Arrive at dusk. Watch the gas lamps come on one by one.</p>
-            <button class="btn-book-large" onclick="openBookingPopup()">Check Availability & Book →</button>
+            <button class="btn-book-large" onclick="openBookingPopup()">Check Availability &amp; Book &rarr;</button>
         </div>
-
         <p style="font-size:0.9rem; color:#64748b; font-family:'Inter',sans-serif;">
-            Want the full Demon Slayer pilgrimage? Read our complete guide: 
-            <a href="../archive/demon-slayer-real-locations.html" style="color:var(--deep-navy); font-weight:600;">Tracing the Blade — Every Real-Life Demon Slayer Location in Japan →</a>
+            Want the full Demon Slayer pilgrimage? Read our complete guide:
+            <a href="../archive/demon-slayer-real-locations.html" style="color:var(--deep-navy); font-weight:600;">Tracing the Blade — Every Real-Life Demon Slayer Location in Japan &rarr;</a>
         </p>
-
         <a href="../stay.html" class="back-home">← Back to Stay</a>
-
     </article>
 </main>
-
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <button class="lightbox-prev" onclick="changeImage(-1); event.stopPropagation();">&#8249;</button>
     <img id="lightboxImg" src="" alt="">
     <button class="lightbox-next" onclick="changeImage(1); event.stopPropagation();">&#8250;</button>
 </div>
-
+<!-- BOOKING POPUP -->
+<div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
+    <div class="booking-popup" id="bookingPopup">
+        <button class="booking-popup-close" onclick="closeBookingPopup(null,true)" aria-label="Close">&#215;</button>
+        <h4 id="popupHotelName">Check Availability</h4>
+        <p class="popup-subtitle">Compare prices across booking platforms</p>
+        <div class="booking-platforms" id="popupPlatforms"></div>
+        <p class="booking-popup-note">Links may earn affiliate commissions &mdash; your price stays the same.</p>
+    </div>
+</div>
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
@@ -275,15 +218,14 @@
         </div>
         <div class="footer-nav-section">
             <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-            <p class="footer-tagline">📩<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3851565e577850574c5d545559565f59165b5755">[email&#160;protected]</a></p>
+            <p class="footer-tagline">📩info@hotelmanga.com</p>
         </div>
     </div>
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
     menuToggle.addEventListener('click', () => {
@@ -323,18 +265,6 @@
         if (e.key === 'Escape') closeLightbox();
     });
 </script>
-
-<!-- BOOKING POPUP -->
-<div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
-    <div class="booking-popup" id="bookingPopup">
-        <button class="booking-popup-close" onclick="closeBookingPopup(null,true)" aria-label="Close">&#215;</button>
-        <h4 id="popupHotelName">Check Availability</h4>
-        <p class="popup-subtitle">Compare prices across booking platforms</p>
-        <div class="booking-platforms" id="popupPlatforms"></div>
-        <p class="booking-popup-note">Links may earn affiliate commissions &mdash; your price stays the same.</p>
-    </div>
-</div>
-
 <script>
 window.HOTEL_BOOKING_LINKS = {
     name: "Kosekiya Annex",
@@ -386,4 +316,14 @@ window.HOTEL_BOOKING_LINKS = {
     };
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
     document.addEventListener('DOMContentLoaded',function(){
-        document.querySelectorAll('.btn
+        document.querySelectorAll('.btn-book-large').forEach(function(el){
+            el.addEventListener('click',function(e){
+                e.preventDefault();
+                openBookingPopup();
+            });
+        });
+    });
+})();
+</script>
+</body>
+</html>
