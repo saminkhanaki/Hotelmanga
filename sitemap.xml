@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <!-- Core Pages -->
   <url>
     <loc>https://hotelmanga.com/index.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/explore.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/lifestyle.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.75</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/archive.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.69</priority>
   </url>
   <url>
@@ -41,7 +42,13 @@
     <lastmod>2026-03-25</lastmod>
     <priority>0.30</priority>
   </url>
+
   <!-- Archive Articles -->
+  <url>
+    <loc>https://hotelmanga.com/archive/spirited-away-real-locations.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <priority>0.95</priority>
+  </url>
   <url>
     <loc>https://hotelmanga.com/archive/demon-slayer-real-locations.html</loc>
     <lastmod>2026-03-25</lastmod>
@@ -54,20 +61,21 @@
   </url>
   <url>
     <loc>https://hotelmanga.com/archive/manga-shelf.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/archive/one-piece-la.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.70</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/archive/ramen-set.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.70</priority>
   </url>
-  <!-- Stay Articles — 20 Hotel Guides -->
+
+  <!-- Stay Articles — 26 Hotel Guides -->
   <url>
     <loc>https://hotelmanga.com/stay/hotel-gracery-shinjuku.html</loc>
     <lastmod>2026-03-25</lastmod>
@@ -80,7 +88,7 @@
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/grand-chariot-135.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
@@ -95,7 +103,7 @@
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/sekizenkan-ryokan.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-01</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
@@ -168,4 +176,35 @@
     <lastmod>2026-03-25</lastmod>
     <priority>0.85</priority>
   </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/kosekiya-annex-ginzan.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/nara-hotel.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/anshin-oyado-nagoya.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/hotel-tavinos-kyoto.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/hotel-cultia-dazaifu.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/naniwa-ryokan-okuizumo.html</loc>
+    <lastmod>2026-04-01</lastmod>
+    <priority>0.85</priority>
+  </url>
+
 </urlset>
