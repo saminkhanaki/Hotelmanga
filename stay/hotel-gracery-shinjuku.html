@@ -15,334 +15,71 @@
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <style>
-
     <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J5FCEPMY3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4J5FCEPMY3');
-</script>
-        
-        .article-container {
-            max-width: 800px;
-            margin: 40px auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        .article-header {
-            border-bottom: 2px solid #1D3557;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-        }
-        .article-title {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 2.3rem;
-            color: black;
-            line-height: 1.2;
-            margin: 15px 0;
-        }
-        .meta {
-            color: #64748b;
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
-        .hero-img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-bottom: 25px;
-            display: block;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            min-height: 380px;
-            object-fit: cover;
-        }
-        .big-img {
-            width: 60%;
-            float: left;
-            margin: 0 25px 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        .big-right-img {
-            width: 60%;
-            float: right;
-            margin: 0 0 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        .mid-img {
-            width: 45%;
-            float: left;
-            margin: 0 25px 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        .article-body p {
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-            text-align: justify;
-            font-family: 'Inter', sans-serif;
-        }
-        .article-body h2 {
-            color: var(--primary);
-            margin-top: 35px;
-            font-size: 1.6rem;
-            clear: both;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .article-body h3 {
-            color: var(--deep-navy);
-            margin-top: 25px;
-            font-size: 1.2rem;
-            clear: both;
-            font-family: 'Montserrat', sans-serif;
-        }
-        .highlight-box {
-            background: #f8fafc;
-            border-radius: 12px;
-            padding: 25px 30px;
-            margin: 30px 0;
-            border-left: 5px solid var(--accent);
-            clear: both;
-        }
-        .highlight-box h3 {
-            margin-top: 0;
-            color: var(--accent);
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-        }
-        .highlight-box ul {
-            padding-left: 18px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.97rem;
-            line-height: 1.8;
-            color: #4a5568;
-        }
-        .info-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 25px 0;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            clear: both;
-        }
-        .info-table td {
-            padding: 11px 14px;
-            border-bottom: 1px solid #e8edf2;
-            vertical-align: top;
-        }
-        .info-table td:first-child {
-            font-weight: 600;
-            color: var(--deep-navy);
-            width: 38%;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J5FCEPMY3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4J5FCEPMY3');
+    </script>
+    <style>
+        .article-container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+        .article-header { border-bottom: 2px solid #1D3557; margin-bottom: 25px; padding-bottom: 10px; }
+        .article-title { font-family: 'Montserrat', sans-serif; font-size: 2.3rem; color: black; line-height: 1.2; margin: 15px 0; }
+        .meta { color: #64748b; font-size: 0.9rem; margin-bottom: 15px; }
+        .hero-img { width: 100%; height: auto; border-radius: 8px; margin-bottom: 25px; display: block; box-shadow: 0 5px 15px rgba(0,0,0,0.08); min-height: 380px; object-fit: cover; }
+        .big-img { width: 60%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .big-right-img { width: 60%; float: right; margin: 0 0 15px 25px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .mid-img { width: 45%; float: left; margin: 0 25px 15px 0; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .article-body p { margin-bottom: 20px; font-size: 1.1rem; text-align: justify; font-family: 'Inter', sans-serif; }
+        .article-body h2 { color: var(--primary); margin-top: 35px; font-size: 1.6rem; clear: both; font-family: 'Montserrat', sans-serif; }
+        .article-body h3 { color: var(--deep-navy); margin-top: 25px; font-size: 1.2rem; clear: both; font-family: 'Montserrat', sans-serif; }
+        .highlight-box { background: #f8fafc; border-radius: 12px; padding: 25px 30px; margin: 30px 0; border-left: 5px solid var(--accent); clear: both; }
+        .highlight-box h3 { margin-top: 0; color: var(--accent); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.08em; }
+        .highlight-box ul { padding-left: 18px; font-family: 'Inter', sans-serif; font-size: 0.97rem; line-height: 1.8; color: #4a5568; }
+        .info-table { width: 100%; border-collapse: collapse; margin: 25px 0; font-family: 'Inter', sans-serif; font-size: 0.95rem; clear: both; }
+        .info-table td { padding: 11px 14px; border-bottom: 1px solid #e8edf2; vertical-align: top; }
+        .info-table td:first-child { font-weight: 600; color: var(--deep-navy); width: 38%; font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
         .info-table tr:last-child td { border-bottom: none; }
-        .gallery-section {
-            margin: 40px 0 30px;
-            clear: both;
-        }
-        .gallery-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            color: var(--deep-navy);
-            margin-bottom: 16px;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-        .gallery-grid img {
-            width: 100%;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s, opacity 0.2s;
-        }
-        .gallery-grid img:hover {
-            transform: scale(1.03);
-            opacity: 0.92;
-        }
-        .gallery-placeholder {
-            width: 100%;
-            aspect-ratio: 4/3;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.8rem;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-        .lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.92);
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
+        .gallery-section { margin: 40px 0 30px; clear: both; }
+        .gallery-section h2 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; color: var(--deep-navy); margin-bottom: 16px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .gallery-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s, opacity 0.2s; }
+        .gallery-grid img:hover { transform: scale(1.03); opacity: 0.92; }
+        .gallery-placeholder { width: 100%; aspect-ratio: 4/3; border-radius: 8px; background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.8rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
         .lightbox.open { display: flex; }
-        .lightbox img {
-            max-width: 90vw;
-            max-height: 85vh;
-            border-radius: 8px;
-            object-fit: contain;
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 24px;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-            line-height: 1;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
+        .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 20px; right: 24px; color: white; font-size: 2rem; cursor: pointer; font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1; opacity: 0.8; transition: opacity 0.2s; }
         .lightbox-close:hover { opacity: 1; }
-        .lightbox-prev, .lightbox-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-size: 2.5rem;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-            background: none;
-            border: none;
-            padding: 10px;
-        }
+        .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 2.5rem; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; background: none; border: none; padding: 10px; }
         .lightbox-prev { left: 16px; }
         .lightbox-next { right: 16px; }
         .lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
-        .book-cta {
-            background: var(--deep-navy);
-            color: white;
-            padding: 32px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 35px 0 20px;
-            clear: both;
-        }
-        .book-cta h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            margin: 0 0 8px;
-            color: white;
-        }
-        .book-cta p {
-            font-size: 0.95rem !important;
-            opacity: 0.8;
-            margin-bottom: 20px !important;
-        }
-        .btn-book-large {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            padding: 13px 32px;
-            border-radius: 7px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            transition: background 0.2s;
-        }
+        .book-cta { background: var(--deep-navy); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 35px 0 20px; clear: both; }
+        .book-cta h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 0 0 8px; color: white; }
+        .book-cta p { font-size: 0.95rem !important; opacity: 0.8; margin-bottom: 20px !important; }
+        .btn-book-large { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 13px 32px; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: background 0.2s; }
         .btn-book-large:hover { background: #c0392b; }
-        .back-home {
-            display: inline-block;
-            margin-bottom: 10px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-        }
-        .back-stay {
-            display: inline-block;
-            margin-bottom: 10px;
-            margin-left: 16px;
-            color: var(--deep-navy);
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
+        .back-home { display: inline-block; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
+        .back-stay { display: inline-block; margin-bottom: 10px; margin-left: 16px; color: var(--deep-navy); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; opacity: 0.7; }
         @media (max-width: 768px) {
             .article-container { width: 92%; padding: 20px; margin: 20px auto; }
             .article-title { font-size: 1.8rem; }
             .mid-img, .big-img, .big-right-img { width: 100%; float: none; margin: 0 0 20px; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
         }
-
-        /* ===== BOOKING POPUP ===== */
-        .booking-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.55);
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            backdrop-filter: blur(3px);
-        }
+        .booking-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 9999; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(3px); }
         .booking-overlay.active { display: flex; }
-        .booking-popup {
-            background: #fff;
-            border-radius: 16px;
-            padding: 32px 28px 24px;
-            max-width: 420px;
-            width: 100%;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-            animation: popIn 0.22s cubic-bezier(0.34,1.56,0.64,1);
-        }
-        @keyframes popIn {
-            from { transform: scale(0.88); opacity: 0; }
-            to   { transform: scale(1);    opacity: 1; }
-        }
-        .booking-popup-close {
-            position: absolute; top: 12px; right: 16px;
-            font-size: 1.5rem; color: #94a3b8; cursor: pointer;
-            background: none; border: none; padding: 4px 8px;
-            border-radius: 4px; transition: color 0.15s, background 0.15s; line-height:1;
-        }
+        .booking-popup { background: #fff; border-radius: 16px; padding: 32px 28px 24px; max-width: 420px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.25); animation: popIn 0.22s cubic-bezier(0.34,1.56,0.64,1); }
+        @keyframes popIn { from { transform: scale(0.88); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .booking-popup-close { position: absolute; top: 12px; right: 16px; font-size: 1.5rem; color: #94a3b8; cursor: pointer; background: none; border: none; padding: 4px 8px; border-radius: 4px; transition: color 0.15s, background 0.15s; line-height:1; }
         .booking-popup-close:hover { color: #1e293b; background: #f1f5f9; }
-        .booking-popup h4 {
-            font-family: 'Montserrat', sans-serif; font-size: 1.1rem;
-            color: #1D3557; margin: 0 0 4px; padding-right: 28px;
-        }
+        .booking-popup h4 { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #1D3557; margin: 0 0 4px; padding-right: 28px; }
         .popup-subtitle { font-size: 0.85rem; color: #64748b; margin: 0 0 18px; }
         .booking-platforms { display: flex; flex-direction: column; gap: 9px; }
-        .booking-platform-link {
-            display: flex; align-items: center; gap: 12px;
-            padding: 11px 15px; border-radius: 10px; text-decoration: none;
-            font-size: 0.95rem; font-weight: 500; color: #1e293b;
-            transition: background 0.15s, transform 0.1s;
-            border: 1.5px solid #e2e8f0;
-        }
+        .booking-platform-link { display: flex; align-items: center; gap: 12px; padding: 11px 15px; border-radius: 10px; text-decoration: none; font-size: 0.95rem; font-weight: 500; color: #1e293b; transition: background 0.15s, transform 0.1s; border: 1.5px solid #e2e8f0; }
         .booking-platform-link:hover { background: #f8fafc; border-color: #94a3b8; transform: translateX(3px); }
         .platform-logo { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; border-radius: 4px; }
         .platform-name { flex: 1; }
@@ -351,7 +88,6 @@
     </style>
 </head>
 <body>
-
 <nav>
     <a href="../index.html" style="text-decoration: none;">
         <div class="logo-container">
@@ -360,9 +96,7 @@
         </div>
     </a>
     <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
     </div>
     <ul class="nav-list">
         <li><a href="../index.html">Home</a></li>
@@ -371,12 +105,9 @@
         <li><a href="../lifestyle.html">Lifestyle</a></li>
     </ul>
 </nav>
-
 <main class="article-container">
-
     <a href="../stay.html" class="back-home">← Back to Stay</a>
     <a href="../" class="back-stay">/ HotelManga</a>
-
     <header class="article-header">
         <span style="background: var(--deep-navy); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Character Themed</span>
         &nbsp;
@@ -384,66 +115,28 @@
         <h1 class="article-title">Hotel Gracery Shinjuku: Eye-to-Eye with the King of Monsters</h1>
         <div class="meta">March 2026 &nbsp;·&nbsp; Shinjuku, Tokyo &nbsp;·&nbsp; By HotelManga Editorial</div>
     </header>
-
-    <img
-        src="../assets/stay/gracery-hero.webp"
-        alt="Hotel Gracery Shinjuku with Godzilla head on the 8th floor terrace"
-        class="hero-img"
-        onerror="this.style.background='linear-gradient(135deg,#1D3557,#2d5482)'; this.alt='';"
-    >
-
+    <img src="../assets/stay/gracery-hero.webp" alt="Hotel Gracery Shinjuku with Godzilla head on the 8th floor terrace" class="hero-img" onerror="this.style.background='linear-gradient(135deg,#1D3557,#2d5482)'; this.alt='';">
     <article class="article-body">
-
         <p>You are walking through Kabukicho — Tokyo's neon-drenched entertainment district — when you look up and lock eyes with a creature that has been destroying this city since 1954. The head is enormous. The scales are textured. The eyes are lit from within. And it is growing out of the eighth floor of your hotel.</p>
-
         <p>Welcome to Hotel Gracery Shinjuku. The most photographed hotel in Tokyo, and the undisputed headquarters of the King of Monsters.</p>
-
         <h2>The Story of the Godzilla Hotel</h2>
-
         <p>Hotel Gracery Shinjuku opened in 2015 as part of the Shinjuku Toho Building development — a complex built on the site of the old Shinjuku Toho Cinema, which for decades screened the original Godzilla films. The connection is intentional and deeply felt. Toho, the studio that created Godzilla in 1954, commissioned a full-scale recreation of the monster's head for the hotel's eighth-floor terrace, where it has presided over Kabukicho ever since.</p>
-
-        <img
-            src="../assets/stay/gracery-godzilla.webp"
-            alt="Close-up of the Godzilla head on Hotel Gracery Shinjuku's terrace"
-            class="big-img"
-            onerror="this.style.display='none';"
-        >
-
+        <img src="../assets/stay/gracery-godzilla.webp" alt="Close-up of the Godzilla head on Hotel Gracery Shinjuku's terrace" class="big-img" onerror="this.style.display='none';">
         <p>The head measures approximately 12 meters tall — the size of a three-story building on its own. At scheduled times throughout the day, it emits a roar that echoes across Kabukicho and draws crowds of tourists with cameras raised. At night, the eyes glow an eerie green against the Tokyo skyline, visible from streets across the district. It is, by any measure, one of the great spectacles of modern Tokyo.</p>
-
         <p>For fans of Godzilla — one of Japan's most enduring pop culture icons and a franchise that spans seven decades, 38 films, and a recent Hollywood revival — staying here is not just a hotel choice. It is a pilgrimage.</p>
-
         <h2>The Godzilla View Rooms: Worth Every Yen</h2>
-
         <p>The hotel's 970 standard rooms are comfortable, well-designed business hotel rooms — exactly what you would expect from a Gracery property. But the Godzilla View rooms on floors 9 through 12 are something else entirely. These rooms face directly onto the terrace where the monster's head is mounted, placing guests at eye level with Godzilla through their floor-to-ceiling windows.</p>
-
-        <img
-            src="../assets/stay/gracery-room.webp"
-            alt="Godzilla View room at Hotel Gracery Shinjuku"
-            class="big-right-img"
-            onerror="this.style.display='none';"
-        >
-
+        <img src="../assets/stay/gracery-room.webp" alt="Godzilla View room at Hotel Gracery Shinjuku" class="big-right-img" onerror="this.style.display='none';">
         <p>Waking up in a Godzilla View room is an experience that resists easy description. The head is close enough to feel its presence — not threatening, exactly, but enormous and immediate in a way that recalibrates your sense of scale. At 3 AM, with Kabukicho still pulsing with light below and the monster's eyes glowing green outside your window, you understand why people return to this hotel again and again.</p>
-
         <p>The rooms themselves are immaculately maintained. Beds are firm and high-quality, blackout curtains handle Tokyo's relentless light pollution (except, of course, the Godzilla light), and the bathrooms are efficiently designed in the Japanese manner. Godzilla-themed toiletries and a small selection of monster merchandise complete the experience. It is theatrical and sincere at the same time — which is precisely the right combination.</p>
-
         <h2>The 8th Floor Terrace: Tokyo's Best Free Attraction</h2>
-
         <p>The Godzilla Terrace on the 8th floor is open to the public — not just hotel guests — and it is consistently one of the most visited spots in Shinjuku. The viewing platform wraps around the base of the head and offers a panoramic view of Kabukicho and the wider Shinjuku skyline that is genuinely spectacular, particularly at dusk when the neon below begins to compete with the fading sky above.</p>
-
         <p>Hotel guests have one significant advantage: access to the terrace at times when it is less crowded, and the ability to watch the scheduled roaring events from their rooms rather than fighting for a spot on the street below. The roar schedule changes seasonally — check the hotel's current schedule when booking — but events typically occur several times daily and draw sizable crowds even in rain.</p>
-
         <h2>Location: The Center of Everything</h2>
-
         <p>Shinjuku is the busiest railway station in the world, handling over 3.5 million passengers daily. Hotel Gracery sits in Kabukicho, the entertainment district just north of the station — a five-minute walk from the east exit through one of Tokyo's most kinetically alive streetscapes. Golden Gai, the labyrinthine network of tiny bars beloved by locals and adventurous tourists, is three minutes away. The concentrated anime and manga stores of Shinjuku's eastern blocks are immediately walkable.</p>
-
         <p>For otaku travelers, the location is particularly strategic. Animate Shinjuku, one of the largest anime merchandise stores in Tokyo, is a short walk. The Ghibli Museum at Mitaka is 25 minutes by Chuo Line. Akihabara, the undisputed capital of anime culture, is 15 minutes by Sobu Line. Shibuya — where Jujutsu Kaisen's most famous battles were fought — is 8 minutes by Yamanote Line. Hotel Gracery puts all of it within easy reach.</p>
-
         <h2>Dining and the Hotel Experience</h2>
-
         <p>The hotel's restaurant, Gracery Dining, occupies the 30th floor and offers sweeping views of Tokyo's western skyline alongside a menu of Japanese and Western breakfast options. The buffet breakfast is widely praised by guests and represents good value given the view. For dinner, the surrounding streets of Kabukicho offer an overwhelming density of options — ramen, yakiniku, izakaya, conveyor-belt sushi, and every conceivable variation of Japanese cuisine within a five-minute walk in any direction.</p>
-
         <div class="highlight-box">
             <h3>Practical Information</h3>
             <ul>
@@ -457,15 +150,10 @@
                 <li><strong>Language:</strong> English-speaking staff available at front desk</li>
             </ul>
         </div>
-
         <h2>Tips for Getting the Most Out of Your Stay</h2>
-
         <p>Book a Godzilla View room as far in advance as possible — they sell out consistently, particularly on weekends and during Tokyo's peak travel seasons (cherry blossom in late March to early April, and autumn foliage in November). If Godzilla View rooms are unavailable, request a high floor on the east side of the building for partial views of the terrace.</p>
-
         <p>Arrive at the hotel slightly before one of the scheduled roar events and position yourself either on the 8th floor terrace or at your room window. The experience of the roar from inside the hotel — where the sound reverberates through the building structure — is substantially different from hearing it on the street, and worth the timing effort.</p>
-
         <p>Finally: go up to the 30th floor for breakfast on your first morning, even if you are not a buffet person. The view of Tokyo waking up — with Godzilla visible below you and the Shinjuku skyline spreading in every direction — is the best possible orientation to the city you have arrived in.</p>
-
         <table class="info-table">
             <tr><td>Location</td><td>1-19-1 Kabukicho, Shinjuku, Tokyo</td></tr>
             <tr><td>Category</td><td>Character Themed Hotel / Business Hotel</td></tr>
@@ -476,8 +164,6 @@
             <tr><td>Nearest Station</td><td>Shinjuku Station (East Exit) — 5 min walk</td></tr>
             <tr><td>Opened</td><td>April 2015</td></tr>
         </table>
-
-        <!-- Gallery -->
         <div class="gallery-section">
             <h2>Photo Gallery</h2>
             <div class="gallery-grid" id="galleryGrid">
@@ -489,25 +175,30 @@
                 <img src="../assets/stay/gracery-g6.webp" alt="Hotel Gracery lobby" onclick="openLightbox(5)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(5)\'>Photo 6</div>'">
             </div>
         </div>
-
-        <!-- Book CTA -->
         <div class="book-cta">
             <h3>Stay Eye-to-Eye with Godzilla</h3>
             <p>Check availability for Godzilla View rooms — they sell out fast.</p>
             <button class="btn-book-large" onclick="openBookingPopup()">Check Availability & Book →</button>
         </div>
-
         <a href="../stay.html" class="back-home">← Back to Stay</a>
-
     </article>
 </main>
 
-<!-- Lightbox -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <button class="lightbox-prev" onclick="changeImage(-1); event.stopPropagation();">&#8249;</button>
     <img id="lightboxImg" src="" alt="">
     <button class="lightbox-next" onclick="changeImage(1); event.stopPropagation();">&#8250;</button>
+</div>
+
+<div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
+    <div class="booking-popup" id="bookingPopup">
+        <button class="booking-popup-close" onclick="closeBookingPopup(null,true)" aria-label="Close">&#215;</button>
+        <h4 id="popupHotelName">Check Availability</h4>
+        <p class="popup-subtitle">Compare prices across booking platforms</p>
+        <div class="booking-platforms" id="popupPlatforms"></div>
+        <p class="booking-popup-note">As a Booking.com Affiliate, I earn from qualifying transactions. Your price stays the same.</p>
+    </div>
 </div>
 
 <footer class="site-footer">
@@ -534,7 +225,7 @@
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-    
+
 <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
@@ -542,7 +233,6 @@
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
-
     const galleryImages = [
         '../assets/stay/gracery-g1.webp',
         '../assets/stay/gracery-g2.webp',
@@ -552,7 +242,6 @@
         '../assets/stay/gracery-g6.webp'
     ];
     let currentIndex = 0;
-
     function openLightbox(index) {
         currentIndex = index;
         document.getElementById('lightboxImg').src = galleryImages[index];
@@ -577,20 +266,6 @@
         if (e.key === 'Escape') closeLightbox();
     });
 </script>
-
-</body>
-</html>
-
-<!-- BOOKING POPUP -->
-<div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
-    <div class="booking-popup" id="bookingPopup">
-        <button class="booking-popup-close" onclick="closeBookingPopup(null,true)" aria-label="Close">&#215;</button>
-        <h4 id="popupHotelName">Check Availability</h4>
-        <p class="popup-subtitle">Compare prices across booking platforms</p>
-        <div class="booking-platforms" id="popupPlatforms"></div>
-        <p class="booking-popup-note">As a Booking.com Affiliate, I earn from qualifying transactions. Your price stays the same.</p>
-    </div>
-</div>
 <script>
 window.HOTEL_BOOKING_LINKS = {
     name: "Hotel Gracery Shinjuku",
@@ -651,3 +326,5 @@ window.HOTEL_BOOKING_LINKS = {
     });
 })();
 </script>
+</body>
+</html>
