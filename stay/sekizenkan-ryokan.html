@@ -15,7 +15,6 @@
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-
     <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J5FCEPMY3"></script>
 <script>
@@ -128,8 +127,6 @@
             line-height: 1.8;
             color: #4a5568;
         }
-
-        /* ── Info Table ── */
         .info-table {
             width: 100%;
             border-collapse: collapse;
@@ -152,165 +149,29 @@
             text-transform: uppercase;
             letter-spacing: 0.05em;
         }
-        .info-table tr:last-child td {
-            border-bottom: none;
-        }
-
-        /* ── Gallery ── */
-        .gallery-section {
-            margin: 40px 0 30px;
-            clear: both;
-        }
-        .gallery-section h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            color: var(--deep-navy);
-            margin-bottom: 16px;
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-        }
-        .gallery-grid img {
-            width: 100%;
-            aspect-ratio: 4/3;
-            object-fit: cover;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.2s, opacity 0.2s;
-            background: #e8edf2;
-        }
-        .gallery-grid img:hover {
-            transform: scale(1.03);
-            opacity: 0.92;
-        }
-        .gallery-grid .gallery-placeholder {
-            width: 100%;
-            aspect-ratio: 4/3;
-            border-radius: 8px;
-            background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.8rem;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 0.05em;
-            text-transform: uppercase;
-            cursor: pointer;
-        }
-
-        /* ── Lightbox ── */
-        .lightbox {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.92);
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-        }
-        .lightbox.open {
-            display: flex;
-        }
-        .lightbox img {
-            max-width: 90vw;
-            max-height: 85vh;
-            border-radius: 8px;
-            object-fit: contain;
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 24px;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-            line-height: 1;
-            opacity: 0.8;
-            transition: opacity 0.2s;
-        }
+        .info-table tr:last-child td { border-bottom: none; }
+        .gallery-section { margin: 40px 0 30px; clear: both; }
+        .gallery-section h2 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; color: var(--deep-navy); margin-bottom: 16px; }
+        .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+        .gallery-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s, opacity 0.2s; background: #e8edf2; }
+        .gallery-grid img:hover { transform: scale(1.03); opacity: 0.92; }
+        .gallery-grid .gallery-placeholder { width: 100%; aspect-ratio: 4/3; border-radius: 8px; background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.8rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; }
+        .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
+        .lightbox.open { display: flex; }
+        .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 20px; right: 24px; color: white; font-size: 2rem; cursor: pointer; font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1; opacity: 0.8; transition: opacity 0.2s; }
         .lightbox-close:hover { opacity: 1; }
-        .lightbox-prev,
-        .lightbox-next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-size: 2.5rem;
-            cursor: pointer;
-            opacity: 0.7;
-            transition: opacity 0.2s;
-            background: none;
-            border: none;
-            font-family: 'Montserrat', sans-serif;
-            padding: 10px;
-        }
+        .lightbox-prev, .lightbox-next { position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 2.5rem; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; background: none; border: none; font-family: 'Montserrat', sans-serif; padding: 10px; }
         .lightbox-prev { left: 16px; }
         .lightbox-next { right: 16px; }
-        .lightbox-prev:hover,
-        .lightbox-next:hover { opacity: 1; }
-
-        /* ── Book CTA ── */
-        .book-cta {
-            background: var(--deep-navy);
-            color: white;
-            padding: 32px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 35px 0 20px;
-            clear: both;
-        }
-        .book-cta h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.3rem;
-            margin: 0 0 8px;
-            color: white;
-        }
-        .book-cta p {
-            font-size: 0.95rem !important;
-            opacity: 0.8;
-            margin-bottom: 20px !important;
-        }
-        .btn-book-large {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            text-decoration: none;
-            padding: 13px 32px;
-            border-radius: 7px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            letter-spacing: 0.05em;
-            transition: background 0.2s;
-        }
+        .lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
+        .book-cta { background: var(--deep-navy); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 35px 0 20px; clear: both; }
+        .book-cta h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 0 0 8px; color: white; }
+        .book-cta p { font-size: 0.95rem !important; opacity: 0.8; margin-bottom: 20px !important; }
+        .btn-book-large { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 13px 32px; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: background 0.2s; }
         .btn-book-large:hover { background: #c0392b; }
-
-        .back-home {
-            display: inline-block;
-            margin-bottom: 10px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-        }
-        .back-stay {
-            display: inline-block;
-            margin-bottom: 10px;
-            margin-left: 16px;
-            color: var(--deep-navy);
-            text-decoration: none;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            opacity: 0.7;
-        }
-
+        .back-home { display: inline-block; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
+        .back-stay { display: inline-block; margin-bottom: 10px; margin-left: 16px; color: var(--deep-navy); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; opacity: 0.7; }
         @media (max-width: 768px) {
             .article-container { width: 92%; padding: 20px; margin: 20px auto; }
             .article-title { font-size: 1.8rem; }
@@ -318,53 +179,16 @@
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .info-table td:first-child { width: 45%; }
         }
-        /* ===== BOOKING POPUP ===== */
-        .booking-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.55);
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            backdrop-filter: blur(3px);
-        }
+        .booking-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 9999; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(3px); }
         .booking-overlay.active { display: flex; }
-        .booking-popup {
-            background: #fff;
-            border-radius: 16px;
-            padding: 32px 28px 24px;
-            max-width: 420px;
-            width: 100%;
-            position: relative;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-            animation: popIn 0.22s cubic-bezier(0.34,1.56,0.64,1);
-        }
-        @keyframes popIn {
-            from { transform: scale(0.88); opacity: 0; }
-            to   { transform: scale(1);    opacity: 1; }
-        }
-        .booking-popup-close {
-            position: absolute; top: 12px; right: 16px;
-            font-size: 1.5rem; color: #94a3b8; cursor: pointer;
-            background: none; border: none; padding: 4px 8px;
-            border-radius: 4px; transition: color 0.15s, background 0.15s; line-height:1;
-        }
+        .booking-popup { background: #fff; border-radius: 16px; padding: 32px 28px 24px; max-width: 420px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.25); animation: popIn 0.22s cubic-bezier(0.34,1.56,0.64,1); }
+        @keyframes popIn { from { transform: scale(0.88); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+        .booking-popup-close { position: absolute; top: 12px; right: 16px; font-size: 1.5rem; color: #94a3b8; cursor: pointer; background: none; border: none; padding: 4px 8px; border-radius: 4px; transition: color 0.15s, background 0.15s; line-height:1; }
         .booking-popup-close:hover { color: #1e293b; background: #f1f5f9; }
-        .booking-popup h4 {
-            font-family: 'Montserrat', sans-serif; font-size: 1.1rem;
-            color: #1D3557; margin: 0 0 4px; padding-right: 28px;
-        }
+        .booking-popup h4 { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #1D3557; margin: 0 0 4px; padding-right: 28px; }
         .popup-subtitle { font-size: 0.85rem; color: #64748b; margin: 0 0 18px; }
         .booking-platforms { display: flex; flex-direction: column; gap: 9px; }
-        .booking-platform-link {
-            display: flex; align-items: center; gap: 12px;
-            padding: 11px 15px; border-radius: 10px; text-decoration: none;
-            font-size: 0.95rem; font-weight: 500; color: #1e293b;
-            transition: background 0.15s, transform 0.1s;
-            border: 1.5px solid #e2e8f0;
-        }
+        .booking-platform-link { display: flex; align-items: center; gap: 12px; padding: 11px 15px; border-radius: 10px; text-decoration: none; font-size: 0.95rem; font-weight: 500; color: #1e293b; transition: background 0.15s, transform 0.1s; border: 1.5px solid #e2e8f0; }
         .booking-platform-link:hover { background: #f8fafc; border-color: #94a3b8; transform: translateX(3px); }
         .platform-logo { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; border-radius: 4px; }
         .platform-name { flex: 1; }
@@ -373,7 +197,6 @@
     </style>
 </head>
 <body>
-
 <nav>
     <a href="../index.html" style="text-decoration: none;">
         <div class="logo-container">
@@ -393,12 +216,9 @@
         <li><a href="../lifestyle.html">Lifestyle</a></li>
     </ul>
 </nav>
-
 <main class="article-container">
-
     <a href="../stay.html" class="back-home">← Back to Stay</a>
     <a href="../" class="back-stay">/ HotelManga</a>
-
     <header class="article-header">
         <span style="background: var(--deep-navy); color: white; padding: 4px 10px; border-radius: 4px; font-size: 0.7rem; font-weight: bold; text-transform: uppercase; font-family: 'Montserrat', sans-serif; letter-spacing: 0.08em;">Anime Pilgrimage</span>
         &nbsp;
@@ -406,59 +226,29 @@
         <h1 class="article-title">Sekizenkan Ryokan: Sleeping Inside Spirited Away</h1>
         <div class="meta">March 2026 &nbsp;·&nbsp; Shima Onsen, Gunma &nbsp;·&nbsp; By HotelManga Editorial</div>
     </header>
-
-    <!-- Hero Image -->
     <img
         src="../assets/stay/sekizenkan-hero.webp"
         alt="Sekizenkan Ryokan at night, the real Spirited Away bathhouse in Japan"
         class="hero-img"
         onerror="this.style.minHeight='380px'; this.alt='';"
     >
-
     <article class="article-body">
-
         <p>There is a moment — and every pilgrim who has stood on the red bridge at Sekizenkan knows it — when the line between a movie and reality simply disappears. The lanterns are lit. Steam rises from the baths below. The wooden building, three centuries old, glows amber against the dark mountain valley. And every frame of Hayao Miyazaki's <em>Spirited Away</em> floods back at once.</p>
-
         <p>This is not a hotel inspired by <em>Spirited Away</em>. This is the hotel that <em>inspired</em> Spirited Away.</p>
-
         <h2>Japan's Oldest Inn, and the Story Behind the Story</h2>
-
         <p>Sekizenkan was built in 1691 in the mountain hot spring town of Shima Onsen, deep in Gunma Prefecture. For over 330 years, it has operated without interruption — surviving wars, earthquakes, and the relentless passage of time — making it the oldest continuously operating ryokan in Japan. The main building, Zanshinrou, is a registered National Tangible Cultural Property.</p>
-
-        <img
-            src="../assets/stay/sekizenkan-bridge.webp"
-            alt="The red bridge at Sekizenkan Ryokan, inspiration for Spirited Away"
-            class="big-img"
-            onerror="this.style.display='none';"
-        >
-
+        <img src="../assets/stay/sekizenkan-bridge.webp" alt="The red bridge at Sekizenkan Ryokan, inspiration for Spirited Away" class="big-img" onerror="this.style.display='none';">
         <p>When Miyazaki and his team at Studio Ghibli were developing the visual world of <em>Spirited Away</em>, they drew directly from the architecture and atmosphere of places like Sekizenkan. The arched red bridge at the entrance — now one of the most photographed spots in all of anime tourism — is the template for the bridge Chihiro crosses into the spirit world. The main bathhouse building, with its stacked wooden floors, paper lanterns, and steaming baths visible from every corridor, became Yubaba's magnificent establishment.</p>
-
         <p>The similarity is not coincidental. It is devotion, captured in hand-drawn frames.</p>
-
         <h2>The Architecture: Where the Past Lives</h2>
-
         <p>Sekizenkan occupies three interconnected buildings across different eras of Japanese architecture. The original 1691 Honkan is the jewel — its narrow corridors, low ceilings, and the faint smell of aged hinoki wood create a sensory experience that no modern hotel can replicate. The Sanso building, added in 1936, introduces a grander scale with ornate woodwork and a ceremonial entry hall. The Kawabata wing, completed in 1971, adds more rooms while maintaining the design language of its predecessors.</p>
-
-        <img
-            src="../assets/stay/sekizenkan-bath.webp"
-            alt="The historic hot spring baths at Sekizenkan Ryokan"
-            class="big-right-img"
-            onerror="this.style.display='none';"
-        >
-
+        <img src="../assets/stay/sekizenkan-bath.webp" alt="The historic hot spring baths at Sekizenkan Ryokan" class="big-right-img" onerror="this.style.display='none';">
         <p>The baths are the soul of the experience. The onsen waters at Shima are sodium chloride springs — clear, warming, and reputed since the Edo period to heal exhausted travelers. Sekizenkan has four distinct bathing areas: the Roman-style bath (a beautiful anachronism from the 1930s renovation), the open-air rotenburo overlooking the mountain river, and two indoor baths fed directly from the source. Guests rotate through them across the course of their stay, each offering a different relationship with the water and the building surrounding it.</p>
-
         <h2>The Pilgrimage Experience: What Fans Come For</h2>
-
         <p>The red bridge — officially called the Taiko-bashi — is the beginning and end of every Sekizenkan pilgrimage. It curves across the Nakatsu River and delivers you to the entrance of the Honkan with a theatrical inevitability. At night, the lanterns reflecting in the water below create the precise image that appears in the opening minutes of <em>Spirited Away</em>. Bring a camera. Bring someone who understands why you are standing very still and not speaking.</p>
-
         <p>Inside, the connection to the film deepens. The stairways are steep and narrow in the way that old Japanese buildings are — you half-expect to turn a corner and find Kamaji the boiler man feeding his coal furnace. The wooden floors creak with the authority of three centuries. The staff move through the corridors in yukata, carrying trays with practiced silence. It is impossible not to feel that the normal world is somewhere very far away.</p>
-
         <h2>A Night at Sekizenkan: What to Expect</h2>
-
         <p>Stays are structured in the traditional ryokan manner, which means a full-board kaiseki experience: dinner served in your room or the communal dining hall, featuring local mountain vegetables, fresh river fish from the Nakatsu, and seasonal preparations that change with the prefecture's rhythms. The ryokan also provides yukata and tabi socks for guests to wear throughout the property — in the baths, at dinner, and on the bridge at night.</p>
-
         <div class="highlight-box">
             <h3>Practical Information</h3>
             <ul>
@@ -471,19 +261,12 @@
                 <li><strong>Dress code:</strong> Yukata provided; wear it everywhere on the property</li>
             </ul>
         </div>
-
         <h2>Getting There: The Journey Is Part of It</h2>
-
         <p>Reaching Shima Onsen requires intention — and that is precisely right. From Tokyo, take the Joetsu or Hokuriku Shinkansen to Takasaki, then transfer to the Agatsuma Line to Nakanojo, then board the local bus that winds up into the mountains for about 40 minutes. The valley narrows as you ascend. The towns thin out. By the time the bus deposits you at Shima Onsen, you understand why this place has existed for 1,300 years: it is hidden enough from the ordinary world to feel like a different dimension entirely.</p>
-
         <p>Some visitors choose to hire a taxi from Nakanojo station, which takes about 30 minutes and removes the waiting time. Either way, budget for an early arrival — you will want the full afternoon to settle in before the evening bath and dinner ritual begins.</p>
-
         <h2>Why This Matters Beyond the Movie</h2>
-
         <p>It would be reductive to visit Sekizenkan only as a <em>Spirited Away</em> location. The ryokan is a living museum of Japanese hospitality culture — the concept of <em>omotenashi</em>, or selfless service, is practiced here in its most complete form. The building is genuinely, historically significant. The water is genuinely healing. The silence of a mountain valley at 11 PM, with only the sound of the river and the distant percussion of a taiko drum from a neighboring inn, is genuinely unlike anywhere else on Earth.</p>
-
         <p>The Ghibli connection is what brings many people here. But Sekizenkan is what keeps those people very, very quiet — standing on that bridge, not wanting to go inside, not wanting the moment to end.</p>
-
         <table class="info-table">
             <tr><td>Location</td><td>4236 Shima, Nakanojo, Agatsuma District, Gunma Prefecture</td></tr>
             <tr><td>Category</td><td>Traditional Ryokan (Hot Spring Inn)</td></tr>
@@ -494,8 +277,6 @@
             <tr><td>Hot Springs</td><td>Sodium chloride spring — 4 bathing areas</td></tr>
             <tr><td>Nearest Station</td><td>Nakanojo Station (Agatsuma Line) — ~40 min by bus · Transfer at Takasaki (Shinkansen)</td></tr>
         </table>
-
-        <!-- Gallery -->
         <div class="gallery-section">
             <h2>Photo Gallery</h2>
             <div class="gallery-grid" id="galleryGrid">
@@ -507,27 +288,20 @@
                 <img src="../assets/stay/sekizenkan-g6.webp" alt="Sekizenkan kaiseki dinner" onclick="openLightbox(5)" onerror="this.outerHTML='<div class=\'gallery-placeholder\' onclick=\'openLightbox(5)\'>Photo 6</div>'">
             </div>
         </div>
-
-        <!-- Book CTA -->
         <div class="book-cta">
             <h3>Ready to Cross the Red Bridge?</h3>
             <p>Check availability and book your stay at Sekizenkan Ryokan through our trusted partner.</p>
             <button class="btn-book-large" onclick="openBookingPopup()">Check Availability & Book →</button>
         </div>
-
         <a href="../stay.html" class="back-home">← Back to Stay</a>
-
     </article>
 </main>
-
-<!-- Lightbox -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
     <button class="lightbox-prev" onclick="changeImage(-1); event.stopPropagation();">&#8249;</button>
     <img id="lightboxImg" src="" alt="">
     <button class="lightbox-next" onclick="changeImage(1); event.stopPropagation();">&#8250;</button>
 </div>
-
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
@@ -552,18 +326,13 @@
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-
-
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // Mobile menu
+<script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
     menuToggle.addEventListener('click', () => {
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
-
-    // Lightbox
     const galleryImages = [
         '../assets/stay/sekizenkan-g1.webp',
         '../assets/stay/sekizenkan-g2.webp',
@@ -573,7 +342,6 @@
         '../assets/stay/sekizenkan-g6.webp'
     ];
     let currentIndex = 0;
-
     function openLightbox(index) {
         currentIndex = index;
         document.getElementById('lightboxImg').src = galleryImages[index];
@@ -599,7 +367,6 @@
         }
     });
 </script>
-<!-- BOOKING POPUP -->
 <div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
     <div class="booking-popup" id="bookingPopup">
         <button class="booking-popup-close" onclick="closeBookingPopup(null,true)" aria-label="Close">&#215;</button>
@@ -669,3 +436,5 @@ window.HOTEL_BOOKING_LINKS = {
     });
 })();
 </script>
+</body>
+</html>
