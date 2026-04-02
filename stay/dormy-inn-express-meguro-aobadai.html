@@ -292,10 +292,10 @@
 </script>
 <script>
 window.HOTEL_BOOKING_LINKS = {
-    name: "Dormy Inn Express Meguro Aobadai",
-    booking: "https://www.booking.com/hotel/jp/weekly-dormy-inn-meguro-aobadai.html?aid=2819780",
-    trip: "https://www.trip.com/t/lcaQUqly8U2",
-    hotels: "https://www.hotels.com/affiliate/jUHg1qV",
+    name: "Dogo Onsen Funaya",
+    booking: "https://www.booking.com/hotel/jp/funaya.html?aid=2819780",
+    trip: "https://www.trip.com/t/Ex6yQesn8U2",
+    hotels: "https://www.hotels.com/affiliate/Kxuhmxl",
     agoda: null,
 };
 (function(){
@@ -341,4 +341,14 @@ window.HOTEL_BOOKING_LINKS = {
     };
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
     document.addEventListener('DOMContentLoaded',function(){
-        document.querySelectorAll('.bt
+        document.querySelectorAll('.btn-book-large').forEach(function(el){
+            el.addEventListener('click',function(e){
+                e.preventDefault();
+                openBookingPopup();
+            });
+        });
+    });
+})();
+</script>
+</body>
+</html>
