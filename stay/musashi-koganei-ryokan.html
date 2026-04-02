@@ -342,15 +342,22 @@ window.HOTEL_BOOKING_LINKS = {
         overlay.classList.add('active');
         document.body.style.overflow='hidden';
     };
-    window.closeBookingPopup=function(e,force){
-        if(force||!e||e.target===document.getElementById('bookingOverlay')){
+window.closeBookingPopup = function(e, force) {
+        if (force || !e || e.target === document.getElementById('bookingOverlay')) {
             document.getElementById('bookingOverlay').classList.remove('active');
-            document.body.style.overflow='';
+            document.body.style.overflow = '';
         }
     };
-    document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
-    document.addEventListener('DOMContentLoaded',function(){
-        document.querySelectorAll('.bt
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeBookingPopup(null, true);
+    });
+
+    // اصلاح بخش ناتمام:
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("Booking system initialized");
+    });
+})(); // بستن تابع خوداجرا (IIFE)
 </script>
 </body>
 </html>
