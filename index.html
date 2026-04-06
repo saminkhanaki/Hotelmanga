@@ -3,12 +3,11 @@
 <head>
     <link rel="canonical" href="https://hotelmanga.com/">
     <title>HotelManga | Anime Hotel Guide & Manga Travel Magazine</title>
-    <meta name="description" content="HotelManga is the world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan. Demon Slayer real locations, Jujutsu Kaisen Tokyo guides, 20 handpicked stays.">
-    <meta name="keywords" content="anime hotel Japan, manga hotel Tokyo, otaku travel guide, anime pilgrimage Japan, Demon Slayer real locations, Infinity Castle Japan, Jujutsu Kaisen Tokyo, manga lifestyle magazine, HotelManga">
-    <meta property="og:description" content="The world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan. Demon Slayer, Jujutsu Kaisen, Spirited Away — every real location, every hotel.">
+    <meta name="description" content="HotelManga is the world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan. Demon Slayer real locations, Jujutsu Kaisen Tokyo guides, 37 handpicked stays.">
+    <meta name="keywords" content="anime hotel Japan, manga hotel Tokyo, otaku travel guide, anime pilgrimage Japan, Death Note real locations, Demon Slayer real locations, Spirited Away pilgrimage, manga lifestyle magazine, HotelManga">
+    <meta property="og:description" content="The world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan. Death Note, Demon Slayer, Spirited Away — every real location, every hotel.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="HotelManga | Anime Hotel Guide & Manga Travel Magazine">
-    <meta property="og:description" content="The world's most curated guide to anime hotels, manga pilgrimages, and otaku travel in Japan.">
     <meta property="og:image" content="https://hotelmanga.com/assets/og-main-banner.webp">
     <meta property="og:url" content="https://hotelmanga.com/">
     <meta name="twitter:card" content="summary_large_image">
@@ -20,255 +19,49 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-    <!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-4J5FCEPMY3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-4J5FCEPMY3');
-</script>
-
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4J5FCEPMY3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4J5FCEPMY3');
+    </script>
     <style>
-        /* ── Featured Hotel Hero ── */
-        .featured-hotel {
-            max-width: 1100px;
-            margin: 48px auto 0;
-            padding: 0 20px;
-        }
-        .featured-label {
-            display: inline-block;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #888;
-            margin-bottom: 14px;
-        }
-        .featured-hotel-card {
-            display: grid;
-            grid-template-columns: 1.6fr 1fr;
-            border-radius: 12px;
-            overflow: hidden;
-            background: var(--deep-navy);
-            min-height: 420px;
-            text-decoration: none;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.12);
-            transition: box-shadow 0.3s;
-        }
-        .featured-hotel-card:hover {
-            box-shadow: 0 12px 56px rgba(0,0,0,0.18);
-        }
-        .featured-hotel-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        .featured-hotel-card:hover .featured-hotel-img {
-            transform: scale(1.03);
-        }
-        .featured-hotel-img-wrap {
-            overflow: hidden;
-            position: relative;
-        }
-        .featured-hotel-body {
-            padding: 44px 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: white;
-        }
-        .featured-hotel-tag {
-            display: inline-block;
-            background: rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.85);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.68rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            padding: 4px 10px;
-            border-radius: 4px;
-            margin-bottom: 18px;
-            width: fit-content;
-        }
-        .featured-hotel-body h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 700;
-            line-height: 1.3;
-            margin-bottom: 16px;
-            color: white;
-        }
-        .featured-hotel-body p {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            line-height: 1.7;
-            color: rgba(255,255,255,0.72);
-            margin-bottom: 28px;
-            font-weight: 300;
-        }
-        .featured-hotel-footer {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex-wrap: wrap;
-            margin-top: auto;
-        }
-        .btn-featured-read {
-            display: inline-block;
-            padding: 11px 24px;
-            background: white;
-            color: var(--deep-navy);
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.82rem;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 6px;
-            letter-spacing: 0.04em;
-            transition: background 0.2s;
-        }
+        .featured-hotel { max-width: 1100px; margin: 48px auto 0; padding: 0 20px; }
+        .featured-label { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #888; margin-bottom: 14px; }
+        .featured-hotel-card { display: grid; grid-template-columns: 1.6fr 1fr; border-radius: 12px; overflow: hidden; background: var(--deep-navy); min-height: 420px; text-decoration: none; box-shadow: 0 8px 40px rgba(0,0,0,0.12); transition: box-shadow 0.3s; }
+        .featured-hotel-card:hover { box-shadow: 0 12px 56px rgba(0,0,0,0.18); }
+        .featured-hotel-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+        .featured-hotel-card:hover .featured-hotel-img { transform: scale(1.03); }
+        .featured-hotel-img-wrap { overflow: hidden; position: relative; }
+        .featured-hotel-body { padding: 44px 40px; display: flex; flex-direction: column; justify-content: center; color: white; }
+        .featured-hotel-tag { display: inline-block; background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.85); font-family: 'Montserrat', sans-serif; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 4px; margin-bottom: 18px; width: fit-content; }
+        .featured-hotel-body h2 { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; font-weight: 700; line-height: 1.3; margin-bottom: 16px; color: white; }
+        .featured-hotel-body p { font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.7; color: rgba(255,255,255,0.72); margin-bottom: 28px; font-weight: 300; }
+        .featured-hotel-footer { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: auto; }
+        .btn-featured-read { display: inline-block; padding: 11px 24px; background: white; color: var(--deep-navy); font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; text-decoration: none; border-radius: 6px; letter-spacing: 0.04em; transition: background 0.2s; }
         .btn-featured-read:hover { background: #f0f0f0; }
-        .btn-featured-all {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: rgba(255,255,255,0.6);
-            text-decoration: none;
-            letter-spacing: 0.04em;
-            transition: color 0.2s;
-        }
+        .btn-featured-all { font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.6); text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s; }
         .btn-featured-all:hover { color: white; }
-        .featured-hotel-location {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.82rem;
-            color: rgba(255,255,255,0.5);
-            margin-bottom: 6px;
-            font-weight: 300;
-        }
-
-        /* ── Section Divider ── */
-        .section-divider {
-            max-width: 1100px;
-            margin: 56px auto 0;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-        .section-divider h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #aaa;
-            white-space: nowrap;
-        }
-        .section-divider-line {
-            flex: 1;
-            height: 1px;
-            background: #e5e7eb;
-        }
-
-        /* ── 2-Column Editorial Grid ── */
-        .editorial-grid {
-            max-width: 1100px;
-            margin: 24px auto 64px;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 28px;
-        }
-        .editorial-card {
-            border-radius: 10px;
-            overflow: hidden;
-            background: white;
-            border: 1px solid #e5e7eb;
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            transition: box-shadow 0.25s, transform 0.25s;
-        }
-        .editorial-card:hover {
-            box-shadow: 0 6px 32px rgba(0,0,0,0.09);
-            transform: translateY(-2px);
-        }
-        .editorial-card-img-wrap {
-            overflow: hidden;
-            height: 220px;
-        }
-        .editorial-card-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-        .editorial-card:hover .editorial-card-img {
-            transform: scale(1.04);
-        }
-        .editorial-card-body {
-            padding: 24px 26px 28px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .editorial-card-tag {
-            display: inline-block;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.67rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: white;
-            background: var(--deep-navy);
-            padding: 3px 9px;
-            border-radius: 3px;
-            margin-bottom: 12px;
-            width: fit-content;
-        }
-        .editorial-card-tag.tag-lifestyle {
-            background: #2d6a4f;
-        }
-        .editorial-card h3 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--deep-navy);
-            line-height: 1.4;
-            margin-bottom: 10px;
-        }
-        .editorial-card p {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            color: #64748b;
-            line-height: 1.65;
-            font-weight: 300;
-            flex: 1;
-        }
-        .editorial-card-read {
-            display: inline-block;
-            margin-top: 18px;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--deep-navy);
-            text-decoration: none;
-            letter-spacing: 0.05em;
-        }
+        .featured-hotel-location { font-family: 'Inter', sans-serif; font-size: 0.82rem; color: rgba(255,255,255,0.5); margin-bottom: 6px; font-weight: 300; }
+        .section-divider { max-width: 1100px; margin: 56px auto 0; padding: 0 20px; display: flex; align-items: center; gap: 16px; }
+        .section-divider h2 { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #aaa; white-space: nowrap; }
+        .section-divider-line { flex: 1; height: 1px; background: #e5e7eb; }
+        .editorial-grid { max-width: 1100px; margin: 24px auto 64px; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+        .editorial-card { border-radius: 10px; overflow: hidden; background: white; border: 1px solid #e5e7eb; text-decoration: none; display: flex; flex-direction: column; transition: box-shadow 0.25s, transform 0.25s; }
+        .editorial-card:hover { box-shadow: 0 6px 32px rgba(0,0,0,0.09); transform: translateY(-2px); }
+        .editorial-card-img-wrap { overflow: hidden; height: 220px; }
+        .editorial-card-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease; }
+        .editorial-card:hover .editorial-card-img { transform: scale(1.04); }
+        .editorial-card-body { padding: 24px 26px 28px; flex: 1; display: flex; flex-direction: column; }
+        .editorial-card-tag { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 0.67rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: white; background: var(--deep-navy); padding: 3px 9px; border-radius: 3px; margin-bottom: 12px; width: fit-content; }
+        .editorial-card-tag.tag-lifestyle { background: #2d6a4f; }
+        .editorial-card h3 { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; font-weight: 700; color: var(--deep-navy); line-height: 1.4; margin-bottom: 10px; }
+        .editorial-card p { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #64748b; line-height: 1.65; font-weight: 300; flex: 1; }
+        .editorial-card-read { display: inline-block; margin-top: 18px; font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 700; color: var(--deep-navy); text-decoration: none; letter-spacing: 0.05em; }
         .editorial-card-read:hover { text-decoration: underline; }
-
-        /* ── Responsive ── */
         @media (max-width: 768px) {
-            .featured-hotel-card {
-                grid-template-columns: 1fr;
-                min-height: auto;
-            }
+            .featured-hotel-card { grid-template-columns: 1fr; min-height: auto; }
             .featured-hotel-img-wrap { height: 240px; }
             .featured-hotel-body { padding: 28px 24px; }
             .featured-hotel-body h2 { font-size: 1.3rem; }
@@ -278,7 +71,6 @@
     </style>
 </head>
 <body>
-
 <nav>
     <a href="index.html" style="text-decoration: none;">
         <div class="logo-container">
@@ -298,55 +90,49 @@
         <li><a href="lifestyle.html">Lifestyle</a></li>
     </ul>
 </nav>
-
 <main class="main-content">
-
     <!-- Featured Hotel -->
     <div class="featured-hotel">
         <span class="featured-label">✦ Featured Stay This Week</span>
         <div class="featured-hotel-card">
             <div class="featured-hotel-img-wrap">
                 <img
-                    src="assets/stay/sekizenkan-hero.webp"
-                    alt="Sekizenkan Ryokan — the real-life Spirited Away bathhouse in Shima Onsen, Gunma"
+                    src="assets/stay/imperial-hotel-hero.webp"
+                    alt="Imperial Hotel Tokyo — Death Note real location, L's first meeting with the Kira task force"
                     class="featured-hotel-img"
                     onerror="this.style.background='linear-gradient(135deg,#1D3557,#2d5482)'; this.style.minHeight='420px'; this.alt='';">
             </div>
             <div class="featured-hotel-body">
                 <span class="featured-hotel-tag">Anime Pilgrimage</span>
-                <p class="featured-hotel-location">📍 Shima Onsen, Gunma</p>
-                <h2>Sekizenkan Ryokan: The Real Bathhouse Behind Spirited Away</h2>
-                <p>Japan's oldest continuously operating ryokan — built in 1691 — and the direct visual inspiration for Yubaba's bathhouse. Cross the red bridge at night and you are inside the film.</p>
+                <p class="featured-hotel-location">📍 Uchisaiwaicho, Chiyoda, Tokyo</p>
+                <h2>Imperial Hotel Tokyo: Where L Convened the Task Force</h2>
+                <p>Named explicitly in Death Note episode 11 as the location of L's first face-to-face meeting with the Kira investigation team. One of Tokyo's most storied luxury hotels — and one of anime's most precisely placed pilgrimage sites.</p>
                 <div class="featured-hotel-footer">
-                    <a href="stay/sekizenkan-ryokan.html" class="btn-featured-read">Read Full Guide</a>
-                    <a href="stay.html" class="btn-featured-all">Browse All 20 Hotels →</a>
+                    <a href="archive/death-note-real-locations.html" class="btn-featured-read">Read the Death Note Guide</a>
+                    <a href="stay.html" class="btn-featured-all">Browse All 37 Hotels →</a>
                 </div>
             </div>
         </div>
     </div>
-
     <!-- Section Divider -->
     <div class="section-divider">
         <h2>From the Magazine</h2>
         <div class="section-divider-line"></div>
     </div>
-
     <!-- 2-Column Editorial Grid -->
     <div class="editorial-grid">
-
-        <!-- Explore -->
-        <a href="archive/spirited-away-real-locations.html" class="editorial-card">
+        <!-- Explore — Death Note -->
+        <a href="archive/death-note-real-locations.html" class="editorial-card">
             <div class="editorial-card-img-wrap">
-                <img src="assets/spirited-away/spirited-away-hero.webp" alt="Spirited Away real locations Japan pilgrimage guide" class="editorial-card-img" onerror="this.style.background='#e5e7eb'; this.alt='';">
+                <img src="assets/death-note/death-note-hero.webp" alt="Death Note real locations Tokyo pilgrimage guide" class="editorial-card-img" onerror="this.style.background='#e5e7eb'; this.alt='';">
             </div>
             <div class="editorial-card-body">
                 <span class="editorial-card-tag">Explore</span>
-                <h3>Through the Tunnel: Every Real-Life Spirited Away Location in Japan</h3>
-                <p>10 sacred sites across Japan — from Sekizenkan's red bridge to the Edo-Tokyo Museum's boiler room. The complete Spirited Away pilgrimage guide.</p>
+                <h3>The Death Note Map: Every Real-Life Location Behind the Anime</h3>
+                <p>9 documented locations across Tokyo and Yokohama — from the NPA building in Kasumigaseki to the Hibiya Park fountain where Light writes the name.</p>
                 <span class="editorial-card-read">Continue Reading →</span>
             </div>
         </a>
-
         <!-- Lifestyle -->
         <a href="archive/manga-shelf.html" class="editorial-card">
             <div class="editorial-card-img-wrap">
@@ -359,11 +145,8 @@
                 <span class="editorial-card-read">Continue Reading →</span>
             </div>
         </a>
-
     </div>
-
 </main>
-
 <footer class="site-footer">
     <div class="footer-container">
         <div class="footer-brand">
@@ -388,7 +171,6 @@
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-
 <script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
