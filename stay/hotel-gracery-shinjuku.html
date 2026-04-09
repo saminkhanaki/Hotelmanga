@@ -45,9 +45,9 @@
         .gallery-section { margin: 40px 0 30px; clear: both; }
         .gallery-section h2 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; color: var(--deep-navy); margin-bottom: 16px; }
         .gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-        .gallery-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s, opacity 0.2s; }
+        .gallery-grid img { width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: 8px; cursor: pointer; transition: transform 0.2s, opacity 0.2s; background: #e8edf2; }
         .gallery-grid img:hover { transform: scale(1.03); opacity: 0.92; }
-        .gallery-placeholder { width: 100%; aspect-ratio: 4/3; border-radius: 8px; background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.8rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; }
+        .gallery-grid .gallery-placeholder { width: 100%; aspect-ratio: 4/3; border-radius: 8px; background: linear-gradient(135deg, #1D3557 0%, #2d5482 100%); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.5); font-size: 0.8rem; font-family: 'Montserrat', sans-serif; letter-spacing: 0.05em; text-transform: uppercase; cursor: pointer; }
         .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 9999; align-items: center; justify-content: center; padding: 20px; }
         .lightbox.open { display: flex; }
         .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; }
@@ -86,12 +86,12 @@
             .hotel-card { padding: 22px 18px; }
             .hotel-card-grid { grid-template-columns: repeat(2, 1fr); }
             .hotel-card-details { grid-template-columns: 1fr; }
-        }
             .article-container { width: 92%; padding: 20px; margin: 20px auto; }
             .article-title { font-size: 1.8rem; }
             .mid-img, .big-img, .big-right-img { width: 100%; float: none; margin: 0 0 20px; }
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .transport-grid { grid-template-columns: 1fr; }
+            .info-table td:first-child { width: 45%; }
         }
         .booking-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 9999; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(3px); }
         .booking-overlay.active { display: flex; }
@@ -174,79 +174,9 @@
         <p>Cleanliness is one of the most consistently positive dimensions of Hotel Gracery Shinjuku across review platforms. Towels are changed daily, bathrooms are maintained to a standard that multiple guests specifically single out for praise across Booking.com and Hotels.com reviews, and the rooms arrive fresh between guests without the wear that older Tokyo hotels sometimes show. The lobby and public areas on the 8th floor are cleaned regularly given their dual function as hotel space and public attraction.</p>
         <p>The one meaningful exception in the record: a small number of Trip.com reviews from 2025 and early 2026 mention occasional cleanliness inconsistencies — dusty room accessories and, in at least one case, a reported pest sighting. These are outliers against a large volume of positive feedback, but they are worth noting honestly. A hotel with 970 rooms and high occupancy will have variance. If cleanliness matters significantly to you, request a room that has been recently renovated when booking.</p>
 
-        <div class="hotel-card">
-            <p class="hotel-card-title">Quick Reference</p>
-            <p class="hotel-card-name">Hotel Gracery Shinjuku — At a Glance</p>
-            <div class="hotel-card-grid">
-                <div class="hotel-card-stat">
-                    <span class="hotel-card-stat-value">970</span>
-                    <span class="hotel-card-stat-label">Total Rooms</span>
-                </div>
-                <div class="hotel-card-stat">
-                    <span class="hotel-card-stat-value">30F</span>
-                    <span class="hotel-card-stat-label">Floors</span>
-                </div>
-                <div class="hotel-card-stat">
-                    <span class="hotel-card-stat-value">12m</span>
-                    <span class="hotel-card-stat-label">Godzilla Head Height</span>
-                </div>
-                <div class="hotel-card-stat">
-                    <span class="hotel-card-stat-value">5 min</span>
-                    <span class="hotel-card-stat-label">Walk to Shinjuku Station</span>
-                </div>
-            </div>
-            <hr class="hotel-card-divider">
-            <div class="hotel-card-details">
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">Address</span>
-                    <span class="hotel-card-row-value">1-19-1 Kabukicho, Shinjuku, Tokyo</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">Price Range</span>
-                    <span class="hotel-card-row-value">¥12,000–¥35,000 / night</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">Check-in / out</span>
-                    <span class="hotel-card-row-value">3:00 PM / 11:00 AM</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">Best Rooms</span>
-                    <span class="hotel-card-row-value">Godzilla View, floors 9–12 east</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">Opened</span>
-                    <span class="hotel-card-row-value">April 2015</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">From Narita</span>
-                    <span class="hotel-card-row-value">~90 min by N'EX</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">From Haneda</span>
-                    <span class="hotel-card-row-value">~45 min by rail</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">Parking</span>
-                    <span class="hotel-card-row-value">Times Toho Bldg — ¥330/20 min</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">Wi-Fi</span>
-                    <span class="hotel-card-row-value">Free throughout hotel</span>
-                </div>
-                <div class="hotel-card-row">
-                    <span class="hotel-card-row-label">Pop Culture</span>
-                    <span class="hotel-card-row-value">Godzilla — Official Toho collab</span>
-                </div>
-            </div>
-            <div class="hotel-card-tags">
-                <span class="hotel-card-tag">Godzilla Theme</span>
-                <span class="hotel-card-tag">Otaku Friendly</span>
-                <span class="hotel-card-tag">8F Public Terrace</span>
-                <span class="hotel-card-tag">30F Restaurant</span>
-                <span class="hotel-card-tag">English Staff</span>
-                <span class="hotel-card-tag">Kabukicho</span>
-                <span class="hotel-card-tag">Godzilla Roar Events</span>
-            </div>
+        <!-- INFOGRAPHIC PLACEHOLDER — replace src with your uploaded infographic image -->
+        <div style="margin: 40px 0; clear: both;">
+            <img src="../assets/stay/gracery-infographic.webp" alt="Hotel Gracery Shinjuku infographic — key facts and hotel overview" style="width: 100%; border-radius: 12px; display: block;" onerror="this.style.display='none';">
         </div>
 
         <h2>Value: Is Hotel Gracery Shinjuku Worth the Price?</h2>
@@ -372,14 +302,14 @@
         </div>
         <div class="footer-nav-section">
             <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-            <p class="footer-tagline">📩<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb92959d94bb93948f9e97969a959c9ad5989496">[email&#160;protected]</a></p>
+            <p class="footer-tagline">📩 info@hotelmanga.com</p>
         </div>
     </div>
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
     menuToggle.addEventListener('click', () => {
@@ -470,4 +400,14 @@ window.HOTEL_BOOKING_LINKS = {
     };
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
     document.addEventListener('DOMContentLoaded',function(){
-        document.querySelectorAll('.bt
+        document.querySelectorAll('.btn-book-large').forEach(function(el){
+            el.addEventListener('click',function(e){
+                e.preventDefault();
+                openBookingPopup();
+            });
+        });
+    });
+})();
+</script>
+</body>
+</html>
