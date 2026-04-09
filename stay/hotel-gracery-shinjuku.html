@@ -68,7 +68,25 @@
         .transport-card { background: #f8fafc; border-radius: 10px; padding: 18px 20px; border-left: 4px solid var(--deep-navy); }
         .transport-card h4 { font-family: 'Montserrat', sans-serif; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--deep-navy); margin: 0 0 10px; }
         .transport-card ul { padding-left: 16px; margin: 0; font-family: 'Inter', sans-serif; font-size: 0.92rem; line-height: 1.9; color: #4a5568; }
+        .hotel-card { width: 100%; background: #1D3557; border-radius: 14px; padding: 32px 36px; margin: 40px 0; clear: both; color: white; box-sizing: border-box; }
+        .hotel-card-title { font-family: 'Montserrat', sans-serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); margin: 0 0 6px; }
+        .hotel-card-name { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: white; margin: 0 0 24px; }
+        .hotel-card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 24px; }
+        .hotel-card-stat { text-align: center; }
+        .hotel-card-stat-value { font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 700; color: white; display: block; }
+        .hotel-card-stat-label { font-family: 'Inter', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.55); display: block; margin-top: 3px; }
+        .hotel-card-divider { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 0 0 20px; }
+        .hotel-card-details { display: grid; grid-template-columns: 1fr 1fr; gap: 10px 30px; }
+        .hotel-card-row { display: flex; gap: 8px; align-items: baseline; font-size: 0.88rem; }
+        .hotel-card-row-label { color: rgba(255,255,255,0.5); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; flex-shrink: 0; }
+        .hotel-card-row-value { color: white; font-family: 'Inter', sans-serif; }
+        .hotel-card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+        .hotel-card-tag { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 4px 12px; font-family: 'Inter', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.8); }
         @media (max-width: 768px) {
+            .hotel-card { padding: 22px 18px; }
+            .hotel-card-grid { grid-template-columns: repeat(2, 1fr); }
+            .hotel-card-details { grid-template-columns: 1fr; }
+        }
             .article-container { width: 92%; padding: 20px; margin: 20px auto; }
             .article-title { font-size: 1.8rem; }
             .mid-img, .big-img, .big-right-img { width: 100%; float: none; margin: 0 0 20px; }
@@ -148,9 +166,97 @@
         <p>The Godzilla Terrace on the 8th floor is open to the public — not just hotel guests — and it is consistently one of the most visited spots in Shinjuku. The viewing platform wraps around the base of the head and offers a panoramic view of Kabukicho and the wider Shinjuku skyline that is genuinely spectacular, particularly at dusk when the neon below begins to compete with the fading sky above.</p>
         <p>The Gracery Lounge adjacent to the terrace serves coffee and light meals with floor-to-ceiling windows facing the Godzilla head directly. It functions as the hotel's most distinctive public space and is worth visiting regardless of whether you are staying. On the terrace itself, a Godzilla merchandise kiosk stocks official Toho goods — figures, keychains, and apparel — that are difficult to source elsewhere in Shinjuku.</p>
 
+        <h2>Location: The Center of Otaku Tokyo</h2>
+        <p>Shinjuku is the busiest railway station in the world, handling over 3.5 million passengers daily. Hotel Gracery sits in Kabukicho, the entertainment district just north of the station — a five-minute walk from the east exit through one of Tokyo's most kinetically alive streetscapes. Golden Gai, the labyrinthine network of tiny bars beloved by locals and adventurous tourists, is three minutes away. The concentrated anime and manga stores of Shinjuku's eastern blocks are immediately walkable.</p>
+        <p>For otaku travelers, the location is particularly strategic. Animate Shinjuku, one of the largest anime merchandise stores in Tokyo, is a short walk. The Ghibli Museum at Mitaka is 25 minutes by Chuo Line. Akihabara, the undisputed capital of anime culture, is 15 minutes by Sobu Line. Shibuya — where Jujutsu Kaisen's most famous battles were fought — is 8 minutes by Yamanote Line. Hotel Gracery puts all of it within easy reach.</p>
+
+        <h2>Cleanliness: What Guests Actually Report</h2>
+        <p>Cleanliness is one of the most consistently positive dimensions of Hotel Gracery Shinjuku across review platforms. Towels are changed daily, bathrooms are maintained to a standard that multiple guests specifically single out for praise across Booking.com and Hotels.com reviews, and the rooms arrive fresh between guests without the wear that older Tokyo hotels sometimes show. The lobby and public areas on the 8th floor are cleaned regularly given their dual function as hotel space and public attraction.</p>
+        <p>The one meaningful exception in the record: a small number of Trip.com reviews from 2025 and early 2026 mention occasional cleanliness inconsistencies — dusty room accessories and, in at least one case, a reported pest sighting. These are outliers against a large volume of positive feedback, but they are worth noting honestly. A hotel with 970 rooms and high occupancy will have variance. If cleanliness matters significantly to you, request a room that has been recently renovated when booking.</p>
+
+        <div class="hotel-card">
+            <p class="hotel-card-title">Quick Reference</p>
+            <p class="hotel-card-name">Hotel Gracery Shinjuku — At a Glance</p>
+            <div class="hotel-card-grid">
+                <div class="hotel-card-stat">
+                    <span class="hotel-card-stat-value">970</span>
+                    <span class="hotel-card-stat-label">Total Rooms</span>
+                </div>
+                <div class="hotel-card-stat">
+                    <span class="hotel-card-stat-value">30F</span>
+                    <span class="hotel-card-stat-label">Floors</span>
+                </div>
+                <div class="hotel-card-stat">
+                    <span class="hotel-card-stat-value">12m</span>
+                    <span class="hotel-card-stat-label">Godzilla Head Height</span>
+                </div>
+                <div class="hotel-card-stat">
+                    <span class="hotel-card-stat-value">5 min</span>
+                    <span class="hotel-card-stat-label">Walk to Shinjuku Station</span>
+                </div>
+            </div>
+            <hr class="hotel-card-divider">
+            <div class="hotel-card-details">
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">Address</span>
+                    <span class="hotel-card-row-value">1-19-1 Kabukicho, Shinjuku, Tokyo</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">Price Range</span>
+                    <span class="hotel-card-row-value">¥12,000–¥35,000 / night</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">Check-in / out</span>
+                    <span class="hotel-card-row-value">3:00 PM / 11:00 AM</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">Best Rooms</span>
+                    <span class="hotel-card-row-value">Godzilla View, floors 9–12 east</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">Opened</span>
+                    <span class="hotel-card-row-value">April 2015</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">From Narita</span>
+                    <span class="hotel-card-row-value">~90 min by N'EX</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">From Haneda</span>
+                    <span class="hotel-card-row-value">~45 min by rail</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">Parking</span>
+                    <span class="hotel-card-row-value">Times Toho Bldg — ¥330/20 min</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">Wi-Fi</span>
+                    <span class="hotel-card-row-value">Free throughout hotel</span>
+                </div>
+                <div class="hotel-card-row">
+                    <span class="hotel-card-row-label">Pop Culture</span>
+                    <span class="hotel-card-row-value">Godzilla — Official Toho collab</span>
+                </div>
+            </div>
+            <div class="hotel-card-tags">
+                <span class="hotel-card-tag">Godzilla Theme</span>
+                <span class="hotel-card-tag">Otaku Friendly</span>
+                <span class="hotel-card-tag">8F Public Terrace</span>
+                <span class="hotel-card-tag">30F Restaurant</span>
+                <span class="hotel-card-tag">English Staff</span>
+                <span class="hotel-card-tag">Kabukicho</span>
+                <span class="hotel-card-tag">Godzilla Roar Events</span>
+            </div>
+        </div>
+
+        <h2>Value: Is Hotel Gracery Shinjuku Worth the Price?</h2>
+        <p>This is the question that divides guests most consistently, and the honest answer is: it depends entirely on why you are booking. At ¥12,000–¥20,000 per night for a standard room, Hotel Gracery Shinjuku sits at the top of the mid-range bracket for Kabukicho — you can find comparable or larger rooms in the same neighborhood for 30–40% less at nearby APA Hotels or similar chains. Guests who book primarily for location and convenience frequently report that the price feels reasonable given how much they can do without taking a train. Guests who compare purely on room size and amenities against the price often find it lacking.</p>
+        <p>The Godzilla View rooms, which carry a premium of roughly ¥5,000–¥10,000 above standard rates, are a different calculation. If the Godzilla experience is the reason you are in Shinjuku, then the premium buys something that no other hotel in the world offers — and that shifts the value equation significantly in the hotel's favor. If you are treating it as a standard room upgrade, the premium is harder to justify.</p>
+        <p>The 30th-floor breakfast buffet, priced separately at approximately ¥2,500–¥3,000 per person, is widely considered worth adding. Multiple guests across platforms describe it as a genuine highlight — large selection, good quality, and a view that makes the price irrelevant by the second cup of coffee. The bar on the same floor closes at 22:30, which draws consistent criticism from guests who want a late drink after a night in Kabukicho — a fair complaint given the neighborhood.</p>
+        <p>Bottom line: at standard rates, Hotel Gracery Shinjuku is priced for the experience and the location, not for the room. If either of those factors is your primary reason for booking, it represents fair value. If neither is, there are better-value options in the same area.</p>
+
         <h2>Getting to Hotel Gracery Shinjuku</h2>
         <p>Hotel Gracery Shinjuku sits in Kabukicho, the entertainment district immediately north of Shinjuku Station — one of the best-connected rail hubs in Japan. From virtually anywhere in Tokyo, reaching the hotel is straightforward. From the airports, it is direct.</p>
-
         <div class="transport-grid">
             <div class="transport-card">
                 <h4>From Shinjuku Station</h4>
@@ -186,12 +292,7 @@
                 </ul>
             </div>
         </div>
-
         <p>The hotel does not have its own parking lot. The Times Shinjuku Toho Building parking — in the same complex — is the nearest option, operating from 8:00 AM to 11:00 PM at ¥330 per 20 minutes, with a maximum daily charge of ¥1,200 for the automated section. For most international visitors, arriving by rail is significantly easier and faster than driving in central Shinjuku.</p>
-
-        <h2>Location: The Center of Otaku Tokyo</h2>
-        <p>Shinjuku is the busiest railway station in the world, handling over 3.5 million passengers daily. Hotel Gracery sits in Kabukicho, the entertainment district just north of the station — a five-minute walk from the east exit through one of Tokyo's most kinetically alive streetscapes. Golden Gai, the labyrinthine network of tiny bars beloved by locals and adventurous tourists, is three minutes away. The concentrated anime and manga stores of Shinjuku's eastern blocks are immediately walkable.</p>
-        <p>For otaku travelers, the location is particularly strategic. Animate Shinjuku, one of the largest anime merchandise stores in Tokyo, is a short walk. The Ghibli Museum at Mitaka is 25 minutes by Chuo Line. Akihabara, the undisputed capital of anime culture, is 15 minutes by Sobu Line. Shibuya — where Jujutsu Kaisen's most famous battles were fought — is 8 minutes by Yamanote Line. Hotel Gracery puts all of it within easy reach.</p>
 
         <h2>Beyond Godzilla: Hotel Gracery Shinjuku as a Hotel</h2>
         <p>Strip away the Godzilla head and Hotel Gracery Shinjuku is a well-run, mid-range business hotel with 970 rooms, a 30th-floor restaurant, and the operational reliability of the Washington Hotels Group, which manages it. It is not a luxury property — rooms are compact, bathrooms are functional rather than lavish, and amenities are precisely calibrated to business travel — but within its category it performs consistently and without significant complaints.</p>
@@ -219,17 +320,6 @@
         <p>Arrive at the hotel slightly before one of the scheduled roar events and position yourself either on the 8th floor terrace or at your room window. The experience of the roar from inside the hotel — where the sound reverberates through the building structure — is substantially different from hearing it on the street, and worth the timing effort.</p>
         <p>Go up to the 30th floor for breakfast on your first morning, even if you are not a buffet person. The view of Tokyo waking up — with Godzilla visible below you and the Shinjuku skyline spreading in every direction — is the best possible orientation to the city you have arrived in.</p>
 
-        <table class="info-table">
-            <tr><td>Location</td><td>1-19-1 Kabukicho, Shinjuku, Tokyo</td></tr>
-            <tr><td>Category</td><td>Character Themed Hotel / Business Hotel</td></tr>
-            <tr><td>Pop Culture Connection</td><td>Godzilla (Toho, 1954–present) — Official collaboration</td></tr>
-            <tr><td>Total Rooms</td><td>970 rooms across 30 floors</td></tr>
-            <tr><td>Price Range</td><td>¥12,000–¥35,000 per night (Godzilla View rooms higher)</td></tr>
-            <tr><td>Best Rooms</td><td>Godzilla View rooms, floors 9–12</td></tr>
-            <tr><td>Nearest Station</td><td>Shinjuku Station (East Exit) — 5 min walk</td></tr>
-            <tr><td>Opened</td><td>April 2015</td></tr>
-        </table>
-
         <div class="gallery-section">
             <h2>Photo Gallery</h2>
             <div class="gallery-grid" id="galleryGrid">
@@ -245,7 +335,7 @@
         <div class="book-cta">
             <h3>Stay Eye-to-Eye with Godzilla</h3>
             <p>Check availability for Godzilla View rooms — they sell out fast.</p>
-            <button class="btn-book-large" onclick="openBookingPopup()">Check Availability & Book →</button>
+            <button class="btn-book-large" onclick="openBookingPopup()">Check Availability &amp; Book →</button>
         </div>
         <a href="../stay.html" class="back-home">← Back to Stay</a>
     </article>
@@ -282,14 +372,14 @@
         </div>
         <div class="footer-nav-section">
             <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-            <p class="footer-tagline">📩info@hotelmanga.com</p>
+            <p class="footer-tagline">📩<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="fb92959d94bb93948f9e97969a959c9ad5989496">[email&#160;protected]</a></p>
         </div>
     </div>
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
     menuToggle.addEventListener('click', () => {
@@ -380,14 +470,4 @@ window.HOTEL_BOOKING_LINKS = {
     };
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
     document.addEventListener('DOMContentLoaded',function(){
-        document.querySelectorAll('.btn-book-large').forEach(function(el){
-            el.addEventListener('click',function(e){
-                e.preventDefault();
-                openBookingPopup();
-            });
-        });
-    });
-})();
-</script>
-</body>
-</html>
+        document.querySelectorAll('.bt
