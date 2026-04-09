@@ -11,12 +11,13 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink:    #0e0d0b;
+      --ink:    #1a2240;
       --cream:  #f5f1e8;
       --warm:   #ede7d5;
       --muted:  #7a7469;
-      --accent: #b5472a;
+      --accent: #c0392b;
       --border: #d4ccba;
+      --bg-paper: #f5f1e8;
     }
 
     html, body {
@@ -180,7 +181,7 @@
       text-align: center;
     }
 
-    .btn-primary:hover { background: #2a2721; }
+    .btn-primary:hover { background: #0f1628; }
 
     .btn-ghost {
       display: inline-block;
@@ -238,23 +239,71 @@
     .suggestion-links a:hover { color: var(--accent); }
 
     /* ── FOOTER ── */
-    footer {
-      padding: 1.5rem 3rem;
-      border-top: 1px solid var(--border);
+    .site-footer {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 3rem 3rem 0;
+      font-size: 0.82rem;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1.5fr;
+      gap: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-brand .logo-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-tagline {
+      font-size: 0.78rem;
+      color: rgba(245,241,232,0.55);
+      line-height: 1.7;
+    }
+
+    .footer-nav-section h4 {
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(245,241,232,0.45);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .footer-list {
+      list-style: none;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-list a {
+      color: rgba(245,241,232,0.7);
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: color 0.2s;
+    }
+
+    .footer-list a:hover { color: var(--cream); }
+
+    .footer-bottom {
+      padding: 1.25rem 0;
       font-size: 0.72rem;
-      color: var(--muted);
+      color: rgba(245,241,232,0.35);
       letter-spacing: 0.04em;
     }
 
-    footer a {
-      color: var(--muted);
-      text-decoration: none;
+    @media (max-width: 640px) {
+      .site-footer { padding: 2.5rem 1.5rem 0; }
+      .footer-container { grid-template-columns: 1fr; gap: 2rem; }
     }
-
-    footer a:hover { color: var(--ink); }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 640px) {
@@ -267,13 +316,6 @@
 
       .left { padding: 3rem 2rem 2rem; }
       .right { padding: 2rem; }
-
-      footer {
-        padding: 1.25rem 1.5rem;
-        flex-direction: column;
-        gap: 0.5rem;
-        text-align: center;
-      }
     }
   </style>
 </head>
@@ -328,30 +370,30 @@
     </div>
   </main>
 
-<footer class="site-footer">
+  <footer class="site-footer">
     <div class="footer-container">
-        <div class="footer-brand">
-            <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
-            <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
-            <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
-        </div>
-        <div class="footer-nav-section">
-            <h4>Quick Links</h4>
-            <ul class="footer-list">
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="archive.html">Archive</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
-        <div class="footer-nav-section">
-            <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-            <p class="footer-tagline">📩info@hotelmanga.com</p>
-        </div>
+      <div class="footer-brand">
+        <div class="logo-text"><span style="color: var(--bg-paper);">HOTEL</span><span>MANGA</span></div>
+        <p class="footer-tagline">Manga Travel and Lifestyle Magazine.</p><br>
+        <div class="footer-nav-section"><ul class="footer-list"><li><a href="privacy.html">Privacy Policy</a></li></ul></div>
+      </div>
+      <div class="footer-nav-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-list">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="archive.html">Archive</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-nav-section">
+        <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
+        <p class="footer-tagline">📩info@hotelmanga.com</p>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
+      <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
-</footer>
+  </footer>
 
 </body>
 </html>
