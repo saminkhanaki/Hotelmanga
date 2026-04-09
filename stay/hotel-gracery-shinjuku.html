@@ -333,9 +333,18 @@
         showLightboxAt(currentIndex);
     }
     function openInlineLightbox(src, alt) {
-        currentIndex = allImages.findIndex(i => i.src === src);
-        if (currentIndex === -1) currentIndex = 0;
-        showLightboxAt(currentIndex);
+        var found = allImages.findIndex(function(i){ return i.src === src; });
+        if (found !== -1) {
+            currentIndex = found;
+            showLightboxAt(currentIndex);
+        } else {
+            // standalone image not in allImages (e.g. infographic) — show without navigation
+            document.getElementById('lightboxImg').src = src;
+            document.getElementById('lightboxImg').alt = alt || '';
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+            currentIndex = -1;
+        }
     }
     function showLightboxAt(index) {
         document.getElementById('lightboxImg').src = allImages[index].src;
@@ -350,6 +359,7 @@
         }
     }
     function changeImage(direction) {
+        if (currentIndex === -1) return;
         currentIndex = (currentIndex + direction + allImages.length) % allImages.length;
         showLightboxAt(currentIndex);
     }
