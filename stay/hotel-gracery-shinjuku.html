@@ -60,7 +60,7 @@
         .book-cta { background: var(--deep-navy); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 35px 0 20px; clear: both; }
         .book-cta h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 0 0 8px; color: white; }
         .book-cta p { font-size: 0.95rem !important; opacity: 0.8; margin-bottom: 20px !important; }
-        .btn-book-large { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 13px 32px; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: background 0.2s; }
+        .btn-book-large { display: inline-block; background: var(--accent); color: white; text-decoration: none; padding: 13px 32px; border-radius: 7px; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 0.05em; transition: background 0.2s; cursor: pointer; }
         .btn-book-large:hover { background: #c0392b; }
         .back-home { display: inline-block; margin-bottom: 10px; color: var(--accent); text-decoration: none; font-weight: bold; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; }
         .back-stay { display: inline-block; margin-bottom: 10px; margin-left: 16px; color: var(--deep-navy); text-decoration: none; font-family: 'Montserrat', sans-serif; font-size: 0.9rem; opacity: 0.7; }
@@ -147,13 +147,13 @@
 
         <h2>The Story Behind Tokyo's Godzilla Hotel</h2>
         <p>Hotel Gracery Shinjuku opened in 2015 as part of the Shinjuku Toho Building development — a complex built on the site of the old Shinjuku Toho Cinema, which for decades screened the original Godzilla films. The connection is intentional and deeply felt. Toho, the studio that created Godzilla in 1954, commissioned a full-scale recreation of the monster's head for the hotel's eighth-floor terrace, where it has presided over Kabukicho ever since.</p>
-        <img src="../assets/stay/gracery-godzilla.webp" alt="Close-up of the Godzilla head on Hotel Gracery Shinjuku's 8th floor terrace at night" class="big-img" onerror="this.style.display='none';">
+        <img src="../assets/stay/gracery-godzilla.webp" alt="Close-up of the Godzilla head on Hotel Gracery Shinjuku's 8th floor terrace at night" class="big-img" style="cursor:pointer;" onclick="openInlineLightbox(this.src, this.alt)" onerror="this.style.display='none';">
         <p>The head measures approximately 12 meters tall — the size of a three-story building on its own. At scheduled times throughout the day, it emits a roar that echoes across Kabukicho and draws crowds of tourists with cameras raised. At night, the eyes glow an eerie green against the Tokyo skyline, visible from streets across the district. It is, by any measure, one of the great spectacles of modern Tokyo.</p>
         <p>For fans of Godzilla — one of Japan's most enduring pop culture icons and a franchise that spans seven decades, 38 films, and a recent Hollywood revival — staying here is not just a hotel choice. It is a pilgrimage.</p>
 
         <h2>Godzilla Rooms at Hotel Gracery Shinjuku</h2>
         <p>The hotel's 970 standard rooms are comfortable, well-designed business hotel rooms — exactly what you would expect from a Gracery property. But the Godzilla View rooms on floors 9 through 12 are something else entirely. These rooms face directly onto the terrace where the monster's head is mounted, placing guests at eye level with Godzilla through their floor-to-ceiling windows.</p>
-        <img src="../assets/stay/gracery-room.webp" alt="Godzilla View room interior at Hotel Gracery Shinjuku — floor-to-ceiling window facing Godzilla head" class="big-right-img" onerror="this.style.display='none';">
+        <img src="../assets/stay/gracery-room.webp" alt="Godzilla View room interior at Hotel Gracery Shinjuku — floor-to-ceiling window facing Godzilla head" class="big-right-img" style="cursor:pointer;" onclick="openInlineLightbox(this.src, this.alt)" onerror="this.style.display='none';">
         <p>Waking up in a Godzilla View room is an experience that resists easy description. The head is close enough to feel its presence — not threatening, exactly, but enormous and immediate in a way that recalibrates your sense of scale. At 3 AM, with Kabukicho still pulsing with light below and the monster's eyes glowing green outside your window, you understand why people return to this hotel again and again.</p>
         <p>The rooms themselves are immaculately maintained. Beds are firm and high-quality, blackout curtains handle Tokyo's relentless light pollution (except, of course, the Godzilla light), and the bathrooms are efficiently designed in the Japanese manner. Godzilla-themed toiletries and a small selection of monster merchandise complete the experience. It is theatrical and sincere at the same time — which is precisely the right combination.</p>
         <p>For the most immersive experience, request a Godzilla View room on an upper floor of the east-facing wing. These rooms book out weeks in advance during peak seasons, so reserve as early as possible. The dedicated Godzilla Room — a single suite on the lower floors with its own Godzilla statue and claw-through-the-wall installation — is the most dramatic single option and commands a significant premium.</p>
@@ -302,14 +302,14 @@
         </div>
         <div class="footer-nav-section">
             <p class="footer-tagline"><br>📌13101 W Washington Blvd, Los Angeles, CA 90066</p>
-            <p class="footer-tagline">📩 info@hotelmanga.com</p>
+            <p class="footer-tagline">📩 <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="5f363139301f37302b3a33323e31383e713c3032">[email&#160;protected]</a></p>
         </div>
     </div>
     <div class="footer-bottom">
         <p>&copy; 2026 HotelManga. Made for Manga Lovers.</p>
     </div>
 </footer>
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
     const menuToggle = document.querySelector('.menu-toggle');
     const navList = document.querySelector('.nav-list');
     menuToggle.addEventListener('click', () => {
@@ -328,6 +328,14 @@
     function openLightbox(index) {
         currentIndex = index;
         document.getElementById('lightboxImg').src = galleryImages[index];
+        document.getElementById('lightboxImg').alt = '';
+        document.getElementById('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function openInlineLightbox(src, alt) {
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('lightboxImg').alt = alt || '';
+        currentIndex = -1;
         document.getElementById('lightbox').classList.add('open');
         document.body.style.overflow = 'hidden';
     }
@@ -338,6 +346,7 @@
         }
     }
     function changeImage(direction) {
+        if (currentIndex === -1) return;
         currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length;
         document.getElementById('lightboxImg').src = galleryImages[currentIndex];
     }
@@ -400,14 +409,4 @@ window.HOTEL_BOOKING_LINKS = {
     };
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
     document.addEventListener('DOMContentLoaded',function(){
-        document.querySelectorAll('.btn-book-large').forEach(function(el){
-            el.addEventListener('click',function(e){
-                e.preventDefault();
-                openBookingPopup();
-            });
-        });
-    });
-})();
-</script>
-</body>
-</html>
+        document.querySelectorAll('.b
