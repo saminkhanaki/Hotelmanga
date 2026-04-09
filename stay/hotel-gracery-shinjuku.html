@@ -176,7 +176,7 @@
 
         <!-- INFOGRAPHIC PLACEHOLDER — replace src with your uploaded infographic image -->
         <div style="margin: 40px 0; clear: both;">
-            <img src="../assets/stay/gracery-infographic.webp" alt="Hotel Gracery Shinjuku infographic — key facts and hotel overview" style="width: 100%; border-radius: 12px; display: block;" onerror="this.style.display='none';">
+            <img src="../assets/stay/gracery-infographic.webp" alt="Hotel Gracery Shinjuku infographic — key facts and hotel overview" style="width: 100%; border-radius: 12px; display: block; cursor: pointer;" onclick="openInlineLightbox(this.src, this.alt)" onerror="this.style.display='none';">
         </div>
 
         <h2>Value: Is Hotel Gracery Shinjuku Worth the Price?</h2>
@@ -265,7 +265,7 @@
         <div class="book-cta">
             <h3>Stay Eye-to-Eye with Godzilla</h3>
             <p>Check availability for Godzilla View rooms — they sell out fast.</p>
-            <button class="btn-book-large" onclick="openBookingPopup()">Check Availability &amp; Book →</button>
+            <button class="btn-book-large" onclick="openBookingPopup(); return false;">Check Availability &amp; Book →</button>
         </div>
         <a href="../stay.html" class="back-home">← Back to Stay</a>
     </article>
@@ -316,26 +316,30 @@
         navList.classList.toggle('active');
         menuToggle.classList.toggle('is-active');
     });
-    const galleryImages = [
-        '../assets/stay/gracery-g1.webp',
-        '../assets/stay/gracery-g2.webp',
-        '../assets/stay/gracery-g3.webp',
-        '../assets/stay/gracery-g4.webp',
-        '../assets/stay/gracery-g5.webp',
-        '../assets/stay/gracery-g6.webp'
+    const allImages = [
+        { src: '../assets/stay/gracery-godzilla.webp', alt: 'Godzilla head on Hotel Gracery Shinjuku 8th floor terrace' },
+        { src: '../assets/stay/gracery-room.webp', alt: 'Godzilla View room interior at Hotel Gracery Shinjuku' },
+        { src: '../assets/stay/gracery-g1.webp', alt: 'Hotel Gracery Shinjuku exterior with Godzilla head' },
+        { src: '../assets/stay/gracery-g2.webp', alt: 'Godzilla head at night, Hotel Gracery Shinjuku' },
+        { src: '../assets/stay/gracery-g3.webp', alt: 'Godzilla View room interior' },
+        { src: '../assets/stay/gracery-g4.webp', alt: '8th floor terrace and Godzilla head view' },
+        { src: '../assets/stay/gracery-g5.webp', alt: 'Shinjuku skyline from Hotel Gracery Shinjuku' },
+        { src: '../assets/stay/gracery-g6.webp', alt: 'Hotel Gracery Shinjuku lobby' }
     ];
+    const galleryImages = allImages.map(i => i.src);
     let currentIndex = 0;
-    function openLightbox(index) {
-        currentIndex = index;
-        document.getElementById('lightboxImg').src = galleryImages[index];
-        document.getElementById('lightboxImg').alt = '';
-        document.getElementById('lightbox').classList.add('open');
-        document.body.style.overflow = 'hidden';
+    function openLightbox(galleryIndex) {
+        currentIndex = galleryIndex + 2;
+        showLightboxAt(currentIndex);
     }
     function openInlineLightbox(src, alt) {
-        document.getElementById('lightboxImg').src = src;
-        document.getElementById('lightboxImg').alt = alt || '';
-        currentIndex = -1;
+        currentIndex = allImages.findIndex(i => i.src === src);
+        if (currentIndex === -1) currentIndex = 0;
+        showLightboxAt(currentIndex);
+    }
+    function showLightboxAt(index) {
+        document.getElementById('lightboxImg').src = allImages[index].src;
+        document.getElementById('lightboxImg').alt = allImages[index].alt || '';
         document.getElementById('lightbox').classList.add('open');
         document.body.style.overflow = 'hidden';
     }
@@ -346,9 +350,8 @@
         }
     }
     function changeImage(direction) {
-        if (currentIndex === -1) return;
-        currentIndex = (currentIndex + direction + galleryImages.length) % galleryImages.length;
-        document.getElementById('lightboxImg').src = galleryImages[currentIndex];
+        currentIndex = (currentIndex + direction + allImages.length) % allImages.length;
+        showLightboxAt(currentIndex);
     }
     document.addEventListener('keydown', (e) => {
         const lb = document.getElementById('lightbox');
@@ -408,5 +411,7 @@ window.HOTEL_BOOKING_LINKS = {
         }
     };
     document.addEventListener('keydown',function(e){if(e.key==='Escape')closeBookingPopup(null,true);});
-    document.addEventListener('DOMContentLoaded',function(){
-        document.querySelectorAll('.b
+})();
+</script>
+</body>
+</html>
