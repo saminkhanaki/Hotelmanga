@@ -53,6 +53,10 @@
         .lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 8px; object-fit: contain; }
         .lightbox-close { position: absolute; top: 20px; right: 24px; color: white; font-size: 2rem; cursor: pointer; font-family: 'Montserrat', sans-serif; font-weight: 300; line-height: 1; opacity: 0.8; transition: opacity 0.2s; }
         .lightbox-close:hover { opacity: 1; }
+        .lightbox-prev, .lightbox-next { display: none; position: absolute; top: 50%; transform: translateY(-50%); color: white; font-size: 2.5rem; cursor: pointer; opacity: 0.7; transition: opacity 0.2s; background: none; border: none; padding: 10px; }
+        .lightbox-prev { left: 16px; }
+        .lightbox-next { right: 16px; }
+        .lightbox-prev:hover, .lightbox-next:hover { opacity: 1; }
 
         .book-cta { background: var(--deep-navy); color: white; padding: 32px; border-radius: 12px; text-align: center; margin: 35px 0 20px; clear: both; }
         .book-cta h3 { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; margin: 0 0 8px; color: white; }
@@ -269,7 +273,9 @@
 </main>
 <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <button class="lightbox-prev" id="lbPrev" onclick="changeImage(-1); event.stopPropagation();">&#8249;</button>
     <img id="lightboxImg" src="" alt="">
+    <button class="lightbox-next" id="lbNext" onclick="changeImage(1); event.stopPropagation();">&#8250;</button>
 </div>
 <div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
     <div class="booking-popup" id="bookingPopup">
@@ -323,23 +329,24 @@
     ];
     const galleryImages = allImages.map(i => i.src);
     let currentIndex = 0;
+    var galleryStartIndex = 2;
+    var galleryEndIndex = allImages.length - 1;
+    function setArrows(show) {
+        document.getElementById('lbPrev').style.display = show ? 'block' : 'none';
+        document.getElementById('lbNext').style.display = show ? 'block' : 'none';
+    }
     function openLightbox(galleryIndex) {
         currentIndex = galleryIndex + 2;
         showLightboxAt(currentIndex);
+        setArrows(true);
     }
     function openInlineLightbox(src, alt) {
-        var found = allImages.findIndex(function(i){ return i.src === src; });
-        if (found !== -1) {
-            currentIndex = found;
-            showLightboxAt(currentIndex);
-        } else {
-            // standalone image not in allImages (e.g. infographic) — show without navigation
-            document.getElementById('lightboxImg').src = src;
-            document.getElementById('lightboxImg').alt = alt || '';
-            document.getElementById('lightbox').classList.add('open');
-            document.body.style.overflow = 'hidden';
-            currentIndex = -1;
-        }
+        document.getElementById('lightboxImg').src = src;
+        document.getElementById('lightboxImg').alt = alt || '';
+        document.getElementById('lightbox').classList.add('open');
+        document.body.style.overflow = 'hidden';
+        currentIndex = -1;
+        setArrows(false);
     }
     function showLightboxAt(index) {
         document.getElementById('lightboxImg').src = allImages[index].src;
@@ -355,7 +362,10 @@
     }
     function changeImage(direction) {
         if (currentIndex === -1) return;
-        currentIndex = (currentIndex + direction + allImages.length) % allImages.length;
+        var galleryImages6 = allImages.slice(2);
+        var localIndex = currentIndex - 2;
+        localIndex = (localIndex + direction + galleryImages6.length) % galleryImages6.length;
+        currentIndex = localIndex + 2;
         showLightboxAt(currentIndex);
     }
     document.addEventListener('keydown', (e) => {
