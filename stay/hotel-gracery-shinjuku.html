@@ -145,8 +145,10 @@
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .transport-grid { grid-template-columns: 1fr; }
             .info-table td:first-child { width: 45%; }
-            .(max-width: 768px) { .hdc { padding: 22px 18px; } 
-            .hdc-row { grid-template-columns: 110px 1fr; } 
+            .hdc { padding: 22px 18px; }
+            .hdc-row { grid-template-columns: 110px 1fr; }
+        }
+
         }
         .booking-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 9999; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(3px); }
         .booking-overlay.active { display: flex; }
