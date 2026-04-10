@@ -3,12 +3,12 @@
   <!-- Core Pages -->
   <url>
     <loc>https://hotelmanga.com/index.html</loc>
-    <lastmod>2026-04-06</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay.html</loc>
-    <lastmod>2026-04-05</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <priority>0.95</priority>
   </url>
   <url>
@@ -28,7 +28,7 @@
   </url>
   <url>
     <loc>https://hotelmanga.com/about.html</loc>
-    <lastmod>2026-03-25</lastmod>
+    <lastmod>2026-04-11</lastmod>
     <priority>0.50</priority>
   </url>
   <url>
@@ -77,11 +77,11 @@
     <lastmod>2026-04-01</lastmod>
     <priority>0.70</priority>
   </url>
-  <!-- Stay Articles — 37 Hotel Guides -->
+  <!-- Stay Articles — 43 Hotel Guides -->
   <url>
     <loc>https://hotelmanga.com/stay/hotel-gracery-shinjuku.html</loc>
-    <lastmod>2026-03-25</lastmod>
-    <priority>0.90</priority>
+    <lastmod>2026-04-11</lastmod>
+    <priority>0.92</priority>
   </url>
   <url>
     <loc>https://hotelmanga.com/stay/highland-resort-hotel.html</loc>
@@ -208,7 +208,7 @@
     <lastmod>2026-04-01</lastmod>
     <priority>0.85</priority>
   </url>
-  <!-- Spirited Away Hotel Pages — 11 -->
+  <!-- Spirited Away Hotel Pages -->
   <url>
     <loc>https://hotelmanga.com/stay/dogo-onsen-funaya.html</loc>
     <lastmod>2026-04-05</lastmod>
@@ -262,6 +262,37 @@
   <url>
     <loc>https://hotelmanga.com/stay/notoya-ryokan-ginzan.html</loc>
     <lastmod>2026-04-05</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <!-- New Hotel Pages — April 2026 -->
+  <url>
+    <loc>https://hotelmanga.com/stay/shibuya-hotel-en.html</loc>
+    <lastmod>2026-04-11</lastmod>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/tavinos-hamamatsucho.html</loc>
+    <lastmod>2026-04-11</lastmod>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/imperial-hotel-tokyo.html</loc>
+    <lastmod>2026-04-11</lastmod>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/grand-nikko-tokyo-daiba.html</loc>
+    <lastmod>2026-04-11</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/yokohama-minatomirai-manyo-club.html</loc>
+    <lastmod>2026-04-11</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://hotelmanga.com/stay/capsule-net-gran-ueno.html</loc>
+    <lastmod>2026-04-11</lastmod>
     <priority>0.90</priority>
   </url>
 </urlset>
