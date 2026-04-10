@@ -126,6 +126,15 @@
         .hotel-card-row-value { color: white; font-family: 'Inter', sans-serif; }
         .hotel-card-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
         .hotel-card-tag { background: rgba(255,255,255,0.1); border-radius: 20px; padding: 4px 12px; font-family: 'Inter', sans-serif; font-size: 0.78rem; color: rgba(255,255,255,0.8); }
+        .hdc { width: 100%; background: #1D3557; border-radius: 14px; padding: 30px 34px; margin: 40px 0 30px; clear: both; color: white; box-sizing: border-box; }
+        .hdc-label { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255,255,255,0.45); margin: 0 0 5px; }
+        .hdc-name { font-family: 'Montserrat', sans-serif; font-size: 1.35rem; font-weight: 700; color: white; margin: 0 0 22px; line-height: 1.3; }
+        .hdc-divider { border: none; border-top: 1px solid rgba(255,255,255,0.15); margin: 0 0 20px; }
+        .hdc-rows { display: flex; flex-direction: column; gap: 12px; }
+        .hdc-row { display: grid; grid-template-columns: 130px 1fr; gap: 12px; }
+        .hdc-key { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); padding-top: 3px; }
+        .hdc-val { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.88); line-height: 1.5; }
+
         @media (max-width: 768px) {
             .hotel-card { padding: 22px 18px; }
             .hotel-card-grid { grid-template-columns: repeat(2, 1fr); }
@@ -136,6 +145,8 @@
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .transport-grid { grid-template-columns: 1fr; }
             .info-table td:first-child { width: 45%; }
+            .(max-width: 768px) { .hdc { padding: 22px 18px; } 
+            .hdc-row { grid-template-columns: 110px 1fr; } 
         }
         .booking-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 9999; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(3px); }
         .booking-overlay.active { display: flex; }
@@ -294,6 +305,55 @@
         <p>Arrive at the hotel slightly before one of the scheduled roar events and position yourself either on the 8th floor terrace or at your room window. The experience of the roar from inside the hotel — where the sound reverberates through the building structure — is substantially different from hearing it on the street, and worth the timing effort.</p>
         <p>Go up to the 30th floor for breakfast on your first morning, even if you are not a buffet person. The view of Tokyo waking up — with Godzilla visible below you and the Shinjuku skyline spreading in every direction — is the best possible orientation to the city you have arrived in.</p>
 
+        <!-- HOTEL DIRECTORY CARD -->
+        <div class="hdc">
+            <p class="hdc-label">Hotel Directory</p>
+            <p class="hdc-name">Hotel Gracery Shinjuku</p>
+            <hr class="hdc-divider">
+            <div class="hdc-rows">
+                <div class="hdc-row">
+                    <span class="hdc-key">Full Name (EN)</span>
+                    <span class="hdc-val">Hotel Gracery Shinjuku</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Full Name (JP)</span>
+                    <span class="hdc-val">ホテルグレイスリー新宿</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Address</span>
+                    <span class="hdc-val">1-19-1 Kabukicho, Shinjuku-ku, Tokyo 160-0021</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Telephone</span>
+                    <span class="hdc-val">+81-3-6833-1111</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Website</span>
+                    <span class="hdc-val">shinjuku.gracery.com</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Rooms</span>
+                    <span class="hdc-val">970 rooms across 30 floors (Single, Double, Twin, Triple — 18–32㎡)</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Godzilla</span>
+                    <span class="hdc-val">12m life-size head on 8F terrace — official Toho collaboration since 2015</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Best Rooms</span>
+                    <span class="hdc-val">Godzilla View rooms, floors 9–12 east-facing; Godzilla Room suite</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Nearest Access</span>
+                    <span class="hdc-val">Shinjuku Station East Exit — 5 min walk; Higashi-Shinjuku Station A1 — 5 min walk</span>
+                </div>
+                <div class="hdc-row">
+                    <span class="hdc-key">Price Range</span>
+                    <span class="hdc-val">¥12,000–¥35,000 / night (Godzilla View rooms at premium)</span>
+                </div>
+            </div>
+        </div>
+        
         <div class="gallery-section">
             <h2>Photo Gallery</h2>
             <div class="gallery-grid" id="galleryGrid">
