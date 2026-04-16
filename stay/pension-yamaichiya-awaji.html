@@ -89,22 +89,7 @@
         .hdc-row { display: grid; grid-template-columns: 130px 1fr; gap: 12px; }
         .hdc-key { font-family: 'Montserrat', sans-serif; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); padding-top: 3px; }
         .hdc-val { font-family: 'Inter', sans-serif; font-size: 0.9rem; color: rgba(255,255,255,0.88); line-height: 1.5; }
-        /* Booking overlay */
-        .booking-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 9999; align-items: center; justify-content: center; padding: 20px; backdrop-filter: blur(3px); }
-        .booking-overlay.active { display: flex; }
-        .booking-popup { background: #fff; border-radius: 16px; padding: 32px 28px 24px; max-width: 420px; width: 100%; position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.25); animation: popIn 0.22s cubic-bezier(0.34,1.56,0.64,1); }
-        @keyframes popIn { from { transform: scale(0.88); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-        .booking-popup-close { position: absolute; top: 12px; right: 16px; font-size: 1.5rem; color: #94a3b8; cursor: pointer; background: none; border: none; padding: 4px 8px; border-radius: 4px; line-height: 1; transition: color 0.15s, background 0.15s; }
-        .booking-popup-close:hover { color: #1e293b; background: #f1f5f9; }
-        .booking-popup h4 { font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #1D3557; margin: 0 0 4px; padding-right: 28px; }
-        .popup-subtitle { font-size: 0.85rem; color: #64748b; margin: 0 0 18px; }
-        .booking-platforms { display: flex; flex-direction: column; gap: 9px; }
-        .booking-platform-link { display: flex; align-items: center; gap: 12px; padding: 11px 15px; border-radius: 10px; text-decoration: none; font-size: 0.95rem; font-weight: 500; color: #1e293b; transition: background 0.15s, transform 0.1s; border: 1.5px solid #e2e8f0; }
-        .booking-platform-link:hover { background: #f8fafc; border-color: #94a3b8; transform: translateX(3px); }
-        .platform-logo { width: 26px; height: 26px; object-fit: contain; flex-shrink: 0; border-radius: 4px; }
-        .platform-name { flex: 1; }
-        .platform-arrow { color: #94a3b8; }
-        .booking-popup-note { margin-top: 14px; font-size: 0.73rem; color: #94a3b8; text-align: center; }
+
         @media (max-width: 768px) {
             .article-container { width: 92%; padding: 20px; margin: 20px auto; }
             .article-title { font-size: 1.8rem; }
@@ -325,7 +310,7 @@
         <div class="book-cta">
             <h3>Stay Where the Anime Island Begins</h3>
             <p>Rooms fill fast during peak anime park season — book the meal plan together with your room.</p>
-            <a class="btn-book-large" http://www.p-yamaichiya.com/" target="_blank" rel="noopener">Visit Official Website &rarr;</a>
+            <a class="btn-book-large" href="http://www.p-yamaichiya.com/top.html" target="_blank" rel="noopener">Check Availability &amp; Book →</a>
         </div>
 
         <a href="../stay.html" class="back-home">← Back to Stay</a>
@@ -339,15 +324,7 @@
     <button class="lightbox-next" id="lbNext" onclick="changeImage(1); event.stopPropagation();">&#8250;</button>
 </div>
 
-<div class="booking-overlay" id="bookingOverlay" onclick="closeBookingPopup(event)">
-    <div class="booking-popup" id="bookingPopup">
-        <button class="booking-popup-close" onclick="closeBookingPopup(null,true)" aria-label="Close">&#215;</button>
-        <h4 id="popupHotelName">Check Availability</h4>
-        <p class="popup-subtitle">Compare prices across booking platforms</p>
-        <div class="booking-platforms" id="popupPlatforms"></div>
-        <p class="booking-popup-note">As a Booking.com Affiliate, I earn from qualifying transactions. Your price stays the same.</p>
-    </div>
-</div>
+
 
 <footer class="site-footer">
     <div class="footer-container">
@@ -431,64 +408,8 @@
         currentIndex = local + 2;
         showLightboxAt(currentIndex);
     }
-    document.addEventListener('keydown', function(e) {
-        var lb = document.getElementById('lightbox');
-        if (!lb.classList.contains('open')) return;
-        if (e.key === 'ArrowRight') changeImage(1);
-        if (e.key === 'ArrowLeft')  changeImage(-1);
-        if (e.key === 'Escape')     closeLightbox();
-    });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeLightbox(); });
 
-    var HOTEL_BOOKING_LINKS = {
-        name:    "Pension Yamaichiya",
-        booking: "https://www.booking.com",
-        trip:    "https://www.trip.com",
-        hotels:  "https://www.hotels.com",
-        agoda:   null
-    };
-    var PLATFORMS = [
-        { key:'booking', name:'Booking.com', logo:'../assets/logos/booking.png', color:'#003580' },
-        { key:'trip',    name:'Trip.com',    logo:'../assets/logos/trip.png',    color:'#006FAF' },
-        { key:'hotels',  name:'Hotels.com',  logo:'../assets/logos/hotels.png',  color:'#C8003B' },
-        { key:'agoda',   name:'Agoda',       logo:'../assets/logos/agoda.png',   color:'#E53935' }
-    ];
-
-    function openBookingPopup() {
-        var overlay = document.getElementById('bookingOverlay');
-        var nameEl  = document.getElementById('popupHotelName');
-        var plEl    = document.getElementById('popupPlatforms');
-        nameEl.textContent = 'Book: ' + HOTEL_BOOKING_LINKS.name;
-        plEl.innerHTML = '';
-        var any = false;
-        PLATFORMS.forEach(function(p) {
-            var url = HOTEL_BOOKING_LINKS[p.key];
-            if (!url) return;
-            any = true;
-            var a = document.createElement('a');
-            a.href = url; a.target = '_blank'; a.rel = 'noopener sponsored';
-            a.className = 'booking-platform-link';
-            var img = document.createElement('img');
-            img.src = p.logo; img.alt = p.name; img.className = 'platform-logo';
-            img.onerror = function() { this.outerHTML = '<span style="width:26px;height:26px;border-radius:50%;background:'+p.color+';display:inline-block;flex-shrink:0;"></span>'; };
-            var nm = document.createElement('span'); nm.className = 'platform-name'; nm.textContent = p.name;
-            var ar = document.createElement('span'); ar.className = 'platform-arrow'; ar.textContent = '→';
-            a.appendChild(img); a.appendChild(nm); a.appendChild(ar);
-            plEl.appendChild(a);
-        });
-        if (!any) plEl.innerHTML = '<p style="color:#64748b;text-align:center;">No booking links available.</p>';
-        overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeBookingPopup(e, force) {
-        if (force || !e || e.target === document.getElementById('bookingOverlay')) {
-            document.getElementById('bookingOverlay').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    }
-
-    document.getElementById('openBookBtn').addEventListener('click', openBookingPopup);
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeBookingPopup(null, true); });
 </script>
 </body>
 </html>
